@@ -7,7 +7,7 @@ echo  TRIALUM 3D WORLD BUILDER - PRIVATE DESIGN STUDIO
 echo ==========================================================
 if not exist "vendor\three.module.js" goto missing
 if not exist "assets\models\f01-marble-cream-full.glb" goto missing
-goto ready
+goto verify
 :missing
 echo Local 3D dependencies or GLB files are missing.
 echo Pull the latest MAIN using GitHub Desktop first.
@@ -16,7 +16,7 @@ where py >nul 2>nul
 if not errorlevel 1 (
   py -3 scripts\setup.py
   if errorlevel 1 goto failedsetup
-  goto ready
+  goto verify
 )
 where python >nul 2>nul
 if not errorlevel 1 (
@@ -29,6 +29,24 @@ pause
 exit /b 1
 :failedsetup
 echo Setup failed. Check internet connection or pull MAIN from GitHub.
+pause
+exit /b 1
+:verify
+if not exist "assets\models\atrium.glb" goto incomplete
+if not exist "assets\models\warehouse-shell.glb" goto incomplete
+if not exist "assets\models\food-cold-annex-shell.glb" goto incomplete
+if not exist "assets\models\food-packing-annex-shell.glb" goto incomplete
+if not exist "assets\models\greenhouse-shell.glb" goto incomplete
+if not exist "assets\models\g01-main-basin.glb" goto incomplete
+if not exist "assets\models\g01-water-surfaces-animated.glb" goto incomplete
+if not exist "assets\models\aquaglow-mature.glb" goto incomplete
+goto ready
+:incomplete
+echo.
+echo Some original Trialum room GLBs are missing from this local clone.
+echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
+echo All 41 models MUST be present; do not use a half-empty catalogue.
+echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause
 exit /b 1
 :ready
