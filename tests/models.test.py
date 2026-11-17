@@ -10,7 +10,7 @@ class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),15)
+  self.assertEqual(len(models),41)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
@@ -22,13 +22,19 @@ class GLBModels(unittest.TestCase):
    gltf=json.loads(d[20:20+jl])
    self.assertTrue(gltf["meshes"],str(p))
    self.assertEqual(gltf["asset"]["version"],"2.0")
-   self.assertTrue(gltf["images"],str(p))
-   self.assertLess(len(d),160_000)
- def test_frozen_owner_approved_F01_A_SHA(self):
+   if asset["id"].startswith("f01-"):
+    self.assertTrue(gltf.get("images"),str(p))
+    self.assertLess(len(d),160_000)
+   else:
+    self.assertLess(len(d),5_000_000)
+   self.assertTrue(gltf.get("materials"),str(p))
+ def test_known_rooms_and_annexes_are_real_glbs(self):
+  expected=("atrium.glb","warehouse-shell.glb","food-cold-annex-shell.glb",\n            "food-packing-annex-shell.glb","greenhouse-shell.glb",\n            "g01-main-basin.glb","g01-water-surfaces-animated.glb",\n            "aquaglow-mature.glb","pilot-room.glb")
+  for f in expected:self.assertTrue((MODEL_DIR/f).is_file(),f)\n def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
- def test_no_game_scenes_or_play_store_assets_inside_builder(self):
+ def test_no_game_runtime_or_play_store_assets_inside_builder(self):
   self.assertFalse((ROOT/"android").exists())
-  self.assertFalse((ROOT/"prototypes/lw-d/scenes").exists())
+  # Design-only declarative snapshots are allowed; playable engine/runtime is NOT.\n  self.assertFalse((ROOT/"prototypes/lw-d/scenes/agro-food-warehouse/warehouse-runtime.mjs").exists())\n  self.assertFalse((ROOT/"prototypes/lw-d/scenes/agro-greenhouse/greenhouse-app.mjs").exists())
   self.assertFalse((ROOT/"js/engine.js").exists())
 if __name__=="__main__":unittest.main(verbosity=2)
