@@ -68,3 +68,16 @@ test("existing source rooms and two warehouse annexes have editable non-demo JSO
   assert.equal(p.meta.officialScene,false);
  }
 });
+
+test("room selector has all six true GLB projects, with safely whitelisted file names",()=>{
+ const html=file("index.html"),editor=file("src/main.js");
+ assert.match(html,/id="scenePreset"/);
+ for(const id of ["atrium","warehouse","cold","packing","greenhouse","g01"]){
+  assert.ok(html.includes('value="'+id+'"'),id);
+  assert.ok(editor.includes(id+':"trialum-')||editor.includes(id+':"trialum-'),id);
+ }
+ assert.match(editor,/function frameCurrentRoom/);
+ assert.match(editor,/function openRoomPreset/);
+ assert.match(editor,/const mixer=new THREE.AnimationMixer/);
+ assert.match(editor,/" GLB · "/);
+});
