@@ -10,7 +10,7 @@ class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),41)
+  self.assertEqual(len(models),42)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
@@ -46,6 +46,25 @@ class GLBModels(unittest.TestCase):
   size=struct.unpack_from("<I",water,12)[0]
   info=json.loads(water[20:20+size])
   self.assertEqual(info["animations"][0]["name"],"G01_WATER_RIPPLES_LOOP_6S")
+ def test_owner_render_approved_real_F01_F_glb(self):
+  p=MODEL_DIR/"f01-marble-cream-radial-wedge.glb"
+  d=p.read_bytes()
+  jl=struct.unpack_from("<I",d,12)[0]
+  j=json.loads(d[20:20+jl])
+  extras=j["nodes"][0]["extras"]
+  self.assertEqual(extras["module"],"F01-F")
+  self.assertTrue(extras["ownerRenderApproval"])
+  self.assertFalse(extras["ownerModelApproval"])
+  self.assertEqual(extras["radialBoundsM"],[9.15,10.15])
+  self.assertEqual(extras["subdivisions"],32)
+  self.assertAlmostEqual(extras["tileThicknessM"],.06)
+  self.assertAlmostEqual(extras["bevelM"],.004)
+  pbr=j["materials"][0]["pbrMetallicRoughness"]
+  self.assertEqual(pbr["metallicFactor"],0)
+  self.assertAlmostEqual(pbr["roughnessFactor"],.275)
+  self.assertFalse(extras["inGame"])
+  self.assertTrue(extras["noGameStateWrites"])
+  self.assertGreater(j["accessors"][0]["count"],300)
  def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
