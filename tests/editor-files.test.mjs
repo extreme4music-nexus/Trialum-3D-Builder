@@ -89,8 +89,21 @@ test("owner-render-approved F01-F has isolated Builder 3D review preset, never i
  assert.equal(p.schemaVersion,1);
  assert.equal(p.meta.gameplayWrites,0);
  assert.equal(p.meta.officialScene,false);
- assert.equal(ids.filter(x=>x==="f01-f-radial-wedge").length,1);
- assert.ok(ids.includes("f01-a"));
+ assert.equal(p.meta.ownerCorrectedPhysicalModelPass,false);
+ assert.equal(ids.filter(x=>x==="f01-f-radial-wedge").length,7);
+ assert.ok(ids.includes("g01-main-basin"));
+ assert.ok(ids.includes("g01-walkway-and-railings"));
+ assert.ok(ids.includes("g01-water-surfaces-animated"));
+ const tiles=p.instances.filter(x=>x.assetId==="f01-f-radial-wedge");
+ assert.equal(tiles.length,7);
+ for(let i=0;i<tiles.length;i++){
+   const idx=i+3,angle=idx*Math.PI*2/48;
+   assert.equal(tiles[i].id,"f01-f-pool-"+String(idx).padStart(2,"0"));
+   assert.ok(Math.abs(tiles[i].position[0]-7.2*Math.cos(angle))<1e-7);
+   assert.ok(Math.abs(tiles[i].position[2]-7.2*Math.sin(angle))<1e-7);
+   assert.ok(Math.abs(tiles[i].rotationY+angle)<1e-9);
+   assert.equal(tiles[i].position[1],.192);
+ }
  assert.match(file("index.html"),/value="f01-f"/);
  assert.match(file("src/main.js"),/"f01-f":"trialum-f01-f-radial-wedge-review.json"/);
 });
