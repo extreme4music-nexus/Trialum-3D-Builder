@@ -44,3 +44,11 @@ JSON ↓ презема само распоред. ZIP ↓ го содржи JSO
 - **docs/SECURITY.md** — ограничувања, сигурносни граници, локално чување.
 
 Ова е независен билдeр за дизајн; не е издание на Trialum Classic/3D или Google Play. Нема реклами, акаунти, серверски операции, игровни залихи, AI меморија или јавна синхронизација.
+
+## Директно GitHub ↓ / GitHub ↑
+
+Со **Python 3** серверот `START-BUILDER-WINDOWS.bat` можеш преку две копчиња да повлечеш и прикачиш *само Builder дизајни*. За работа на компјутерот е потребно Git, клонирано Builder репо (со origin кон `extreme4music-nexus/Trialum-3D-Builder`) и претходно поставена автентикација преку GitHub Desktop, Git Credential Manager или SSH. Билдерот не бара и не чува GitHub лозинки/токени.
+
+**Редослед:** Зачувај → избери корен на клонираното репо → GitHub ↑ (локален commit + push). За нови фајлови користи GitHub ↓ (само ако немаш локални незачувани Git измени), потоа освежи Edge. Секој Push бара експлицитна потврда. Само `projects/`, `assets/models/` и `assets/catalog.json` смеат да се комитираат од копчето. `GitHub ↑` не прави merge во главната Trialum игра и не објавува Android build.
+
+Ако работиш преку Node fallback, GitHub копчињата не се достапни; користи GitHub Desktop или инсталирај Python 3. GitHub Push може да откаже доколку локалниот Git нема автентикација; во тој случај постави Git Credential Manager преку GitHub Desktop. За конфликт, не се користи force push.
