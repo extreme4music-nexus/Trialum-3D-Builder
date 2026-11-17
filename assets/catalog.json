@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum original F01 GLB material and editable prototype library",
+  "name": "Trialum original GLB catalog — F01, Atrium, Warehouse, two annexes, Greenhouse, G01, Aquaglow, B1",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -308,6 +308,424 @@
       "version": 1,
       "source": "Trialum S7 original F01-E corner generator, owner approval pending",
       "approval": "GENERATOR MIRRORED; CI/OWNER REVIEW PENDING"
+    },
+    {
+      "id": "agro-atrium",
+      "name": "Агро лоби · оригинален атриум",
+      "category": "Агро лоби · GLB",
+      "src": "assets/models/atrium.glb",
+      "dimensions": [
+        14,
+        6.2,
+        18
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S1 original scene GLB",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-warehouse-shell",
+      "name": "Главен магацин · вистинска GLB просторија",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/warehouse-shell.glb",
+      "dimensions": [
+        18,
+        6.5,
+        36
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S4 original shell",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-smart-rack",
+      "name": "Паметен рафт",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/smart-storage-rack.glb",
+      "dimensions": [
+        2,
+        3,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S4 rack",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-cold-locker",
+      "name": "Ладилник · паметен орман",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/cold-locker.glb",
+      "dimensions": [
+        1.6,
+        2.4,
+        1.2
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S4 locker",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-cargo-crates",
+      "name": "Кутии и контејнери за храна",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/cargo-crates.glb",
+      "dimensions": [
+        2,
+        1.5,
+        1.5
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S4 cargo",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-conveyor-sorter",
+      "name": "Транспортер и сортирање",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/conveyor-sorter.glb",
+      "dimensions": [
+        4,
+        1.5,
+        1.6
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S4 conveyor",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-inventory-kiosk",
+      "name": "Холографски магацински киоск",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/holo-inventory-kiosk.glb",
+      "dimensions": [
+        1.7,
+        2.8,
+        1.2
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S4 inventory kiosk",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-mini-transporter",
+      "name": "Мал транспортен робот",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/mini-transporter.glb",
+      "dimensions": [
+        1.2,
+        0.8,
+        0.9
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S4 transporter",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-cold-annex-shell",
+      "name": "Разладна комора · физичка соба",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/food-cold-annex-shell.glb",
+      "dimensions": [
+        4.4,
+        4.3,
+        6.7
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "Builder derived GLB from canonical S5 runtime geometry; owner review pending",
+      "approval": "DERIVED_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "food-packing-annex-shell",
+      "name": "Пакување · физичка соба",
+      "category": "Стовариште · GLB",
+      "src": "assets/models/food-packing-annex-shell.glb",
+      "dimensions": [
+        4.4,
+        4.3,
+        6.7
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "Builder derived GLB from canonical S5 runtime geometry; owner review pending",
+      "approval": "DERIVED_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "greenhouse-shell",
+      "name": "Стаклена градина · цела 3D обвивка",
+      "category": "Стаклена градина · GLB",
+      "src": "assets/models/greenhouse-shell.glb",
+      "dimensions": [
+        82,
+        12.5,
+        104
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S7 original structural shell",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "greenhouse-floor",
+      "name": "Градина · издвоен поден GLB",
+      "category": "Стаклена градина · GLB",
+      "src": "assets/models/greenhouse-floor-shell.glb",
+      "dimensions": [
+        82,
+        0.5,
+        104
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S7 floor component; alternative to full shell",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "greenhouse-glass-roof",
+      "name": "Градина · издвоен стаклен кров",
+      "category": "Стаклена градина · GLB",
+      "src": "assets/models/greenhouse-glass-roof-shell.glb",
+      "dimensions": [
+        82,
+        12.5,
+        104
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical S7 roof component; alternative to full shell",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "g01-main-basin",
+      "name": "G01 главен базен",
+      "category": "G01 · водно јадро",
+      "src": "assets/models/g01-main-basin.glb",
+      "dimensions": [
+        13.4,
+        2,
+        13.4
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "S7 G01 candidate source; owner visual pending",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "g01-satellite-basins",
+      "name": "G01 три помошни базени",
+      "category": "G01 · водно јадро",
+      "src": "assets/models/g01-satellite-basins.glb",
+      "dimensions": [
+        26,
+        2,
+        18
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "S7 G01 candidate source; owner visual pending",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "g01-walkway-and-railings",
+      "name": "G01 пешачки патеки и огради",
+      "category": "G01 · водно јадро",
+      "src": "assets/models/g01-walkway-and-railings.glb",
+      "dimensions": [
+        19,
+        2,
+        19
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "S7 G01 candidate source; owner visual pending",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "g01-crossing-bridge",
+      "name": "G01 премин преку водата",
+      "category": "G01 · водно јадро",
+      "src": "assets/models/g01-crossing-bridge.glb",
+      "dimensions": [
+        15,
+        2,
+        4
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "S7 G01 candidate source; owner visual pending",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "g01-visual-service-pumps",
+      "name": "G01 сервисни пумпи и филтри",
+      "category": "G01 · водно јадро",
+      "src": "assets/models/g01-visual-service-pumps.glb",
+      "dimensions": [
+        28,
+        2.5,
+        6
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "S7 G01 candidate source; owner visual pending",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "g01-water-surfaces-animated",
+      "name": "G01 анимирани водни површини (GLB)",
+      "category": "G01 · водно јадро",
+      "src": "assets/models/g01-water-surfaces-animated.glb",
+      "dimensions": [
+        26,
+        0.4,
+        18
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "S7 animated morph-target model; preview requires animation playback",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "aquaglow-sprout",
+      "name": "Aquaglow · никулец",
+      "category": "Aquaglow · развојни GLB",
+      "src": "assets/models/aquaglow-sprout.glb",
+      "dimensions": [
+        0.5,
+        0.3,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical Aquaglow visual stage ONLY",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "aquaglow-young",
+      "name": "Aquaglow · младо растение",
+      "category": "Aquaglow · развојни GLB",
+      "src": "assets/models/aquaglow-young.glb",
+      "dimensions": [
+        0.65,
+        0.7,
+        0.65
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical Aquaglow visual stage ONLY",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "aquaglow-growing",
+      "name": "Aquaglow · растење",
+      "category": "Aquaglow · развојни GLB",
+      "src": "assets/models/aquaglow-growing.glb",
+      "dimensions": [
+        0.7,
+        1.1,
+        0.7
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical Aquaglow visual stage ONLY",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "aquaglow-mature",
+      "name": "Aquaglow · зрело растение",
+      "category": "Aquaglow · развојни GLB",
+      "src": "assets/models/aquaglow-mature.glb",
+      "dimensions": [
+        0.95,
+        1.6,
+        0.95
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical Aquaglow visual stage ONLY",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "aquaglow-weakened",
+      "name": "Aquaglow · ослабено",
+      "category": "Aquaglow · развојни GLB",
+      "src": "assets/models/aquaglow-weakened.glb",
+      "dimensions": [
+        0.7,
+        1.1,
+        0.7
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical Aquaglow visual stage ONLY",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "aquaglow-dead",
+      "name": "Aquaglow · мртво растение",
+      "category": "Aquaglow · развојни GLB",
+      "src": "assets/models/aquaglow-dead.glb",
+      "dimensions": [
+        0.7,
+        1.1,
+        0.7
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "canonical Aquaglow visual stage ONLY",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "b1-pilot-room",
+      "name": "B1 лабораторија · историски тестен GLB",
+      "category": "B1 · пилот GLB",
+      "src": "assets/models/pilot-room.glb",
+      "dimensions": [
+        6,
+        2.8,
+        6
+      ],
+      "placement": "floor",
+      "origin": "Trialum authored world origin; approximate catalog bounds for UI",
+      "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
+      "note": "original B1 GLB whitebox test; not a production room",
+      "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
     }
-  ]
+  ],
+  "assetLibraryVersion": "2026-11-17-all-known-glb-generators-v1",
+  "genuineGlbCount": 41
 }
