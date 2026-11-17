@@ -647,6 +647,31 @@ function handleKey(e){
  const key=e.key.toLowerCase(),map={v:"select",p:"place",g:"move",r:"rotate"};
  if(map[key]){e.preventDefault();setTool(map[key]);}
 }
+
+// Explicit local GitHub sync. Browser never receives credentials or runs arbitrary commands.
+let gitToken="";
+async function githubSync(action){
+ if(!["pull","publish"].includes(action))return;
+ if(state.dirty){say("Прво Зачувај ги измените во клонираната Builder папка.",true);return;}
+ const btn=$("git"+(action==="pull"?"Pull":"Publish"));
+ btn.disabled=true;
+ try{
+  const statusResponse=await fetch("./api/git-status",{cache:"no-store"});
+  const status=await statusResponse.json();
+  if(!status.ok)throw Error(status.error||"Локалниот Git сервис не е достапен");
+  gitToken=status.csrf;
+  if(!confirm(action==="pull"?
+    "GitHub ↓ ќе направи Pull (ff-only) од Builder main. Продолжи?":
+    "GitHub ↑ ќе ги објави зачуваните projects/ и GLB дизајни на Builder main. Продолжи?"))return;
+  const res=await fetch("./api/git-"+action,{method:"POST",headers:{"Content-Type":"application/json","X-Trialum-CSRF":gitToken},body:"{}"});
+  const data=await res.json();
+  if(!data.ok)throw Error(data.error||"GitHub sync не успеа");
+  say("GitHub "+(action==="pull"?"Pull":"Push")+" успешно: "+data.message);
+  if(action==="pull")say("GitHub Pull заврши. Освежи го Builder за новиот каталог.");
+ }catch(e){say("GitHub: "+e.message+" · користи Python сервер и поставена GitHub Desktop/Git Credential Manager автентикација.",true)}
+ finally{btn.disabled=false;}
+}
+
 function addListeners(){
  document.querySelectorAll("[data-tool]").forEach(b=>b.addEventListener("click",()=>setTool(b.dataset.tool)));
  ui.assetSearch.addEventListener("input",renderCatalogue);
@@ -660,6 +685,8 @@ function addListeners(){
   e.target.value="";
  };
  $("saveProject").onclick=saveProjectToRepo;
+ $("gitPull").onclick=()=>githubSync("pull");
+ $("gitPublish").onclick=()=>githubSync("publish");
  $("exportProject").onclick=()=>{downloadJson(collectProject(),slug(state.project.name)+".json");say("JSON проектот е преземен. Зачувај го во projects/.")};
  $("exportBundle").onclick=exportBundle;
  $("importGlb").onclick=()=>ui.glbFileInput.click();
