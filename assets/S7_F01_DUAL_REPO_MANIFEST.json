@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-17",
+  "sourceRepository": "extreme4music-nexus/Trialum",
+  "sourceBranch": "feature/lw-d-s7-f01-e-cream-marble-corner-20261117",
+  "targetRepository": "extreme4music-nexus/Trialum-3D-Builder",
+  "targetBranch": "main",
+  "gameMainModified": false,
+  "productionProject": "projects/trialum-s7-f01-production.json",
+  "assetFamily": "S7-F01",
+  "sourceGeneratorFiles": [
+    "tools/b1/build-s7-f01-marble.py",
+    "tools/b1/build-s7-f01-half.py",
+    "tools/b1/build-s7-f01-quarter.py",
+    "tools/b1/build-s7-f01-edge.py",
+    "tools/b1/build-s7-f01-corner.py"
+  ],
+  "modelCountExpected": 15,
+  "modelSetStatus": "11_ALREADY_PRESENT_F01_A_B_C_D;4_F01_E_GENERATION_PENDING_GITHUB_ACTIONS_BINARY_VERIFICATION",
+  "ownerApprovalStatus": "F01_A_OWNER_PASS;F01_B_C_D_E_PENDING_OWNER_REVIEW",
+  "scope": "F01 ONLY — other prior 3D GLB assets are not yet inventoried nor claimed synced",
+  "models": [
+    {
+      "id": "f01-a",
+      "path": "assets/models/f01-marble-cream-full.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PASS"
+    },
+    {
+      "id": "f01-b1",
+      "path": "assets/models/f01-marble-cream-half-first.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-b2",
+      "path": "assets/models/f01-marble-cream-half-second.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-c1",
+      "path": "assets/models/f01-marble-cream-quarter-c1.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-c2",
+      "path": "assets/models/f01-marble-cream-quarter-c2.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-c3",
+      "path": "assets/models/f01-marble-cream-quarter-c3.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-c4",
+      "path": "assets/models/f01-marble-cream-quarter-c4.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-d-north",
+      "path": "assets/models/f01-marble-cream-edge-north.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-d-south",
+      "path": "assets/models/f01-marble-cream-edge-south.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-d-east",
+      "path": "assets/models/f01-marble-cream-edge-east.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-d-west",
+      "path": "assets/models/f01-marble-cream-edge-west.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "BINARY_PREVIOUSLY_COMMITTED_IN_BUILDER",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-e-north-west",
+      "path": "assets/models/f01-marble-cream-corner-north-west.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-e-north-east",
+      "path": "assets/models/f01-marble-cream-corner-north-east.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-e-south-east",
+      "path": "assets/models/f01-marble-cream-corner-south-east.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-e-south-west",
+      "path": "assets/models/f01-marble-cream-corner-south-west.glb",
+      "source": "canonical Trialum S7 generators",
+      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "ownerVisual": "PENDING"
+    }
+  ]
+}
