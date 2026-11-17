@@ -654,6 +654,7 @@ function addListeners(){
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
  $("openProject").onclick=()=>ui.projectFileInput.click();
+ $("openS7Project").onclick=async()=>{try{const r=await fetch("./projects/trialum-s7-f01-production.json",{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);useProject(await r.json(),true);say("Вчитан активниот S7 F01 проект со 70 оригинални 3D модули.")}catch(e){say("S7 проектот не е достапен: "+e.message,true)}};
  ui.projectFileInput.onchange=async e=>{
   try{await fileOpen(e.target.files?.[0])}catch(err){say("Неправилен проект: "+err.message,true)}
   e.target.value="";
@@ -734,7 +735,7 @@ async function startup(){
  ])if(!state.registry.has(item.id))state.registry.set(item.id,item);
  let data;let recoveredLocalDraft=false;
  try{const saved=localStorage.getItem(LOCAL_AUTOSAVE);if(saved){data=JSON.parse(saved);recoveredLocalDraft=true;}}catch{}
- if(!data)try{const r=await fetch("./projects/example-room.json");if(r.ok)data=await r.json()}catch{}
+ if(!data)try{const r=await fetch("./projects/trialum-s7-f01-production.json");if(r.ok)data=await r.json()}catch{}
  try{state.project=data?sanitizeProject(data):createProject()}catch{state.project=createProject()}
  for(const asset of state.project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=state.project.name;
