@@ -272,7 +272,8 @@ function undo(direction){
 }
 function updateCounters(){
  $("objectCounter").textContent=state.project.instances.length;
- $("assetCounter").textContent=state.registry.size+" модели";
+ const all=[...state.registry.values()],real=all.filter(a=>a.src&&(a.src.endsWith(".glb")||a.src.startsWith("local:"))).length;
+ $("assetCounter").textContent=real+" GLB · "+(all.length-real)+" макети";
 }
 function refreshObjectList(){
  ui.objectList.replaceChildren();
