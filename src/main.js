@@ -684,6 +684,7 @@ const ROOM_PRESETS=Object.freeze({
  packing:"trialum-packing-room.json",
  greenhouse:"trialum-agro-greenhouse.json",
  g01:"trialum-g01-water-core.json",
+ "f01-f":"trialum-f01-f-radial-wedge-review.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
