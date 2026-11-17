@@ -727,30 +727,30 @@
     },
     {
       "id": "f01-f-radial-wedge",
-      "name": "F01-F · Заоблена мермерна плочка · 1m лак",
+      "name": "F01-F · МАЛА закривена плочка за G01 базен (1 од 48)",
       "category": "Мермер F01 · оригинални GLB",
       "src": "assets/models/f01-marble-cream-radial-wedge.glb",
       "dimensions": [
-        1.4129,
+        1.061231,
         0.06,
-        1.4129
+        1.064342
       ],
       "boundsMinLocal": [
-        -0.6702,
+        -0.061231,
         0,
-        0
+        0.002805
       ],
       "boundsMaxLocal": [
-        0.7428,
+        0.999999,
         0.06,
-        1.4129
+        1.067147
       ],
       "placement": "floor",
-      "origin": "local (0,0,0) = inner arc start; G01 world anchor provided in GLB metadata",
-      "phase": "radial wedge; r=9.15..10.15m; center 45 degrees",
-      "version": 1,
-      "source": "Trialum S7-F01-F owner-render-approved 32-segment real GLB generator; frozen original F01-A PBR",
-      "approval": "OWNER RENDER PASS · GLB MODEL OWNER REVIEW PENDING",
+      "origin": "local pivot = start of inner arc r=7.2m; repeated around actual G01 pool with Y rotation -theta",
+      "phase": "48 individual movable ~1m tiles around r=7.2..8.2m beside pool railing; 7-piece safe preview",
+      "version": 2,
+      "source": "CORRECTED owner feedback: 24-subdivision one-piece glTF2, 6mm grout, 4mm bevel; frozen original F01-A PBR",
+      "approval": "PREVIOUS OVERSIZED WEDGE REJECTED; CORRECTED 7x POOLSIDE REVIEW PENDING",
       "noGameStateWrites": true
     }
   ],
