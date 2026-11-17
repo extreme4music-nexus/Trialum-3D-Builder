@@ -41,13 +41,13 @@ jobs:
           npm test
           python3 -m py_compile scripts/setup.py scripts/server.py tools/b1/*.py
 
-      - name: Reproduce EXACT original F01-A/B/C/D real GLB assets and vendor pinned MIT Three.js locally
+      - name: Reproduce EXACT original F01-A/B/C/D/E real GLB assets and vendor pinned MIT Three.js locally
         shell: bash
         run: |
           set -euo pipefail
           python3 scripts/setup.py
           python3 tests/models.test.py
-          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 11
+          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 15
           test -f vendor/three.module.js
           test -f vendor/three.core.js
           test -f vendor/addons/loaders/GLTFLoader.js
@@ -64,9 +64,9 @@ jobs:
           git config user.email "trialum-builder-bot@users.noreply.github.com"
           git add assets/models vendor
           if git diff --staged --quiet; then
-            echo "All 11 original GLBs and pinned Three modules already current."
+            echo "All 15 original GLBs and pinned Three modules already current."
           else
-            git commit -m "build(builder): ship 11 original F01 GLBs and locally vendored Three.js 0.180.0 MIT"
+            git commit -m "build(builder): ship 15 original F01 GLBs and locally vendored Three.js 0.180.0 MIT"
             git push origin HEAD:main
             echo "Committed authoring binaries to Builder main. Owner should Pull in GitHub Desktop."
           fi
