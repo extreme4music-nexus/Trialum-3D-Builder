@@ -53,10 +53,12 @@ class GLBModels(unittest.TestCase):
   j=json.loads(d[20:20+jl])
   extras=j["nodes"][0]["extras"]
   self.assertEqual(extras["module"],"F01-F")
-  self.assertTrue(extras["ownerRenderApproval"])
-  self.assertFalse(extras["ownerModelApproval"])
-  self.assertEqual(extras["radialBoundsM"],[9.15,10.15])
-  self.assertEqual(extras["subdivisions"],32)
+  self.assertTrue(extras["ownerApprovedConceptRender"])
+  self.assertFalse(extras["ownerCorrectedModelApproval"])
+  self.assertEqual(extras["moduleRadialBoundsM"],[7.2,8.2])
+  self.assertEqual(extras["subdivisions"],24)
+  self.assertTrue(extras["poolsideNotOutboard"])
+  self.assertTrue(extras["previousOversizedStandaloneRejected"])
   self.assertAlmostEqual(extras["tileThicknessM"],.06)
   self.assertAlmostEqual(extras["bevelM"],.004)
   pbr=j["materials"][0]["pbrMetallicRoughness"]
