@@ -20,13 +20,14 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
  assert.doesNotMatch(source,/fetch\([^)]*\/api\/(?:player|social|inventory)/i);
  assert.doesNotMatch(html,/three\.js.*cdn|http:\/\/[a-z]/i);
 });
-test("catalogue is auditable; 11 true original F01 GLB model references",()=>{
+test("catalogue is auditable; 15 true original F01 GLB model references",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(glbs.length,11);
- assert.equal(new Set(glbs.map(x=>x.id)).size,11);
+ assert.equal(glbs.length,15);
+ assert.equal(new Set(glbs.map(x=>x.id)).size,15);
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
+ assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
 });
 test("starter is localhost only and repo contains standalone handoff docs",()=>{
  const py=file("scripts/server.py"),node=file("scripts/server.mjs");
@@ -34,4 +35,18 @@ test("starter is localhost only and repo contains standalone handoff docs",()=>{
  assert.match(node,/127\.0\.0\.1/);
  assert.match(file("START-BUILDER-WINDOWS.bat"),/START|server\.py|server\.mjs/);
  assert.ok(fs.existsSync("docs/HANDOFF.md"));
+});
+
+test("official S7 builder project contains original GLB modules, not demo primitives",()=>{
+ const p=JSON.parse(file("projects/trialum-s7-f01-production.json"));
+ const c=JSON.parse(file("assets/catalog.json"));
+ const ids=new Set(c.assets.map(a=>a.id));
+ assert.equal(p.schemaVersion,1);
+ assert.equal(p.projectId,"trialum-s7-f01-greenhouse-production-20261117");
+ assert.equal(p.instances.length,70);
+ assert.ok(p.instances.every(i=>ids.has(i.assetId)));
+ assert.ok(p.instances.every(i=>i.assetId.startsWith("f01-")));
+ assert.equal(p.meta.gameplayWrites,0);
+ assert.equal(p.meta.officialScene,false);
+ assert.match(file("src/main.js"),/openS7Project/);
 });
