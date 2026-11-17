@@ -10,9 +10,11 @@ const mime={".html":"text/html; charset=utf-8",".js":"text/javascript; charset=u
 ".jpg":"image/jpeg",".jpeg":"image/jpeg",".svg":"image/svg+xml",".txt":"text/plain; charset=utf-8",".md":"text/markdown; charset=utf-8"};
 const importmapHash=async()=>{
  const page=await readFile(path.join(root,"index.html"),"utf8");
- const match=page.match(/<script\\s+type=["\u0027]importmap["\u0027]\\s*>([\\s\\S]*?)<\\/script>/i);
- if(!match)throw Error("Builder importmap missing");
- return "\u0027sha256-"+createHash("sha256").update(match[1],"utf8").digest("base64")+"\u0027";
+ const tag='<script type="importmap">';
+ const start=page.indexOf(tag),end=start<0?-1:page.indexOf("</script>",start+tag.length);
+ if(end<0)throw Error("Builder importmap missing");
+ const inlineMap=page.slice(start+tag.length,end);
+ return "\u0027sha256-"+createHash("sha256").update(inlineMap,"utf8").digest("base64")+"\u0027";
 };
 const server=http.createServer(async(req,res)=>{
  try{
