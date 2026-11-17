@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bootstrap editor's PINNED MIT Three.js dependencies and REAL F01 A-D GLBs.
+"""Bootstrap editor's PINNED MIT Three.js dependencies and REAL F01 A-E GLBs.
 
 - Offline-ready after FIRST setup; GitHub Actions checks in all generated assets.
 - No tokens, no remote writes, no private GitHub API, no gameplay writes.
@@ -133,7 +133,7 @@ def build_original_glbs():
         raise RuntimeError("F01-A owner-approved original GLB or texture has drifted")
     catalog=json.loads((ROOT/"assets/catalog.json").read_text(encoding="utf-8"))
     missing=[x["src"] for x in catalog.get("assets",[])
-       if isinstance(x.get("src"),str) and x["src"].endswith(".glb") and not (ROOT/x["src"]).is_file()]
+       if isinstance(x.get("src"),str) and x["src"].endswith(".glb") and x["src"].split("/")[-1] in GLB_NAMES and not (ROOT/x["src"]).is_file()]
     if missing:raise RuntimeError("Missing catalogue files: "+repr(missing))
     print("[assets] checked 15 original real GLBs (A/B/C/D/E), exact A texture/hash PASS.")
 
