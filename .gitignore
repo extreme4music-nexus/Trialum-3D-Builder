@@ -11,3 +11,7 @@ dist/
 *.tmp
 *.bak
 # Real authored glTF2 assets are intentionally version-controlled under assets/models/
+
+# Deterministic rebuild workdir: NEVER commit generated intermediate copies
+build/
+.venv/
