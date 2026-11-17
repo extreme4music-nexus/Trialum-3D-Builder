@@ -1,10 +1,10 @@
 /* Builder -> Living Spaces room layout bridge. Data only, NO direct gameplay writes. */
 import {sanitizeProject} from "./project.js";
-export function exportLivingSpace(raw,ownerId="owner-local",roomId="home-main"){
+export function exportLivingSpace(raw,catalogueAssets=[],ownerId="owner-local",roomId="home-main"){
  const p=sanitizeProject(raw),width=p.room.width,depth=p.room.depth;
  if(!ownerId||!roomId)throw Error("Owner and room required");
  const ids=new Set();const items=[];
- const catalogue=new Map((p.assets||[]).map(a=>[a.id,a]));
+ const catalogue=new Map([...(Array.isArray(catalogueAssets)?catalogueAssets:[]),...(p.assets||[])].map(a=>[a.id,a]));
  for(const object of p.instances){
   if(ids.has(object.id))throw Error("Duplicate instance");
   ids.add(object.id);
