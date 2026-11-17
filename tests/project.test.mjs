@@ -36,5 +36,5 @@ test("grid snapping and non-overlapping adjacent floor tiles",()=>{
 });
 test("non-Latin scene title produces safe Git-tracked filename",()=>{
  assert.equal(slug("Floor room 01"),"floor-room-01");
- assert.equal(slug("Мој проект"),"scene");
+ assert.equal(slug("Мој проект"),"moj-proekt");
 });
