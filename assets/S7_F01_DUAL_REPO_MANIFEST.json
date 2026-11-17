@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "updated": "2026-11-17",
   "sourceRepository": "extreme4music-nexus/Trialum",
-  "sourceBranch": "feature/lw-d-s7-f01-e-cream-marble-corner-20261117",
+  "sourceBranch": "feature/lw-d-s7-f01-f-radial-wedge-render-review-20261117",
   "targetRepository": "extreme4music-nexus/Trialum-3D-Builder",
   "targetBranch": "main",
   "gameMainModified": false,
@@ -13,12 +13,13 @@
     "tools/b1/build-s7-f01-half.py",
     "tools/b1/build-s7-f01-quarter.py",
     "tools/b1/build-s7-f01-edge.py",
-    "tools/b1/build-s7-f01-corner.py"
+    "tools/b1/build-s7-f01-corner.py",
+    "tools/b1/build-s7-f01-radial-wedge.py"
   ],
-  "modelCountExpected": 15,
-  "modelSetStatus": "15_BINARY_FILES_PRESENT_IN_BUILDER;F01_E_GITHUB_SHA_CI_CHECK_REQUIRED",
-  "ownerApprovalStatus": "F01_A_OWNER_PASS;F01_B_C_D_E_PENDING_OWNER_REVIEW",
-  "scope": "F01 ONLY — other prior 3D GLB assets are not yet inventoried nor claimed synced",
+  "modelCountExpected": 16,
+  "modelSetStatus": "16_REAL_F01_GLBS_IN_BUILDER_MAIN;F01_F_IDENTICAL_BINARY_GAME_FEATURE_SHA256_VERIFIED;OWNER_MODEL_QA_PENDING",
+  "ownerApprovalStatus": "F01_A_OWNER_MODEL_PASS;F01_F_OWNER_RENDER_PASS_MODEL_VISUAL_QA_PENDING;F01_B_C_D_E_OWNER_VISUAL_REVIEW_PENDING",
+  "scope": "F01 original modular marble family A-F. Other 26 historical/derived GLBs are tracked in assets/TRIALUM_LEGACY_GLB_MANIFEST.json; 42 total Builder GLBs.",
   "models": [
     {
       "id": "f01-a",
@@ -124,6 +125,32 @@
       "source": "canonical Trialum S7 generators",
       "status": "BINARY_PRESENT_IN_BUILDER;OWNER_VISUAL_PENDING",
       "ownerVisual": "PENDING"
+    },
+    {
+      "id": "f01-f-radial-wedge",
+      "path": "assets/models/f01-marble-cream-radial-wedge.glb",
+      "source": "same deterministic generator committed in game PR #96 and Builder main",
+      "status": "REAL_GLB_2_REPOS_SAME_GIT_BLOB_SHA_CI_PASS_OWNER_MODEL_REVIEW_PENDING",
+      "ownerVisual": "RENDER PASS; MODEL ON-DEVICE PENDING",
+      "sha256": "0b76aaf4870dbb06ded35a961330f7337a172c68fdd0b0092d2e7db78443196c",
+      "size": 89948,
+      "gitBlobSha": "2735c84d70220bcf69b391debf3d01f57d85f07f"
     }
-  ]
+  ],
+  "latestModule": {
+    "assetId": "S7-FLOOR-F01-F",
+    "file": "assets/models/f01-marble-cream-radial-wedge.glb",
+    "builderModelCountTotal": 42,
+    "gameFeatureBranch": "feature/lw-d-s7-f01-f-radial-wedge-render-review-20261117",
+    "binarySha256": "0b76aaf4870dbb06ded35a961330f7337a172c68fdd0b0092d2e7db78443196c",
+    "gitBlobSha": "2735c84d70220bcf69b391debf3d01f57d85f07f",
+    "sizeBytes": 89948,
+    "modelGenerator": "tools/b1/build-s7-f01-radial-wedge.py",
+    "spec": "docs/blueprints/S7_F01_F_RADIAL_WEDGE_PREVIEW_SPEC_20261117.json",
+    "ownerRenderPass": true,
+    "ownerModelPass": false,
+    "glbBuilt": true,
+    "dualRepoBinaryIdentical": true,
+    "gameplayWrites": 0
+  }
 }
