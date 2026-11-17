@@ -244,6 +244,70 @@
       "placement": "floor",
       "color": "#7ca276",
       "source": "designer placeholder ONLY"
+    },
+    {
+      "id": "f01-e-north-west",
+      "name": "F01-E · Мермерен агол NW",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-corner-north-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "F01-A tile bottom-left pivot",
+      "version": 1,
+      "source": "Trialum S7 original F01-E corner generator, owner approval pending",
+      "approval": "GENERATOR MIRRORED; CI/OWNER REVIEW PENDING"
+    },
+    {
+      "id": "f01-e-north-east",
+      "name": "F01-E · Мермерен агол NE",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-corner-north-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "F01-A tile bottom-left pivot",
+      "version": 1,
+      "source": "Trialum S7 original F01-E corner generator, owner approval pending",
+      "approval": "GENERATOR MIRRORED; CI/OWNER REVIEW PENDING"
+    },
+    {
+      "id": "f01-e-south-east",
+      "name": "F01-E · Мермерен агол SE",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-corner-south-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "F01-A tile bottom-left pivot",
+      "version": 1,
+      "source": "Trialum S7 original F01-E corner generator, owner approval pending",
+      "approval": "GENERATOR MIRRORED; CI/OWNER REVIEW PENDING"
+    },
+    {
+      "id": "f01-e-south-west",
+      "name": "F01-E · Мермерен агол SW",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-corner-south-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "F01-A tile bottom-left pivot",
+      "version": 1,
+      "source": "Trialum S7 original F01-E corner generator, owner approval pending",
+      "approval": "GENERATOR MIRRORED; CI/OWNER REVIEW PENDING"
     }
   ]
 }
