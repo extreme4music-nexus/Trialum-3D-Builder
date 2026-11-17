@@ -1,4 +1,7 @@
 # TRIALUM 3D WORLD BUILDER — COMPLETE RECOVERY HANDOFF
+
+> **LATEST — 17 NOV 2026, supersedes historical 11/15-model notes below:** Builder main now tracks **41 physically committed real GLB binaries** (15 F01 + 24 original historical Trialum scene assets + 2 newly converted S5 annex shell GLBs), plus seven editable project JSONs. Six real-room presets are available via the top "Избери 3D просторија…" menu; the S7 F01 70-element workspace remains accessible. Build scripts `scripts/setup.py` (F01) and `scripts/build_all_assets.py` (other 26) with `tools/b1/package.json` pinned original tools; catalog, source recipes, SHA manifests and binaries are in Builder. **Read [current 41-GLB handoff](ALL_KNOWN_GLB_ROOMS_HANDOFF_20261117.md) first.** The old 11-model count, missing F01-E claim and external-ZIP notes below are HISTORICAL. Owner device/visual QA is still pending; no Trialum game main/Play changes.
+
 17 November 2026 · Builder v0.1 · Owner-directed development; repository made PUBLIC by owner for Actions
 
 ## Goal and ownership
