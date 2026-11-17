@@ -34,7 +34,7 @@ const server=http.createServer(async(req,res)=>{
   res.writeHead(200,{"Content-Type":mime[ext],"Content-Length":bytes.length,
    "Cache-Control":"no-cache","X-Content-Type-Options":"nosniff",
    "Referrer-Policy":"no-referrer","Cross-Origin-Resource-Policy":"same-origin",
-   `Content-Security-Policy`:`default-src 'self' blob: data:; script-src 'self' ${await importmapHash()}; style-src 'self' 'unsafe-inline'; connect-src 'self' blob:; img-src 'self' blob: data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'`});
+   "Content-Security-Policy":`default-src 'self' blob: data:; script-src 'self' ${await importmapHash()}; style-src 'self' 'unsafe-inline'; connect-src 'self' blob:; img-src 'self' blob: data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'`});
   res.end(req.method==="HEAD"?undefined:bytes);
  }catch{res.writeHead(404,{"Content-Type":"text/plain"});res.end("Not found");}
 });
