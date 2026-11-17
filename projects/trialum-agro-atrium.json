@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-agro-atrium-original-glb",
+  "name": "Агро лоби · оригинално 3D",
+  "description": "Original Trialum S1 Agro Atrium scene, 3 navigation portals; one real glTF2 GLB. Owner may edit saved copy only. No live gameplay.",
+  "room": {
+    "width": 14,
+    "depth": 18,
+    "height": 6.2,
+    "gridSize": 0.5,
+    "showWalls": false,
+    "floorColor": "#28443f",
+    "wallColor": "#4b625b"
+  },
+  "instances": [
+    {
+      "id": "agro-atrium-root",
+      "assetId": "agro-atrium",
+      "label": "agro-atrium",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical original S1 atrium/glb. This root holds original 3 door semantic anchors; hide it for redesign."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
