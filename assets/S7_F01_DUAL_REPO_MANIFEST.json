@@ -16,7 +16,7 @@
     "tools/b1/build-s7-f01-corner.py"
   ],
   "modelCountExpected": 15,
-  "modelSetStatus": "11_ALREADY_PRESENT_F01_A_B_C_D;4_F01_E_GENERATION_PENDING_GITHUB_ACTIONS_BINARY_VERIFICATION",
+  "modelSetStatus": "15_BINARY_FILES_PRESENT_IN_BUILDER;F01_E_GITHUB_SHA_CI_CHECK_REQUIRED",
   "ownerApprovalStatus": "F01_A_OWNER_PASS;F01_B_C_D_E_PENDING_OWNER_REVIEW",
   "scope": "F01 ONLY — other prior 3D GLB assets are not yet inventoried nor claimed synced",
   "models": [
@@ -101,28 +101,28 @@
       "id": "f01-e-north-west",
       "path": "assets/models/f01-marble-cream-corner-north-west.glb",
       "source": "canonical Trialum S7 generators",
-      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "status": "BINARY_PRESENT_IN_BUILDER;OWNER_VISUAL_PENDING",
       "ownerVisual": "PENDING"
     },
     {
       "id": "f01-e-north-east",
       "path": "assets/models/f01-marble-cream-corner-north-east.glb",
       "source": "canonical Trialum S7 generators",
-      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "status": "BINARY_PRESENT_IN_BUILDER;OWNER_VISUAL_PENDING",
       "ownerVisual": "PENDING"
     },
     {
       "id": "f01-e-south-east",
       "path": "assets/models/f01-marble-cream-corner-south-east.glb",
       "source": "canonical Trialum S7 generators",
-      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "status": "BINARY_PRESENT_IN_BUILDER;OWNER_VISUAL_PENDING",
       "ownerVisual": "PENDING"
     },
     {
       "id": "f01-e-south-west",
       "path": "assets/models/f01-marble-cream-corner-south-west.glb",
       "source": "canonical Trialum S7 generators",
-      "status": "SOURCE_COMMITTED_BINARY_NOT_YET_VERIFIED",
+      "status": "BINARY_PRESENT_IN_BUILDER;OWNER_VISUAL_PENDING",
       "ownerVisual": "PENDING"
     }
   ]
