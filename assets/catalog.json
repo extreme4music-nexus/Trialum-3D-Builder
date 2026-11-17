@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "name": "Trialum original F01 GLB material and editable prototype library",
+  "units": "m",
+  "upAxis": "Y",
+  "assets": [
+    {
+      "id": "f01-a",
+      "name": "F01-A · Цела мермерна плочка",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-full.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": null,
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "OWNER VISUAL PASS"
+    },
+    {
+      "id": "f01-b1",
+      "name": "F01-B1 · Половина 1",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-half-first.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": 0,
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-b2",
+      "name": "F01-B2 · Половина 2",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-half-second.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": 0.5,
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-c1",
+      "name": "F01-C1 · Четвртина 1",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-quarter-c1.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": [
+        0,
+        0
+      ],
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-c2",
+      "name": "F01-C2 · Четвртина 2",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-quarter-c2.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": [
+        0.5,
+        0
+      ],
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-c3",
+      "name": "F01-C3 · Четвртина 3",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-quarter-c3.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": [
+        0,
+        0.5
+      ],
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-c4",
+      "name": "F01-C4 · Четвртина 4",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-quarter-c4.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": [
+        0.5,
+        0.5
+      ],
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-d-north",
+      "name": "F01-D · Завршен раб Север",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-edge-north.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": "north",
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-d-south",
+      "name": "F01-D · Завршен раб Југ",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-edge-south.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": "south",
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-d-east",
+      "name": "F01-D · Завршен раб Исток",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-edge-east.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": "east",
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "f01-d-west",
+      "name": "F01-D · Завршен раб Запад",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-edge-west.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "bottom-left",
+      "phase": "west",
+      "version": 1,
+      "source": "Trialum S7 original CI-verified GLB generators",
+      "approval": "CI PASS · owner visual review pending"
+    },
+    {
+      "id": "marker-lab",
+      "name": "Машина · пример",
+      "category": "Развојни макети",
+      "src": null,
+      "dimensions": [
+        1.4,
+        1.2,
+        0.9
+      ],
+      "placement": "floor",
+      "color": "#8bb9b1",
+      "source": "designer placeholder ONLY"
+    },
+    {
+      "id": "marker-wall",
+      "name": "Ѕиден панел · пример",
+      "category": "Развојни макети",
+      "src": null,
+      "dimensions": [
+        1,
+        1.2,
+        0.12
+      ],
+      "placement": "wall",
+      "color": "#b7cdbb",
+      "source": "designer placeholder ONLY"
+    },
+    {
+      "id": "marker-plant",
+      "name": "Растение · пример",
+      "category": "Развојни макети",
+      "src": null,
+      "dimensions": [
+        0.55,
+        1,
+        0.55
+      ],
+      "placement": "floor",
+      "color": "#7ca276",
+      "source": "designer placeholder ONLY"
+    }
+  ]
+}
