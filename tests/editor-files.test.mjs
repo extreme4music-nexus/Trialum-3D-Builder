@@ -28,7 +28,7 @@ test("catalogue contains all 42 historical and derived Trialum room GLBs",()=>{
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
  assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
- assert.ok(c.assets.some(x=>x.id==="f01-f-radial-wedge"&&x.approval.includes("RENDER PASS")));
+ assert.ok(c.assets.some(x=>x.id==="f01-f-radial-wedge"&&x.approval.includes("PREVIOUS OVERSIZED WEDGE REJECTED")&&x.approval.includes("POOLSIDE REVIEW PENDING")));
  for(const id of ["agro-atrium","food-warehouse-shell","food-cold-annex-shell","food-packing-annex-shell","greenhouse-shell","g01-main-basin","aquaglow-mature","b1-pilot-room"]){
   assert.ok(c.assets.some(x=>x.id===id),"Missing original or derived GLB: "+id);
  }
