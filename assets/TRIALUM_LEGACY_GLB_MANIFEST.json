@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-17",
+  "sourceRepository": "extreme4music-nexus/Trialum",
+  "sourceCommit": "b801808a5b219284d52c52a8ae8e643700c84478",
+  "renderStatus": "BINARY_CI_VERIFIED_OWNER_VISUAL_PENDING",
+  "visualOnly": true,
+  "gameplayWrites": false,
+  "newModels": 26,
+  "assets": [
+    {
+      "file": "aquaglow-dead.glb",
+      "src": "assets/models/aquaglow-dead.glb",
+      "sourceOutput": "build/g01-aquatic-review/aquaglow-dead.glb",
+      "size": 14448,
+      "sha256": "05bf8fa1a484a01568f8ddf66c363f8b99a865e0da68ab74fe1d2a7a5dc8fb30",
+      "meshes": 2,
+      "nodes": 4,
+      "animations": 0
+    },
+    {
+      "file": "aquaglow-growing.glb",
+      "src": "assets/models/aquaglow-growing.glb",
+      "sourceOutput": "build/g01-aquatic-review/aquaglow-growing.glb",
+      "size": 23616,
+      "sha256": "4a0ab98bdafe3750802b0abbf52bde0228b504e2719138a1132bd2e42a1c4305",
+      "meshes": 5,
+      "nodes": 7,
+      "animations": 0
+    },
+    {
+      "file": "aquaglow-mature.glb",
+      "src": "assets/models/aquaglow-mature.glb",
+      "sourceOutput": "build/g01-aquatic-review/aquaglow-mature.glb",
+      "size": 34652,
+      "sha256": "1d5e1b5f1a6c3fa1cb30cee8cd703e15fa1e08e78287ac5d2485e6242489474e",
+      "meshes": 5,
+      "nodes": 7,
+      "animations": 0
+    },
+    {
+      "file": "aquaglow-sprout.glb",
+      "src": "assets/models/aquaglow-sprout.glb",
+      "sourceOutput": "build/g01-aquatic-review/aquaglow-sprout.glb",
+      "size": 12532,
+      "sha256": "00f31bb12f775dbc6e02e8a35597c1fcb8f1c40ea8189047bcf4e5c68401f76b",
+      "meshes": 4,
+      "nodes": 6,
+      "animations": 0
+    },
+    {
+      "file": "aquaglow-weakened.glb",
+      "src": "assets/models/aquaglow-weakened.glb",
+      "sourceOutput": "build/g01-aquatic-review/aquaglow-weakened.glb",
+      "size": 19416,
+      "sha256": "beff593dcc01911cc34bbc31645eaf969ca4224b2f8b1cc766c17d5c11a54661",
+      "meshes": 4,
+      "nodes": 6,
+      "animations": 0
+    },
+    {
+      "file": "aquaglow-young.glb",
+      "src": "assets/models/aquaglow-young.glb",
+      "sourceOutput": "build/g01-aquatic-review/aquaglow-young.glb",
+      "size": 15260,
+      "sha256": "28ac684d49cb8b373a5e2771959b9acac89a95fbae4569e723ef8e7602231a54",
+      "meshes": 4,
+      "nodes": 6,
+      "animations": 0
+    },
+    {
+      "file": "atrium.glb",
+      "src": "assets/models/atrium.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-lobby/atrium.glb",
+      "size": 638880,
+      "sha256": "2483619df93afa7391e21ee833090b64f3c6b534df1f249afdb007e29446fcb9",
+      "meshes": 21,
+      "nodes": 305,
+      "animations": 0
+    },
+    {
+      "file": "cargo-crates.glb",
+      "src": "assets/models/cargo-crates.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-food-warehouse/cargo-crates.glb",
+      "size": 110896,
+      "sha256": "4acf2d8c3b26d9ba5798f24af34dbdba63897c9fa7edf20cfd794a0344c2f049",
+      "meshes": 5,
+      "nodes": 13,
+      "animations": 0
+    },
+    {
+      "file": "cold-locker.glb",
+      "src": "assets/models/cold-locker.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-food-warehouse/cold-locker.glb",
+      "size": 71832,
+      "sha256": "582e289c70a779fc4c3aed2dbcab40e961f0ed56d4f397c27897aaef1f09f953",
+      "meshes": 7,
+      "nodes": 33,
+      "animations": 0
+    },
+    {
+      "file": "conveyor-sorter.glb",
+      "src": "assets/models/conveyor-sorter.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-food-warehouse/conveyor-sorter.glb",
+      "size": 78320,
+      "sha256": "d438a60ec3bfd5509f50431042334d47444150f1001e0cc97eb98d8e34244607",
+      "meshes": 8,
+      "nodes": 24,
+      "animations": 0
+    },
+    {
+      "file": "food-cold-annex-shell.glb",
+      "src": "assets/models/food-cold-annex-shell.glb",
+      "sourceOutput": "build/warehouse-annex-prefabs/food-cold-annex-shell.glb",
+      "size": 12612,
+      "sha256": "25578d90ca5f0f177ac2bf1417a8545c8603ddf11175c3328b8dfc3ab1d74427",
+      "meshes": 6,
+      "nodes": 8,
+      "animations": 0
+    },
+    {
+      "file": "food-packing-annex-shell.glb",
+      "src": "assets/models/food-packing-annex-shell.glb",
+      "sourceOutput": "build/warehouse-annex-prefabs/food-packing-annex-shell.glb",
+      "size": 10832,
+      "sha256": "6f0c7eef0e3df1fd8a1a9659d27be72a0133c0068ef16c1e5e485ab317fc8c06",
+      "meshes": 5,
+      "nodes": 7,
+      "animations": 0
+    },
+    {
+      "file": "g01-crossing-bridge.glb",
+      "src": "assets/models/g01-crossing-bridge.glb",
+      "sourceOutput": "build/g01-watercore/g01-crossing-bridge.glb",
+      "size": 15092,
+      "sha256": "5da68e44a8902289064dd8a5d86fd5569cb0fb391c8d13f30e5473976a14c301",
+      "meshes": 2,
+      "nodes": 3,
+      "animations": 0
+    },
+    {
+      "file": "g01-main-basin.glb",
+      "src": "assets/models/g01-main-basin.glb",
+      "sourceOutput": "build/g01-watercore/g01-main-basin.glb",
+      "size": 74552,
+      "sha256": "a092ee8521a4f5f9d26562e5c1f6420dc5295c4ec04704cf8fbef72326975cde",
+      "meshes": 3,
+      "nodes": 9,
+      "animations": 0
+    },
+    {
+      "file": "g01-satellite-basins.glb",
+      "src": "assets/models/g01-satellite-basins.glb",
+      "sourceOutput": "build/g01-watercore/g01-satellite-basins.glb",
+      "size": 103468,
+      "sha256": "523cc8edebda93681981533d9d176e96ac6f213bc2b45f2390ff0ebd407c7392",
+      "meshes": 3,
+      "nodes": 7,
+      "animations": 0
+    },
+    {
+      "file": "g01-visual-service-pumps.glb",
+      "src": "assets/models/g01-visual-service-pumps.glb",
+      "sourceOutput": "build/g01-watercore/g01-visual-service-pumps.glb",
+      "size": 12664,
+      "sha256": "27cd580e0eeb784e7936e54ceb57ce890100eb6fbca7370b59944af6c09c7b4d",
+      "meshes": 3,
+      "nodes": 6,
+      "animations": 0
+    },
+    {
+      "file": "g01-walkway-and-railings.glb",
+      "src": "assets/models/g01-walkway-and-railings.glb",
+      "sourceOutput": "build/g01-watercore/g01-walkway-and-railings.glb",
+      "size": 218956,
+      "sha256": "8b09d8e61b30f9f489912123ae35cedbacda28dd8022684e495c92eabb4d168c",
+      "meshes": 4,
+      "nodes": 5,
+      "animations": 0
+    },
+    {
+      "file": "g01-water-surfaces-animated.glb",
+      "src": "assets/models/g01-water-surfaces-animated.glb",
+      "sourceOutput": "build/g01-aquatic-review/g01-water-surfaces-animated.glb",
+      "size": 72308,
+      "sha256": "35fb9295ca9fa5d7b78bf43d78007d068eca83edadac69efd60c2635a9e5b134",
+      "meshes": 4,
+      "nodes": 4,
+      "animations": 1
+    },
+    {
+      "file": "greenhouse-floor-shell.glb",
+      "src": "assets/models/greenhouse-floor-shell.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-greenhouse/greenhouse-floor-shell.glb",
+      "size": 721184,
+      "sha256": "7381b63ad963a0121ac24256e2d24a8bf212921d4b74ebccef3ffa36a44de4e1",
+      "meshes": 6,
+      "nodes": 7,
+      "animations": 0
+    },
+    {
+      "file": "greenhouse-glass-roof-shell.glb",
+      "src": "assets/models/greenhouse-glass-roof-shell.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-greenhouse/greenhouse-glass-roof-shell.glb",
+      "size": 377060,
+      "sha256": "fcc9da3afb2a554aa9503507c4493b7b0b7a63278f27450e904bbbd23051bab4",
+      "meshes": 5,
+      "nodes": 6,
+      "animations": 0
+    },
+    {
+      "file": "greenhouse-shell.glb",
+      "src": "assets/models/greenhouse-shell.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-greenhouse/greenhouse-shell.glb",
+      "size": 1098020,
+      "sha256": "6af4a7d81418e277a22c0c1e09cec1c4cf1ee5bfb47945f6c027b09fc2b7f203",
+      "meshes": 11,
+      "nodes": 18,
+      "animations": 0
+    },
+    {
+      "file": "holo-inventory-kiosk.glb",
+      "src": "assets/models/holo-inventory-kiosk.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-food-warehouse/holo-inventory-kiosk.glb",
+      "size": 107556,
+      "sha256": "1db545818ecc732ee4bf0a4243ee72ddc3d229ab2be57ad06efa8c42313e4693",
+      "meshes": 7,
+      "nodes": 8,
+      "animations": 0
+    },
+    {
+      "file": "mini-transporter.glb",
+      "src": "assets/models/mini-transporter.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-food-warehouse/mini-transporter.glb",
+      "size": 125972,
+      "sha256": "8100119f7c25f8adce92d85f04b558d4ac33bc3d6f963669ca6a147344c8ba4f",
+      "meshes": 9,
+      "nodes": 18,
+      "animations": 0
+    },
+    {
+      "file": "pilot-room.glb",
+      "src": "assets/models/pilot-room.glb",
+      "sourceOutput": "prototypes/lw-d/b1/pilot-room.glb",
+      "size": 5796,
+      "sha256": "774a84cb4b9384ca66b2e97284b195594537774fb55d26c7fc064f0f4410c5bd",
+      "meshes": 4,
+      "nodes": 16,
+      "animations": 0
+    },
+    {
+      "file": "smart-storage-rack.glb",
+      "src": "assets/models/smart-storage-rack.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-food-warehouse/smart-storage-rack.glb",
+      "size": 110896,
+      "sha256": "0a0d340d46127f3141ddea9ad8701deaeda32c1fbb13a265f069d0c95d48ef5e",
+      "meshes": 6,
+      "nodes": 60,
+      "animations": 0
+    },
+    {
+      "file": "warehouse-shell.glb",
+      "src": "assets/models/warehouse-shell.glb",
+      "sourceOutput": "prototypes/lw-d/scenes/agro-food-warehouse/warehouse-shell.glb",
+      "size": 336992,
+      "sha256": "e3836b8036e7ef30e3fd2332f4edf84bdb25125217b5064cd7f3e6f41c74acf5",
+      "meshes": 14,
+      "nodes": 138,
+      "animations": 0
+    }
+  ]
+}
