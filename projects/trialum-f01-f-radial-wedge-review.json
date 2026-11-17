@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-s7-f01-f-owner-model-review-20261117",
+  "name": "F01-F · закривен крем мермер · вистински 3D GLB преглед",
+  "description": "32-segment genuine radial marble GLB from approved render, beside approved original F01-A comparison pieces. Standalone QA design, not the installed G01 floor.",
+  "room": {
+    "width": 10,
+    "depth": 8,
+    "height": 3,
+    "gridSize": 0.05,
+    "showWalls": false,
+    "floorColor": "#293739",
+    "wallColor": "#34494c"
+  },
+  "instances": [
+    {
+      "id": "f01-f-hero",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мермерен закривен сегмент",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real 32-segment annular wedge: outer G01 walkway radius 9.15m, radial width 1m; pivot inner arc start. Original F01-A UV texture."
+    },
+    {
+      "id": "f01-a-compare-01",
+      "assetId": "f01-a",
+      "label": "F01-A · оригинална цела плочка за споредба",
+      "position": [
+        -2.5,
+        0,
+        -1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original F01-A owner-approved PBR compared under same Builder illumination. No overlap."
+    },
+    {
+      "id": "f01-a-compare-02",
+      "assetId": "f01-a",
+      "label": "F01-A · втор компаративен модул",
+      "position": [
+        -2.5,
+        0,
+        0.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Inspect warm ivory, mineral veins and 60mm thickness. This is NOT placed in live greenhouse."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderApproved": true,
+    "ownerModelPass": false,
+    "originalF01AShaFrozen": true
+  }
+}
