@@ -77,6 +77,10 @@ jobs:
             echo "All 42 physical GLBs and pinned Three modules already current."
           else
             git commit -m "build(builder): ship all 42 original/derived Trialum GLBs and pinned Three.js 0.180.0"
+            # Owner may have pushed more Builder layouts after this run started.
+            # Rebase on latest main; NEVER force-push or erase human changes.
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
             echo "Committed authoring binaries to Builder main. Owner should Pull in GitHub Desktop."
           fi
