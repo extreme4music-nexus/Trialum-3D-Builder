@@ -708,6 +708,14 @@ async function openRoomPreset(key){
   state.saveHandle=null;
   useProject(data,true);
   frameCurrentRoom();
+  if(key==="f01-f"){
+    // Focus on the TRUE G01 north-east poolside arc (22.5–75 degrees).
+    // The seven small separate tiles must be visible, not one lonely slab.
+    camera.position.set(18,13,16);
+    controls.target.set(4.9,.16,4.9);
+    controls.maxDistance=120;
+    controls.update();
+  }
   try{localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(state.project));}catch{}
   say("Вчитана вистинска GLB просторија: "+data.name+" · "+data.instances.length+" елементи.");
  }catch(e){say("Не можам да ја отворам просторијата: "+e.message,true)}
