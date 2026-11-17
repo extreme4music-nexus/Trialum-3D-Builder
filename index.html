@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111f22">
+  <title>Trialum 3D World Builder</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three.module.js",
+      "three/addons/": "./vendor/addons/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark">T<span>3D</span></div>
+        <div><strong>Trialum World Builder</strong><small>PRIVATE · LEVEL DESIGN STUDIO · v0.1</small></div>
+      </div>
+      <div class="project-title">
+        <input id="projectName" aria-label="Име на проект" value="Моја прва просторија" maxlength="100">
+        <span class="save-state" id="saveIndicator">● Незачувани измени</span>
+      </div>
+      <nav class="top-actions" aria-label="Проекти">
+        <button id="newProject" title="Нова сцена">Ново</button>
+        <button id="openProject" title="Отвори JSON проект">Отвори</button>
+        <button id="saveProject" class="accent" title="Зачувај во папка на GitHub Desktop">Зачувај</button>
+        <button id="exportProject" title="Преземи JSON проект">JSON ↓</button>
+        <button id="exportBundle" title="Преземи ZIP со GLB и сцена">ZIP ↓</button>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <aside class="left sidebar">
+        <div class="panel-heading"><h2>Библиотека</h2><span id="assetCounter">0 модели</span></div>
+        <p class="helper">Избери модел, па кликни на теренот.</p>
+        <input id="assetSearch" type="search" placeholder="Пребарај модел…" aria-label="Пребарај модел">
+        <select id="categoryFilter" aria-label="Категорија"><option value="">Сите категории</option></select>
+        <div id="catalog" class="catalog" role="listbox" aria-label="3Д модели"></div>
+        <div class="import-zone">
+          <button id="importGlb" class="full">＋ Додај GLB модел</button>
+          <small>Можеш и да повлечеш .glb во прозорецот. Новите модели се чуваат локално.</small>
+        </div>
+        <section class="objects">
+          <div class="panel-heading"><h2>Предмети во сцената</h2><span id="objectCounter">0</span></div>
+          <div id="objectList" class="object-list"></div>
+        </section>
+      </aside>
+
+      <section class="work" aria-label="3Д уредувач">
+        <div class="toolbar">
+          <div class="toolset" role="group" aria-label="Алатки">
+            <button data-tool="select" class="active" title="Избери (V)">↖ Избор</button>
+            <button data-tool="place" title="Постави (P)">⊞ Постави</button>
+            <button data-tool="move" title="Помести со контролите (G)">✣ Помести</button>
+            <button data-tool="rotate" title="Ротирај со контролите (R)">⟳ Ротирај</button>
+            <button data-tool="erase" title="Избриши со клик">⌫ Бриши</button>
+          </div>
+          <span class="toolbar-separator"></span>
+          <label class="toolbar-label">Површина <select id="surfaceMode"><option value="floor">Под</option><option value="wall">Ѕид</option><option value="free">Слободно</option></select></label>
+          <label class="toolbar-label">Мрежа <select id="gridStep"><option value="0.25">0,25 m</option><option value="0.5" selected>0,50 m</option><option value="1">1,00 m</option><option value="0.1">0,10 m</option><option value="0.05">0,05 m</option></select></label>
+          <label class="toolbar-label" title="Snap"><input type="checkbox" id="snapEnabled" checked> Лепење</label>
+          <button id="toggleGrid" title="Мрежата може да се исклучи" class="active"># Мрежа</button>
+          <button id="resetCamera" title="Врати го погледот">◎ Камера</button>
+        </div>
+        <div id="viewport" class="viewport">
+          <canvas id="sceneCanvas" aria-label="3Д простор"></canvas>
+          <div class="viewport-hint" id="viewportHint">Лев клик: избор / поставување · Десен клик: вртење камера · Тркалце: зум</div>
+          <div class="axis-mark"><span class="axis-x">X</span> <span class="axis-y">Y</span> <span class="axis-z">Z</span></div>
+          <div id="dropOverlay">Пушти GLB тука за да го додадеш во библиотеката</div>
+        </div>
+        <div class="statusbar">
+          <span id="statusText">Подготвено за дизајнирање.</span>
+          <span id="cameraStatus">Y-up · метри</span>
+        </div>
+      </section>
+
+      <aside class="right sidebar">
+        <div class="panel-heading"><h2>Инспектор</h2></div>
+        <div id="noSelection" class="empty-selection">
+          <div class="empty-icon">⬡</div>
+          <strong>Нема избран предмет</strong>
+          <p>Кликни на плочка или предмет за да ја измениш позицијата, ротацијата и големината.</p>
+        </div>
+        <div id="inspector" hidden>
+          <div id="selectedAssetTitle" class="selected-title"></div>
+          <label class="field-label" for="objLabel">Име на предмет</label>
+          <input id="objLabel" maxlength="100">
+          <p class="field-label">Позиција (метри)</p>
+          <div class="triple">
+            <label>X<input id="posX" type="number" step="0.25"></label>
+            <label>Y<input id="posY" type="number" step="0.25"></label>
+            <label>Z<input id="posZ" type="number" step="0.25"></label>
+          </div>
+          <label class="field-label" for="rotY">Ротација Y (°)</label>
+          <input id="rotY" type="number" step="15" min="-3600" max="3600">
+          <label class="field-label" for="scaleVal">Големина / scale</label>
+          <input id="scaleVal" type="number" step="0.1" min="0.05" max="20">
+          <label class="field-label" for="layerSelect">Слој</label>
+          <select id="layerSelect"><option value="floor">Под</option><option value="wall">Ѕид</option><option value="props">Предмети</option><option value="decor">Декорација</option><option value="structure">Конструкција</option></select>
+          <label class="field-label" for="binding">Engine binding (опционално)</label>
+          <input id="binding" placeholder="Пример: lab.storage.rack">
+          <small class="helptext">Само дизајнерска ознака — билдерот не менува играчки залихи.</small>
+          <label class="checkrow"><input id="objLocked" type="checkbox"> Заклучен предмет</label>
+          <label class="checkrow"><input id="objVisible" type="checkbox" checked> Видлив предмет</label>
+          <button id="applyInspector" class="accent full">Примени промени</button>
+          <div class="two-buttons">
+            <button id="duplicateObject">Дуплирај</button>
+            <button id="deleteObject" class="danger">Избриши</button>
+          </div>
+        </div>
+        <section class="room-settings">
+          <div class="panel-heading"><h2>Просторија</h2></div>
+          <div class="triple">
+            <label>Ширина<input id="roomWidth" type="number" value="12" min="2" max="120" step=".5"></label>
+            <label>Длабочина<input id="roomDepth" type="number" value="12" min="2" max="120" step=".5"></label>
+            <label>Висина<input id="roomHeight" type="number" value="4" min="2" max="30" step=".5"></label>
+          </div>
+          <label class="checkrow"><input id="showWalls" type="checkbox"> Прикажи ѕидови</label>
+          <button id="applyRoom" class="full">Примени димензии</button>
+          <p class="helptext">Мрежата помага при редење. Ѕидните плочки се лепат на избраниот ѕид.</p>
+        </section>
+        <section class="shortcuts">
+          <div class="panel-heading"><h2>Кратенки</h2></div>
+          <div class="keyline"><kbd>V</kbd> Избор <kbd>P</kbd> Поставување</div>
+          <div class="keyline"><kbd>G</kbd> Поместување <kbd>R</kbd> Ротација</div>
+          <div class="keyline"><kbd>Del</kbd> Бришење <kbd>Ctrl+D</kbd> Копија</div>
+          <div class="keyline"><kbd>Ctrl+Z</kbd> Назад <kbd>Ctrl+Y</kbd> Напред</div>
+          <div class="keyline"><kbd>Ctrl+S</kbd> Зачувај</div>
+        </section>
+      </aside>
+    </main>
+    <div class="bottomline"><span>TWCS · Trialum World Construction System</span><span id="footerNote">Локален проект · нема синхронизација со играта</span></div>
+  </div>
+  <input id="projectFileInput" type="file" accept=".json,application/json" hidden>
+  <input id="glbFileInput" type="file" accept=".glb,model/gltf-binary" multiple hidden>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
