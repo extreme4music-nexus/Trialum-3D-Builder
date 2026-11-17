@@ -1,4 +1,7 @@
-const test=require("node:test"),assert=require("node:assert/strict"),core=require("../src/living-spaces-core.js");
+const test=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm"),path=require("node:path");
+const sandbox={module:{exports:{}}};
+vm.runInNewContext(fs.readFileSync(path.join(__dirname,"../src/living-spaces-core.js"),"utf8"),sandbox);
+const core=sandbox.module.exports;
 const owner={id:"user-1",role:"player"},stranger={id:"user-2",role:"player"};
 const opts={bounds:{width:10,depth:10,height:3},allowedAssets:["bed","desk","plant"]};
 function room(){return core.create("user-1","home");}
