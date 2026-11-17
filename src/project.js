@@ -61,7 +61,11 @@ export function downloadBlob(blob,filename){
  link.href=url;link.download=filename;document.body.append(link);link.click();link.remove();
  setTimeout(()=>URL.revokeObjectURL(url),5000);
 }
-export function slug(s){return name(s,"scene",80).normalize("NFKD").toLowerCase().replace(/[^a-z0-9_-]+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"")||"scene";}
+const mkLatin=Object.freeze({а:"a",б:"b",в:"v",г:"g",д:"d",ѓ:"gj",е:"e",ж:"zh",з:"z",ѕ:"dz",и:"i",ј:"j",к:"k",л:"l",љ:"lj",м:"m",н:"n",њ:"nj",о:"o",п:"p",р:"r",с:"s",т:"t",ќ:"kj",у:"u",ф:"f",х:"h",ц:"c",ч:"ch",џ:"dzh",ш:"sh"});
+export function slug(s){
+ const transliterated=[...name(s,"scene",80).normalize("NFKD").toLowerCase()].map(c=>mkLatin[c]??c).join("");
+ return transliterated.replace(/[^a-z0-9_-]+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"")||"scene";
+}
 export const clone=value=>JSON.parse(JSON.stringify(value));
 export const snap=(value,step)=>Math.round(value/step)*step;
 export function rectanglesOverlap(a,b,epsilon=0.0001){
