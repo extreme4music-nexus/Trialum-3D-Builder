@@ -131,7 +131,7 @@ def build_original_glbs():
         raise RuntimeError("F01-A owner-approved original GLB or texture has drifted")
     catalog=json.loads((ROOT/"assets/catalog.json").read_text(encoding="utf-8"))
     missing=[x["src"] for x in catalog.get("assets",[])
-       if x.get("src","").endswith(".glb") and not (ROOT/x["src"]).is_file()]
+       if isinstance(x.get("src"),str) and x["src"].endswith(".glb") and not (ROOT/x["src"]).is_file()]
     if missing:raise RuntimeError("Missing catalogue files: "+repr(missing))
     print("[assets] checked 11 original real GLBs (A/B/C/D), exact A texture/hash PASS.")
 
