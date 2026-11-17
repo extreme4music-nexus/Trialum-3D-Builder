@@ -29,12 +29,18 @@ class GLBModels(unittest.TestCase):
     self.assertLess(len(d),5_000_000)
    self.assertTrue(gltf.get("materials"),str(p))
  def test_known_rooms_and_annexes_are_real_glbs(self):
-  expected=("atrium.glb","warehouse-shell.glb","food-cold-annex-shell.glb",\n            "food-packing-annex-shell.glb","greenhouse-shell.glb",\n            "g01-main-basin.glb","g01-water-surfaces-animated.glb",\n            "aquaglow-mature.glb","pilot-room.glb")
-  for f in expected:self.assertTrue((MODEL_DIR/f).is_file(),f)\n def test_frozen_owner_approved_F01_A_SHA(self):
+  expected=("atrium.glb","warehouse-shell.glb","food-cold-annex-shell.glb",
+            "food-packing-annex-shell.glb","greenhouse-shell.glb",
+            "g01-main-basin.glb","g01-water-surfaces-animated.glb",
+            "aquaglow-mature.glb","pilot-room.glb")
+  for f in expected:self.assertTrue((MODEL_DIR/f).is_file(),f)
+ def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
  def test_no_game_runtime_or_play_store_assets_inside_builder(self):
   self.assertFalse((ROOT/"android").exists())
-  # Design-only declarative snapshots are allowed; playable engine/runtime is NOT.\n  self.assertFalse((ROOT/"prototypes/lw-d/scenes/agro-food-warehouse/warehouse-runtime.mjs").exists())\n  self.assertFalse((ROOT/"prototypes/lw-d/scenes/agro-greenhouse/greenhouse-app.mjs").exists())
+  # Design-only declarative snapshots are allowed; playable engine/runtime is NOT.
+  self.assertFalse((ROOT/"prototypes/lw-d/scenes/agro-food-warehouse/warehouse-runtime.mjs").exists())
+  self.assertFalse((ROOT/"prototypes/lw-d/scenes/agro-greenhouse/greenhouse-app.mjs").exists())
   self.assertFalse((ROOT/"js/engine.js").exists())
 if __name__=="__main__":unittest.main(verbosity=2)
