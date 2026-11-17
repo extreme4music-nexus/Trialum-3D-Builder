@@ -8,7 +8,7 @@ from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
 ROOT=Path(__file__).resolve().parents[1]
-HOST="127.0.0.1"
+HOST="0.0.0.0"
 TOKEN=secrets.token_urlsafe(32)
 LOCK=threading.Lock()
 def importmap_hash():
