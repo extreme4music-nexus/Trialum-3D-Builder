@@ -45,7 +45,7 @@ goto ready
 echo.
 echo Some original Trialum room GLBs are missing from this local clone.
 echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
-echo All 41 models MUST be present; do not use a half-empty catalogue.
+echo All 42 models MUST be present; do not use a half-empty catalogue.
 echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause
 exit /b 1
