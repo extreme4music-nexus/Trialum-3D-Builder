@@ -34,6 +34,18 @@ class GLBModels(unittest.TestCase):
             "g01-main-basin.glb","g01-water-surfaces-animated.glb",
             "aquaglow-mature.glb","pilot-room.glb")
   for f in expected:self.assertTrue((MODEL_DIR/f).is_file(),f)
+ def test_original_legacy_glb_hash_manifest_and_real_water_animation(self):
+  manifest=json.loads((ROOT/"assets/TRIALUM_LEGACY_GLB_MANIFEST.json").read_text(encoding="utf-8"))
+  self.assertEqual(manifest["newModels"],26)
+  self.assertEqual(len(manifest["assets"]),26)
+  for row in manifest["assets"]:
+   p=ROOT/row["src"]
+   self.assertEqual(len(p.read_bytes()),row["size"])
+   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),row["sha256"])
+  water=(MODEL_DIR/"g01-water-surfaces-animated.glb").read_bytes()
+  size=struct.unpack_from("<I",water,12)[0]
+  info=json.loads(water[20:20+size])
+  self.assertEqual(info["animations"][0]["name"],"G01_WATER_RIPPLES_LOOP_6S")
  def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
