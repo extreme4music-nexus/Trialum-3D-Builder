@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-warehouse-packing-room",
+  "name": "Пакување · уредлива соба",
+  "description": "Canonical S5 food packing annex static GLB structural shell + two original racks + original conveyor. No live inventory, no duplicated stock. Owner editable project.",
+  "room": {
+    "width": 8,
+    "depth": 10,
+    "height": 4.5,
+    "gridSize": 0.5,
+    "showWalls": false,
+    "floorColor": "#254c48",
+    "wallColor": "#305f5d"
+  },
+  "instances": [
+    {
+      "id": "packing-room-shell",
+      "assetId": "food-packing-annex-shell",
+      "label": "food-packing-annex-shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original S5 runtime geometry converted to Builder GLB."
+    },
+    {
+      "id": "packing-rack--1",
+      "assetId": "food-smart-rack",
+      "label": "food-smart-rack",
+      "position": [
+        -1.33,
+        0,
+        0.1
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": [
+        0.83,
+        0.84,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact original equipment placement"
+    },
+    {
+      "id": "packing-rack-1",
+      "assetId": "food-smart-rack",
+      "label": "food-smart-rack",
+      "position": [
+        1.33,
+        0,
+        0.1
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": [
+        0.83,
+        0.84,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact original equipment placement"
+    },
+    {
+      "id": "packing-conveyor",
+      "assetId": "food-conveyor-sorter",
+      "label": "food-conveyor-sorter",
+      "position": [
+        0,
+        0,
+        1.72
+      ],
+      "rotationY": 0,
+      "scale": [
+        0.65,
+        0.8,
+        0.7
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact original conveyor placement"
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
