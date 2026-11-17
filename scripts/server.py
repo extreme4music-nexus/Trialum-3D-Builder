@@ -3,7 +3,7 @@
 Only repository-specific Git commands, never shell, tokens, arbitrary paths or user-supplied refs.
 Requires local Git credential helper (GitHub Desktop/Git Credential Manager/SSH).
 """
-import json,os,re,secrets,subprocess,threading
+import base64,hashlib,json,os,re,secrets,subprocess,threading
 from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
@@ -11,6 +11,13 @@ ROOT=Path(__file__).resolve().parents[1]
 HOST="127.0.0.1"
 TOKEN=secrets.token_urlsafe(32)
 LOCK=threading.Lock()
+def importmap_hash():
+ """Only the exact locally shipped importmap is allowed as an inline script."""
+ page=(ROOT/'index.html').read_text(encoding='utf-8')
+ match=re.search(r'<script\\s+type=[\"\\\']importmap[\"\\\']\\s*>(.*?)</script>',page,re.S|re.I)
+ if not match:raise RuntimeError('Builder importmap missing')
+ digest=base64.b64encode(hashlib.sha256(match.group(1).encode('utf-8')).digest()).decode('ascii')
+ return "'sha256-"+digest+"'"
 ALLOWED_RE=re.compile(r"^(?:https://github\.com/|git@github\.com:|ssh://git@github\.com/)extreme4music-nexus/Trialum-3D-Builder(?:\.git)?/?$")
 def git(*args,timeout=90):
  p=subprocess.run(["git",*args],cwd=ROOT,capture_output=True,text=True,timeout=timeout,stdin=subprocess.DEVNULL)
@@ -37,7 +44,7 @@ class Handler(SimpleHTTPRequestHandler):
   self.send_header("X-Content-Type-Options","nosniff")
   self.send_header("Referrer-Policy","no-referrer")
   self.send_header("Cross-Origin-Resource-Policy","same-origin")
-  self.send_header("Content-Security-Policy","default-src 'self' blob: data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' blob:; img-src 'self' blob: data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'")
+  self.send_header("Content-Security-Policy","default-src 'self' blob: data:; script-src 'self' "+importmap_hash()+"; style-src 'self' 'unsafe-inline'; connect-src 'self' blob:; img-src 'self' blob: data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'")
   super().end_headers()
  def respond(self,status,data):
   raw=json.dumps(data,ensure_ascii=False).encode("utf-8")
