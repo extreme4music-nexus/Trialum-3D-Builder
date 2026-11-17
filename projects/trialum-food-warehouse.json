@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-food-warehouse-original-layout",
+  "name": "Стовариште за храна · целосна 3D сцена",
+  "description": "Canonical S4/S5 food warehouse shell, racks and two physical annexes, reconstructed using source scene positions. Static Builder preview only; food counts and animations stay in game.",
+  "room": {
+    "width": 18,
+    "depth": 36,
+    "height": 6.5,
+    "gridSize": 0.5,
+    "showWalls": false,
+    "floorColor": "#28443f",
+    "wallColor": "#4b625b"
+  },
+  "instances": [
+    {
+      "id": "warehouse-root",
+      "assetId": "food-warehouse-shell",
+      "label": "food-warehouse-shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Actual 7-model S4 warehouse base shell. Source scene.json; building includes solid roof."
+    },
+    {
+      "id": "rack-1",
+      "assetId": "food-smart-rack",
+      "label": "food-smart-rack",
+      "position": [
+        -7.3,
+        0,
+        -3.7
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "rack-2",
+      "assetId": "food-smart-rack",
+      "label": "food-smart-rack",
+      "position": [
+        -7.3,
+        0,
+        0.85
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "cold-locker-1",
+      "assetId": "food-cold-locker",
+      "label": "food-cold-locker",
+      "position": [
+        7.3,
+        0,
+        -4.2
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "cold-locker-2",
+      "assetId": "food-cold-locker",
+      "label": "food-cold-locker",
+      "position": [
+        7.3,
+        0,
+        0.55
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "cargo-1",
+      "assetId": "food-cargo-crates",
+      "label": "food-cargo-crates",
+      "position": [
+        5.4,
+        0,
+        3.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "cargo-2",
+      "assetId": "food-cargo-crates",
+      "label": "food-cargo-crates",
+      "position": [
+        5.4,
+        0,
+        0.45
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "conveyor-1",
+      "assetId": "food-conveyor-sorter",
+      "label": "food-conveyor-sorter",
+      "position": [
+        -4.4,
+        0,
+        2.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "conveyor-2",
+      "assetId": "food-conveyor-sorter",
+      "label": "food-conveyor-sorter",
+      "position": [
+        4.4,
+        0,
+        2.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "holo-kiosk",
+      "assetId": "food-inventory-kiosk",
+      "label": "food-inventory-kiosk",
+      "position": [
+        -6.7,
+        0,
+        6.1
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "robot-staging",
+      "assetId": "food-mini-transporter",
+      "label": "food-mini-transporter",
+      "position": [
+        0,
+        0,
+        3
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Canonical source position. Transport robot is STATIC staging in Builder; live path animation belongs only in game."
+    },
+    {
+      "id": "cold-annex-structure",
+      "assetId": "food-cold-annex-shell",
+      "label": "food-cold-annex-shell",
+      "position": [
+        -5.8,
+        0,
+        -14.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original 2026-11-15 annex geometry reproduced as independent GLB."
+    },
+    {
+      "id": "packing-annex-structure",
+      "assetId": "food-packing-annex-shell",
+      "label": "food-packing-annex-shell",
+      "position": [
+        5.8,
+        0,
+        -14.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original 2026-11-15 annex geometry reproduced as independent GLB."
+    },
+    {
+      "id": "cold-annex-locker--1",
+      "assetId": "food-cold-locker",
+      "label": "food-cold-locker",
+      "position": [
+        -6.97,
+        0,
+        -14.58
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": [
+        0.82,
+        0.9,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact S5 room equipment transform"
+    },
+    {
+      "id": "packing-annex-rack--1",
+      "assetId": "food-smart-rack",
+      "label": "food-smart-rack",
+      "position": [
+        4.47,
+        0,
+        -14.8
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": [
+        0.83,
+        0.84,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact S5 room equipment transform"
+    },
+    {
+      "id": "cold-annex-locker-1",
+      "assetId": "food-cold-locker",
+      "label": "food-cold-locker",
+      "position": [
+        -4.63,
+        0,
+        -14.58
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": [
+        0.82,
+        0.9,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact S5 room equipment transform"
+    },
+    {
+      "id": "packing-annex-rack-1",
+      "assetId": "food-smart-rack",
+      "label": "food-smart-rack",
+      "position": [
+        7.13,
+        0,
+        -14.8
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": [
+        0.83,
+        0.84,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact S5 room equipment transform"
+    },
+    {
+      "id": "packing-annex-belt",
+      "assetId": "food-conveyor-sorter",
+      "label": "food-conveyor-sorter",
+      "position": [
+        5.8,
+        0,
+        -13.18
+      ],
+      "rotationY": 0,
+      "scale": [
+        0.65,
+        0.8,
+        0.7
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact S5 packing annex belt transform"
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
