@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bootstrap editor's PINNED MIT Three.js dependencies and REAL F01 A-E GLBs.
+"""Bootstrap editor's PINNED MIT Three.js dependencies and REAL F01 A-F GLBs.
 
 - Offline-ready after FIRST setup; GitHub Actions checks in all generated assets.
 - No tokens, no remote writes, no private GitHub API, no gameplay writes.
@@ -40,7 +40,8 @@ GLB_NAMES=[
  "f01-marble-cream-half-second.glb",
  *("f01-marble-cream-quarter-c%d.glb"%i for i in range(1,5)),
  *("f01-marble-cream-edge-%s.glb"%s for s in ("north","south","east","west")),
- *("f01-marble-cream-corner-%s.glb"%s for s in ("north-west","north-east","south-east","south-west"))
+ *("f01-marble-cream-corner-%s.glb"%s for s in ("north-west","north-east","south-east","south-west")),
+ "f01-marble-cream-radial-wedge.glb"
 ]
 RELATIVE_IMPORT=re.compile(r'''(?:\bfrom\s*|\bimport\s*\(\s*)["'](\.{1,2}/[^"']+)["']''')
 USER_AGENT="TrialumWorldBuilder/0.1 (static dependency pin, GitHub Actions)"
@@ -104,6 +105,7 @@ def build_original_glbs():
        "build-s7-f01-quarter.py",
        "build-s7-f01-edge.py",
        "build-s7-f01-corner.py",
+       "build-s7-f01-radial-wedge.py",
     ):
         path=ROOT/"tools/b1"/script
         if not path.exists():raise RuntimeError("Missing original authoring script "+str(path))
@@ -113,10 +115,10 @@ def build_original_glbs():
     dest.mkdir(parents=True,exist_ok=True)
     all_files={
        x.name:x
-       for folder in ("F01-A","F01-B","F01-C","F01-D","F01-E")
+       for folder in ("F01-A","F01-B","F01-C","F01-D","F01-E","F01-F")
        for x in (ROOT/"build/s7-floor-f01"/folder).glob("*.glb")
     }
-    assert len(GLB_NAMES)==15 and set(all_files)==set(GLB_NAMES), (
+    assert len(GLB_NAMES)==16 and set(all_files)==set(GLB_NAMES), (
        "Unexpected asset mismatch "+str(set(GLB_NAMES)^set(all_files))
     )
     for name in GLB_NAMES:
@@ -135,7 +137,7 @@ def build_original_glbs():
     missing=[x["src"] for x in catalog.get("assets",[])
        if isinstance(x.get("src"),str) and x["src"].endswith(".glb") and x["src"].split("/")[-1] in GLB_NAMES and not (ROOT/x["src"]).is_file()]
     if missing:raise RuntimeError("Missing catalogue files: "+repr(missing))
-    print("[assets] checked 15 original real GLBs (A/B/C/D/E), exact A texture/hash PASS.")
+    print("[assets] checked 16 original real GLBs (A/B/C/D/E/F), exact A texture/hash PASS.")
 
 
 def main():
