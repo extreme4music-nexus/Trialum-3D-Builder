@@ -17,8 +17,8 @@
     "tools/b1/build-s7-f01-radial-wedge.py"
   ],
   "modelCountExpected": 16,
-  "modelSetStatus": "16_REAL_F01_GLBS_IN_BUILDER_MAIN;F01_F_IDENTICAL_BINARY_GAME_FEATURE_SHA256_VERIFIED;OWNER_MODEL_QA_PENDING",
-  "ownerApprovalStatus": "F01_A_OWNER_MODEL_PASS;F01_F_OWNER_RENDER_PASS_MODEL_VISUAL_QA_PENDING;F01_B_C_D_E_OWNER_VISUAL_REVIEW_PENDING",
+  "modelSetStatus": "16_REAL_F01_GLBS_IN_BUILDER_MAIN;F01_F_CORRECTED_POOL_TILE_MATCHED_GAME_FEATURE;OWNER_APPROVAL_PENDING",
+  "ownerApprovalStatus": "F01_A_OWNER_MODEL_PASS;F01_F_PREVIOUS_LARGE_MODEL_REJECTED;F01_F_NEW_7_TILE_G01_MODEL_OWNER_REVIEW_PENDING;F01_B_C_D_E_OLDER_PENDING",
   "scope": "F01 original modular marble family A-F. Other 26 historical/derived GLBs are tracked in assets/TRIALUM_LEGACY_GLB_MANIFEST.json; 42 total Builder GLBs.",
   "models": [
     {
@@ -130,11 +130,11 @@
       "id": "f01-f-radial-wedge",
       "path": "assets/models/f01-marble-cream-radial-wedge.glb",
       "source": "same deterministic generator committed in game PR #96 and Builder main",
-      "status": "REAL_GLB_2_REPOS_SAME_GIT_BLOB_SHA_CI_PASS_OWNER_MODEL_REVIEW_PENDING",
-      "ownerVisual": "RENDER PASS; MODEL ON-DEVICE PENDING",
-      "sha256": "0b76aaf4870dbb06ded35a961330f7337a172c68fdd0b0092d2e7db78443196c",
-      "size": 89948,
-      "gitBlobSha": "2735c84d70220bcf69b391debf3d01f57d85f07f"
+      "status": "CORRECTED_24_SEGMENT_SMALL_POOL_TILE_BINARY_SAME_IN_TWO_REPOS_OWNER_VISUAL_PENDING",
+      "ownerVisual": "PRIOR LARGE MODEL REJECTED; NEW 7 TILE REAL G01 POOL PREVIEW PENDING",
+      "sha256": "982c6d5193bd4b4ea09d59aa099c957a998c24dfa883ac5435f819b756f31e8d",
+      "size": 83200,
+      "gitBlobSha": "7b759d7206e813761cbd2d70fc2b11b86a4ff25f"
     }
   ],
   "latestModule": {
@@ -142,13 +142,24 @@
     "file": "assets/models/f01-marble-cream-radial-wedge.glb",
     "builderModelCountTotal": 42,
     "gameFeatureBranch": "feature/lw-d-s7-f01-f-radial-wedge-render-review-20261117",
-    "binarySha256": "0b76aaf4870dbb06ded35a961330f7337a172c68fdd0b0092d2e7db78443196c",
-    "gitBlobSha": "2735c84d70220bcf69b391debf3d01f57d85f07f",
-    "sizeBytes": 89948,
+    "binarySha256": "982c6d5193bd4b4ea09d59aa099c957a998c24dfa883ac5435f819b756f31e8d",
+    "gitBlobSha": "7b759d7206e813761cbd2d70fc2b11b86a4ff25f",
+    "sizeBytes": 83200,
     "modelGenerator": "tools/b1/build-s7-f01-radial-wedge.py",
     "spec": "docs/blueprints/S7_F01_F_RADIAL_WEDGE_PREVIEW_SPEC_20261117.json",
-    "ownerRenderPass": true,
-    "ownerModelPass": false,
+    "previewProject": "projects/trialum-f01-f-radial-wedge-review.json",
+    "previewTileCount": 7,
+    "sourceRingRadii": [
+      7.2,
+      9.15
+    ],
+    "newBandRadii": [
+      7.2,
+      8.2
+    ],
+    "ownerConceptRenderPass": true,
+    "ownerCorrectedModelPass": false,
+    "priorLargeModelRejected": true,
     "glbBuilt": true,
     "dualRepoBinaryIdentical": true,
     "gameplayWrites": 0
