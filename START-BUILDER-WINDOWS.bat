@@ -22,7 +22,7 @@ where python >nul 2>nul
 if not errorlevel 1 (
   python scripts\setup.py
   if errorlevel 1 goto failedsetup
-  goto ready
+  goto verify
 )
 echo Please install Python 3 or pull generated files from MAIN.
 pause
