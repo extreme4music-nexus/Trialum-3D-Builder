@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum original GLB catalog — F01, Atrium, Warehouse, two annexes, Greenhouse, G01, Aquaglow, B1",
+  "name": "Trialum original GLB catalog — 42 models including owner-render-approved F01-F radial cream marble",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -724,8 +724,36 @@
       "source": "extreme4music-nexus/Trialum@b801808a5b219284d52c52a8ae8e643700c84478",
       "note": "original B1 GLB whitebox test; not a production room",
       "approval": "ORIGINAL_SOURCE_REAL_GLB_OWNER_REVIEW_PENDING"
+    },
+    {
+      "id": "f01-f-radial-wedge",
+      "name": "F01-F · Заоблена мермерна плочка · 1m лак",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-marble-cream-radial-wedge.glb",
+      "dimensions": [
+        1.4129,
+        0.06,
+        1.4129
+      ],
+      "boundsMinLocal": [
+        -0.6702,
+        0,
+        0
+      ],
+      "boundsMaxLocal": [
+        0.7428,
+        0.06,
+        1.4129
+      ],
+      "placement": "floor",
+      "origin": "local (0,0,0) = inner arc start; G01 world anchor provided in GLB metadata",
+      "phase": "radial wedge; r=9.15..10.15m; center 45 degrees",
+      "version": 1,
+      "source": "Trialum S7-F01-F owner-render-approved 32-segment real GLB generator; frozen original F01-A PBR",
+      "approval": "OWNER RENDER PASS · GLB MODEL OWNER REVIEW PENDING",
+      "noGameStateWrites": true
     }
   ],
-  "assetLibraryVersion": "2026-11-17-all-known-glb-generators-v1",
-  "genuineGlbCount": 41
+  "assetLibraryVersion": "2026-11-17-f01-f-42-real-glbs",
+  "genuineGlbCount": 42
 }
