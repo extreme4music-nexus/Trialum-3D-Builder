@@ -1,0 +1,13 @@
+# Developer/editor temporary files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+node_modules/
+coverage/
+dist/
+*.log
+.cache/
+*.tmp
+*.bak
+# Real authored glTF2 assets are intentionally version-controlled under assets/models/
