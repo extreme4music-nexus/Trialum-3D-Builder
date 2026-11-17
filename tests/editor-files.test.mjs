@@ -20,14 +20,15 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
  assert.doesNotMatch(source,/fetch\([^)]*\/api\/(?:player|social|inventory)/i);
  assert.doesNotMatch(html,/three\.js.*cdn|http:\/\/[a-z]/i);
 });
-test("catalogue contains all 41 historical and derived Trialum room GLBs",()=>{
+test("catalogue contains all 42 historical and derived Trialum room GLBs",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(glbs.length,41);
- assert.equal(new Set(glbs.map(x=>x.id)).size,41);
+ assert.equal(glbs.length,42);
+ assert.equal(new Set(glbs.map(x=>x.id)).size,42);
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
  assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
+ assert.ok(c.assets.some(x=>x.id==="f01-f-radial-wedge"&&x.approval.includes("RENDER PASS")));
  for(const id of ["agro-atrium","food-warehouse-shell","food-cold-annex-shell","food-packing-annex-shell","greenhouse-shell","g01-main-basin","aquaglow-mature","b1-pilot-room"]){
   assert.ok(c.assets.some(x=>x.id===id),"Missing original or derived GLB: "+id);
  }
@@ -80,4 +81,16 @@ test("room selector has all six true GLB projects, with safely whitelisted file 
  assert.match(editor,/function openRoomPreset/);
  assert.match(editor,/const mixer=new THREE.AnimationMixer/);
  assert.match(editor,/" GLB · "/);
+});
+
+test("owner-render-approved F01-F has isolated Builder 3D review preset, never installed in game",()=>{
+ const p=JSON.parse(file("projects/trialum-f01-f-radial-wedge-review.json"));
+ const ids=p.instances.map(x=>x.assetId);
+ assert.equal(p.schemaVersion,1);
+ assert.equal(p.meta.gameplayWrites,0);
+ assert.equal(p.meta.officialScene,false);
+ assert.equal(ids.filter(x=>x==="f01-f-radial-wedge").length,1);
+ assert.ok(ids.includes("f01-a"));
+ assert.match(file("index.html"),/value="f01-f"/);
+ assert.match(file("src/main.js"),/"f01-f":"trialum-f01-f-radial-wedge-review.json"/);
 });
