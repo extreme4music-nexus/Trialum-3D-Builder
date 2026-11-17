@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-greenhouse-original-shell-g01-preview",
+  "name": "Стаклена градина · S7 оригинална GLB сцена",
+  "description": "Real original S7 greenhouse glass shell (82x104m) + G01 water modules staged but hidden until floor openings and physical owner review. Aquaglow stages in catalog only.",
+  "room": {
+    "width": 82,
+    "depth": 104,
+    "height": 12.5,
+    "gridSize": 0.5,
+    "showWalls": false,
+    "floorColor": "#254c48",
+    "wallColor": "#305f5d"
+  },
+  "instances": [
+    {
+      "id": "greenhouse-original-shell",
+      "assetId": "greenhouse-shell",
+      "label": "greenhouse-shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Existing original S7 glass shell, physical paw shape, 4 wings. Shell has not yet been cut for real G01 pools."
+    },
+    {
+      "id": "future-g01-main-basin",
+      "assetId": "g01-main-basin",
+      "label": "g01-main-basin",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": false,
+      "binding": "",
+      "note": "REAL G01 standalone GLB exists, but deliberately hidden in full greenhouse until owner approves physical floor cutouts; enable in Inspector for study."
+    },
+    {
+      "id": "future-g01-satellite-basins",
+      "assetId": "g01-satellite-basins",
+      "label": "g01-satellite-basins",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": false,
+      "binding": "",
+      "note": "REAL G01 standalone GLB exists, but deliberately hidden in full greenhouse until owner approves physical floor cutouts; enable in Inspector for study."
+    },
+    {
+      "id": "future-g01-walkway-and-railings",
+      "assetId": "g01-walkway-and-railings",
+      "label": "g01-walkway-and-railings",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": false,
+      "binding": "",
+      "note": "REAL G01 standalone GLB exists, but deliberately hidden in full greenhouse until owner approves physical floor cutouts; enable in Inspector for study."
+    },
+    {
+      "id": "future-g01-crossing-bridge",
+      "assetId": "g01-crossing-bridge",
+      "label": "g01-crossing-bridge",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": false,
+      "binding": "",
+      "note": "REAL G01 standalone GLB exists, but deliberately hidden in full greenhouse until owner approves physical floor cutouts; enable in Inspector for study."
+    },
+    {
+      "id": "future-g01-visual-service-pumps",
+      "assetId": "g01-visual-service-pumps",
+      "label": "g01-visual-service-pumps",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": false,
+      "binding": "",
+      "note": "REAL G01 standalone GLB exists, but deliberately hidden in full greenhouse until owner approves physical floor cutouts; enable in Inspector for study."
+    },
+    {
+      "id": "future-g01-water-surfaces-animated",
+      "assetId": "g01-water-surfaces-animated",
+      "label": "g01-water-surfaces-animated",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": false,
+      "binding": "",
+      "note": "REAL G01 standalone GLB exists, but deliberately hidden in full greenhouse until owner approves physical floor cutouts; enable in Inspector for study."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
