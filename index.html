@@ -29,7 +29,16 @@
       </div>
       <nav class="top-actions" aria-label="Проекти">
         <button id="newProject" title="Нова сцена">Ново</button>
-        <button id="openS7Project" title="Вчитај активен Trialum S7 F01 проект">S7 Проект</button>
+        <select id="scenePreset" title="Вчитај вистински Trialum GLB простор" aria-label="3D простории од Trialum">
+          <option value="">🏛️ Избери 3D просторија…</option>
+          <option value="atrium">🏛️ Агро лоби</option>
+          <option value="warehouse">📦 Главно стовариште</option>
+          <option value="cold">❄️ Разладна комора</option>
+          <option value="packing">📦 Пакување</option>
+          <option value="greenhouse">🌿 Стаклена градина</option>
+          <option value="g01">💧 G01 водно јадро</option>
+        </select>
+        <button id="openS7Project" title="Вчитај активен Trialum S7 F01 проект">S7 F01</button>
         <button id="openProject" title="Отвори JSON проект">Отвори</button>
         <button id="saveProject" class="accent" title="Зачувај во папка на GitHub Desktop">Зачувај</button>
         <button id="gitPull" title="Преземи последни измени од GitHub; претходно зачувај">GitHub ↓</button>
