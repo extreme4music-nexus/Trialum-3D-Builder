@@ -32,8 +32,10 @@ SOURCES={
  **{f"aquaglow-{stage}.glb":f"build/g01-aquatic-review/aquaglow-{stage}.glb"
     for stage in ("sprout","young","growing","mature","weakened","dead")},
  "pilot-room.glb":"prototypes/lw-d/b1/pilot-room.glb",
+ "food-cold-annex-shell.glb":"build/warehouse-annex-prefabs/food-cold-annex-shell.glb",
+ "food-packing-annex-shell.glb":"build/warehouse-annex-prefabs/food-packing-annex-shell.glb",
 }
-assert len(SOURCES)==24,len(SOURCES)
+assert len(SOURCES)==26,len(SOURCES)
 
 def run(command):
  print("[GLB] RUN", " ".join(map(str,command)),flush=True)
@@ -54,7 +56,7 @@ def check(raw,name):
 
 def main():
  # Original Trialum generators, not replacements/reconstructions.
- for script in ("build-agro-greenhouse.py","build-agro-g01-watercore.py","build-agro-g01-aquatic.py"):
+ for script in ("build-agro-greenhouse.py","build-agro-g01-watercore.py","build-agro-g01-aquatic.py","build-warehouse-annex-prefabs.py"):
   run([sys.executable,TOOLS/script])
  for script in ("build-agro-lobby.mjs","build-food-warehouse.mjs","generate-glb.mjs"):
   run(["node",TOOLS/script])
