@@ -27,7 +27,7 @@ const state={
  tool:"select",roomMeshes:[],instanceMeshes:new Map(),history:[],historyIndex:-1,
  saveHandle:null,repoHandle:null,dirty:false,modelCache:new Map(),localUrls:new Map(),
  localFiles:new Map(),gridOn:true,dragging:false,dragChanged:false,
- busy:0,warningCount:0,
+ busy:0,warningCount:0,modelAnimations:new Map(),animationMixers:new Map(),
 };
 
 const scene=new THREE.Scene();
@@ -189,6 +189,7 @@ async function modelObject(asset){
    const url=await glbUrl(asset);
    const gltf=await loader.loadAsync(url);
    if(!gltf?.scene)throw Error("GLB без 3D сцена");
+   state.modelAnimations.set(asset.id,gltf.animations||[]);
    return gltf.scene;
   })());
  }
@@ -206,7 +207,7 @@ function sceneGroupFor(rec){
 }
 async function renderInstance(rec){
  const old=state.instanceMeshes.get(rec.id);
- if(old){if(gizmo.object===old)gizmo.detach();contentRoot.remove(old);}
+ if(old){if(gizmo.object===old)gizmo.detach();contentRoot.remove(old);state.animationMixers.delete(rec.id);}
  const root=sceneGroupFor(rec);
  state.instanceMeshes.set(rec.id,root);
  contentRoot.add(root);
@@ -216,6 +217,8 @@ async function renderInstance(rec){
   const obj=await modelObject(asset);
   if(state.instanceMeshes.get(rec.id)!==root)return;
   root.add(obj);
+  const clips=state.modelAnimations.get(asset.id)||[];
+  if(clips.length){const mixer=new THREE.AnimationMixer(obj);for(const clip of clips)mixer.clipAction(clip).play();state.animationMixers.set(rec.id,mixer);}
  }catch(e){
   console.error("Model load failed:",asset.id,e);
   if(state.instanceMeshes.get(rec.id)===root)root.add(placeholder(asset,true));
@@ -224,7 +227,7 @@ async function renderInstance(rec){
  if(state.selectedId===rec.id&&!rec.locked)gizmo.attach(root);
 }
 function clearScene(){
- gizmo.detach();
+ gizmo.detach();state.animationMixers.clear();
  for(const mesh of state.instanceMeshes.values())contentRoot.remove(mesh);
  state.instanceMeshes.clear();
 }
@@ -673,6 +676,42 @@ async function githubSync(action){
  finally{btn.disabled=false;}
 }
 
+const ROOM_PRESETS=Object.freeze({
+ atrium:"trialum-agro-atrium.json",
+ warehouse:"trialum-food-warehouse.json",
+ cold:"trialum-cold-storage.json",
+ packing:"trialum-packing-room.json",
+ greenhouse:"trialum-agro-greenhouse.json",
+ g01:"trialum-g01-water-core.json",
+ f01:"trialum-s7-f01-production.json"
+});
+function frameCurrentRoom(){
+ const {width,depth,height}=state.project.room;
+ const size=Math.max(width,depth);
+ const distance=Math.max(12,size*1.08);
+ camera.position.set(distance*.55,Math.max(7,height*.9,distance*.52),distance*.82);
+ controls.target.set(0,Math.min(height*.3,3),0);
+ controls.maxDistance=Math.max(220,size*3);
+ camera.far=Math.max(800,size*12);
+ camera.updateProjectionMatrix();controls.update();
+}
+async function openRoomPreset(key){
+ const file=ROOM_PRESETS[key];if(!file)return;
+ if(state.dirty&&!confirm("Има незачувани измени. Да ја отвориме другата просторија?"))return;
+ try{
+  const response=await fetch("./projects/"+file,{cache:"no-store"});
+  if(!response.ok)throw Error("HTTP "+response.status);
+  const data=await response.json();
+  // Never keep the save handle for the previously opened room.
+  state.saveHandle=null;
+  useProject(data,true);
+  frameCurrentRoom();
+  try{localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(state.project));}catch{}
+  say("Вчитана вистинска GLB просторија: "+data.name+" · "+data.instances.length+" елементи.");
+ }catch(e){say("Не можам да ја отворам просторијата: "+e.message,true)}
+ finally{$("scenePreset").value="";}
+}
+
 function addListeners(){
  document.querySelectorAll("[data-tool]").forEach(b=>b.addEventListener("click",()=>setTool(b.dataset.tool)));
  ui.assetSearch.addEventListener("input",renderCatalogue);
@@ -680,7 +719,8 @@ function addListeners(){
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
  $("openProject").onclick=()=>ui.projectFileInput.click();
- $("openS7Project").onclick=async()=>{try{const r=await fetch("./projects/trialum-s7-f01-production.json",{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);useProject(await r.json(),true);say("Вчитан активниот S7 F01 проект со 70 оригинални 3D модули.")}catch(e){say("S7 проектот не е достапен: "+e.message,true)}};
+ $("openS7Project").onclick=()=>openRoomPreset("f01");
+ $("scenePreset").onchange=e=>openRoomPreset(e.target.value);
  ui.projectFileInput.onchange=async e=>{
   try{await fileOpen(e.target.files?.[0])}catch(err){say("Неправилен проект: "+err.message,true)}
   e.target.value="";
@@ -703,7 +743,7 @@ function addListeners(){
   state.project.room.showWalls=ui.showWalls.checked;
   roomHelpers();markChanged();say("Просторијата е обновена.");};
  $("resetCamera").onclick=()=>{
-  camera.position.set(10,10,11);controls.target.set(0,0,0);controls.update();say("Камерата е вратена.");};
+  frameCurrentRoom();say("Камерата е прилагодена на големината на просторијата.");};
  ui.gridStep.addEventListener("change",()=>{state.project.room.gridSize=gridStep();syncGrid();markChanged()});
  $("toggleGrid").onclick=()=>{
   state.gridOn=!state.gridOn;
@@ -740,8 +780,11 @@ function addListeners(){
  });
  observer.observe(ui.viewport);
 }
+const animationClock=new THREE.Clock();
 function tick(){
  requestAnimationFrame(tick);
+ const dt=Math.min(animationClock.getDelta(),0.08);
+ for(const mixer of state.animationMixers.values())mixer.update(dt);
  controls.update();
  renderer.render(scene,camera);
 }
