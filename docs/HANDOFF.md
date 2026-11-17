@@ -1,5 +1,17 @@
 # TRIALUM 3D WORLD BUILDER — COMPLETE RECOVERY HANDOFF
 
+## F01-F — ИСПРАВКА ПО ТВОЈАТА ЗАБЕЛЕШКА: ПЛОЧКИТЕ МОРА ДА БИДАТ ОКОЛУ БАЗЕНОТ
+**Претходниот самостоен голем F01-F е ОДБИЕН и заменет; неговите стари 89 948 bytes / r9.15–10.15 m / SHA 0b76… НЕ СЕ ВЕЌЕ ВАЖЕЧКИ.**
+
+Новиот `assets/models/f01-marble-cream-radial-wedge.glb` е **ЕДНА МАЛА САМОСТОЈНА 3D ПЛОЧКА** покрај постојната кружна патека на реалниот G01: r=7.2–8.2 m, 1m радијална ширина и 7.5° модуларен сегмент (околу 1m должина), 24 вистински закривени поделби, 6cm дебелина, 4mm bevel, 6mm фуга, непроменета F01-A PBR текстура. Се повторува во 48 чекори, но **не се поставени 48 во играта**.
+
+Во менито **Избери 3D просторија… → F01-F · закривен мермер** се отвора `projects/trialum-f01-f-radial-wedge-review.json` со **7 посебно избирливи плочки** наредени како закривен крем-мермерен сегмент во самиот G01: заедно со вистинската оригинална ограда, кружна патека, главен базен, три помошни базени, мост и анимирана вода. Сегментите се прикажани како **дизајнерски површински слој** малку над постојната патека, а не се инсталирани во вистинската игра — нема промени на 4-те водни слота или на нивната логика.
+
+Нов GLB SHA256: `982c6d5193bd4b4ea09d59aa099c957a998c24dfa883ac5435f819b756f31e8d` · 83 200 bytes · Git blob `7b759d7206e813761cbd2d70fc2b11b86a4ff25f` идентичен во двете GitHub репоа. Испорака проверена со [Game GLB CI](https://github.com/extreme4music-nexus/Trialum/actions/runs/44191561176) и [Builder CI](https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44191681735).
+
+**ВАЖНО:** Коригираниот изглед и поставување во Builder чекаат визуелна проверка од сопственикот. Ова го поправа геометрискиот и сценскиот пропуст, но не тврди дека screenshot е пиксел-по-пиксел идентичен со концептниот рендер.
+
+
 > **LATEST ADDENDUM (F01-F, 2026-11-17):** previous 41-model status is now **42 physical GLB binaries** in Builder main. The new `f01-marble-cream-radial-wedge.glb` is 89,948 bytes, 32 segments / 392 triangles, owner CONCEPT RENDER PASS, real GLB model visual review PENDING; identical SHA256 in Trialum Draft PR #96 and Builder main. Builder menu **F01-F · закривен мермер (за проверка)** opens a 3-asset standalone review project. Game main, G01 installed scene, Classic and Play are untouched. Use [live inventory](ALL_KNOWN_GLB_ROOMS_HANDOFF_20261117.md).\n\n
 > **LATEST — 17 NOV 2026, supersedes historical 11/15-model notes below:** Builder main now tracks **41 physically committed real GLB binaries** (15 F01 + 24 original historical Trialum scene assets + 2 newly converted S5 annex shell GLBs), plus seven editable project JSONs. Six real-room presets are available via the top "Избери 3D просторија…" menu; the S7 F01 70-element workspace remains accessible. Build scripts `scripts/setup.py` (F01) and `scripts/build_all_assets.py` (other 26) with `tools/b1/package.json` pinned original tools; catalog, source recipes, SHA manifests and binaries are in Builder. **Read [current 41-GLB handoff](ALL_KNOWN_GLB_ROOMS_HANDOFF_20261117.md) first.** The old 11-model count, missing F01-E claim and external-ZIP notes below are HISTORICAL. Owner device/visual QA is still pending; no Trialum game main/Play changes.
 
