@@ -49,7 +49,7 @@ jobs:
           node --check tools/b1/build-food-warehouse.mjs
           node --check tools/b1/generate-glb.mjs
 
-      - name: Build all 41 real GLBs (F01 + original Trialum rooms + derived annexes) and pinned Three.js
+      - name: Build all 42 real GLBs (F01 + original Trialum rooms + derived annexes) and pinned Three.js
         shell: bash
         run: |
           set -euo pipefail
@@ -57,7 +57,7 @@ jobs:
           npm install --prefix tools/b1 --no-audit --no-fund --package-lock=false --ignore-scripts
           python3 scripts/build_all_assets.py
           python3 tests/models.test.py
-          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 41
+          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 42
           test -f vendor/three.module.js
           test -f vendor/three.core.js
           test -f vendor/addons/loaders/GLTFLoader.js
@@ -74,9 +74,9 @@ jobs:
           git config user.email "trialum-builder-bot@users.noreply.github.com"
           git add assets/models vendor assets/TRIALUM_LEGACY_GLB_MANIFEST.json
           if git diff --staged --quiet; then
-            echo "All 41 physical GLBs and pinned Three modules already current."
+            echo "All 42 physical GLBs and pinned Three modules already current."
           else
-            git commit -m "build(builder): ship all 41 original/derived Trialum GLBs and pinned Three.js 0.180.0"
+            git commit -m "build(builder): ship all 42 original/derived Trialum GLBs and pinned Three.js 0.180.0"
             git push origin HEAD:main
             echo "Committed authoring binaries to Builder main. Owner should Pull in GitHub Desktop."
           fi
@@ -92,7 +92,7 @@ jobs:
           curl -fsS http://127.0.0.1:8765/ | grep -q "Trialum World Builder"
           curl -fsS -o /tmp/f01-real-glb http://127.0.0.1:8765/assets/models/f01-marble-cream-full.glb
           cmp /tmp/f01-real-glb assets/models/f01-marble-cream-full.glb
-          for model in atrium warehouse-shell food-cold-annex-shell food-packing-annex-shell greenhouse-shell g01-main-basin g01-water-surfaces-animated aquaglow-mature pilot-room; do
+          for model in atrium warehouse-shell food-cold-annex-shell food-packing-annex-shell greenhouse-shell g01-main-basin g01-water-surfaces-animated aquaglow-mature pilot-room f01-marble-cream-radial-wedge; do
             curl -fsS -o "/tmp/$model.glb" "http://127.0.0.1:8765/assets/models/$model.glb"
             cmp "/tmp/$model.glb" "assets/models/$model.glb"
           done
@@ -104,5 +104,5 @@ jobs:
 
       - name: Save successful CI details (no APK, no game-state changes)
         run: |
-          echo "TWCS Builder initialized with 41 real historical/derived GLB models."
+          echo "TWCS Builder initialized with 42 real historical/derived GLB models."
           echo "No Android APK, no Play upload, no source Trialum repo changes."
