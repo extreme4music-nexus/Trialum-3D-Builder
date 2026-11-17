@@ -10,7 +10,7 @@ class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),11)
+  self.assertEqual(len(models),15)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
