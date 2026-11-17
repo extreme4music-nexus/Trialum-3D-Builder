@@ -1,5 +1,16 @@
 # Trialum 3D World Builder (TWCS)
 
+## НОВО — F01-F вистинска закривена мермерна плочка (owner render PASS)
+
+Со новото издание Builder содржи **42 физички оригинални/изведени GLB**, од кои **16 се F01 мермер** (A-F). **F01-F** е вистински 32-сегментен glTF2 заоблен мермерен модул, дебел 6 cm со реален 4 mm bevel, вградена и непроменета оригинална F01-A минерална текстура; неговиот концепт-рендер е одобрен од сопственикот, а финалната визуелна проверка на моделот допрва следува.
+
+За да го тестирате: затворете го стариот сервер, GitHub Desktop `main` → Fetch/Pull, стартувајте `START-BUILDER-WINDOWS.bat`, во горниот изборник **„Избери 3D просторија… → 🤍 F01-F · закривен мермер (за проверка)“**. Отвора `projects/trialum-f01-f-radial-wedge-review.json` со вистинскиот GLB и две неизменети одобрени F01-A споредбени плочки. Тестирајте агли/боја/bevel/жилки и зачувајте ги измените како обичен Builder проект.
+
+Моделот е *byte-for-byte* идентичен во `Trialum` [Draft PR #96](https://github.com/extreme4music-nexus/Trialum/pull/96) и `Trialum-3D-Builder` main, со SHA-256 `0b76aaf4870dbb06ded35a961330f7337a172c68fdd0b0092d2e7db78443196c`, 89 948 bytes. [Builder CI](https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44186505770) и [Game GLB CI](https://github.com/extreme4music-nexus/Trialum/actions/runs/44186709070) PASS.
+
+**Не е инсталиран во играта/главниот G01/Play Store.** Визуелно одобрување на вистинскиот GLB во Builder пред F01-G, според договорениот квалитетен редослед.
+
+
 ## Вистински Trialum GLB простории — 41 модели (17.11.2026)
 
 Во горниот изборник **„🏛️ Избери 3D просторија…“** се отвораат вистински, уредливи проекти со GLB модели од Trialum:
