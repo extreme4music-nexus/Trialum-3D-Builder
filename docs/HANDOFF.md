@@ -1,10 +1,10 @@
 # TRIALUM 3D WORLD BUILDER — COMPLETE RECOVERY HANDOFF
-17 November 2026 · Builder v0.1 · Owner-directed private development
+17 November 2026 · Builder v0.1 · Owner-directed development; repository made PUBLIC by owner for Actions
 
 ## Goal and ownership
-The owner explicitly created a NEW private GitHub repository:
+The owner created a separate GitHub repository, originally private and later made PUBLIC to enable GitHub Actions runners:
 **extreme4music-nexus/Trialum-3D-Builder**.
-The agent confirmed it exists and initialized its main branch.
+The agent confirmed it exists, initialized main and successfully bootstrapped its complete binary/model/tool dependencies using GitHub Actions.
 This is a standalone Windows desktop browser HTML/Three.js GLB level editor.
 The owner wants to **clone it with GitHub Desktop, position actual 3D models
 like LEGO bricks, save projects into the clone and commit/push**.
@@ -85,6 +85,18 @@ The original 9 material modules are A full B half C quarter D edge E corner
 F radial wedge G border H service I wet finish. Do not invent curved G01
 geometry: inspect actual four animated basins and owner S7 V3 topology first.
 
+## ✅ GitHub Actions bootstrap ACTUALLY COMPLETED — 2026-11-17
+
+The owner changed Builder visibility from private to **PUBLIC**. Previously all jobs failed before runner provisioning. GitHub runner then worked and showed actionable test errors; both were repaired (catalogue entries with `src:null`, and curl SIGPIPE in validation). Final run [#44150701259](https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44150701259) **SUCCESS 1/1**, source SHA `97e3ef9f29137c181dc2ae719c0cddf399d8775b`. All 9/9 Node + 3/3 Python asset tests passed, real original F01-A SHA validated, full localhost HTML/GLB/JS file delivery validated.
+
+The **11 authentic original F01 A/B/C/D GLBs** and pinned MIT Three.js 0.180.0 / GLTFLoader / OrbitControls / TransformControls were committed by the bot to Builder `main` at [binary commit `a5bf7dc`](https://github.com/extreme4music-nexus/Trialum-3D-Builder/commit/a5bf7dc). A fresh GitHub Desktop clone now includes those files; the old manual GLB ZIP workaround is NOT required.
+
+**Owner next step:** Pull/clone Builder main, double-click START-BUILDER-WINDOWS.bat, visually verify real 3D F01 A-D assets and save/push a design project. This device/visual QA has NOT been confirmed.
+
+**Public repo privacy warning:** all pushed `projects/*.json`, models and new source files are now publicly visible. Do not push confidential designs, account details, keys, personal messages, game saves or other private data. Builder remains standalone despite repo's public visibility.
+
+[Up-to-date build status](docs/BOOTSTRAP_STATUS_20261117.md) (path relative to repo root is `docs/BOOTSTRAP_STATUS_20261117.md`).
+
 ## Bootstrapping
 Once scripts, original A-D generators, catalogue and workflow are committed,
 GitHub Actions bootstrap.yml (permissions contents:write only THIS repo)
@@ -94,8 +106,9 @@ runs scripts/setup.py:
 3) CI checks Node project tests, Python actual glTF geometry and original hash
 4) commits only assets/models and vendor into Builder main for owner to Pull.
 The setup script may fetch npm CDN once. Thereafter editor is offline-ready.
-If action blocked/failed, Windows starter attempts setup via Python3; do not
-claim assets are in Git until verify a GitHub commit with binary files.
+The first successful bootstrap already committed the verified binaries to main.
+If a future GitHub workflow is temporarily unavailable, the Windows starter
+still offers Python3 setup as a local fallback; do not silently overwrite user scenes.
 
 ## Specific acceptance QA (NOT yet owner confirmed)
 1. Clone Builder repo and Pull after binary bootstrap commit.
