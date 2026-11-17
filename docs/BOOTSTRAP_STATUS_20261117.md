@@ -1,27 +1,34 @@
 # Trialum Builder bootstrap status — 17 Nov 2026
 
-## Verified GitHub repository and source
-- Private repo exists: https://github.com/extreme4music-nexus/Trialum-3D-Builder
-- Main contains actual code (index.html, 3D Three.js editor, CSS, project serializer, local server, Windows starter), 11 GLB catalogue entries, four byte-for-byte original F01 deterministic Python source generators, and complete docs.
-- JavaScript syntax of src/main.js and src/project.js was parsed and checked using the connected tools. Six schema/catalogue in-memory checks passed, including grid snap, JSON import/export and 11 catalogue entries.
-- Example scene is in projects/example-room.json; no source Trialum/Classic/Play or warehouse game code edited.
+## ✅ GitHub Actions recovered after the repository became PUBLIC
 
-## GitHub Actions infrastructure blocker — do not claim CI green
-The newly created private repository currently fails to provision an Actions job.
-- Original bootstrap workflow run #44147563490, attempts 1 and 2 both FAILED *before any reported step*, with no available job logs / steps in the connected GitHub API.
-- Minimal separate runner smoke #44148060908, using a single echo step on ubuntu-24.04, also FAILED before any reported step and exposes no logs.
-- Because even an independent echo probe fails, cannot attribute this to the Builder code, Python model generator or Three.js downloads. May be GitHub account Actions billing/runner permissions; only GitHub Actions UI/account can establish exact cause.
-- **Consequently the 11 generated GLB binaries and pinned Three.js vendor files are NOT yet committed to Builder main.** Do not say GitHub Desktop clone alone is fully offline-ready.
+- Repository: https://github.com/extreme4music-nexus/Trialum-3D-Builder
+- **Visibility: PUBLIC**, changed by the owner intentionally to make GitHub Actions runners available. Do not describe this repository as private in future handoffs.
+- **Final green bootstrap run:** https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44150701259
+- Head/source SHA: `97e3ef9f29137c181dc2ae719c0cddf399d8775b`.
+- **Result: SUCCESS, 1/1 job completed successfully.**
+- Previous runs failed before provisioning a runner when repository was private; changing visibility enabled real runner execution. Once runners worked, two correctable setup/test issues surfaced: nullable `src` for intentional mock objects and a `curl | grep -q` pipeline SIGPIPE on 603 KB Three.js module. Both were fixed and verified by final run.
 
-## Fully implemented local recovery path
-1. Clone Builder in GitHub Desktop and open its folder.
-2. Make sure Python 3 is installed. At Windows terminal in Builder root run:
-   py -3 scripts/setup.py
-3. This generates the **11 exact original glTF2 A/B/C/D files** into assets/models and downloads the pinned Three.js module plus its addon dependencies under vendor/.
-4. Double-click START-BUILDER-WINDOWS.bat; local URL http://127.0.0.1:8765/.
-5. GitHub Desktop now sees generated GLB+vendor; commit/push them once from the user's local machine if GitHub Actions is still unavailable. Do not commit unrelated files.
-6. Offline fallback for original 11 GLBs is also supplied in this conversation as Trialum-3D-Builder-F01-Real-GLB-Starter-Pack.zip; extract at Builder root, then run scripts/setup.py once to obtain the pinned Three.js vendor. The archive itself is not yet hosted as a GitHub binary.
+## ✅ Actual GLB and Three.js files committed to main
 
-## Next action
-Get an actual local Chromium owner test before claiming PASS: exact real GLB loads, placement, save into cloned repo, reopen design and GitHub Desktop push. The small engine/schema tests are distinct from full visual WebGL testing.
-When GitHub Actions infra is restored, rerun bootstrap and verify binary commit and CI before marking bootstrap green.
+- **GitHub Actions binary commit:** https://github.com/extreme4music-nexus/Trialum-3D-Builder/commit/a5bf7dc
+- `assets/models/` now contains **11 real binary glTF2 models**: F01-A ×1, F01-B ×2, F01-C ×4, F01-D ×4.
+- `vendor/` contains pinned **three@0.180.0**, `three.module.js`, `three.core.js`, GLTFLoader, OrbitControls, TransformControls, BufferGeometryUtils and upstream MIT license.
+- The canonical F01-A approved SHA256 check passed in Python.
+- **9/9 Node tests PASS**, **3/3 Python model tests PASS** in workflow; 11 GLBs and local Three.js server bytes verified by complete direct comparison.
+- Local static server bound to `127.0.0.1:8765` served HTML, vendor JS and real GLB; hidden git config request blocked. No game/Play/warehouse code changed.
+- Repo `main` now includes these generated binaries and dependencies, so **manual Python bootstrap and the earlier fallback ZIP are no longer needed for a fresh GitHub Desktop clone**.
+
+## What the owner should do
+
+1. In GitHub Desktop, **Fetch origin → Pull origin** for `extreme4music-nexus/Trialum-3D-Builder`.
+2. Open cloned folder → double-click `START-BUILDER-WINDOWS.bat` (requires Python 3 or Node.js 20+ for the loopback server).
+3. Open `http://127.0.0.1:8765/` via Edge/Chrome. Place existing F01-A/B/C/D from catalogue.
+4. Press **Зачувај**, explicitly choose the clone root, confirm new `projects/*.json` and any imported GLBs appear as changed files in GitHub Desktop, then Commit/Push.
+5. Report the first owner Windows visual QA result, including whether real GLBs (not fallback boxes), drag, rotate, save, reload work.
+
+**Note:** This repository is now PUBLIC; scene JSONs and models committed and pushed to main will be publicly accessible. Avoid publishing private data, server keys or designs intended to remain confidential.
+
+## Remaining acceptance gate
+
+CI is **GREEN**, GLB assets **AVAILABLE**, but **owner Windows browser/WebGL visual PASS is not yet recorded**. The verified server/http/tests are not evidence that the owner's particular Windows/Edge GPU renders every imported model flawlessly. Do not claim owner acceptance or Android game integration until separately verified.
