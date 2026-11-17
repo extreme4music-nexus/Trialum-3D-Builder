@@ -6,6 +6,8 @@ on:
     paths:
       - 'tools/b1/**'
       - 'scripts/setup.py'
+      - 'scripts/server.py'
+      - 'scripts/server.mjs'
       - 'src/**'
       - 'index.html'
       - 'assets/catalog.json'
