@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-warehouse-cold-storage-room",
+  "name": "Разладна комора · уредлива соба",
+  "description": "Canonical Food Warehouse S5 cold annex coordinates, real structural GLB extracted from the original room, with two original cold-locker GLB assets. Design-only.",
+  "room": {
+    "width": 8,
+    "depth": 10,
+    "height": 4.5,
+    "gridSize": 0.5,
+    "showWalls": false,
+    "floorColor": "#28443f",
+    "wallColor": "#4b625b"
+  },
+  "instances": [
+    {
+      "id": "cold-room-shell",
+      "assetId": "food-cold-annex-shell",
+      "label": "food-cold-annex-shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Built from owner S5 source, local centered room pivot."
+    },
+    {
+      "id": "cold-locker--1",
+      "assetId": "food-cold-locker",
+      "label": "food-cold-locker",
+      "position": [
+        -1.17,
+        0,
+        0.32
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": [
+        0.82,
+        0.9,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact original S5 annex equipment"
+    },
+    {
+      "id": "cold-locker-1",
+      "assetId": "food-cold-locker",
+      "label": "food-cold-locker",
+      "position": [
+        1.17,
+        0,
+        0.32
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": [
+        0.82,
+        0.9,
+        0.83
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Exact original S5 annex equipment"
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
