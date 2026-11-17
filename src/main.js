@@ -459,7 +459,8 @@ function warnIfCollision(rec){
  if(overlaps.length)say("Внимание: предметот се преклопува со "+overlaps.length+" други. Само предупредување.",true);
 }
 function applyInspector(){
- const rec=getSelected();if(!rec||rec.locked){say("Заклучен предмет. Отклучи го прво.",true);return;}
+ const rec=getSelected();if(!rec){say("Прво избери предмет.",true);return;}
+ if(rec.locked&&ui.objLocked.checked){say("За да го отклучиш, исклучи Заклучен предмет, па Примени.",true);return;}
  const pos=[ui.posX,ui.posY,ui.posZ].map((node,i)=>Number.isFinite(Number(node.value))?math.clamp(Number(node.value),-300,300):rec.position[i]);
  const scale=math.clamp(Number(ui.scaleVal.value)||1,.05,20);
  rec.label=ui.objLabel.value.slice(0,100);
@@ -731,18 +732,21 @@ async function startup(){
   {id:"wall-panel",name:"Ѕиден панел · тест",category:"Градежни блокови",
    dimensions:[1,1,.10],placement:"wall",color:"#668e87"}
  ])if(!state.registry.has(item.id))state.registry.set(item.id,item);
- let data;
- try{const saved=localStorage.getItem(LOCAL_AUTOSAVE);if(saved)data=JSON.parse(saved)}catch{}
+ let data;let recoveredLocalDraft=false;
+ try{const saved=localStorage.getItem(LOCAL_AUTOSAVE);if(saved){data=JSON.parse(saved);recoveredLocalDraft=true;}}catch{}
  if(!data)try{const r=await fetch("./projects/example-room.json");if(r.ok)data=await r.json()}catch{}
  try{state.project=data?sanitizeProject(data):createProject()}catch{state.project=createProject()}
  for(const asset of state.project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
  refreshCategories();roomHelpers();addListeners();await rebuildScene();recordSnapshot();
- markSaved();updateCounters();
+ if(recoveredLocalDraft){state.dirty=true;ui.saveIndicator.textContent="● Локална копија · треба Git зачувување";ui.saveIndicator.style.color="#edb979";}
+ else markSaved();
+ updateCounters();
  $("viewportHint").textContent="Лев клик: избор или лепење · Десен клик: орбита · Среден: зум · Ctrl+S: зачувај";
  tick();
- say("Trialum Builder е подготвен · "+state.catalog.length+" оригинални модели во каталогот.");
+ say((recoveredLocalDraft?"Вратена локална копија (Зачувај во GitHub папка). ":"")+
+ "Trialum Builder е подготвен · "+state.catalog.length+" оригинални модели во каталогот.");
  if(!state.catalog.length)say("Нема GLB каталог. Стартувај scripts/build_assets.py или провери GitHub Actions.",true);
 }
 startup().catch(e=>{console.error(e);say("Грешка при стартување: "+e.message,true);});
