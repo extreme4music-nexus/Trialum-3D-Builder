@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-builder-demo",
+  "name": "Моја прва мермерна соба",
+  "description": "Standalone editor example. NOT a canonical G01 or gameplay save.",
+  "room": {
+    "width": 8,
+    "depth": 8,
+    "height": 3.3,
+    "showWalls": false,
+    "gridSize": 0.5,
+    "floorColor": "#526b60",
+    "wallColor": "#34494c"
+  },
+  "instances": [
+    {
+      "id": "demo_1",
+      "assetId": "f01-a",
+      "label": "",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "demo_2",
+      "assetId": "f01-a",
+      "label": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "demo_3",
+      "assetId": "f01-b1",
+      "label": "",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "demo_4",
+      "assetId": "f01-b2",
+      "label": "",
+      "position": [
+        1,
+        0,
+        0.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "demo_5",
+      "assetId": "f01-c1",
+      "label": "",
+      "position": [
+        -1,
+        0,
+        -1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "demo_6",
+      "assetId": "f01-c2",
+      "label": "",
+      "position": [
+        -0.5,
+        0,
+        -1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "demo_7",
+      "assetId": "f01-c3",
+      "label": "",
+      "position": [
+        -1,
+        0,
+        -0.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "demo_8",
+      "assetId": "f01-c4",
+      "label": "",
+      "position": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "visible": true,
+      "locked": false,
+      "binding": "",
+      "note": ""
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
