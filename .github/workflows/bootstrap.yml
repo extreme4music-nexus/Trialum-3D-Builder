@@ -1,0 +1,92 @@
+name: Trialum 3D Builder — build original GLBs, vendor Three.js, run tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/b1/**'
+      - 'scripts/setup.py'
+      - 'src/**'
+      - 'index.html'
+      - 'assets/catalog.json'
+      - 'projects/**'
+      - 'tests/**'
+      - '.github/workflows/bootstrap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trialum-builder-main-bootstrap
+  cancel-in-progress: false
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout isolated Builder repo only
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Confirm local-only editor source parses
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          npm run check
+          npm test
+          python3 -m py_compile scripts/setup.py scripts/server.py tools/b1/*.py
+
+      - name: Reproduce EXACT original F01-A/B/C/D real GLB assets and vendor pinned MIT Three.js locally
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/setup.py
+          python3 tests/models.test.py
+          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 11
+          test -f vendor/three.module.js
+          test -f vendor/three.core.js
+          test -f vendor/addons/loaders/GLTFLoader.js
+          test -f vendor/addons/controls/OrbitControls.js
+          test -f vendor/addons/controls/TransformControls.js
+          test -f vendor/THREE-LICENSE.txt
+          sha256sum assets/models/f01-marble-cream-full.glb
+
+      - name: Commit reproducible binaries to private Builder main for owner's GitHub Desktop Pull
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "trialum-builder-bot"
+          git config user.email "trialum-builder-bot@users.noreply.github.com"
+          git add assets/models vendor
+          if git diff --staged --quiet; then
+            echo "All 11 original GLBs and pinned Three modules already current."
+          else
+            git commit -m "build(builder): ship 11 original F01 GLBs and locally vendored Three.js 0.180.0 MIT"
+            git push origin HEAD:main
+            echo "Committed authoring binaries to Builder main. Owner should Pull in GitHub Desktop."
+          fi
+
+      - name: Verify secure localhost-only HTTP service returns editor and models
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/server.py > /tmp/trialum-builder-http.log 2>&1 &
+          sid=$!
+          trap 'kill "$sid" 2>/dev/null || true' EXIT
+          sleep 2
+          curl -fsS http://127.0.0.1:8765/ | grep -q "Trialum World Builder"
+          curl -fsS -o /tmp/f01-real-glb http://127.0.0.1:8765/assets/models/f01-marble-cream-full.glb
+          cmp /tmp/f01-real-glb assets/models/f01-marble-cream-full.glb
+          curl -fsS http://127.0.0.1:8765/vendor/three.module.js | grep -q 'three'
+          ! curl -fsS http://127.0.0.1:8765/.git/config
+          echo "PASS: self-contained localhost server + true GLB + pinned local Three.js."
+
+      - name: Save successful CI details (no APK, no game-state changes)
+        run: |
+          echo "TWCS Builder initialized and self-hostable."
+          echo "No Android APK, no Play upload, no source Trialum repo changes."
