@@ -9,7 +9,7 @@ ORIGINAL_F01_A="787965608e2e4005a0ee84c857d7f0379a8093149b39da6bacb2d012feafc147
 class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
-  models=[x for x in assets if x.get("src","").endswith(".glb")]
+  models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
   self.assertEqual(len(models),11)
   for asset in models:
    p=ROOT/asset["src"]
