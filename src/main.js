@@ -7,6 +7,7 @@ import {OrbitControls} from "three/addons/controls/OrbitControls.js";
 import {TransformControls} from "three/addons/controls/TransformControls.js";
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
 import {createProject,sanitizeProject,downloadJson,downloadBlob,slug,clone,snap,rectanglesOverlap} from "./project.js";
+import {exportLivingSpace} from "./living-spaces-adapter.js";
 
 const $=id=>document.getElementById(id);
 const ids=["projectName","saveIndicator","assetSearch","categoryFilter","catalog",
@@ -688,6 +689,7 @@ function addListeners(){
  $("gitPull").onclick=()=>githubSync("pull");
  $("gitPublish").onclick=()=>githubSync("publish");
  $("exportProject").onclick=()=>{downloadJson(collectProject(),slug(state.project.name)+".json");say("JSON проектот е преземен. Зачувај го во projects/.")};
+ $("exportLivingSpace").onclick=()=>{try{const data=exportLivingSpace(collectProject(),[...state.registry.values()]);downloadJson(data,slug(state.project.name)+"-living-space.json");say("Извезен Living Spaces JSON: "+data.items.length+" предмети. Не ја менува играта.");}catch(e){say("Living Spaces export: "+e.message,true)}};
  $("exportBundle").onclick=exportBundle;
  $("importGlb").onclick=()=>ui.glbFileInput.click();
  ui.glbFileInput.onchange=async e=>{await importGlbs([...e.target.files]);e.target.value=""};
