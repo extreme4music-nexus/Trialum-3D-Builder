@@ -1,0 +1,90 @@
+name: Trialum Builder M01-M03 — produce and commit 60 genuine metal GLB files
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/source/m01-m03-metal-build-sources.tar.gz.b64'
+      - '.github/workflows/s7-m01-m03-metal-glb-assets.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: trialum-builder-metal-60-physical-delivery
+  cancel-in-progress: false
+jobs:
+  build-real-glbs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover exact source generator, textures recipe, review scenes
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64,io,tarfile,hashlib
+          file=Path('assets/source/m01-m03-metal-build-sources.tar.gz.b64')
+          raw=base64.b64decode(''.join(file.read_text().split()),validate=True)
+          assert hashlib.sha256(raw).hexdigest()=='ffbbad41f0de6b03228a29862af53ae69bfd4ff21cedaf13d1f7bf7682e72ca7'
+          assert len(raw)<30000
+          names=set()
+          with tarfile.open(fileobj=io.BytesIO(raw),mode='r:gz') as t:
+           for m in t.getmembers():
+            assert m.isfile() and not m.issym() and not m.islnk()
+            assert m.name.startswith(('tools/b1/','tests/','docs/','assets/m01-','projects/trialum-s7-metal-'))
+            assert '..' not in Path(m.name).parts and m.name not in names
+            names.add(m.name)
+            p=Path(m.name)
+            content=t.extractfile(m).read()
+            assert not p.exists() or p.read_bytes()==content,'Content conflict: '+str(p)
+            p.parent.mkdir(parents=True,exist_ok=True)
+            if not p.exists():p.write_bytes(content)
+          assert len(names)==10
+          print('PASS: approved 10-file reproducible source bundle')
+          PY
+      - name: Create exactly 60 genuine metal GLBs and independent verification
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --quiet 'numpy==2.3.5' 'pillow==12.3.0' 'trimesh==4.11.1'
+          python3 tools/b1/build-s7-m01-m03-metal.py
+          python3 tests/verify-s7-m01-m03.py
+          test "$(find assets/models -maxdepth 1 -name 'm0?-metal-*.glb' -type f | wc -l)" -eq 60
+      - name: Register 60 independent metal assets; preserve the first 150
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('assets/catalog.json')
+          c=json.loads(p.read_text())
+          updates=json.loads(Path('assets/m01-m03-catalog-additions.json').read_text())
+          assert len(updates)==60
+          ids={a['id']:a for a in c['assets']}
+          for item in updates:
+           if item['id'] in ids:assert ids[item['id']]['src']==item['src']
+           else:c['assets'].append(item)
+          actual=[a for a in c['assets'] if (a.get('src') or '').endswith('.glb')]
+          assert len(actual)==210,len(actual)
+          c['genuineGlbCount']=len(actual)
+          c['assetLibraryVersion']='2026-11-18-metal-M01-M03-210-glbs'
+          p.write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n')
+          print('PASS: previous 150 GLB catalogue assets + 60 approved metal modules')
+          PY
+      - name: Commit metal GLBs and editable Builder scenes to main
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-s7-metal-build-bot'
+          git config user.email 'trialum-s7-bot@users.noreply.github.com'
+          git add assets/models/m0?-metal-*.glb assets/materials/m0?-*.png assets/materials/m01-m03-metal-60-manifest.json
+          git add tools/b1/build-s7-m01-m03-metal.py tools/b1/make-m01-m03-builder-scenes.py assets/m01-m03-catalog-additions.json assets/catalog.json tests/verify-s7-m01-m03.py docs/S7_M01_M03_60_METAL_GLB_DELIVERY_20261118.md projects/trialum-s7-metal-*.json
+          if git diff --cached --quiet; then echo 'No changes'; exit 0; fi
+          git commit -m 'build(builder): add 60 genuine metal GLBs and five editable 3D review scenes'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
