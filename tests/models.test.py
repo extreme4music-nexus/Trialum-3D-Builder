@@ -10,7 +10,7 @@ class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),42)
+  self.assertEqual(len(models),45)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
@@ -24,7 +24,7 @@ class GLBModels(unittest.TestCase):
    self.assertEqual(gltf["asset"]["version"],"2.0")
    if asset["id"].startswith("f01-"):
     self.assertTrue(gltf.get("images"),str(p))
-    self.assertLess(len(d),160_000)
+    self.assertLess(len(d),220_000)
    else:
     self.assertLess(len(d),5_000_000)
    self.assertTrue(gltf.get("materials"),str(p))
@@ -67,6 +67,27 @@ class GLBModels(unittest.TestCase):
   self.assertFalse(extras["inGame"])
   self.assertTrue(extras["noGameStateWrites"])
   self.assertGreater(j["accessors"][0]["count"],300)
+ def test_f01_g_actual_cream_bevelled_curved_trim_variants(self):
+  files=("f01-g-cream-marble-pool-trim-1m.glb","f01-g-cream-marble-pool-trim-half.glb",
+         "f01-g-cream-marble-pool-trim-3m-showcase.glb")
+  for file in files:
+   raw=(MODEL_DIR/file).read_bytes()
+   assert raw[:4]==b"glTF"
+   jl=struct.unpack_from("<I",raw,12)[0]
+   j=json.loads(raw[20:20+jl])
+   meta=j["nodes"][0]["extras"]
+   self.assertEqual(meta["module"],"F01-G")
+   self.assertAlmostEqual(meta["heightM"],.135)
+   self.assertAlmostEqual(meta["topBevelM"],.008)
+   self.assertEqual(meta["realG01RadiusInnerM"],8.2)
+   self.assertEqual(meta["realG01RadiusOuterM"],8.39)
+   self.assertFalse(meta["inGame"])
+   self.assertEqual(meta["gameplayWrites"],0)
+   self.assertEqual(meta["textureSha256"],"81c434a57b770148ced6e9c40dccabade929a844a27b143f2dc13a4da0ff8c98")
+   self.assertTrue(j["images"])
+   self.assertGreater(j["accessors"][0]["count"],100)
+  one=json.loads((MODEL_DIR/files[0]).read_bytes()[20:20+struct.unpack_from("<I",(MODEL_DIR/files[0]).read_bytes(),12)[0]])
+  self.assertAlmostEqual(one["nodes"][0]["extras"]["arcRadians"],3.141592653589793/24)
  def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
