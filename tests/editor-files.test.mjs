@@ -265,3 +265,24 @@ test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-stat
  assert.match(js,/if\(total>=5\)/);
  assert.match(js,/plantId must come from canonical game engine/);
 });
+
+test("one-click 24-light gallery remains visible after pulling Builder main",()=>{
+ const html=file("index.html"),js=file("src/main.js"),launcher=file("START-BUILDER-WINDOWS.bat");
+ const c=JSON.parse(file("assets/catalog.json"));
+ const lighting=c.assets.filter(a=>/^s7-l(?:f[1-3]|w[1-2]|c[1-3])-/.test(a.id)&&a.src?.endsWith(".glb"));
+ assert.equal(lighting.length,24,"Real lighting assets must be present in Builder");
+ assert.match(html,/id="openLightingGallery"/);
+ assert.match(html,/id="builderLibraryVersion"/);
+ assert.match(js,/\$\("openLightingGallery"\)\.onclick=\(\)=>openRoomPreset\("lights-all"\)/);
+ assert.match(js,/LED "\+lightCount\+"\/24"/);
+ for(const item of ["lights-all","lights-floor","lights-wall","lights-ceiling","lights-g01"]){
+  assert.ok(html.includes('value="'+item+'"'),item+" not in room selector");
+  assert.ok(js.includes('"'+item+'":"trialum-s7-lights-'),item+" route missing");
+ }
+ const gallery=JSON.parse(file("projects/trialum-s7-lights-all-24-glbs.json"));
+ assert.equal(gallery.instances.length,24);
+ assert.ok(gallery.instances.every(x=>lighting.some(a=>a.id===x.assetId)));
+ assert.match(launcher,/s7-lf1-perimeter-straight-1m\.glb/);
+ assert.match(launcher,/s7-lc1-g01-1plus4-ring-chandelier\.glb/);
+ assert.match(launcher,/goto portbusy/);
+});
