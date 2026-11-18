@@ -1,0 +1,137 @@
+name: S7.8-C — 24 genuine greenhouse lighting GLBs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/lighting/s7-lighting-24-asset-source.tar.gz.b64'
+      - '.github/workflows/s7-lighting-24-glbs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: trialum-s7-lighting-24-builder
+  cancel-in-progress: false
+jobs:
+  build-and-ship:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Checkout current Builder main and preserve owner history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Stable Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover exact 11-file S7.8-C source bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64,gzip,tarfile,io,hashlib
+          src=Path('assets/lighting/s7-lighting-24-asset-source.tar.gz.b64')
+          body=src.read_text().strip()
+          assert hashlib.sha256(body.encode()).hexdigest()=='e83581741a09356dcad717d86151799f188858b8bba44117f73eff0e9af47c1f'
+          expected={
+            'tools/b1/build-s7-lights.py','tests/s7-lights-verify.py',
+            'assets/lighting/s7-lights-catalog-additions.json',
+            'assets/lighting/s7-lights-manifest.json',
+            'docs/S7_LIGHTING_24_GLB_HANDOFF_20261118.md',
+            'docs/TRIALUM_3D_GRAPHICS_PROFILES_RAY_TRACING_DESIGN_20261118.md',
+            'projects/trialum-s7-lights-all-24-glbs.json',
+            'projects/trialum-s7-lights-floor-f1-f3.json',
+            'projects/trialum-s7-lights-wall-w1-w2.json',
+            'projects/trialum-s7-lights-ceiling-c1-c3.json',
+            'projects/trialum-s7-lights-g01-five-rings.json'}
+          with tarfile.open(fileobj=io.BytesIO(gzip.decompress(base64.b64decode(body))),mode='r:') as t:
+            members=t.getmembers()
+            assert {m.name for m in members}==expected
+            assert all(m.isfile() and m.size<180000 for m in members)
+            for m in members:
+              dest=Path(m.name)
+              data=t.extractfile(m).read()
+              if dest.exists():
+                assert dest.read_bytes()==data, f'Owner edited source; refusing overwrite: {dest}'
+              else:
+                dest.parent.mkdir(parents=True,exist_ok=True)
+                dest.write_bytes(data)
+          print('PASS: exact immutable 11-file source bundle')
+          PY
+      - name: Generate and verify 24 physical closed PBR-emissive GLBs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet 'numpy==2.3.5' 'trimesh==4.11.1'
+          python3 tools/b1/build-s7-lights.py
+          python3 tests/s7-lights-verify.py
+      - name: Add all eight families to Builder catalogue and five editable scenes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog=Path('assets/catalog.json')
+          d=json.loads(catalog.read_text(encoding='utf8'))
+          incoming=json.loads(Path('assets/lighting/s7-lights-catalog-additions.json').read_text())
+          existing={x['id']:x for x in d['assets']}
+          assert len(incoming)==24 and len({x['id'] for x in incoming})==24
+          for row in incoming:
+            assert Path(row['src']).is_file(),row['src']
+            old=existing.get(row['id'])
+            if old: assert old['src']==row['src'],f'Owner model collision {row["id"]}'
+            else:
+              d['assets'].append(row)
+              existing[row['id']]=row
+          assert len({x['id'] for x in d['assets']})==len(d['assets'])
+          count=sum(x.get('src','').endswith('.glb') for x in d['assets'])
+          assert count==234,count
+          d['genuineGlbCount']=count
+          d['assetLibraryVersion']='2026-11-18-s7-8c-24-light-glbs-234'
+          catalog.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          html=Path('index.html');s=html.read_text(encoding='utf8')
+          anchor='          <option value="metal-compare">⚙️ M01/M02/M03 · метални форми и сервис</option>'
+          entries=[
+            ('lights-all','💡 S7 · СИТЕ 24 LED GLB'),
+            ('lights-floor','💡 Подни светилки L-F1–F3'),
+            ('lights-wall','💡 Ѕидни светилки L-W1–W2'),
+            ('lights-ceiling','💡 Тавански L-C1–C3'),
+            ('lights-g01','💡 G01 · лустер 1+4 прстени')]
+          if 'value="lights-all"' not in s:
+            assert anchor in s,'Unexpected Builder dropdown; no unsafe patch'
+            s=s.replace(anchor,anchor+'\n'+'\n'.join(f'          <option value="{k}">{title}</option>' for k,title in entries))
+          html.write_text(s,encoding='utf8')
+          main=Path('src/main.js');js=main.read_text(encoding='utf8')
+          marker=' "metal-compare":"trialum-s7-metal-3-finishes-service-compare.json",'
+          additions=[
+            ('lights-all','trialum-s7-lights-all-24-glbs.json'),
+            ('lights-floor','trialum-s7-lights-floor-f1-f3.json'),
+            ('lights-wall','trialum-s7-lights-wall-w1-w2.json'),
+            ('lights-ceiling','trialum-s7-lights-ceiling-c1-c3.json'),
+            ('lights-g01','trialum-s7-lights-g01-five-rings.json')]
+          if '"lights-all":' not in js:
+            assert marker in js,'Unexpected Builder presets; refuse blind overwrite'
+            js=js.replace(marker,marker+'\n'+'\n'.join(f' "{k}":"{v}",' for k,v in additions))
+          main.write_text(js,encoding='utf8')
+          print('PASS: 234 physical model assets and five real 3D Builder scenes')
+          PY
+          python3 tests/models.test.py
+          node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
+      - name: Commit real GLB binaries and source (no force push, no gameplay)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-s7-lighting-builder-bot'
+          git config user.email 'trialum-s7-lights@users.noreply.github.com'
+          git add -f assets/models/s7-l*.glb
+          git add tools/b1/build-s7-lights.py tests/s7-lights-verify.py
+          git add assets/lighting/s7-lights-*.json projects/trialum-s7-lights-*.json docs/S7_LIGHTING_24_GLB_HANDOFF_20261118.md docs/TRIALUM_3D_GRAPHICS_PROFILES_RAY_TRACING_DESIGN_20261118.md
+          git add assets/catalog.json index.html src/main.js
+          if git diff --cached --quiet; then echo 'All 24 real GLBs already present'; exit 0; fi
+          git commit -m 'feat(builder S7.8-C): 24 genuine greenhouse emissive GLBs, five galleries, no gameplay changes'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
