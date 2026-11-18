@@ -805,6 +805,15 @@ const ROOM_PRESETS=Object.freeze({
  "metal-m02":"trialum-s7-metal-m02-20-glbs.json",
  "metal-m03":"trialum-s7-metal-m03-20-glbs.json",
  "metal-compare":"trialum-s7-metal-3-finishes-service-compare.json",
+ "irrigation-all":"trialum-s7-irrigation-all-glbs.json",
+ "irrigation-i01":"trialum-s7-irrigation-i01-gallery.json",
+ "irrigation-i02":"trialum-s7-irrigation-i02-gallery.json",
+ "irrigation-i03":"trialum-s7-irrigation-i03-gallery.json",
+ "irrigation-i04":"trialum-s7-irrigation-i04-gallery.json",
+ "irrigation-i05":"trialum-s7-irrigation-i05-gallery.json",
+ "irrigation-i06":"trialum-s7-irrigation-i06-gallery.json",
+ "irrigation-control":"trialum-s7-irrigation-c-irr01-gallery.json",
+ "irrigation-beds":"trialum-s7-irrigation-four-bed-panels.json",
  "lights-all":"trialum-s7-lights-all-24-glbs.json",
  "lights-floor":"trialum-s7-lights-floor-f1-f3.json",
  "lights-wall":"trialum-s7-lights-wall-w1-w2.json",
@@ -861,6 +870,7 @@ function addListeners(){
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
  $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");
+ $("openIrrigationGallery").onclick=()=>openRoomPreset("irrigation-all");
  $("openProject").onclick=()=>ui.projectFileInput.click();
  $("openS7Project").onclick=()=>openRoomPreset("f01");
  $("scenePreset").onchange=e=>openRoomPreset(e.target.value);
