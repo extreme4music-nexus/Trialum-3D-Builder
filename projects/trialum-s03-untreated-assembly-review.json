@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-s03-untreated-assembly",
+  "name": "S03 · проверка на модули и споеви",
+  "description": "Real S03 modules; original S01 dug-soil remains unchanged. Design-only owner render approved, in-Builder 3D owner QA pending.",
+  "room": {
+    "width": 10,
+    "depth": 9,
+    "height": 4,
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#d6d5c9",
+    "wallColor": "#bfc9bc"
+  },
+  "instances": [
+    {
+      "id": "S03-0-full",
+      "assetId": "s03-untreated-full",
+      "label": "S03 full",
+      "position": [
+        -2,
+        0,
+        -1.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-1-half-west",
+      "assetId": "s03-untreated-half-west",
+      "label": "S03 half-west",
+      "position": [
+        -0.19999999999999996,
+        0,
+        -1.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-2-half-east",
+      "assetId": "s03-untreated-half-east",
+      "label": "S03 half-east",
+      "position": [
+        1.6,
+        0,
+        -1.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-3-quarter-nw",
+      "assetId": "s03-untreated-quarter-nw",
+      "label": "S03 quarter-nw",
+      "position": [
+        -2,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-4-quarter-ne",
+      "assetId": "s03-untreated-quarter-ne",
+      "label": "S03 quarter-ne",
+      "position": [
+        -0.19999999999999996,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-5-quarter-sw",
+      "assetId": "s03-untreated-quarter-sw",
+      "label": "S03 quarter-sw",
+      "position": [
+        1.6,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-6-quarter-se",
+      "assetId": "s03-untreated-quarter-se",
+      "label": "S03 quarter-se",
+      "position": [
+        -2,
+        0,
+        1.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderPass": true,
+    "ownerPhysicalGLBPass": false,
+    "canonicalSoilState": "S03",
+    "canonicalSlotsPerBed": 5
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-s03-untreated-15-gallery",
+  "name": "S03 · 15 необработени почвени GLB",
+  "description": "Real S03 modules; original S01 dug-soil remains unchanged. Design-only owner render approved, in-Builder 3D owner QA pending.",
+  "room": {
+    "width": 14,
+    "depth": 14,
+    "height": 4,
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#d6d5c9",
+    "wallColor": "#bfc9bc"
+  },
+  "instances": [
+    {
+      "id": "S03-0-full",
+      "assetId": "s03-untreated-full",
+      "label": "S03 full",
+      "position": [
+        -3.5999999999999996,
+        0,
+        -3.4499999999999997
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-1-half-west",
+      "assetId": "s03-untreated-half-west",
+      "label": "S03 half-west",
+      "position": [
+        -1.2,
+        0,
+        -3.4499999999999997
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-2-half-east",
+      "assetId": "s03-untreated-half-east",
+      "label": "S03 half-east",
+      "position": [
+        1.2,
+        0,
+        -3.4499999999999997
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-3-quarter-nw",
+      "assetId": "s03-untreated-quarter-nw",
+      "label": "S03 quarter-nw",
+      "position": [
+        3.5999999999999996,
+        0,
+        -3.4499999999999997
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-4-quarter-ne",
+      "assetId": "s03-untreated-quarter-ne",
+      "label": "S03 quarter-ne",
+      "position": [
+        -3.5999999999999996,
+        0,
+        -1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-5-quarter-sw",
+      "assetId": "s03-untreated-quarter-sw",
+      "label": "S03 quarter-sw",
+      "position": [
+        -1.2,
+        0,
+        -1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-6-quarter-se",
+      "assetId": "s03-untreated-quarter-se",
+      "label": "S03 quarter-se",
+      "position": [
+        1.2,
+        0,
+        -1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-7-edge-north",
+      "assetId": "s03-untreated-edge-north",
+      "label": "S03 edge-north",
+      "position": [
+        3.5999999999999996,
+        0,
+        -1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-8-edge-south",
+      "assetId": "s03-untreated-edge-south",
+      "label": "S03 edge-south",
+      "position": [
+        -3.5999999999999996,
+        0,
+        1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-9-edge-east",
+      "assetId": "s03-untreated-edge-east",
+      "label": "S03 edge-east",
+      "position": [
+        -1.2,
+        0,
+        1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-10-edge-west",
+      "assetId": "s03-untreated-edge-west",
+      "label": "S03 edge-west",
+      "position": [
+        1.2,
+        0,
+        1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-11-corner-nw",
+      "assetId": "s03-untreated-corner-nw",
+      "label": "S03 corner-nw",
+      "position": [
+        3.5999999999999996,
+        0,
+        1.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-12-corner-ne",
+      "assetId": "s03-untreated-corner-ne",
+      "label": "S03 corner-ne",
+      "position": [
+        -3.5999999999999996,
+        0,
+        3.4499999999999997
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-13-corner-se",
+      "assetId": "s03-untreated-corner-se",
+      "label": "S03 corner-se",
+      "position": [
+        -1.2,
+        0,
+        3.4499999999999997
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    },
+    {
+      "id": "S03-14-corner-sw",
+      "assetId": "s03-untreated-corner-sw",
+      "label": "S03 corner-sw",
+      "position": [
+        1.2,
+        0,
+        3.4499999999999997
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Untreated soil, no planting holes and no game-state writes"
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderPass": true,
+    "ownerPhysicalGLBPass": false,
+    "canonicalSoilState": "S03",
+    "canonicalSlotsPerBed": 5
+  }
+}

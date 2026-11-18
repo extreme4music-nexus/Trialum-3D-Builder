@@ -27,11 +27,13 @@
     "S03": {
       "nameMk": "Необработена / набиена земја",
       "description": "Посебен претстоен визуелен сет: неправилно тврда земја со камчиња, корења, без ископани дупки. Не смее да се замени со S01.",
-      "status": "NOT_RENDERED_NOT_APPROVED_NO_GLB",
-      "builderAssetId": null,
-      "existingGlb": null,
+      "status": "OWNER_RENDER_PASS_REAL_15_GLB_MODELS_BUILT_DEVICE_REVIEW_PENDING",
+      "builderAssetId": "s03-untreated-full",
+      "existingGlb": "assets/models/s03-untreated-full.glb",
       "physicalHoles": 0,
-      "canonicalSoilState": "untreated-compacted"
+      "canonicalSoilState": "untreated-compacted",
+      "realModelVariants": 15,
+      "ownerRenderPass": true
     }
   },
   "legacyAliases": {

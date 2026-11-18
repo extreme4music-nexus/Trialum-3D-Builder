@@ -230,7 +230,7 @@ test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-stat
  const ids=new Set(catalogue.assets.map(a=>a.id));
  for(const id of ["s02-25-planting-grid","s01-dug-turnover","s02-fill-plug","s02-slot-ring","s02-demo-seedling"])
   assert.ok(ids.has(id),"Missing soil GLB in catalogue: "+id);
- assert.equal(catalogue.genuineGlbCount,135);
+ assert.equal(catalogue.genuineGlbCount,150);
  const grid=JSON.parse(file("assets/soil-slot-matrix.json"));
  assert.equal(grid.slotCount,25);
  assert.equal(grid.canonicalPlantSlotsPerBed,5);

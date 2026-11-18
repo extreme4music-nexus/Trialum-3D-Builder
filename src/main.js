@@ -798,6 +798,8 @@ const ROOM_PRESETS=Object.freeze({
  "soil-mixed":"trialum-s02-mixed-planting-demo.json",
  "soil-dug":"trialum-s03-dug-soil.json",
  "soil-compare":"trialum-s02-s03-soil-comparison.json",
+ "soil-s03-gallery":"trialum-s03-untreated-15-glb-gallery.json",
+ "soil-s03-assembly":"trialum-s03-untreated-assembly-review.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){

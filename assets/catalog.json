@@ -2543,8 +2543,353 @@
       "note": "EXAMPLE only, no real species/plantId, never convert this into canonical plant",
       "ownerModelPass": false,
       "gameplayWrites": 0
+    },
+    {
+      "id": "s03-untreated-full",
+      "name": "S03 · НЕОБРАБОТЕНА почва · full",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-full.glb",
+      "dimensions": [
+        1,
+        0.153,
+        1
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-half-west",
+      "name": "S03 · НЕОБРАБОТЕНА почва · half-west",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-half-west.glb",
+      "dimensions": [
+        0.5,
+        0.153,
+        1
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-half-east",
+      "name": "S03 · НЕОБРАБОТЕНА почва · half-east",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-half-east.glb",
+      "dimensions": [
+        0.5,
+        0.153,
+        1
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-quarter-nw",
+      "name": "S03 · НЕОБРАБОТЕНА почва · quarter-nw",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-quarter-nw.glb",
+      "dimensions": [
+        0.5,
+        0.153,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": "s03-untreated-quarter-ne",
+      "name": "S03 · НЕОБРАБОТЕНА почва · quarter-ne",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-quarter-ne.glb",
+      "dimensions": [
+        0.5,
+        0.153,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "s03-untreated-quarter-sw",
+      "name": "S03 · НЕОБРАБОТЕНА почва · quarter-sw",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-quarter-sw.glb",
+      "dimensions": [
+        0.5,
+        0.153,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-quarter-se",
+      "name": "S03 · НЕОБРАБОТЕНА почва · quarter-se",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-quarter-se.glb",
+      "dimensions": [
+        0.5,
+        0.153,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-edge-north",
+      "name": "S03 · НЕОБРАБОТЕНА почва · edge-north",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-edge-north.glb",
+      "dimensions": [
+        1,
+        0.153,
+        0.2
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0.8
+      ]
+    },
+    {
+      "id": "s03-untreated-edge-south",
+      "name": "S03 · НЕОБРАБОТЕНА почва · edge-south",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-edge-south.glb",
+      "dimensions": [
+        1,
+        0.153,
+        0.2
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-edge-east",
+      "name": "S03 · НЕОБРАБОТЕНА почва · edge-east",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-edge-east.glb",
+      "dimensions": [
+        0.2,
+        0.153,
+        1
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0.8,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-edge-west",
+      "name": "S03 · НЕОБРАБОТЕНА почва · edge-west",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-edge-west.glb",
+      "dimensions": [
+        0.2,
+        0.153,
+        1
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-corner-nw",
+      "name": "S03 · НЕОБРАБОТЕНА почва · corner-nw",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-corner-nw.glb",
+      "dimensions": [
+        0.2,
+        0.153,
+        0.2
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0.8
+      ]
+    },
+    {
+      "id": "s03-untreated-corner-ne",
+      "name": "S03 · НЕОБРАБОТЕНА почва · corner-ne",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-corner-ne.glb",
+      "dimensions": [
+        0.2,
+        0.153,
+        0.2
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "s03-untreated-corner-se",
+      "name": "S03 · НЕОБРАБОТЕНА почва · corner-se",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-corner-se.glb",
+      "dimensions": [
+        0.2,
+        0.153,
+        0.2
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0.8,
+        0
+      ]
+    },
+    {
+      "id": "s03-untreated-corner-sw",
+      "name": "S03 · НЕОБРАБОТЕНА почва · corner-sw",
+      "category": "Почва S03 · Необработена",
+      "src": "assets/models/s03-untreated-corner-sw.glb",
+      "dimensions": [
+        0.2,
+        0.153,
+        0.2
+      ],
+      "placement": "floor",
+      "source": "Owner-approved S03 A/B/C D/E 3D boards; tools/b1/build-s7-s03-untreated.py",
+      "approval": "OWNER DESIGN RENDER PASS; REAL GLB QA PENDING",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "plantingHoles": 0,
+      "plantSlotsGranted": 0,
+      "sourceUVOffset": [
+        0,
+        0
+      ]
     }
   ],
-  "assetLibraryVersion": "2026-11-18-soil-S01-S02-135-glbs",
-  "genuineGlbCount": 135
+  "assetLibraryVersion": "2026-11-18-s03-untreated-150-glbs",
+  "genuineGlbCount": 150
 }

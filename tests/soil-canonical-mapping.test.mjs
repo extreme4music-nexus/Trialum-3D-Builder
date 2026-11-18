@@ -9,8 +9,8 @@ test("S01/S02/S03 taxonomy is explicit and non-deceptive",()=>{
  assert.equal(tax.canonicalStates.S01.builderAssetId,"s01-dug-turnover");
  assert.equal(tax.canonicalStates.S01.legacyBuilderAssetId,"s03-dug-turnover");
  assert.equal(tax.canonicalStates.S02.physicalHoles,25);
- assert.equal(tax.canonicalStates.S03.status,"NOT_RENDERED_NOT_APPROVED_NO_GLB");
- assert.equal(tax.canonicalStates.S03.existingGlb,null);
+ assert.equal(tax.canonicalStates.S03.realModelVariants,15);
+ assert.equal(tax.canonicalStates.S03.existingGlb,"assets/models/s03-untreated-full.glb");
  assert.equal(tax.constraints.canonicalTerrestrialBeds,4);
  assert.equal(tax.constraints.realPlantSlotsPerBed,5);
  assert.equal(tax.constraints.createsNewPlantCapacity,false);
@@ -18,7 +18,7 @@ test("S01/S02/S03 taxonomy is explicit and non-deceptive",()=>{
 test("existing exact soil binary stays byte-identical while canonical S01 asset resolves",()=>{
  const c=file("assets/catalog.json");
  const models=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(models.length,135);
+ assert.equal(models.length,150);
  const map=new Map(models.map(x=>[x.id,x]));
  assert.ok(map.has("s01-dug-turnover"));
  assert.ok(!map.has("s03-dug-turnover"));

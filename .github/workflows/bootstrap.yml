@@ -56,7 +56,7 @@ jobs:
           node --check tools/b1/build-food-warehouse.mjs
           node --check tools/b1/generate-glb.mjs
 
-      - name: Build all 135 real GLBs (F01 + original Trialum rooms + derived annexes) and pinned Three.js
+      - name: Build all 150 real GLBs (F01 + original Trialum rooms + derived annexes) and pinned Three.js
         shell: bash
         run: |
           set -euo pipefail
@@ -128,6 +128,8 @@ jobs:
           p.write_text(x.replace(old,"for p in (ROOT/'projects').glob('trialum-s0[23]-*.json'):"),encoding='utf8')
           PY
           /tmp/trialum-soil-venv/bin/python tests/soil-glb.test.py
+          /tmp/trialum-soil-venv/bin/python tools/b1/build-s7-s03-untreated.py > /tmp/s7-s03-15-build.json
+          /tmp/trialum-soil-venv/bin/python tests/s03-verify.py
           mkdir -p docs
           # Do not overwrite the newer owner-visible S01/S02 naming documentation.
           if test ! -f docs/S7_SOIL_GLBS_25_MATRIX_20261118.md; then
@@ -148,11 +150,15 @@ jobs:
           assert 's03-dug-turnover' not in {a['id'] for a in doc['assets']}
           assert len(doc['assets'])==len({a['id'] for a in doc['assets']})
           tax=json.loads(Path('docs/S7_SOIL_CANONICAL_STATES_20261118.json').read_text())
-          assert tax['canonicalStates']['S03']['existingGlb'] is None
+          assert tax['canonicalStates']['S03']['existingGlb']=='assets/models/s03-untreated-full.glb'
+          for new in json.loads(Path('assets/s03-catalog-additions.json').read_text(encoding='utf8')):
+           old=next((x for x in doc['assets'] if x['id']==new['id']),None)
+           if old is not None:assert old['src']==new['src']
+           else:doc['assets'].append(new)
           glbs=[a for a in doc['assets'] if (a.get('src') or '').endswith('.glb')]
-          assert len(glbs)==135
-          doc['genuineGlbCount']=135
-          doc['assetLibraryVersion']='2026-11-18-soil-S01-S02-135-glbs'
+          assert len(glbs)==150
+          doc['genuineGlbCount']=150
+          doc['assetLibraryVersion']='2026-11-18-soil-S01-S02-150-glbs'
           cat.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
           expected={
            's02-planting-bed-5x5-empty.glb':'7ead405a5ac39c9efef81d3e402cb454fa35ebd07c5933bb00a7877496c83b11',
@@ -163,11 +169,11 @@ jobs:
           for name,sha in expected.items():
            raw=Path('assets/models',name).read_bytes()
            assert hashlib.sha256(raw).hexdigest()==sha,(name,'GLB SHA drift')
-          print('PASS: 135 physical GLBs, five new soil GLB files byte-identical to approved offline package')
+          print('PASS: 150 physical GLBs, five new soil GLB files byte-identical to approved offline package')
           PY
           python3 tests/models.test.py
           node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
-          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 135
+          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 150
           test -f vendor/three.module.js
           test -f vendor/three.core.js
           test -f vendor/addons/loaders/GLTFLoader.js
@@ -183,13 +189,14 @@ jobs:
           git config user.name "trialum-builder-bot"
           git config user.email "trialum-builder-bot@users.noreply.github.com"
           git add assets/models vendor assets/TRIALUM_LEGACY_GLB_MANIFEST.json assets/materials/f02-black-marble-exact-reference-atlas.png assets/materials/f02-glb-sha-manifest.json assets/materials/f03-glb-sha-manifest.json assets/materials/f03-[st]-reference-derived-atlas.png assets/materials/f03-[st]-subtle-normal.png
-          git add -f assets/models/s02-*.glb assets/models/s03-dug-turnover-soil.glb
-          git add assets/soil-*.png assets/soil-slot-matrix.json assets/soil-model-manifest.json assets/catalog-additions.json assets/catalog.json assets/source/soil_approved_s01_s02_atlas.jpg
+          git add -f assets/models/s02-*.glb assets/models/s03-dug-turnover-soil.glb assets/models/s03-untreated-*.glb
+          git add assets/materials/s03-untreated-15-glb-manifest.json
+          git add assets/soil-*.png assets/soil-slot-matrix.json assets/soil-model-manifest.json assets/catalog-additions.json assets/s03-catalog-additions.json assets/catalog.json assets/source/soil_approved_s01_s02_atlas.jpg
           git add tools/b1/build-s7-soil-approved.py tests/soil-glb.test.py projects/trialum-s02-*.json projects/trialum-s03-*.json docs/S7_SOIL_GLBS_25_MATRIX_20261118.md requirements.txt
           if git diff --staged --quiet; then
-            echo "All 135 physical GLBs and pinned Three modules already current."
+            echo "All 150 physical GLBs and pinned Three modules already current."
           else
-            git commit -m "build(builder): ship all 135 original/derived Trialum GLBs and pinned Three.js 0.180.0"
+            git commit -m "build(builder): ship all 150 original/derived Trialum GLBs and pinned Three.js 0.180.0"
             # Owner may have pushed more Builder layouts after this run started.
             # Rebase on latest main; NEVER force-push or erase human changes.
             git fetch origin main
@@ -217,9 +224,9 @@ jobs:
           cmp /tmp/trialum-vendored-three.module.js vendor/three.module.js
           grep -q 'three' /tmp/trialum-vendored-three.module.js
           ! curl -fsS http://127.0.0.1:8765/.git/config
-          echo "PASS: localhost server serves real 135-GLB library + room assets + pinned Three.js."
+          echo "PASS: localhost server serves real 150-GLB library + room assets + pinned Three.js."
 
       - name: Save successful CI details (no APK, no game-state changes)
         run: |
-          echo "TWCS Builder initialized with 135 real historical/derived GLB models."
+          echo "TWCS Builder initialized with 150 real historical/derived GLB models."
           echo "No Android APK, no Play upload, no source Trialum repo changes."
