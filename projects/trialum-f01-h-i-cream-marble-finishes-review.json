@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-s7-f01-h-i-complete-cream-marble-finish-gallery",
+  "name": "F01-H + F01-I · БЕЛО-КРЕМ МЕРМЕР · финиш тест",
+  "description": "Two distinct TRUE 1m 3D marble finishes side-by-side with untouched owner-approved F01-A baseline. H is polished-looking but HONED MATTE service marble; I is tactile micro-stippled wet-adjacent. Each GLB can be picked and placed separately. Owner on-device visual review pending.",
+  "room": {
+    "width": 10,
+    "depth": 7,
+    "height": 2.6,
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#433c38",
+    "wallColor": "#584e46"
+  },
+  "instances": [
+    {
+      "id": "H-main",
+      "assetId": "f01-h-honed-service",
+      "label": "F01-H · мат 1m, сервисен простор",
+      "position": [
+        -2.1,
+        0,
+        -0.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "True 1x1x0.06m cream-white/beige marble. Only the surface finish changes. Real wet slip coefficient is not certified. No gameplay."
+    },
+    {
+      "id": "H-second",
+      "assetId": "f01-h-honed-service",
+      "label": "F01-H · втора плочка за спој",
+      "position": [
+        -2.1,
+        0,
+        1.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "True 1x1x0.06m cream-white/beige marble. Only the surface finish changes. Real wet slip coefficient is not certified. No gameplay."
+    },
+    {
+      "id": "A-reference",
+      "assetId": "f01-a",
+      "label": "F01-A · ОРИГИНАЛ за споредба",
+      "position": [
+        0,
+        0,
+        -0.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "True 1x1x0.06m cream-white/beige marble. Only the surface finish changes. Real wet slip coefficient is not certified. No gameplay."
+    },
+    {
+      "id": "I-main",
+      "assetId": "f01-i-wet-fine-texture",
+      "label": "F01-I · ситна релјефна текстура 1m",
+      "position": [
+        2.1,
+        0,
+        -0.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "True 1x1x0.06m cream-white/beige marble. Only the surface finish changes. Real wet slip coefficient is not certified. No gameplay."
+    },
+    {
+      "id": "I-second",
+      "assetId": "f01-i-wet-fine-texture",
+      "label": "F01-I · втора плочка за спој",
+      "position": [
+        2.1,
+        0,
+        1.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "True 1x1x0.06m cream-white/beige marble. Only the surface finish changes. Real wet slip coefficient is not certified. No gameplay."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerPassG": true,
+    "ownerF01HModelPass": false,
+    "ownerF01IModelPass": false,
+    "actualCertifiedSlipResistance": false,
+    "ownerF01AApprovedReference": true
+  }
+}
