@@ -685,6 +685,8 @@ const ROOM_PRESETS=Object.freeze({
  greenhouse:"trialum-agro-greenhouse.json",
  g01:"trialum-g01-water-core.json",
  "f01-f":"trialum-f01-f-radial-wedge-review.json",
+ "f01-g":"trialum-f01-g-pool-curb-g01-preview.json",
+ "f01-g-showcase":"trialum-f01-g-curved-trim-showcase.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
@@ -708,7 +710,7 @@ async function openRoomPreset(key){
   state.saveHandle=null;
   useProject(data,true);
   frameCurrentRoom();
-  if(key==="f01-f"){
+  if(key==="f01-f"||key==="f01-g"){
     // Focus on the TRUE G01 north-east poolside arc (22.5–75 degrees).
     // The seven small separate tiles must be visible, not one lonely slab.
     camera.position.set(18,13,16);
@@ -716,6 +718,7 @@ async function openRoomPreset(key){
     controls.maxDistance=120;
     controls.update();
   }
+  if(key==="f01-g-showcase"){camera.position.set(8,5,9);controls.target.set(0,.2,0);controls.update();}
   try{localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(state.project));}catch{}
   say("Вчитана вистинска GLB просторија: "+data.name+" · "+data.instances.length+" елементи.");
  }catch(e){say("Не можам да ја отворам просторијата: "+e.message,true)}
