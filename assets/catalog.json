@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum 3D Builder — F01 21 cream + F02 29 black + 26 original rooms · 76 physical GLBs",
+  "name": "Trialum real 130 GLB studio assets — F01 ivory marble, F02 black marble, F03 smooth and subtly textured sage grey stone, original rooms",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -1370,8 +1370,1088 @@
       "gameplayWrites": 0,
       "materialFamily": "F02 black with white and grey veins",
       "ownerModelPass": false
+    },
+    {
+      "id": "f03-s-stone-full",
+      "name": "F03-S A · МАЗЕН природен камен · full.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-full.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-half-first",
+      "name": "F03-S B · МАЗЕН природен камен · half first.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-half-first.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-half-second",
+      "name": "F03-S B · МАЗЕН природен камен · half second.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-half-second.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-quarter-c1",
+      "name": "F03-S C · МАЗЕН природен камен · quarter c1.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-quarter-c1.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-quarter-c2",
+      "name": "F03-S C · МАЗЕН природен камен · quarter c2.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-quarter-c2.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-quarter-c3",
+      "name": "F03-S C · МАЗЕН природен камен · quarter c3.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-quarter-c3.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-quarter-c4",
+      "name": "F03-S C · МАЗЕН природен камен · quarter c4.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-quarter-c4.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-edge-north",
+      "name": "F03-S D · МАЗЕН природен камен · edge north.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-edge-north.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-edge-south",
+      "name": "F03-S D · МАЗЕН природен камен · edge south.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-edge-south.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-edge-east",
+      "name": "F03-S D · МАЗЕН природен камен · edge east.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-edge-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-edge-west",
+      "name": "F03-S D · МАЗЕН природен камен · edge west.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-edge-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-corner-north-west",
+      "name": "F03-S E · МАЗЕН природен камен · corner north west.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-corner-north-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-corner-north-east",
+      "name": "F03-S E · МАЗЕН природен камен · corner north east.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-corner-north-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-corner-south-east",
+      "name": "F03-S E · МАЗЕН природен камен · corner south east.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-corner-south-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-corner-south-west",
+      "name": "F03-S E · МАЗЕН природен камен · corner south west.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-corner-south-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-radial-wedge",
+      "name": "F03-S F · МАЗЕН природен камен · radial wedge.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-radial-wedge.glb",
+      "dimensions": [
+        1.0612308,
+        0.06,
+        1.064342
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-pool-trim-1m",
+      "name": "F03-S G · МАЗЕН природен камен · pool trim 1m.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-pool-trim-1m.glb",
+      "dimensions": [
+        0.259765,
+        0.135,
+        1.0891406
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-pool-trim-half",
+      "name": "F03-S G · МАЗЕН природен камен · pool trim half.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-pool-trim-half.glb",
+      "dimensions": [
+        0.2073629,
+        0.135,
+        0.5427387
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-pool-trim-3m-showcase",
+      "name": "F03-S G · МАЗЕН природен камен · pool trim 3m showcase.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-pool-trim-3m-showcase.glb",
+      "dimensions": [
+        0.8141878,
+        0.135,
+        3.210714
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-l-corner-showcase-north-west",
+      "name": "F03-S L · МАЗЕН природен камен · l corner showcase north west.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-l-corner-showcase-north-west.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-l-corner-showcase-north-east",
+      "name": "F03-S L · МАЗЕН природен камен · l corner showcase north east.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-l-corner-showcase-north-east.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-l-corner-showcase-south-east",
+      "name": "F03-S L · МАЗЕН природен камен · l corner showcase south east.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-l-corner-showcase-south-east.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-l-corner-showcase-south-west",
+      "name": "F03-S L · МАЗЕН природен камен · l corner showcase south west.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-l-corner-showcase-south-west.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-raised-border-showcase-north",
+      "name": "F03-S R · МАЗЕН природен камен · raised border showcase north.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-raised-border-showcase-north.glb",
+      "dimensions": [
+        1,
+        0.135,
+        0.19
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-raised-border-showcase-south",
+      "name": "F03-S R · МАЗЕН природен камен · raised border showcase south.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-raised-border-showcase-south.glb",
+      "dimensions": [
+        1,
+        0.135,
+        0.19
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-raised-border-showcase-east",
+      "name": "F03-S R · МАЗЕН природен камен · raised border showcase east.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-raised-border-showcase-east.glb",
+      "dimensions": [
+        0.19,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-s-stone-raised-border-showcase-west",
+      "name": "F03-S R · МАЗЕН природен камен · raised border showcase west.glb",
+      "category": "Камен F03-S · оригинални GLB",
+      "src": "assets/models/f03-s-stone-raised-border-showcase-west.glb",
+      "dimensions": [
+        0.19,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SMOOTH_HONED",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-full",
+      "name": "F03-T A · СУПТИЛНО РАПАВ природен камен · full.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-full.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-half-first",
+      "name": "F03-T B · СУПТИЛНО РАПАВ природен камен · half first.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-half-first.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-half-second",
+      "name": "F03-T B · СУПТИЛНО РАПАВ природен камен · half second.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-half-second.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-quarter-c1",
+      "name": "F03-T C · СУПТИЛНО РАПАВ природен камен · quarter c1.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-quarter-c1.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-quarter-c2",
+      "name": "F03-T C · СУПТИЛНО РАПАВ природен камен · quarter c2.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-quarter-c2.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-quarter-c3",
+      "name": "F03-T C · СУПТИЛНО РАПАВ природен камен · quarter c3.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-quarter-c3.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-quarter-c4",
+      "name": "F03-T C · СУПТИЛНО РАПАВ природен камен · quarter c4.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-quarter-c4.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-edge-north",
+      "name": "F03-T D · СУПТИЛНО РАПАВ природен камен · edge north.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-edge-north.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-edge-south",
+      "name": "F03-T D · СУПТИЛНО РАПАВ природен камен · edge south.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-edge-south.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-edge-east",
+      "name": "F03-T D · СУПТИЛНО РАПАВ природен камен · edge east.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-edge-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-edge-west",
+      "name": "F03-T D · СУПТИЛНО РАПАВ природен камен · edge west.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-edge-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-corner-north-west",
+      "name": "F03-T E · СУПТИЛНО РАПАВ природен камен · corner north west.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-corner-north-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-corner-north-east",
+      "name": "F03-T E · СУПТИЛНО РАПАВ природен камен · corner north east.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-corner-north-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-corner-south-east",
+      "name": "F03-T E · СУПТИЛНО РАПАВ природен камен · corner south east.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-corner-south-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-corner-south-west",
+      "name": "F03-T E · СУПТИЛНО РАПАВ природен камен · corner south west.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-corner-south-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-radial-wedge",
+      "name": "F03-T F · СУПТИЛНО РАПАВ природен камен · radial wedge.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-radial-wedge.glb",
+      "dimensions": [
+        1.0612308,
+        0.06,
+        1.064342
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-pool-trim-1m",
+      "name": "F03-T G · СУПТИЛНО РАПАВ природен камен · pool trim 1m.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-pool-trim-1m.glb",
+      "dimensions": [
+        0.259765,
+        0.135,
+        1.0891406
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-pool-trim-half",
+      "name": "F03-T G · СУПТИЛНО РАПАВ природен камен · pool trim half.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-pool-trim-half.glb",
+      "dimensions": [
+        0.2073629,
+        0.135,
+        0.5427387
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-pool-trim-3m-showcase",
+      "name": "F03-T G · СУПТИЛНО РАПАВ природен камен · pool trim 3m showcase.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-pool-trim-3m-showcase.glb",
+      "dimensions": [
+        0.8141878,
+        0.135,
+        3.210714
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-l-corner-showcase-north-west",
+      "name": "F03-T L · СУПТИЛНО РАПАВ природен камен · l corner showcase north west.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-l-corner-showcase-north-west.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-l-corner-showcase-north-east",
+      "name": "F03-T L · СУПТИЛНО РАПАВ природен камен · l corner showcase north east.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-l-corner-showcase-north-east.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-l-corner-showcase-south-east",
+      "name": "F03-T L · СУПТИЛНО РАПАВ природен камен · l corner showcase south east.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-l-corner-showcase-south-east.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-l-corner-showcase-south-west",
+      "name": "F03-T L · СУПТИЛНО РАПАВ природен камен · l corner showcase south west.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-l-corner-showcase-south-west.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-raised-border-showcase-north",
+      "name": "F03-T R · СУПТИЛНО РАПАВ природен камен · raised border showcase north.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-raised-border-showcase-north.glb",
+      "dimensions": [
+        1,
+        0.135,
+        0.19
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-raised-border-showcase-south",
+      "name": "F03-T R · СУПТИЛНО РАПАВ природен камен · raised border showcase south.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-raised-border-showcase-south.glb",
+      "dimensions": [
+        1,
+        0.135,
+        0.19
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-raised-border-showcase-east",
+      "name": "F03-T R · СУПТИЛНО РАПАВ природен камен · raised border showcase east.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-raised-border-showcase-east.glb",
+      "dimensions": [
+        0.19,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
+    },
+    {
+      "id": "f03-t-stone-raised-border-showcase-west",
+      "name": "F03-T R · СУПТИЛНО РАПАВ природен камен · raised border showcase west.glb",
+      "category": "Камен F03-T · оригинални GLB",
+      "src": "assets/models/f03-t-stone-raised-border-showcase-west.glb",
+      "dimensions": [
+        0.19,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "origin": "Original F01/F02 local pivot and metric grid; precise bounds in manifest",
+      "source": "Owner-approved sage-grey stone render source atlas; tools/b1/build-s7-f03-stone.py",
+      "approval": "FOUR DESIGN RENDER BOARDS OWNER PASS; 54 REAL GLB CI PASS; DEVICE VISUAL QA PENDING",
+      "finish": "SUBTLE_MICRO_TEXTURE",
+      "ownerRenderPass": true,
+      "ownerModelPass": false,
+      "gameplayWrites": 0,
+      "certifiedSlipResistance": false
     }
   ],
-  "assetLibraryVersion": "2026-11-18-f02-black-marble-76-real-glbs",
-  "genuineGlbCount": 76
+  "assetLibraryVersion": "2026-11-18-F03-two-stone-finishes-130-real-glbs",
+  "genuineGlbCount": 130
 }
