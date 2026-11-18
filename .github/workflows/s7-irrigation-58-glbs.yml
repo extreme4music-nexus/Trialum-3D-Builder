@@ -1,0 +1,125 @@
+name: Trialum S7.8-D — 58 genuine irrigation and flexible-hose GLBs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/irrigation/s7-irrigation-58-source.tar.gz.b64'
+      - '.github/workflows/s7-irrigation-58-glbs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: trialum-s7-builder-irrigation-assets
+  cancel-in-progress: false
+jobs:
+  build-verify-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout real isolated Builder main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify and extract exact reproducible irrigation source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import tarfile,io,base64,hashlib
+          b=Path('assets/irrigation/s7-irrigation-58-source.tar.gz.b64').read_bytes().strip()
+          assert hashlib.sha256(b).hexdigest()=='447f2a9eb5ee96d2e54f6c3db5c68087b73d8fe56477225b329a343653f5bfea'
+          mapping={
+            'build-s7-irrigation.py':'tools/b1/build-s7-irrigation.py',
+            's7-irrigation-verify.py':'tests/s7-irrigation-verify.py',
+            'S7_IRRIGATION_58_GLB_HANDOFF_20261118.md':'docs/S7_IRRIGATION_58_GLB_HANDOFF_20261118.md'
+          }
+          with tarfile.open(fileobj=io.BytesIO(base64.b64decode(b)),mode='r:gz') as t:
+            assert {m.name for m in t.getmembers()}==set(mapping)
+            for m in t.getmembers():
+              assert m.isfile() and m.size<90000
+              path=Path(mapping[m.name]);path.parent.mkdir(parents=True,exist_ok=True)
+              data=t.extractfile(m).read()
+              if path.exists():assert path.read_bytes()==data,('refuse to overwrite',str(path))
+              else:path.write_bytes(data)
+          PY
+      - name: Build exactly 58 watertight genuine GLBs and nine review scenes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --quiet 'numpy==2.3.5' 'trimesh==4.11.1' 'networkx==3.6.1'
+          python3 tools/b1/build-s7-irrigation.py --root . > /tmp/s7-irrigation-build.json
+          python3 tests/s7-irrigation-verify.py
+          test "$(find assets/models -name 's7-i*.glb' -o -name 's7-c-irr*.glb' | wc -l)" -eq 58
+      - name: Register models in Builder, add direct menu button and nine GLB scenes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          c=Path('assets/catalog.json');d=json.loads(c.read_text(encoding='utf8'))
+          old={a['id']:a for a in d['assets']}
+          new=json.loads(Path('assets/irrigation/s7-irrigation-catalog-additions.json').read_text(encoding='utf8'))
+          assert len(new)==58
+          for a in new:
+            assert Path(a['src']).is_file(),a['src']
+            if a['id'] in old:assert old[a['id']]['src']==a['src']
+            else:d['assets'].append(a)
+          d['genuineGlbCount']=sum(1 for x in d['assets'] if str(x.get('src','')).endswith('.glb'))
+          assert d['genuineGlbCount']==292,d['genuineGlbCount']
+          d['assetLibraryVersion']='2026-11-18-s7-irrigation-292-real-glbs'
+          c.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          h=Path('index.html');v=h.read_text(encoding='utf8')
+          if 'id="openIrrigationGallery"' not in v:
+            token='<button id="openLightingGallery"'
+            assert token in v
+            v=v.replace(token,'<button id="openIrrigationGallery" class="accent" title="Отвори ги 58-те вистински GLB модели за наводнување">💧 IRR 58</button>\n        '+token,1)
+          if 'value="irrigation-all"' not in v:
+            token='<option value="lights-all">'
+            assert token in v
+            opts=''.join('<option value="irrigation-'+id+'">💧 '+title+'</option>\n          ' for id,title in [
+              ('all','I01–I06 · СИТЕ 58 модели'),('i01','I01 · резервоари 4'),('i02','I02 · пумпи и филтри 7'),
+              ('i03','I03 · флексибилни свиоци 17'),('i04','I04 · спојки и вентили 12'),
+              ('i05','I05 · капалки 9'),('i06','I06 · сензори и сервис 7'),
+              ('control','C-IRR01 · два контролери'),('beds','G02–G05 · 4 панели')])
+            v=v.replace(token,opts+token,1)
+          h.write_text(v,encoding='utf8')
+          js=Path('src/main.js');v=js.read_text(encoding='utf8')
+          if '"irrigation-all":"trialum-s7-irrigation-all-glbs.json"' not in v:
+            anchor=' "lights-all":"trialum-s7-lights-all-24-glbs.json",'
+            assert anchor in v
+            keys=[('all','all-glbs'),('i01','i01-gallery'),('i02','i02-gallery'),
+              ('i03','i03-gallery'),('i04','i04-gallery'),('i05','i05-gallery'),('i06','i06-gallery'),
+              ('control','c-irr01-gallery'),('beds','four-bed-panels')]
+            v=v.replace(anchor, ''.join(' "irrigation-'+k+'":"trialum-s7-irrigation-'+s+'.json",\n' for k,s in keys)+anchor,1)
+          if '$('+'"openIrrigationGallery"'+').onclick=' not in v:
+            anchor=' $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");'
+            assert anchor in v
+            v=v.replace(anchor,anchor+'\n $("openIrrigationGallery").onclick=()=>openRoomPreset("irrigation-all");',1)
+          js.write_text(v,encoding='utf8')
+          assert len(json.loads(Path('projects/trialum-s7-irrigation-all-glbs.json').read_text())['instances'])==58
+          PY
+          python3 tests/models.test.py
+          node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
+          test "$(find assets/models -maxdepth 1 -name '*.glb' | wc -l)" -eq 292
+      - name: Commit only approved Builder source, 58 GLB geometry and visual previews
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-s7-irrigation-build-bot'
+          git config user.email 'trialum-s7-irrigation@users.noreply.github.com'
+          git add -f assets/models/s7-i*.glb assets/models/s7-c-irr*.glb
+          git add assets/catalog.json assets/irrigation/*.json tools/b1/build-s7-irrigation.py tests/s7-irrigation-verify.py
+          git add projects/trialum-s7-irrigation-*.json docs/S7_IRRIGATION_58_GLB_HANDOFF_20261118.md index.html src/main.js
+          if git diff --staged --quiet; then echo 'All 58 physical GLBs already present';exit 0;fi
+          git commit -m 'feat(builder S7.8-D): 58 genuine irrigation GLBs + 9 editable review scenes'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+          echo 'Builder updated only. No production Trialum game integration.'
