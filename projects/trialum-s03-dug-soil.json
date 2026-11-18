@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "projectId": "trialum-s03-real-dug-soil-no-plants",
-  "name": "S03 · Ископана, орана почва · БЕЗ растенија",
-  "description": "Owner-approved second soil render, genuine 3D irregular soil slab with earthy roots/stones. No planting holes, no hidden seedlings. IMPORTANT: canonical original S7 roadmap labels freshly dug soil S01; stage as owner S03 visual alias until mapping is confirmed.",
+  "projectId": "trialum-s01-dug-soil-owner-approved-legacy-s03-glb",
+  "name": "S01 · ИСКОПАНА почва · без дупки",
+  "description": "Canonical S01 freshly dug loose 3D soil, owner-approved original render (historically labelled S03). Source GLB filename remains s03-dug-turnover-soil.glb for integrity; NOT canonical S03 untreated.",
   "room": {
     "width": 8,
     "depth": 5,
@@ -15,7 +15,7 @@
   "instances": [
     {
       "id": "plowed-1",
-      "assetId": "s03-dug-turnover",
+      "assetId": "s01-dug-turnover",
       "label": "Ископана / орана почва 1",
       "position": [
         -1.7,
@@ -36,7 +36,7 @@
     },
     {
       "id": "plowed-2",
-      "assetId": "s03-dug-turnover",
+      "assetId": "s01-dug-turnover",
       "label": "Ископана / орана почва 2",
       "position": [
         -0.55,
@@ -57,7 +57,7 @@
     },
     {
       "id": "plowed-3",
-      "assetId": "s03-dug-turnover",
+      "assetId": "s01-dug-turnover",
       "label": "Ископана / орана почва 3",
       "position": [
         0.6,
@@ -78,7 +78,7 @@
     },
     {
       "id": "plowed-4",
-      "assetId": "s03-dug-turnover",
+      "assetId": "s01-dug-turnover",
       "label": "Ископана / орана почва 4",
       "position": [
         -1.7,
@@ -99,7 +99,7 @@
     },
     {
       "id": "plowed-5",
-      "assetId": "s03-dug-turnover",
+      "assetId": "s01-dug-turnover",
       "label": "Ископана / орана почва 5",
       "position": [
         -0.55,
@@ -120,7 +120,7 @@
     },
     {
       "id": "plowed-6",
-      "assetId": "s03-dug-turnover",
+      "assetId": "s01-dug-turnover",
       "label": "Ископана / орана почва 6",
       "position": [
         0.6,
@@ -149,6 +149,10 @@
     "ownerApprovedVisualReference": true,
     "ownerPhysicalGlbPass": false,
     "25GridMarkersAreGamePlantSlots": false,
-    "canonicalSlotsPerBed": 5
+    "canonicalSlotsPerBed": 5,
+    "canonicalSoilStates": [
+      "S01"
+    ],
+    "originalS03LabelWasLegacy": true
   }
 }
