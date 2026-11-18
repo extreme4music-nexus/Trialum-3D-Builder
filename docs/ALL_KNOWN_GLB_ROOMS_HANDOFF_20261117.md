@@ -1,5 +1,25 @@
 # ALL KNOWN TRIALUM GLB ASSETS → BUILDER (2026-11-17)
 
+## НОВО F01-G — закривен крем-мермерен раб, според одобрениот 3D рендер (18.11.2026)
+
+**45 вистински GLB модели во Builder.** Од нив **3 нови F01-G** се изработени од вистинска 3D геометрија со иста замрзната крем-мермерна текстура F01-A, реално заоблена линија, дебелина 13,5 cm, ширина 19 cm, 8 mm bevel и подискретен сјај (roughness 0.225).
+
+- `f01-g-cream-marble-pool-trim-3m-showcase.glb` — долго **НЕПРЕКИНАТО 3,26 m** заоблено парче, како левиот студиски рендер; изложбен модел.
+- `f01-g-cream-marble-pool-trim-1m.glb` — **едно посебно преместливо ~1,09 m парче**, вистински мал закривен раб со 6 mm спој.
+- `f01-g-cream-marble-pool-trim-half.glb` — **половина ~0,54 m парче**, за премини/доработка.
+
+**Два тестни проекта во менито „Избери 3D просторија…“:**
+
+1. **✨ F01-G · Долга мермерна лајсна 3D** → `projects/trialum-f01-g-curved-trim-showcase.json`. Трите модели стојат посебно за ротирање и споредување со левиот дел од рендерот.
+2. **🤍 F01-G · 7 закривени рабови ОКОЛУ G01** → `projects/trialum-f01-g-pool-curb-g01-preview.json`. Во оригиналниот вистински базен G01 се поставени **седум вистински F01-F мали подни плочки плус седум посебни F01-G завршни рабови**, со ограда, мост и анимирана вода — десниот концепт од рендерот.
+
+**Физички модели во двата репозиториума (исти Git blob и SHA256):** [Game feature branch](https://github.com/extreme4music-nexus/Trialum/tree/feature/lw-d-s7-f01-g-pool-marble-trim-20261118/assets/models) и [Builder main](https://github.com/extreme4music-nexus/Trialum-3D-Builder/tree/main/assets/models). Generator `tools/b1/build-s7-f01-g-pool-trim.py`. [Game source QA SUCCESS](https://github.com/extreme4music-nexus/Trialum/actions/runs/44214935599) и [Builder 45 GLB CI SUCCESS](https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44215016691).
+
+**Што не е ветено:** ChatGPT генерираниот рендер не е вистинска CAD мерна документација; не може да се гарантира пиксел-по-пиксел идентичност меѓу студиско осветлување и Edge WebGL. Испораката користи ист дизајн, ист оригинален крем/беж мермер и вистински модуларни физички димензии. **Owner visual GLB PASS сè уште е отворен.** Продукциската игра, Google Play и водните/магацински gameplay слотови не се менувани. За вистинско применување во играта ќе следува посебна ревизија на премините и коридорите покрај мостот.
+
+**Windows:** GitHub Desktop → Builder `main` → Fetch/Pull → затвори стар терминал → `START-BUILDER-WINDOWS.bat` → Edge `http://127.0.0.1:8765/`.
+
+
 ## F01-F — ИСПРАВКА ПО ТВОЈАТА ЗАБЕЛЕШКА: ПЛОЧКИТЕ МОРА ДА БИДАТ ОКОЛУ БАЗЕНОТ
 **Претходниот самостоен голем F01-F е ОДБИЕН и заменет; неговите стари 89 948 bytes / r9.15–10.15 m / SHA 0b76… НЕ СЕ ВЕЌЕ ВАЖЕЧКИ.**
 
