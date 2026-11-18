@@ -228,7 +228,7 @@ test("both owner-render-approved F03 stone finishes have all 54 genuine GLBs and
 test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-state expansion",()=>{
  const catalogue=JSON.parse(file("assets/catalog.json"));
  const ids=new Set(catalogue.assets.map(a=>a.id));
- for(const id of ["s02-25-planting-grid","s03-dug-turnover","s02-fill-plug","s02-slot-ring","s02-demo-seedling"])
+ for(const id of ["s02-25-planting-grid","s01-dug-turnover","s02-fill-plug","s02-slot-ring","s02-demo-seedling"])
   assert.ok(ids.has(id),"Missing soil GLB in catalogue: "+id);
  assert.equal(catalogue.genuineGlbCount,135);
  const grid=JSON.parse(file("assets/soil-slot-matrix.json"));
