@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum original GLB library — 45 assets including F01-G curved pool trim",
+  "name": "Trialum complete white cream marble F01 A–I catalogue — 47 genuine GLB models",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -767,7 +767,7 @@
       "origin": "Local pivot inner arc start: r=8.2, use rotY=-theta for G01 placement",
       "note": "[8.2,8.39]m outer F01-F edge; repeatable 48-sector arc",
       "source": "Trialum F01-G owner-accepted concept image; source-code generator mirrors exact frozen F01-A beige/ivory texture",
-      "approval": "CONCEPT RENDER ACCEPTED; REAL GLB BUILT; OWNER IN-BUILDER VISUAL PASS PENDING",
+      "approval": "OWNER MODEL VISUAL PASS — 2026-11-18 (latest three F01-G curved trims)",
       "version": 1,
       "noGameStateWrites": true
     },
@@ -785,7 +785,7 @@
       "origin": "Local pivot inner arc start: r=8.2, use rotY=-theta for G01 placement",
       "note": "Half of 48-sector angle; use at path transitions",
       "source": "Trialum F01-G owner-accepted concept image; source-code generator mirrors exact frozen F01-A beige/ivory texture",
-      "approval": "CONCEPT RENDER ACCEPTED; REAL GLB BUILT; OWNER IN-BUILDER VISUAL PASS PENDING",
+      "approval": "OWNER MODEL VISUAL PASS — 2026-11-18 (latest three F01-G curved trims)",
       "version": 1,
       "noGameStateWrites": true
     },
@@ -803,11 +803,53 @@
       "origin": "Local pivot inner arc start: r=8.2, use rotY=-theta for G01 placement",
       "note": "Concept render LEFT long solid piece; showcase only, not modular gameplay",
       "source": "Trialum F01-G owner-accepted concept image; source-code generator mirrors exact frozen F01-A beige/ivory texture",
-      "approval": "CONCEPT RENDER ACCEPTED; REAL GLB BUILT; OWNER IN-BUILDER VISUAL PASS PENDING",
+      "approval": "OWNER MODEL VISUAL PASS — 2026-11-18 (latest three F01-G curved trims)",
       "version": 1,
       "noGameStateWrites": true
+    },
+    {
+      "id": "f01-h-honed-service",
+      "name": "F01-H · бело-крем мермер, елегантен мат сервисен под",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-h-cream-marble-matte-service.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "origin": "bottom-left; exact F01-A modular 1m tile footprint, Y-up",
+      "phase": "S7 F01-H",
+      "version": 1,
+      "source": "Trialum dual F01-H/I python real GLB creator, F01-A frozen original 384px cream mineral PBR",
+      "approval": "NEW REAL GLB — OWNER FINISH VISUAL REVIEW PENDING",
+      "finish": "HONED_MATTE_SERVICE",
+      "roughness": 0.7,
+      "notes": "1m dry service area. Exact F01-A mineral basecolor, embedded subtle stone micro-normal; 60mm slab, true 4mm bevel. No claims of physical slip testing.",
+      "gameplayWrites": 0
+    },
+    {
+      "id": "f01-i-wet-fine-texture",
+      "name": "F01-I · бело-крем мермер, фина текстура за влажни патеки",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-i-cream-marble-fine-textured-wet.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "origin": "bottom-left; exact F01-A modular 1m tile footprint, Y-up",
+      "phase": "S7 F01-I",
+      "version": 1,
+      "source": "Trialum dual F01-H/I python real GLB creator, F01-A frozen original 384px cream mineral PBR",
+      "approval": "NEW REAL GLB — OWNER FINISH VISUAL REVIEW PENDING",
+      "finish": "FINE_STIPPLE_WET_ADJACENT",
+      "roughness": 0.86,
+      "notes": "1m wet-adjacent visual design. Original F01-A mineral basecolor, embedded more pronounced micro-normal + genuine 40x40 shallow texture mesh; 60mm slab/4mm bevel. Physical anti-slip certification NOT implied.",
+      "gameplayWrites": 0
     }
   ],
-  "assetLibraryVersion": "2026-11-18-F01-G-45-glbs",
-  "genuineGlbCount": 45
+  "assetLibraryVersion": "2026-11-18-F01-HI-47-real-glbs",
+  "genuineGlbCount": 47
 }
