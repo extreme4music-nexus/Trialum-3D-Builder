@@ -10,7 +10,7 @@ class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),76)
+  self.assertEqual(len(models),130)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
@@ -132,6 +132,30 @@ class GLBModels(unittest.TestCase):
    self.assertEqual(g["nodes"][0]["extras"]["gameplayWrites"],0)
    self.assertEqual(g["materials"][0]["pbrMetallicRoughness"]["metallicFactor"],0)
   self.assertGreater(next(x for x in manifest["models"] if x["module"]=="F02-I")["triangles"],1000)
+ def test_F03_54_actual_gltf_stone_models_from_approved_render_references(self):
+  m=json.loads((ROOT/"assets/materials/f03-glb-sha-manifest.json").read_text(encoding="utf-8"))
+  self.assertEqual(len(m["models"]),54)
+  self.assertTrue(m["ownerRenderPass"])
+  self.assertFalse(m["ownerGlbPass"])
+  self.assertEqual(m["gameplayWrites"],0)
+  self.assertEqual(sum(x["finish"]=="s" for x in m["models"]),27)
+  self.assertEqual(sum(x["finish"]=="t" for x in m["models"]),27)
+  for finish in ("s","t"):
+   ref=(ROOT/f"assets/materials/f03-{finish}-reference-derived-atlas.png").read_bytes()
+   self.assertEqual(hashlib.sha256(ref).hexdigest(),m["embeddedAtlasSha256"][finish])
+  for row in m["models"]:
+   raw=(MODEL_DIR/row["file"]).read_bytes()
+   self.assertEqual(hashlib.sha256(raw).hexdigest(),row["sha256"])
+   self.assertEqual(len(raw),row["size"])
+   length=struct.unpack_from("<I",raw,12)[0]
+   gltf=json.loads(raw[20:20+length])
+   self.assertEqual(gltf["asset"]["version"],"2.0")
+   self.assertEqual(len(gltf["images"]),2)
+   self.assertEqual(gltf["nodes"][0]["extras"]["family"],"F03")
+   self.assertTrue(gltf["nodes"][0]["extras"]["ownerRenderPass"])
+   self.assertFalse(gltf["nodes"][0]["extras"]["ownerGlbVisualPass"])
+   self.assertFalse(gltf["nodes"][0]["extras"]["inGame"])
+   self.assertEqual(gltf["materials"][0]["pbrMetallicRoughness"]["roughnessFactor"],.61 if row["finish"]=="s" else .79)
  def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
