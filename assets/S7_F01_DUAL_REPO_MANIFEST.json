@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "sourceRepository": "extreme4music-nexus/Trialum",
-  "sourceBranch": "feature/lw-d-s7-f01-f-radial-wedge-render-review-20261117",
+  "sourceBranch": "feature/lw-d-s7-f01-g-pool-marble-trim-20261118",
   "targetRepository": "extreme4music-nexus/Trialum-3D-Builder",
   "targetBranch": "main",
   "gameMainModified": false,
@@ -14,12 +14,13 @@
     "tools/b1/build-s7-f01-quarter.py",
     "tools/b1/build-s7-f01-edge.py",
     "tools/b1/build-s7-f01-corner.py",
-    "tools/b1/build-s7-f01-radial-wedge.py"
+    "tools/b1/build-s7-f01-radial-wedge.py",
+    "tools/b1/build-s7-f01-g-pool-trim.py"
   ],
-  "modelCountExpected": 16,
-  "modelSetStatus": "16_REAL_F01_GLBS_IN_BUILDER_MAIN;F01_F_CORRECTED_POOL_TILE_MATCHED_GAME_FEATURE;OWNER_APPROVAL_PENDING",
-  "ownerApprovalStatus": "F01_A_OWNER_MODEL_PASS;F01_F_PREVIOUS_LARGE_MODEL_REJECTED;F01_F_NEW_7_TILE_G01_MODEL_OWNER_REVIEW_PENDING;F01_B_C_D_E_OLDER_PENDING",
-  "scope": "F01 original modular marble family A-F. Other 26 historical/derived GLBs are tracked in assets/TRIALUM_LEGACY_GLB_MANIFEST.json; 42 total Builder GLBs.",
+  "modelCountExpected": 19,
+  "modelSetStatus": "19_REAL_F01_GLBS_IN_BUILDER_MAIN;3_F01_G_MATCH_GAME_FEATURE_GIT_BLOB_AND_SHA;OWNER_VISUAL_TEST_PENDING",
+  "ownerApprovalStatus": "F01_A_OWNER_MODEL_PASS;F01_F_CORRECTED_MODEL_OWNER_REVIEW_PENDING;F01_G_CONCEPT_RENDER_ACCEPTED_3_REAL_GLBS_DELIVERED_OWNER_MODEL_REVIEW_PENDING",
+  "scope": "F01 modular marble family A-G, including F01-F pool tile and F01-G long/poolside edge trims; 45 physical GLBs total in Builder incl other 26 historical assets.",
   "models": [
     {
       "id": "f01-a",
@@ -135,33 +136,69 @@
       "sha256": "982c6d5193bd4b4ea09d59aa099c957a998c24dfa883ac5435f819b756f31e8d",
       "size": 83200,
       "gitBlobSha": "7b759d7206e813761cbd2d70fc2b11b86a4ff25f"
+    },
+    {
+      "id": "f01-g-pool-trim-1m",
+      "path": "assets/models/f01-g-cream-marble-pool-trim-1m.glb",
+      "status": "REAL_GLB_IN_BOTH_REPOS_SAME_GIT_BLOB;OWNER_VISUAL_PENDING",
+      "ownerVisual": "F01-G concept image accepted, 3D physical GLB pending actual device approval",
+      "sha256": "1c6e46751739de51a10557eae460e97885dce01dc61471d1b6ff3c932a6fe14b",
+      "size": 101636,
+      "gitBlobSha": "4903e1def03cac016882a6908197e71697fa6388",
+      "note": "~1.09 m modular curved trim"
+    },
+    {
+      "id": "f01-g-pool-trim-half",
+      "path": "assets/models/f01-g-cream-marble-pool-trim-half.glb",
+      "status": "REAL_GLB_IN_BOTH_REPOS_SAME_GIT_BLOB;OWNER_VISUAL_PENDING",
+      "ownerVisual": "F01-G concept image accepted, 3D physical GLB pending actual device approval",
+      "sha256": "40210ad22cef0242ed4d4a0427b800e7af6df4285ae1d624e555d2e5260fa7af",
+      "size": 93240,
+      "gitBlobSha": "dfb0704cfbb8567bccf369bc8afcfa2d498215d4",
+      "note": "~0.54 m half curved trim"
+    },
+    {
+      "id": "f01-g-pool-trim-3m-showcase",
+      "path": "assets/models/f01-g-cream-marble-pool-trim-3m-showcase.glb",
+      "status": "REAL_GLB_IN_BOTH_REPOS_SAME_GIT_BLOB;OWNER_VISUAL_PENDING",
+      "ownerVisual": "F01-G concept image accepted, 3D physical GLB pending actual device approval",
+      "sha256": "298effd5a3dd60b3425015a4aa37429c0b4d94ad0037baf29adf1ac84639b802",
+      "size": 178908,
+      "gitBlobSha": "5fb0b22d5694c9ea6cbd44e07170dd33fa7af34d",
+      "note": "~3.26 m single continuous sculptural trim, preview only"
     }
   ],
   "latestModule": {
-    "assetId": "S7-FLOOR-F01-F",
-    "file": "assets/models/f01-marble-cream-radial-wedge.glb",
-    "builderModelCountTotal": 42,
-    "gameFeatureBranch": "feature/lw-d-s7-f01-f-radial-wedge-render-review-20261117",
-    "binarySha256": "982c6d5193bd4b4ea09d59aa099c957a998c24dfa883ac5435f819b756f31e8d",
-    "gitBlobSha": "7b759d7206e813761cbd2d70fc2b11b86a4ff25f",
-    "sizeBytes": 83200,
-    "modelGenerator": "tools/b1/build-s7-f01-radial-wedge.py",
-    "spec": "docs/blueprints/S7_F01_F_RADIAL_WEDGE_PREVIEW_SPEC_20261117.json",
-    "previewProject": "projects/trialum-f01-f-radial-wedge-review.json",
-    "previewTileCount": 7,
-    "sourceRingRadii": [
-      7.2,
-      9.15
+    "assetId": "S7-FLOOR-F01-G",
+    "gameFeatureBranch": "feature/lw-d-s7-f01-g-pool-marble-trim-20261118",
+    "realGlbs": [
+      {
+        "file": "assets/models/f01-g-cream-marble-pool-trim-1m.glb",
+        "sha256": "1c6e46751739de51a10557eae460e97885dce01dc61471d1b6ff3c932a6fe14b",
+        "sizeBytes": 101636,
+        "gitBlobSha": "4903e1def03cac016882a6908197e71697fa6388"
+      },
+      {
+        "file": "assets/models/f01-g-cream-marble-pool-trim-half.glb",
+        "sha256": "40210ad22cef0242ed4d4a0427b800e7af6df4285ae1d624e555d2e5260fa7af",
+        "sizeBytes": 93240,
+        "gitBlobSha": "dfb0704cfbb8567bccf369bc8afcfa2d498215d4"
+      },
+      {
+        "file": "assets/models/f01-g-cream-marble-pool-trim-3m-showcase.glb",
+        "sha256": "298effd5a3dd60b3425015a4aa37429c0b4d94ad0037baf29adf1ac84639b802",
+        "sizeBytes": 178908,
+        "gitBlobSha": "5fb0b22d5694c9ea6cbd44e07170dd33fa7af34d"
+      }
     ],
-    "newBandRadii": [
-      7.2,
-      8.2
-    ],
-    "ownerConceptRenderPass": true,
-    "ownerCorrectedModelPass": false,
-    "priorLargeModelRejected": true,
-    "glbBuilt": true,
-    "dualRepoBinaryIdentical": true,
+    "realBuilderModelCount": 45,
+    "gameCI": "https://github.com/extreme4music-nexus/Trialum/actions/runs/44214935599",
+    "builderCI": "https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44215016691",
+    "builderPreview": "projects/trialum-f01-g-pool-curb-g01-preview.json",
+    "builderShowcase": "projects/trialum-f01-g-curved-trim-showcase.json",
+    "ownerConceptVisualAccepted": true,
+    "ownerPhysicalGLBPass": false,
+    "inGame": false,
     "gameplayWrites": 0
   }
 }
