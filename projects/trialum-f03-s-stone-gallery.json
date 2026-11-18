@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-f03-s-27-model-gallery",
+  "name": "F03-S · 27 МАЗНИ сиво-зелени камени GLB",
+  "description": "Owner approved all F03 3D render boards; 54 genuine watertight GLBs ready for visual on-device QA. No gameplay integration.",
+  "room": {
+    "width": 28,
+    "depth": 26,
+    "height": 5.6,
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#4b554f",
+    "wallColor": "#57675c"
+  },
+  "instances": [
+    {
+      "id": "f03-s-gallery-01",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -10.9,
+        0,
+        -9.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-02",
+      "assetId": "f03-s-stone-half-first",
+      "label": "f03-s-stone-half-first",
+      "position": [
+        -6.6000000000000005,
+        0,
+        -9.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-03",
+      "assetId": "f03-s-stone-half-second",
+      "label": "f03-s-stone-half-second",
+      "position": [
+        -2.3000000000000007,
+        0,
+        -9.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-04",
+      "assetId": "f03-s-stone-quarter-c1",
+      "label": "f03-s-stone-quarter-c1",
+      "position": [
+        1.9999999999999982,
+        0,
+        -9.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-05",
+      "assetId": "f03-s-stone-quarter-c2",
+      "label": "f03-s-stone-quarter-c2",
+      "position": [
+        6.299999999999999,
+        0,
+        -9.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-06",
+      "assetId": "f03-s-stone-quarter-c3",
+      "label": "f03-s-stone-quarter-c3",
+      "position": [
+        10.6,
+        0,
+        -9.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-07",
+      "assetId": "f03-s-stone-quarter-c4",
+      "label": "f03-s-stone-quarter-c4",
+      "position": [
+        -10.9,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-08",
+      "assetId": "f03-s-stone-edge-north",
+      "label": "f03-s-stone-edge-north",
+      "position": [
+        -6.6000000000000005,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-09",
+      "assetId": "f03-s-stone-edge-south",
+      "label": "f03-s-stone-edge-south",
+      "position": [
+        -2.3000000000000007,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-10",
+      "assetId": "f03-s-stone-edge-east",
+      "label": "f03-s-stone-edge-east",
+      "position": [
+        1.9999999999999982,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-11",
+      "assetId": "f03-s-stone-edge-west",
+      "label": "f03-s-stone-edge-west",
+      "position": [
+        6.299999999999999,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-12",
+      "assetId": "f03-s-stone-corner-north-west",
+      "label": "f03-s-stone-corner-north-west",
+      "position": [
+        10.6,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-13",
+      "assetId": "f03-s-stone-corner-north-east",
+      "label": "f03-s-stone-corner-north-east",
+      "position": [
+        -10.9,
+        0,
+        -1.0999999999999996
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-14",
+      "assetId": "f03-s-stone-corner-south-east",
+      "label": "f03-s-stone-corner-south-east",
+      "position": [
+        -6.6000000000000005,
+        0,
+        -1.0999999999999996
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-15",
+      "assetId": "f03-s-stone-corner-south-west",
+      "label": "f03-s-stone-corner-south-west",
+      "position": [
+        -2.3000000000000007,
+        0,
+        -1.0999999999999996
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-16",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        1.9999999999999982,
+        0,
+        -1.0999999999999996
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-17",
+      "assetId": "f03-s-stone-pool-trim-1m",
+      "label": "f03-s-stone-pool-trim-1m",
+      "position": [
+        6.299999999999999,
+        0,
+        -1.0999999999999996
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-18",
+      "assetId": "f03-s-stone-pool-trim-half",
+      "label": "f03-s-stone-pool-trim-half",
+      "position": [
+        10.6,
+        0,
+        -1.0999999999999996
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-19",
+      "assetId": "f03-s-stone-pool-trim-3m-showcase",
+      "label": "f03-s-stone-pool-trim-3m-showcase",
+      "position": [
+        -10.9,
+        0,
+        3.3000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-20",
+      "assetId": "f03-s-stone-l-corner-showcase-north-west",
+      "label": "f03-s-stone-l-corner-showcase-north-west",
+      "position": [
+        -6.6000000000000005,
+        0,
+        3.3000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-21",
+      "assetId": "f03-s-stone-l-corner-showcase-north-east",
+      "label": "f03-s-stone-l-corner-showcase-north-east",
+      "position": [
+        -2.3000000000000007,
+        0,
+        3.3000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-22",
+      "assetId": "f03-s-stone-l-corner-showcase-south-east",
+      "label": "f03-s-stone-l-corner-showcase-south-east",
+      "position": [
+        1.9999999999999982,
+        0,
+        3.3000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-23",
+      "assetId": "f03-s-stone-l-corner-showcase-south-west",
+      "label": "f03-s-stone-l-corner-showcase-south-west",
+      "position": [
+        6.299999999999999,
+        0,
+        3.3000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-24",
+      "assetId": "f03-s-stone-raised-border-showcase-north",
+      "label": "f03-s-stone-raised-border-showcase-north",
+      "position": [
+        10.6,
+        0,
+        3.3000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-25",
+      "assetId": "f03-s-stone-raised-border-showcase-south",
+      "label": "f03-s-stone-raised-border-showcase-south",
+      "position": [
+        -10.9,
+        0,
+        7.700000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-26",
+      "assetId": "f03-s-stone-raised-border-showcase-east",
+      "label": "f03-s-stone-raised-border-showcase-east",
+      "position": [
+        -6.6000000000000005,
+        0,
+        7.700000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-s-gallery-27",
+      "assetId": "f03-s-stone-raised-border-showcase-west",
+      "label": "f03-s-stone-raised-border-showcase-west",
+      "position": [
+        -2.3000000000000007,
+        0,
+        7.700000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderPass": true,
+    "ownerGlbModelPass": false,
+    "source": "F03 4 accepted render boards",
+    "actualSlipCertificate": false
+  }
+}
