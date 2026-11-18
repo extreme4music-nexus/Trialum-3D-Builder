@@ -157,7 +157,7 @@ jobs:
            if old is not None:assert old['src']==new['src']
            else:doc['assets'].append(new)
           glbs=[a for a in doc['assets'] if (a.get('src') or '').endswith('.glb')]
-          assert len(glbs) in (150,210),len(glbs)
+          assert len(glbs) in (150,210,234),len(glbs)
           doc['genuineGlbCount']=len(glbs)
           doc['assetLibraryVersion']='2026-11-18-floor-mixed-'+str(len(glbs))+'-glbs'
           cat.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
@@ -174,6 +174,22 @@ jobs:
           PY
           python3 tests/models.test.py
           node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
+          if test -f tools/b1/build-s7-lights.py; then
+            python3 tools/b1/build-s7-lights.py > /tmp/s7-lighting-build.json
+            python3 tests/s7-lights-verify.py
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          doc=json.loads(Path('assets/catalog.json').read_text(encoding='utf8'))
+          ids={a['id'] for a in doc['assets']}
+          incoming=json.loads(Path('assets/lighting/s7-lights-catalog-additions.json').read_text(encoding='utf8'))
+          assert len(incoming)==24
+          for row in incoming:
+           assert row['id'] in ids,row['id']
+           assert Path(row['src']).is_file(),row['src']
+          assert doc['genuineGlbCount']==234,doc['genuineGlbCount']
+          PY
+          fi
           test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq "$(python3 -c "import json; print(json.load(open('assets/catalog.json'))['genuineGlbCount'])")"
           test -f vendor/three.module.js
           test -f vendor/three.core.js
