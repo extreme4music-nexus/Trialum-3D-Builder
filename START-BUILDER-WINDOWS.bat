@@ -56,12 +56,17 @@ if not exist "assets\models\f03-s-stone-radial-wedge.glb" goto incomplete
 if not exist "assets\models\f03-t-stone-pool-trim-1m.glb" goto incomplete
 if not exist "assets\models\f03-s-stone-l-corner-showcase-north-west.glb" goto incomplete
 if not exist "assets\models\f03-t-stone-raised-border-showcase-west.glb" goto incomplete
+if not exist "assets\models\s02-planting-bed-5x5-empty.glb" goto incomplete
+if not exist "assets\models\s03-dug-turnover-soil.glb" goto incomplete
+if not exist "assets\models\s02-single-hole-soil-plug.glb" goto incomplete
+if not exist "assets\models\s02-slot-target-ring.glb" goto incomplete
+if not exist "assets\models\s02-demo-seedling-preview.glb" goto incomplete
 goto ready
 :incomplete
 echo.
 echo Some original Trialum room GLBs are missing from this local clone.
 echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
-echo All 130 models MUST be present; do not use a half-empty catalogue.
+echo All 135 models MUST be present; do not use a half-empty catalogue.
 echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause
 exit /b 1
