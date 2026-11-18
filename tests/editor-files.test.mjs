@@ -224,3 +224,44 @@ test("both owner-render-approved F03 stone finishes have all 54 genuine GLBs and
  assert.equal(m.models.length,54);
  assert.equal(m.ownerGlbPass,false);
 });
+
+test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-state expansion",()=>{
+ const catalogue=JSON.parse(file("assets/catalog.json"));
+ const ids=new Set(catalogue.assets.map(a=>a.id));
+ for(const id of ["s02-25-planting-grid","s03-dug-turnover","s02-fill-plug","s02-slot-ring","s02-demo-seedling"])
+  assert.ok(ids.has(id),"Missing soil GLB in catalogue: "+id);
+ assert.equal(catalogue.genuineGlbCount,135);
+ const grid=JSON.parse(file("assets/soil-slot-matrix.json"));
+ assert.equal(grid.slotCount,25);
+ assert.equal(grid.canonicalPlantSlotsPerBed,5);
+ assert.equal(grid.slots.length,25);
+ assert.equal(new Set(grid.slots.map(s=>s.slotId)).size,25);
+ assert.ok(grid.slots.every(s=>s.status==="OPEN"&&s.plantId===null));
+ for(const path of ["projects/trialum-s02-25-empty-holes.json",
+   "projects/trialum-s02-mixed-planting-demo.json",
+   "projects/trialum-s03-dug-soil.json","projects/trialum-s02-s03-soil-comparison.json"]){
+  const p=JSON.parse(file(path));
+  assert.ok(p.instances.length>0,path);
+  assert.ok(p.instances.every(x=>ids.has(x.assetId)),path);
+  assert.equal(p.meta.canonicalSlotsPerBed,5);
+  assert.equal(p.meta.officialScene,false);
+  assert.equal(p.meta.gameplayWrites,0);
+ }
+ const mixed=JSON.parse(file("projects/trialum-s02-mixed-planting-demo.json"));
+ assert.equal(mixed.instances.filter(x=>x.assetId==="s02-fill-plug").length,3);
+ assert.equal(mixed.instances.filter(x=>x.assetId==="s02-demo-seedling").length,2);
+ const html=file("index.html"),js=file("src/main.js");
+ for(const id of ["soilMatrixTool","soilMatrixPanel","soilMatrixClose","soilMatrixTarget",
+                  "soilMatrixCells","soilMatrixStatus"]){
+   assert.ok(html.includes('id="'+id+'"'),id);
+ }
+ for(const preset of ["soil-empty","soil-mixed","soil-dug","soil-compare"]){
+   assert.ok(html.includes('value="'+preset+'"'));
+   assert.ok(js.includes('"'+preset+'":"trialum-'));
+ }
+ assert.match(js,/function soilSlotPosition/);
+ assert.match(js,/function existingSoilPlug/);
+ assert.match(js,/function toggleSoilPreviewSlot/);
+ assert.match(js,/if\(total>=5\)/);
+ assert.match(js,/plantId must come from canonical game engine/);
+});
