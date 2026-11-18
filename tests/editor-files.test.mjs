@@ -20,11 +20,11 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
  assert.doesNotMatch(source,/fetch\([^)]*\/api\/(?:player|social|inventory)/i);
  assert.doesNotMatch(html,/three\.js.*cdn|http:\/\/[a-z]/i);
 });
-test("catalogue contains all 47 historical and derived Trialum room GLBs",()=>{
+test("catalogue contains all 76 physical original and premium F02 models",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(glbs.length,47);
- assert.equal(new Set(glbs.map(x=>x.id)).size,47);
+ assert.equal(glbs.length,76);
+ assert.equal(new Set(glbs.map(x=>x.id)).size,76);
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
  assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
@@ -136,7 +136,7 @@ test("F01-G includes real G01 assembled 7-curb preview plus continuous long show
 
 test("last F01 white-cream marble family has real distinct H and I GLBs and owner preview",()=>{
  const c=JSON.parse(file("assets/catalog.json"));const byId=new Map(c.assets.map(a=>[a.id,a]));
- assert.equal(c.genuineGlbCount,47);
+ assert.equal(c.genuineGlbCount,76);
  const a=byId.get("f01-a");
  const h=byId.get("f01-h-honed-service"),i=byId.get("f01-i-wet-fine-texture");
  assert.ok(a&&h&&i);
@@ -155,4 +155,38 @@ test("last F01 white-cream marble family has real distinct H and I GLBs and owne
  assert.equal(p.meta.actualCertifiedSlipResistance,false);
  assert.match(file("index.html"),/value="f01-hi"/);
  assert.match(file("src/main.js"),/"f01-hi":"trialum-f01-h-i-cream-marble-finishes-review.json"/);
+});
+
+test("all 29 black marble real assets and three editable owner preview scenes are present",()=>{
+ const c=JSON.parse(file("assets/catalog.json"));
+ const ids=new Set(c.assets.map(a=>a.id));
+ const black=c.assets.filter(a=>a.id.startsWith("f02-black-marble-"));
+ assert.equal(black.length,29);
+ assert.ok(black.every(a=>a.src.endsWith(".glb")));
+ assert.ok(black.every(a=>a.approval.includes("OWNER IN-BUILDER MODEL REVIEW PENDING")));
+ const map=[
+  ["projects/trialum-f02-black-marble-gallery.json",29],
+  ["projects/trialum-f02-black-marble-g01-pool-preview.json",19],
+  ["projects/trialum-f02-black-marble-finishes-review.json",3]
+ ];
+ for(const [path,count] of map){
+  const p=JSON.parse(file(path));
+  assert.equal(p.instances.length,count,path);
+  assert.ok(p.instances.every(x=>ids.has(x.assetId)),path);
+  assert.equal(p.meta.gameplayWrites,0,path);
+  assert.equal(p.meta.officialScene,false,path);
+ }
+ const gallery=JSON.parse(file(map[0][0]));
+ assert.ok(gallery.instances.some(x=>x.assetId==="f02-black-marble-l-corner-showcase-north-west"));
+ assert.ok(gallery.instances.some(x=>x.assetId==="f02-black-marble-raised-border-showcase-east"));
+ const pool=JSON.parse(file(map[1][0]));
+ assert.equal(pool.instances.filter(x=>x.assetId==="f02-black-marble-radial-wedge").length,7);
+ assert.equal(pool.instances.filter(x=>x.assetId==="f02-black-marble-pool-trim-1m").length,7);
+ assert.ok(pool.instances.some(x=>x.assetId==="g01-main-basin"));
+ assert.ok(pool.instances.some(x=>x.assetId==="g01-walkway-and-railings"));
+ const html=file("index.html"),editor=file("src/main.js");
+ for(const key of ["f02-gallery","f02-g01","f02-finishes"]){
+  assert.ok(html.includes('value="'+key+'"'));
+  assert.ok(editor.includes('"'+key+'":"trialum-f02-'));
+ }
 });
