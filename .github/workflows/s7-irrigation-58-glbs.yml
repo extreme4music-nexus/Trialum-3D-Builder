@@ -5,6 +5,7 @@ on:
     paths:
       - 'assets/irrigation/s7-irrigation-58-source.tar.gz.b64'
       - '.github/workflows/s7-irrigation-58-glbs.yml'
+      - 'tests/soil-canonical-mapping.test.mjs'
   workflow_dispatch:
 permissions:
   contents: write
