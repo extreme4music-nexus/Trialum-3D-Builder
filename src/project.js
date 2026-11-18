@@ -1,5 +1,8 @@
 // Trialum World Builder project schema. Data-only, never trusted as game state.
 export const SCHEMA_VERSION=1;
+// Historical Builder-only name: the owner-rendered dug S01 soil was labelled S03.
+// Keep old user scene JSON working without ever pretending real S03 untreated exists.
+export const LEGACY_SOIL_ASSET_ALIASES=Object.freeze({"s03-dug-turnover":"s01-dug-turnover"});
 const clamp=(n,min,max,def)=>Number.isFinite(Number(n))?Math.max(min,Math.min(max,Number(n))):def;
 const name=(s,fallback,max=100)=>String(s??fallback).trim().slice(0,max)||fallback;
 const vector=(v,def,min=-1000,max=1000)=>Array.isArray(v)&&v.length===3?v.map((n,i)=>clamp(n,min,max,def[i])):[...def];
@@ -26,6 +29,7 @@ export function sanitizeProject(raw){
   wallColor:/^#[0-9a-f]{6}$/i.test(src.wallColor||"")?src.wallColor:"#34494c"
  };
  const ids=new Set();
+ const customAssetIds=new Set(Array.isArray(raw.assets)?raw.assets.map(a=>a?.id).filter(Boolean):[]);
  p.instances=raw.instances.map((it,i)=>{
   if(!it||typeof it!=="object")return null;
   let id=name(it.id,"obj"+i,80);
@@ -33,7 +37,7 @@ export function sanitizeProject(raw){
   ids.add(id);
   const layer=["floor","wall","props","decor","structure"].includes(it.layer)?it.layer:"props";
   return {
-   id,assetId:name(it.assetId,"block",120),
+   id,assetId:(()=>{const old=name(it.assetId,"block",120);return customAssetIds.has(old)?old:(LEGACY_SOIL_ASSET_ALIASES[old]||old);})(),
    label:name(it.label,"",100),
    position:vector(it.position,[0,0,0],-300,300),
    rotationY:clamp(it.rotationY,-20*Math.PI,20*Math.PI,0),
