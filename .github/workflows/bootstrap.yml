@@ -175,8 +175,9 @@ jobs:
           python3 tests/models.test.py
           node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
           if test -f tools/b1/build-s7-lights.py; then
-            python3 tools/b1/build-s7-lights.py > /tmp/s7-lighting-build.json
-            python3 tests/s7-lights-verify.py
+            # Use the pinned venv installed above; runner system Python has no numpy/trimesh.
+            /tmp/trialum-soil-venv/bin/python tools/b1/build-s7-lights.py > /tmp/s7-lighting-build.json
+            /tmp/trialum-soil-venv/bin/python tests/s7-lights-verify.py
             python3 - <<'PY'
           import json
           from pathlib import Path
