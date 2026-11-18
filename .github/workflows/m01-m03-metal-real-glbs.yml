@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - 'assets/source/m01-m03-metal-build-sources.tar.gz.b64'
-      - '.github/workflows/s7-m01-m03-metal-glb-assets.yml'
+      - '.github/workflows/m01-m03-metal-real-glbs.yml'
   workflow_dispatch:
 permissions:
   contents: write
