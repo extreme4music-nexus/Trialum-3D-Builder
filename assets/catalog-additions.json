@@ -18,9 +18,9 @@
     "gameplayWrites": 0
   },
   {
-    "id": "s03-dug-turnover",
-    "name": "S03 · Ископана почва · без дупки",
-    "category": "Почва · S03 ископана",
+    "id": "s01-dug-turnover",
+    "name": "S01 · Свежо ископана / разорана почва · без дупки",
+    "category": "Почва · S01 ископана",
     "src": "assets/models/s03-dug-turnover-soil.glb",
     "dimensions": [
       1,
@@ -33,7 +33,9 @@
     "approval": "OWNER CONCEPT RENDERS PASS; PHYSICAL GLB OWNER REVIEW PENDING",
     "note": "owner approved SECOND render; legacy S7 document calls loose dug soil S01, map before gameplay",
     "ownerModelPass": false,
-    "gameplayWrites": 0
+    "gameplayWrites": 0,
+    "canonicalSoilState": "S01",
+    "legacyAssetId": "s03-dug-turnover"
   },
   {
     "id": "s02-fill-plug",
