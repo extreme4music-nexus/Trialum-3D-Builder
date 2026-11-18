@@ -98,8 +98,21 @@ jobs:
            assert members.keys()==allowed and all(x.isfile() for x in members.values())
            for name,member in members.items():
             dest=Path(name);dest.parent.mkdir(parents=True,exist_ok=True)
+            if name in ("projects/trialum-s03-dug-soil.json","projects/trialum-s02-s03-soil-comparison.json") and dest.is_file():
+             print("PRESERVED owner-edited canonical S01 scene:",name)
+             continue
             dest.write_bytes(t.extractfile(member).read())
-          print('Recovered all 11 audited soil sources and editable design projects')
+          additions=Path("assets/catalog-additions.json")
+          rows=json.loads(additions.read_text(encoding="utf8"))
+          for row in rows:
+           if row["id"]=="s03-dug-turnover":
+            row["id"]="s01-dug-turnover"
+            row["name"]="S01 · Свежо ископана / разорана почва · без дупки"
+            row["category"]="Почва · S01 ископана"
+            row["canonicalSoilState"]="S01"
+            row["legacyAssetId"]="s03-dug-turnover"
+          additions.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
+          print('Recovered deterministic soil source while retaining owner-approved canonical S01 scenes')
           PY
           python3 -m venv /tmp/trialum-soil-venv
           /tmp/trialum-soil-venv/bin/pip install --disable-pip-version-check --quiet "numpy==2.3.5" "pillow==12.3.0" "trimesh==4.11.1" "scipy==1.17.0" "networkx==3.6.1"
@@ -116,7 +129,10 @@ jobs:
           PY
           /tmp/trialum-soil-venv/bin/python tests/soil-glb.test.py
           mkdir -p docs
-          cp README_MK.md docs/S7_SOIL_GLBS_25_MATRIX_20261118.md
+          # Do not overwrite the newer owner-visible S01/S02 naming documentation.
+          if test ! -f docs/S7_SOIL_GLBS_25_MATRIX_20261118.md; then
+            cp README_MK.md docs/S7_SOIL_GLBS_25_MATRIX_20261118.md
+          fi
           rm README_MK.md
           python3 - <<'PY'
           import json,hashlib
@@ -126,12 +142,17 @@ jobs:
           existing={x['id']:x for x in doc['assets']}
           for item in json.loads(Path('assets/catalog-additions.json').read_text(encoding='utf8')):
            if item['id'] in existing:
-            assert existing[item['id']]==item, 'Soil ID collision: '+item['id']
+            assert existing[item['id']]['src']==item['src'], 'Soil source collision: '+item['id']
            else:doc['assets'].append(item)
+          assert 's01-dug-turnover' in {a['id'] for a in doc['assets']}
+          assert 's03-dug-turnover' not in {a['id'] for a in doc['assets']}
+          assert len(doc['assets'])==len({a['id'] for a in doc['assets']})
+          tax=json.loads(Path('docs/S7_SOIL_CANONICAL_STATES_20261118.json').read_text())
+          assert tax['canonicalStates']['S03']['existingGlb'] is None
           glbs=[a for a in doc['assets'] if (a.get('src') or '').endswith('.glb')]
           assert len(glbs)==135
           doc['genuineGlbCount']=135
-          doc['assetLibraryVersion']='2026-11-18-soil-S02-S03-135-glbs'
+          doc['assetLibraryVersion']='2026-11-18-soil-S01-S02-135-glbs'
           cat.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
           expected={
            's02-planting-bed-5x5-empty.glb':'7ead405a5ac39c9efef81d3e402cb454fa35ebd07c5933bb00a7877496c83b11',
@@ -145,6 +166,7 @@ jobs:
           print('PASS: 135 physical GLBs, five new soil GLB files byte-identical to approved offline package')
           PY
           python3 tests/models.test.py
+          node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
           test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 135
           test -f vendor/three.module.js
           test -f vendor/three.core.js
