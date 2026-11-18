@@ -707,6 +707,12 @@ const ROOM_PRESETS=Object.freeze({
  "f02-gallery":"trialum-f02-black-marble-gallery.json",
  "f02-g01":"trialum-f02-black-marble-g01-pool-preview.json",
  "f02-finishes":"trialum-f02-black-marble-finishes-review.json",
+ "f03-all":"trialum-f03-all-54-stone-gallery.json",
+ "f03-s":"trialum-f03-s-stone-gallery.json",
+ "f03-t":"trialum-f03-t-stone-gallery.json",
+ "f03-compare":"trialum-f03-smooth-vs-textured-compare.json",
+ "f03-s-g01":"trialum-f03-s-g01-pool-preview.json",
+ "f03-t-g01":"trialum-f03-t-g01-pool-preview.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
@@ -730,7 +736,7 @@ async function openRoomPreset(key){
   state.saveHandle=null;
   useProject(data,true);
   frameCurrentRoom();
-  if(key==="f01-f"||key==="f01-g"||key==="f02-g01"){
+  if(key==="f01-f"||key==="f01-g"||key==="f02-g01"||key==="f03-s-g01"||key==="f03-t-g01"){
     // Focus on the TRUE G01 north-east poolside arc (22.5–75 degrees).
     // The seven small separate tiles must be visible, not one lonely slab.
     camera.position.set(18,13,16);
@@ -742,6 +748,9 @@ async function openRoomPreset(key){
   if(key==="f01-hi"){camera.position.set(5.5,5.8,7.8);controls.target.set(0,.16,.35);controls.update();}
   if(key==="f02-gallery"){frameCurrentRoom();camera.position.set(20,20,23);controls.target.set(0,.35,0);controls.update();}
   if(key==="f02-finishes"){camera.position.set(6,6,8);controls.target.set(0,.13,0);controls.update();}
+  if(key==="f03-all"){camera.position.set(29,24,31);controls.target.set(0,.25,0);controls.update();}
+  if(key==="f03-s"||key==="f03-t"){camera.position.set(22,19,25);controls.target.set(0,.2,0);controls.update();}
+  if(key==="f03-compare"){camera.position.set(9,10,11);controls.target.set(0,.16,0);controls.update();}
   try{localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(state.project));}catch{}
   say("Вчитана вистинска GLB просторија: "+data.name+" · "+data.instances.length+" елементи.");
  }catch(e){say("Не можам да ја отворам просторијата: "+e.message,true)}
