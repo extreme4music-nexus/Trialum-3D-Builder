@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "projectId": "trialum-s02-s03-soil-design-compare",
-  "name": "Почва S02 и S03 · сите одобрени 3D елементи",
-  "description": "Compare one empty S02 5x5 matrix with soil plug and demo plant, beside owner-approved dug soil S03 surface. Compare individual authentic GLBs and their independent pivot/placement.",
+  "projectId": "trialum-s01-s02-canonical-soil-compare",
+  "name": "S01 / S02 · ископана и подготвена почва (споредба)",
+  "description": "Compare canonical S01 freshly dug soil with canonical S02 planting-hole soil. The S03 untreated/compacted soil is still unrendered and absent; it is NOT represented by the dug soil.",
   "room": {
     "width": 8,
     "depth": 6,
@@ -36,8 +36,8 @@
     },
     {
       "id": "soil-compare-s03",
-      "assetId": "s03-dug-turnover",
-      "label": "S03 · ископана, не засадена",
+      "assetId": "s01-dug-turnover",
+      "label": "S01 · ископана, не засадена",
       "position": [
         0.7,
         0,
@@ -62,7 +62,7 @@
       "position": [
         -1.2,
         0.12,
-        0.0
+        0
       ],
       "rotationY": 0,
       "scale": [
@@ -83,7 +83,7 @@
       "position": [
         -1.2,
         0.12,
-        0.0
+        0
       ],
       "rotationY": 0,
       "scale": [
@@ -128,6 +128,11 @@
     "ownerApprovedVisualReference": true,
     "ownerPhysicalGlbPass": false,
     "25GridMarkersAreGamePlantSlots": false,
-    "canonicalSlotsPerBed": 5
+    "canonicalSlotsPerBed": 5,
+    "canonicalSoilStates": [
+      "S01",
+      "S02"
+    ],
+    "originalS03LabelWasLegacy": true
   }
 }
