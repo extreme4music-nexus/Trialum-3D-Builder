@@ -805,6 +805,11 @@ const ROOM_PRESETS=Object.freeze({
  "metal-m02":"trialum-s7-metal-m02-20-glbs.json",
  "metal-m03":"trialum-s7-metal-m03-20-glbs.json",
  "metal-compare":"trialum-s7-metal-3-finishes-service-compare.json",
+ "lights-all":"trialum-s7-lights-all-24-glbs.json",
+ "lights-floor":"trialum-s7-lights-floor-f1-f3.json",
+ "lights-wall":"trialum-s7-lights-wall-w1-w2.json",
+ "lights-ceiling":"trialum-s7-lights-ceiling-c1-c3.json",
+ "lights-g01":"trialum-s7-lights-g01-five-rings.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
