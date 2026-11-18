@@ -61,17 +61,28 @@ if not exist "assets\models\s03-dug-turnover-soil.glb" goto incomplete
 if not exist "assets\models\s02-single-hole-soil-plug.glb" goto incomplete
 if not exist "assets\models\s02-slot-target-ring.glb" goto incomplete
 if not exist "assets\models\s02-demo-seedling-preview.glb" goto incomplete
+if not exist "assets\models\s7-lf1-perimeter-straight-1m.glb" goto incomplete
+if not exist "assets\models\s7-lc1-g01-1plus4-ring-chandelier.glb" goto incomplete
+if not exist "projects\trialum-s7-lights-all-24-glbs.json" goto incomplete
 goto ready
 :incomplete
 echo.
 echo Some original Trialum room GLBs are missing from this local clone.
 echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
-echo All 135 models MUST be present; do not use a half-empty catalogue.
+echo All 234 models MUST be present, including 24 lights; do not use a half-empty catalogue.
 echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause
 exit /b 1
 :ready
+rem A previously running localhost server can serve an OLD clone after Pull.
+rem Never open browser against stale process or terminate it automatically.
+where powershell >nul 2>nul
+if not errorlevel 1 (
+  powershell -NoProfile -Command "$c=New-Object System.Net.Sockets.TcpClient;try{$c.Connect('127.0.0.1',8765);$c.Close();exit 17}catch{exit 0}"
+  if errorlevel 17 goto portbusy
+)
 echo.
+echo Verified lighting files: S7 floor strip, G01 chandelier, 24-model gallery.
 echo Your builder is at http://127.0.0.1:8765/
 echo Keep this window open while you edit.
 echo.
@@ -94,5 +105,15 @@ if not errorlevel 1 (
   goto :eof
 )
 echo Requires Python 3 or Node.js 20+ for the local server.
+pause
+exit /b 1
+
+:portbusy
+echo.
+echo ERROR: another Builder or service is already listening on 127.0.0.1:8765.
+echo It might be serving the OLD clone even after your GitHub Desktop Pull.
+echo Save open designs. Close the old Builder server terminal/window first.
+echo Then run THIS START-BUILDER-WINDOWS.bat from the current Builder MAIN folder.
+echo No processes or user files were changed by this check.
 pause
 exit /b 1
