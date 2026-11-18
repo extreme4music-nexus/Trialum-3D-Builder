@@ -9,3 +9,27 @@ input[type=checkbox]{accent-color:#65bb91;box-shadow:none}.topbar{height:70px;ba
 #scenePreset{min-width:175px;max-width:205px;flex-shrink:0;font-size:11px;border:1px solid #56766a;background:#203932;color:#e9fff1;border-radius:8px;padding:8px 7px}
 @media(max-width:1050px){.topbar>.top-actions{max-width:calc(100vw - 290px)}}
 @media(max-width:820px){.topbar>.top-actions{max-width:100%;width:100%;overflow-x:auto}}
+
+/* S02 planting: 25 precise 5x5 positions, selectable soil plugs, zero game writes. */
+.soil-matrix-panel[hidden]{display:none!important}
+.soil-matrix-panel{position:fixed;top:78px;right:18px;z-index:90;width:min(350px,calc(100vw - 36px));
+ max-height:calc(100vh - 106px);overflow-y:auto;background:#203027;color:#e9f7ed;
+ border:1px solid #66856b;box-shadow:0 12px 32px #0008;border-radius:14px;padding:15px;
+ font-size:12px;line-height:1.5}
+.soil-matrix-panel p{margin:8px 0}
+.soil-matrix-heading{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.soil-matrix-heading strong{font-size:14px}
+.soil-matrix-heading button{background:#385248;color:#f9faf8;border-radius:8px;border:1px solid #799785;
+ min-width:31px;min-height:29px;cursor:pointer}
+.soil-matrix-panel label{display:block;color:#c0d6c7;margin:10px 0 4px}
+#soilMatrixTarget{width:100%;background:#101e19;color:#f3fff5;border:1px solid #779483;
+ border-radius:8px;padding:8px}
+.soil-matrix-cells{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:12px 0}
+.soil-matrix-cells button{aspect-ratio:1;min-height:37px;display:flex;align-items:center;justify-content:center;
+ flex-direction:column;background:#4b3527;color:#f9e5cd;border:1px solid #8e7354;border-radius:8px;
+ cursor:pointer;font-size:12px;font-weight:650;line-height:1.18}
+.soil-matrix-cells button[data-occupied="true"]{background:#39704c;border-color:#93d69d;color:#fff}
+.soil-matrix-cells button:focus-visible{outline:3px solid #ffdd70;outline-offset:2px}
+.soil-matrix-status{font-weight:700;color:#d3e9c7}
+.soil-matrix-disclaimer{color:#b8cbbc!important;font-size:11px}
+@media(max-width:760px){.soil-matrix-panel{top:100px;right:8px;width:calc(100vw - 16px);max-height:calc(100vh - 125px)}}
