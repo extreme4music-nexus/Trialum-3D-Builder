@@ -128,7 +128,7 @@ jobs:
            if item['id'] in existing:
             assert existing[item['id']]==item, 'Soil ID collision: '+item['id']
            else:doc['assets'].append(item)
-          glbs=[a for a in doc['assets'] if a.get('src','').endswith('.glb')]
+          glbs=[a for a in doc['assets'] if (a.get('src') or '').endswith('.glb')]
           assert len(glbs)==135
           doc['genuineGlbCount']=135
           doc['assetLibraryVersion']='2026-11-18-soil-S02-S03-135-glbs'
