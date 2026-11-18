@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-f02-g01-pool-7-black-curves-review",
+  "name": "F02 · ЦРНИ ЗАКРИВЕНИ ПЛОЧКИ ОКОЛУ ВИСТИНСКИ G01",
+  "description": "Seven separate F02-F black curved paving pieces, seven F02-G narrow raised curves, existing G01 basin, satellites, rail, bridge and water. All preview data only, with no collision or authoritative path modification.",
+  "room": {
+    "gridSize": 0.05,
+    "showWalls": false,
+    "floorColor": "#202d33",
+    "wallColor": "#45474c",
+    "width": 34,
+    "depth": 34,
+    "height": 5.5
+  },
+  "instances": [
+    {
+      "id": "real-G01-g01-main-basin",
+      "assetId": "g01-main-basin",
+      "label": "real-G01-g01-main-basin",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Actual original G01 главен базен GLB, never write to production"
+    },
+    {
+      "id": "real-G01-g01-satellite-basins",
+      "assetId": "g01-satellite-basins",
+      "label": "real-G01-g01-satellite-basins",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Actual original G01 помошни базени GLB, never write to production"
+    },
+    {
+      "id": "real-G01-g01-walkway-and-railings",
+      "assetId": "g01-walkway-and-railings",
+      "label": "real-G01-g01-walkway-and-railings",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Actual original G01 патека и ограда GLB, never write to production"
+    },
+    {
+      "id": "real-G01-g01-crossing-bridge",
+      "assetId": "g01-crossing-bridge",
+      "label": "real-G01-g01-crossing-bridge",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Actual original G01 мост GLB, never write to production"
+    },
+    {
+      "id": "real-G01-g01-water-surfaces-animated",
+      "assetId": "g01-water-surfaces-animated",
+      "label": "real-G01-g01-water-surfaces-animated",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Actual original G01 вода GLB, never write to production"
+    },
+    {
+      "id": "f02-pool-tile-3",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-pool-tile-3",
+      "position": [
+        6.65193263,
+        0.192,
+        2.75532071
+      ],
+      "rotationY": -0.3926990817,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "An individual 1m black marble tile beside the existing pool rail, 6mm grout; not one giant outer slab."
+    },
+    {
+      "id": "f02-pool-trim-3",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-pool-trim-3",
+      "position": [
+        7.57581217,
+        0.192,
+        3.13800415
+      ],
+      "rotationY": -0.3926990817,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Separate raised 19cm black marble curve next to individual tile."
+    },
+    {
+      "id": "f02-pool-tile-4",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-pool-tile-4",
+      "position": [
+        6.23538291,
+        0.192,
+        3.6
+      ],
+      "rotationY": -0.5235987756,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "An individual 1m black marble tile beside the existing pool rail, 6mm grout; not one giant outer slab."
+    },
+    {
+      "id": "f02-pool-trim-4",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-pool-trim-4",
+      "position": [
+        7.10140831,
+        0.192,
+        4.1
+      ],
+      "rotationY": -0.5235987756,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Separate raised 19cm black marble curve next to individual tile."
+    },
+    {
+      "id": "f02-pool-tile-5",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-pool-tile-5",
+      "position": [
+        5.71214405,
+        0.192,
+        4.38308229
+      ],
+      "rotationY": -0.6544984695,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "An individual 1m black marble tile beside the existing pool rail, 6mm grout; not one giant outer slab."
+    },
+    {
+      "id": "f02-pool-trim-5",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-pool-trim-5",
+      "position": [
+        6.50549739,
+        0.192,
+        4.99184372
+      ],
+      "rotationY": -0.6544984695,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Separate raised 19cm black marble curve next to individual tile."
+    },
+    {
+      "id": "f02-pool-tile-6",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-pool-tile-6",
+      "position": [
+        5.09116882,
+        0.192,
+        5.09116882
+      ],
+      "rotationY": -0.7853981634,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "An individual 1m black marble tile beside the existing pool rail, 6mm grout; not one giant outer slab."
+    },
+    {
+      "id": "f02-pool-trim-6",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-pool-trim-6",
+      "position": [
+        5.79827561,
+        0.192,
+        5.79827561
+      ],
+      "rotationY": -0.7853981634,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Separate raised 19cm black marble curve next to individual tile."
+    },
+    {
+      "id": "f02-pool-tile-7",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-pool-tile-7",
+      "position": [
+        4.38308229,
+        0.192,
+        5.71214405
+      ],
+      "rotationY": -0.9162978573,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "An individual 1m black marble tile beside the existing pool rail, 6mm grout; not one giant outer slab."
+    },
+    {
+      "id": "f02-pool-trim-7",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-pool-trim-7",
+      "position": [
+        4.99184372,
+        0.192,
+        6.50549739
+      ],
+      "rotationY": -0.9162978573,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Separate raised 19cm black marble curve next to individual tile."
+    },
+    {
+      "id": "f02-pool-tile-8",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-pool-tile-8",
+      "position": [
+        3.6,
+        0.192,
+        6.23538291
+      ],
+      "rotationY": -1.0471975512,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "An individual 1m black marble tile beside the existing pool rail, 6mm grout; not one giant outer slab."
+    },
+    {
+      "id": "f02-pool-trim-8",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-pool-trim-8",
+      "position": [
+        4.1,
+        0.192,
+        7.10140831
+      ],
+      "rotationY": -1.0471975512,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Separate raised 19cm black marble curve next to individual tile."
+    },
+    {
+      "id": "f02-pool-tile-9",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-pool-tile-9",
+      "position": [
+        2.75532071,
+        0.192,
+        6.65193263
+      ],
+      "rotationY": -1.1780972451,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "An individual 1m black marble tile beside the existing pool rail, 6mm grout; not one giant outer slab."
+    },
+    {
+      "id": "f02-pool-trim-9",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-pool-trim-9",
+      "position": [
+        3.13800415,
+        0.192,
+        7.57581217
+      ],
+      "rotationY": -1.1780972451,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Separate raised 19cm black marble curve next to individual tile."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderApproved": true,
+    "ownerPhysicalModelsReviewPending": true,
+    "created": "2026-11-18"
+  }
+}
