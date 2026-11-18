@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum original GLB catalog — 42 models including owner-render-approved F01-F radial cream marble",
+  "name": "Trialum original GLB library — 45 assets including F01-G curved pool trim",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -752,8 +752,62 @@
       "source": "CORRECTED owner feedback: 24-subdivision one-piece glTF2, 6mm grout, 4mm bevel; frozen original F01-A PBR",
       "approval": "PREVIOUS OVERSIZED WEDGE REJECTED; CORRECTED 7x POOLSIDE REVIEW PENDING",
       "noGameStateWrites": true
+    },
+    {
+      "id": "f01-g-pool-trim-1m",
+      "name": "F01-G · крем мермерен ЗАКРИВЕН РАБ ~1 m",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-g-cream-marble-pool-trim-1m.glb",
+      "dimensions": [
+        0.259766,
+        0.135,
+        1.089141
+      ],
+      "placement": "floor",
+      "origin": "Local pivot inner arc start: r=8.2, use rotY=-theta for G01 placement",
+      "note": "[8.2,8.39]m outer F01-F edge; repeatable 48-sector arc",
+      "source": "Trialum F01-G owner-accepted concept image; source-code generator mirrors exact frozen F01-A beige/ivory texture",
+      "approval": "CONCEPT RENDER ACCEPTED; REAL GLB BUILT; OWNER IN-BUILDER VISUAL PASS PENDING",
+      "version": 1,
+      "noGameStateWrites": true
+    },
+    {
+      "id": "f01-g-pool-trim-half",
+      "name": "F01-G · половина закривен мермерен раб",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-g-cream-marble-pool-trim-half.glb",
+      "dimensions": [
+        0.207363,
+        0.135,
+        0.542739
+      ],
+      "placement": "floor",
+      "origin": "Local pivot inner arc start: r=8.2, use rotY=-theta for G01 placement",
+      "note": "Half of 48-sector angle; use at path transitions",
+      "source": "Trialum F01-G owner-accepted concept image; source-code generator mirrors exact frozen F01-A beige/ivory texture",
+      "approval": "CONCEPT RENDER ACCEPTED; REAL GLB BUILT; OWNER IN-BUILDER VISUAL PASS PENDING",
+      "version": 1,
+      "noGameStateWrites": true
+    },
+    {
+      "id": "f01-g-pool-trim-3m-showcase",
+      "name": "F01-G · долг непрекинат заоблен раб ~3,26 m (преглед)",
+      "category": "Мермер F01 · оригинални GLB",
+      "src": "assets/models/f01-g-cream-marble-pool-trim-3m-showcase.glb",
+      "dimensions": [
+        0.814188,
+        0.135,
+        3.210715
+      ],
+      "placement": "floor",
+      "origin": "Local pivot inner arc start: r=8.2, use rotY=-theta for G01 placement",
+      "note": "Concept render LEFT long solid piece; showcase only, not modular gameplay",
+      "source": "Trialum F01-G owner-accepted concept image; source-code generator mirrors exact frozen F01-A beige/ivory texture",
+      "approval": "CONCEPT RENDER ACCEPTED; REAL GLB BUILT; OWNER IN-BUILDER VISUAL PASS PENDING",
+      "version": 1,
+      "noGameStateWrites": true
     }
   ],
-  "assetLibraryVersion": "2026-11-17-f01-f-42-real-glbs",
-  "genuineGlbCount": 42
+  "assetLibraryVersion": "2026-11-18-F01-G-45-glbs",
+  "genuineGlbCount": 45
 }
