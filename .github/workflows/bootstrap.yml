@@ -44,7 +44,8 @@ jobs:
           node --version
           npm run check
           npm test
-          python3 -m py_compile scripts/setup.py scripts/build_all_assets.py scripts/server.py tools/b1/*.py
+          python3 -m py_compile scripts/setup.py scripts/build_all_assets.py scripts/server.py scripts/git_doctor.py tests/git_sync_safety.test.py tools/b1/*.py
+          python3 tests/git_sync_safety.test.py
           node --check tools/b1/build-agro-lobby.mjs
           node --check tools/b1/build-food-warehouse.mjs
           node --check tools/b1/generate-glb.mjs
