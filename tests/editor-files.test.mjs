@@ -20,11 +20,11 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
  assert.doesNotMatch(source,/fetch\([^)]*\/api\/(?:player|social|inventory)/i);
  assert.doesNotMatch(html,/three\.js.*cdn|http:\/\/[a-z]/i);
 });
-test("catalogue contains all 76 physical original and premium F02 models",()=>{
+test("catalogue contains all 130 physical original F01 F02 and premium F03 stone models",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(glbs.length,76);
- assert.equal(new Set(glbs.map(x=>x.id)).size,76);
+ assert.equal(glbs.length,130);
+ assert.equal(new Set(glbs.map(x=>x.id)).size,130);
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
  assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
@@ -136,7 +136,7 @@ test("F01-G includes real G01 assembled 7-curb preview plus continuous long show
 
 test("last F01 white-cream marble family has real distinct H and I GLBs and owner preview",()=>{
  const c=JSON.parse(file("assets/catalog.json"));const byId=new Map(c.assets.map(a=>[a.id,a]));
- assert.equal(c.genuineGlbCount,76);
+ assert.equal(c.genuineGlbCount,130);
  const a=byId.get("f01-a");
  const h=byId.get("f01-h-honed-service"),i=byId.get("f01-i-wet-fine-texture");
  assert.ok(a&&h&&i);
@@ -189,4 +189,37 @@ test("all 29 black marble real assets and three editable owner preview scenes ar
   assert.ok(html.includes('value="'+key+'"'));
   assert.ok(editor.includes('"'+key+'":"trialum-f02-'));
  }
+});
+
+test("both owner-render-approved F03 stone finishes have all 54 genuine GLBs and 6 selectable 3D scenes",()=>{
+ const c=JSON.parse(file("assets/catalog.json")),idSet=new Set(c.assets.map(a=>a.id));
+ const stones=c.assets.filter(a=>a.id.startsWith("f03-")&&a.src?.endsWith(".glb"));
+ assert.equal(stones.length,54);
+ assert.equal(stones.filter(a=>a.finish==="SMOOTH_HONED").length,27);
+ assert.equal(stones.filter(a=>a.finish==="SUBTLE_MICRO_TEXTURE").length,27);
+ assert.ok(stones.every(a=>a.ownerRenderPass===true&&a.ownerModelPass===false&&a.gameplayWrites===0));
+ const scenes=[
+ ["projects/trialum-f03-all-54-stone-gallery.json",54],
+ ["projects/trialum-f03-s-stone-gallery.json",27],
+ ["projects/trialum-f03-t-stone-gallery.json",27],
+ ["projects/trialum-f03-smooth-vs-textured-compare.json",10],
+ ["projects/trialum-f03-s-g01-pool-preview.json",19],
+ ["projects/trialum-f03-t-g01-pool-preview.json",19],
+ ];
+ for(const [path,count] of scenes){
+  const p=JSON.parse(file(path));
+  assert.equal(p.instances.length,count,path);
+  assert.ok(p.instances.every(x=>idSet.has(x.assetId)),path);
+  assert.equal(p.meta.gameplayWrites,0,path);
+  assert.equal(p.meta.officialScene,false,path);
+  assert.equal(p.meta.ownerGlbModelPass,false,path);
+ }
+ const html=file("index.html"),editor=file("src/main.js");
+ for(const key of ["f03-all","f03-s","f03-t","f03-compare","f03-s-g01","f03-t-g01"]){
+  assert.ok(html.includes('value="'+key+'"'),key);
+  assert.ok(editor.includes('"'+key+'":"trialum-f03-'),key);
+ }
+ const m=JSON.parse(file("assets/materials/f03-glb-sha-manifest.json"));
+ assert.equal(m.models.length,54);
+ assert.equal(m.ownerGlbPass,false);
 });
