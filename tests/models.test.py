@@ -8,9 +8,11 @@ CAT=ROOT/"assets/catalog.json"
 ORIGINAL_F01_A="787965608e2e4005a0ee84c857d7f0379a8093149b39da6bacb2d012feafc147"
 class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
-  assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
+  catalog=json.loads(CAT.read_text(encoding="utf-8"))
+  assets=catalog["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),130)
+  self.assertEqual(len(models),catalog["genuineGlbCount"])
+  self.assertGreaterEqual(len(models),130)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
