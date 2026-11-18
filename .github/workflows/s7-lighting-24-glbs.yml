@@ -87,7 +87,7 @@ jobs:
               d['assets'].append(row)
               existing[row['id']]=row
           assert len({x['id'] for x in d['assets']})==len(d['assets'])
-          count=sum(x.get('src','').endswith('.glb') for x in d['assets'])
+          count=sum((x.get('src') or '').endswith('.glb') for x in d['assets'])
           assert count==234,count
           d['genuineGlbCount']=count
           d['assetLibraryVersion']='2026-11-18-s7-8c-24-light-glbs-234'
