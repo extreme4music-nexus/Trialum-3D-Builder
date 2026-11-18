@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "updated": "2026-11-18",
   "sourceRepository": "extreme4music-nexus/Trialum",
-  "sourceBranch": "feature/lw-d-s7-f01-g-pool-marble-trim-20261118",
+  "sourceBranch": "feature/lw-d-s7-f01-h-i-cream-marble-finishes-20261118",
   "targetRepository": "extreme4music-nexus/Trialum-3D-Builder",
   "targetBranch": "main",
   "gameMainModified": false,
@@ -15,12 +15,13 @@
     "tools/b1/build-s7-f01-edge.py",
     "tools/b1/build-s7-f01-corner.py",
     "tools/b1/build-s7-f01-radial-wedge.py",
-    "tools/b1/build-s7-f01-g-pool-trim.py"
+    "tools/b1/build-s7-f01-g-pool-trim.py",
+    "tools/b1/build-s7-f01-h-i-marble-finishes.py"
   ],
-  "modelCountExpected": 19,
-  "modelSetStatus": "19_REAL_F01_GLBS_IN_BUILDER_MAIN;3_F01_G_MATCH_GAME_FEATURE_GIT_BLOB_AND_SHA;OWNER_VISUAL_TEST_PENDING",
-  "ownerApprovalStatus": "F01_A_OWNER_MODEL_PASS;F01_F_CORRECTED_MODEL_OWNER_REVIEW_PENDING;F01_G_CONCEPT_RENDER_ACCEPTED_3_REAL_GLBS_DELIVERED_OWNER_MODEL_REVIEW_PENDING",
-  "scope": "F01 modular marble family A-G, including F01-F pool tile and F01-G long/poolside edge trims; 45 physical GLBs total in Builder incl other 26 historical assets.",
+  "modelCountExpected": 21,
+  "modelSetStatus": "21_REAL_F01_WHITE_CREAM_GLB_MODELS_A_TO_I;47_TOTAL_BUILDER_REAL_GLB;H_I_IDENTICAL_BINARY_GAME_FEATURE_AND_BUILDER_MAIN",
+  "ownerApprovalStatus": "F01-G_3_REAL_MODELS_OWNER_VISUAL_PASS_20261118;F01-H_I_REAL_MODELS_BUILT_OWNER_VISUAL_PASS_PENDING;F01-A_PASS;OTHER_EARLIER_F01_REVIEW_AS_RECORDED",
+  "scope": "F01 entire planned cream-white marble tile family A-I; H/I finish variants physically delivered and distinct; no claimed certified slip-resistance. 47 real GLBs including 26 non-F01 assets.",
   "models": [
     {
       "id": "f01-a",
@@ -166,39 +167,73 @@
       "size": 178908,
       "gitBlobSha": "5fb0b22d5694c9ea6cbd44e07170dd33fa7af34d",
       "note": "~3.26 m single continuous sculptural trim, preview only"
+    },
+    {
+      "id": "f01-h-honed-service",
+      "path": "assets/models/f01-h-cream-marble-matte-service.glb",
+      "status": "TRUE_GLTF2_PHYSCIAL_BINARY_CI_PASS_DUAL_REPO_MATCH",
+      "ownerVisual": "GLB MODEL VISUAL QA PENDING",
+      "sha256": "5a4a11975ed2319bda6fcf4a5532dc0b8c97e7da2d2ea768a963979e45293c67",
+      "gitBlobSha": "f65657ef2e7a597b64e69a1c58efcdc8cf22e222",
+      "size": 175632,
+      "materialFinish": "HONED_MATTE_SERVICE",
+      "dimensionsMeters": [
+        1,
+        0.06,
+        1
+      ],
+      "realSlipResistanceCertified": false
+    },
+    {
+      "id": "f01-i-wet-fine-texture",
+      "path": "assets/models/f01-i-cream-marble-fine-textured-wet.glb",
+      "status": "TRUE_GLTF2_PHYSCIAL_BINARY_CI_PASS_DUAL_REPO_MATCH",
+      "ownerVisual": "GLB MODEL VISUAL QA PENDING",
+      "sha256": "753eca2840d988a3dc9655b1d27ae9cde1c11cc81d1403c0a2ed692a4f1ad6ab",
+      "gitBlobSha": "a53e20fb321aa403ae20085f3de543cb3183615a",
+      "size": 459472,
+      "materialFinish": "FINE_STIPPLE_WET_ADJACENT",
+      "dimensionsMeters": [
+        1,
+        0.06,
+        1
+      ],
+      "realSlipResistanceCertified": false
     }
   ],
   "latestModule": {
-    "assetId": "S7-FLOOR-F01-G",
-    "gameFeatureBranch": "feature/lw-d-s7-f01-g-pool-marble-trim-20261118",
-    "realGlbs": [
+    "assetIds": [
+      "S7-FLOOR-F01-H",
+      "S7-FLOOR-F01-I"
+    ],
+    "gameFeatureBranch": "feature/lw-d-s7-f01-h-i-cream-marble-finishes-20261118",
+    "physicalFiles": [
       {
-        "file": "assets/models/f01-g-cream-marble-pool-trim-1m.glb",
-        "sha256": "1c6e46751739de51a10557eae460e97885dce01dc61471d1b6ff3c932a6fe14b",
-        "sizeBytes": 101636,
-        "gitBlobSha": "4903e1def03cac016882a6908197e71697fa6388"
+        "file": "assets/models/f01-h-cream-marble-matte-service.glb",
+        "sha256": "5a4a11975ed2319bda6fcf4a5532dc0b8c97e7da2d2ea768a963979e45293c67",
+        "gitBlobSha": "f65657ef2e7a597b64e69a1c58efcdc8cf22e222",
+        "bytes": 175632,
+        "finish": "HONED_MATTE_SERVICE"
       },
       {
-        "file": "assets/models/f01-g-cream-marble-pool-trim-half.glb",
-        "sha256": "40210ad22cef0242ed4d4a0427b800e7af6df4285ae1d624e555d2e5260fa7af",
-        "sizeBytes": 93240,
-        "gitBlobSha": "dfb0704cfbb8567bccf369bc8afcfa2d498215d4"
-      },
-      {
-        "file": "assets/models/f01-g-cream-marble-pool-trim-3m-showcase.glb",
-        "sha256": "298effd5a3dd60b3425015a4aa37429c0b4d94ad0037baf29adf1ac84639b802",
-        "sizeBytes": 178908,
-        "gitBlobSha": "5fb0b22d5694c9ea6cbd44e07170dd33fa7af34d"
+        "file": "assets/models/f01-i-cream-marble-fine-textured-wet.glb",
+        "sha256": "753eca2840d988a3dc9655b1d27ae9cde1c11cc81d1403c0a2ed692a4f1ad6ab",
+        "gitBlobSha": "a53e20fb321aa403ae20085f3de543cb3183615a",
+        "bytes": 459472,
+        "finish": "FINE_STIPPLE_WET_ADJACENT"
       }
     ],
-    "realBuilderModelCount": 45,
-    "gameCI": "https://github.com/extreme4music-nexus/Trialum/actions/runs/44214935599",
-    "builderCI": "https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44215016691",
-    "builderPreview": "projects/trialum-f01-g-pool-curb-g01-preview.json",
-    "builderShowcase": "projects/trialum-f01-g-curved-trim-showcase.json",
-    "ownerConceptVisualAccepted": true,
-    "ownerPhysicalGLBPass": false,
-    "inGame": false,
-    "gameplayWrites": 0
+    "totalWhiteCreamF01Models": 21,
+    "totalBuilderRealGlbs": 47,
+    "originalF01AShaFrozen": true,
+    "sourceGenerator": "tools/b1/build-s7-f01-h-i-marble-finishes.py",
+    "builderProject": "projects/trialum-f01-h-i-cream-marble-finishes-review.json",
+    "gameCI": "https://github.com/extreme4music-nexus/Trialum/actions/runs/44251585406",
+    "builderCI": "https://github.com/extreme4music-nexus/Trialum-3D-Builder/actions/runs/44251895051",
+    "ownerHVisualPass": false,
+    "ownerIVisualPass": false,
+    "gameplayWrites": 0,
+    "productionInstall": false,
+    "realSlipResistanceCertified": false
   }
 }
