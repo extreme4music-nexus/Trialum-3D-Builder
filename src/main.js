@@ -800,6 +800,11 @@ const ROOM_PRESETS=Object.freeze({
  "soil-compare":"trialum-s02-s03-soil-comparison.json",
  "soil-s03-gallery":"trialum-s03-untreated-15-glb-gallery.json",
  "soil-s03-assembly":"trialum-s03-untreated-assembly-review.json",
+ "metal-all":"trialum-s7-metal-all-60-glbs.json",
+ "metal-m01":"trialum-s7-metal-m01-20-glbs.json",
+ "metal-m02":"trialum-s7-metal-m02-20-glbs.json",
+ "metal-m03":"trialum-s7-metal-m03-20-glbs.json",
+ "metal-compare":"trialum-s7-metal-3-finishes-service-compare.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
