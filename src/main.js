@@ -655,6 +655,18 @@ function handleKey(e){
 
 // Explicit local GitHub sync. Browser never receives credentials or runs arbitrary commands.
 let gitToken="";
+function gitErrorMessage(data){
+ const code=typeof data?.code==="string"?data.code:"GIT_UNEXPECTED";
+ const raw=String(data?.error||"Непозната грешка од локалниот Git сервис");
+ const details=raw.length>280?raw.slice(0,280)+"…":raw;
+ const hint=String(data?.hint||"").slice(0,360);
+ if(["GIT_DIRECTORY_MISSING","GIT_METADATA_DISAPPEARED","GIT_METADATA_UNWRITABLE"].includes(code))
+  return "GitHub: Локалната .git папка е недостапна или незапишлива. "+details+
+   " · Провери CONNECT-GITHUB-WINDOWS.bat и патеката во GitHub Desktop. Не ја бриши .git и не го клонирај повторно пред да ги зачуваш проектите.";
+ if(code==="GIT_BUSY")return "GitHub: Во тек е друга Git операција. Затвори го тековниот Pull/Push во GitHub Desktop. "+details;
+ if(code==="GIT_REMOTE_AHEAD")return "GitHub: На серверот има понови измени. Прегледај ги во GitHub Desktop пред Push. "+details;
+ return "GitHub ["+code+"]: "+details+(hint?" · "+hint:"");
+}
 async function githubSync(action){
  if(!["pull","publish"].includes(action))return;
  if(state.dirty){say("Прво Зачувај ги измените во клонираната Builder папка.",true);return;}
@@ -663,18 +675,22 @@ async function githubSync(action){
  try{
   const statusResponse=await fetch("./api/git-status",{cache:"no-store"});
   const status=await statusResponse.json();
-  if(!status.ok)throw Error(status.error||"Локалниот Git сервис не е достапен");
+  if(!status.ok)throw Error(gitErrorMessage(status));
   gitToken=status.csrf;
   if(!confirm(action==="pull"?
-    "GitHub ↓ ќе направи Pull (ff-only) од Builder main. Продолжи?":
-    "GitHub ↑ ќе ги објави зачуваните projects/ и GLB дизајни на Builder main. Продолжи?"))return;
-  const res=await fetch("./api/git-"+action,{method:"POST",headers:{"Content-Type":"application/json","X-Trialum-CSRF":gitToken},body:"{}"});
+    "GitHub ↓ ќе направи Pull (ff-only) од Builder main. Не го користи истовремено GitHub Desktop. Продолжи?":
+    "GitHub ↑ ќе ги објави зачуваните проекти/GLB во Builder main. Не пуштај истовремено GitHub Desktop. Продолжи?"))return;
+  const res=await fetch("./api/git-"+action,{method:"POST",
+    headers:{"Content-Type":"application/json","X-Trialum-CSRF":gitToken},body:"{}"});
   const data=await res.json();
-  if(!data.ok)throw Error(data.error||"GitHub sync не успеа");
+  if(!data.ok)throw Error(gitErrorMessage(data));
   say("GitHub "+(action==="pull"?"Pull":"Push")+" успешно: "+data.message);
   if(action==="pull")say("GitHub Pull заврши. Освежи го Builder за новиот каталог.");
- }catch(e){say("GitHub: "+e.message+" · користи Python сервер и поставена GitHub Desktop/Git Credential Manager автентикација.",true)}
- finally{btn.disabled=false;}
+ }catch(e){
+  const msg=e?.message||String(e);
+  say(msg.startsWith("GitHub")?msg:
+    "GitHub: "+msg+" · Провери дали Python серверот работи и дали истиот GitHub Desktop клон е достапен.",true);
+ }finally{btn.disabled=false;}
 }
 
 const ROOM_PRESETS=Object.freeze({
