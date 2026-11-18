@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-f03-t-g01-review",
+  "name": "F03-T · 7 КАМЕНИ ПЛОЧКИ И РАБОВИ ОКОЛУ G01",
+  "description": "Owner approved all F03 3D render boards; 54 genuine watertight GLBs ready for visual on-device QA. No gameplay integration.",
+  "room": {
+    "width": 34,
+    "depth": 34,
+    "height": 5.5,
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#4b554f",
+    "wallColor": "#57675c"
+  },
+  "instances": [
+    {
+      "id": "real-g01-main-basin",
+      "assetId": "g01-main-basin",
+      "label": "g01-main-basin",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 model; no gameplay installation"
+    },
+    {
+      "id": "real-g01-satellite-basins",
+      "assetId": "g01-satellite-basins",
+      "label": "g01-satellite-basins",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 model; no gameplay installation"
+    },
+    {
+      "id": "real-g01-walkway-and-railings",
+      "assetId": "g01-walkway-and-railings",
+      "label": "g01-walkway-and-railings",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 model; no gameplay installation"
+    },
+    {
+      "id": "real-g01-crossing-bridge",
+      "assetId": "g01-crossing-bridge",
+      "label": "g01-crossing-bridge",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 model; no gameplay installation"
+    },
+    {
+      "id": "real-g01-water-surfaces-animated",
+      "assetId": "g01-water-surfaces-animated",
+      "label": "g01-water-surfaces-animated",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 model; no gameplay installation"
+    },
+    {
+      "id": "f03-t-pool-tile-3",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        6.65193263,
+        0.192,
+        2.75532071
+      ],
+      "rotationY": -0.39269908169872414,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Small independently movable 7.5deg r7.2..8.2m tile"
+    },
+    {
+      "id": "f03-t-pool-trim-3",
+      "assetId": "f03-t-stone-pool-trim-1m",
+      "label": "f03-t-stone-pool-trim-1m",
+      "position": [
+        7.57581217,
+        0.192,
+        3.13800415
+      ],
+      "rotationY": -0.39269908169872414,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "One independent r8.2..8.39m raised trim"
+    },
+    {
+      "id": "f03-t-pool-tile-4",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        6.23538291,
+        0.192,
+        3.6
+      ],
+      "rotationY": -0.5235987755982988,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Small independently movable 7.5deg r7.2..8.2m tile"
+    },
+    {
+      "id": "f03-t-pool-trim-4",
+      "assetId": "f03-t-stone-pool-trim-1m",
+      "label": "f03-t-stone-pool-trim-1m",
+      "position": [
+        7.10140831,
+        0.192,
+        4.1
+      ],
+      "rotationY": -0.5235987755982988,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "One independent r8.2..8.39m raised trim"
+    },
+    {
+      "id": "f03-t-pool-tile-5",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        5.71214405,
+        0.192,
+        4.38308229
+      ],
+      "rotationY": -0.6544984694978736,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Small independently movable 7.5deg r7.2..8.2m tile"
+    },
+    {
+      "id": "f03-t-pool-trim-5",
+      "assetId": "f03-t-stone-pool-trim-1m",
+      "label": "f03-t-stone-pool-trim-1m",
+      "position": [
+        6.50549739,
+        0.192,
+        4.99184372
+      ],
+      "rotationY": -0.6544984694978736,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "One independent r8.2..8.39m raised trim"
+    },
+    {
+      "id": "f03-t-pool-tile-6",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        5.09116882,
+        0.192,
+        5.09116882
+      ],
+      "rotationY": -0.7853981633974483,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Small independently movable 7.5deg r7.2..8.2m tile"
+    },
+    {
+      "id": "f03-t-pool-trim-6",
+      "assetId": "f03-t-stone-pool-trim-1m",
+      "label": "f03-t-stone-pool-trim-1m",
+      "position": [
+        5.79827561,
+        0.192,
+        5.79827561
+      ],
+      "rotationY": -0.7853981633974483,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "One independent r8.2..8.39m raised trim"
+    },
+    {
+      "id": "f03-t-pool-tile-7",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        4.38308229,
+        0.192,
+        5.71214405
+      ],
+      "rotationY": -0.916297857297023,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Small independently movable 7.5deg r7.2..8.2m tile"
+    },
+    {
+      "id": "f03-t-pool-trim-7",
+      "assetId": "f03-t-stone-pool-trim-1m",
+      "label": "f03-t-stone-pool-trim-1m",
+      "position": [
+        4.99184372,
+        0.192,
+        6.50549739
+      ],
+      "rotationY": -0.916297857297023,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "One independent r8.2..8.39m raised trim"
+    },
+    {
+      "id": "f03-t-pool-tile-8",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        3.6,
+        0.192,
+        6.23538291
+      ],
+      "rotationY": -1.0471975511965976,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Small independently movable 7.5deg r7.2..8.2m tile"
+    },
+    {
+      "id": "f03-t-pool-trim-8",
+      "assetId": "f03-t-stone-pool-trim-1m",
+      "label": "f03-t-stone-pool-trim-1m",
+      "position": [
+        4.1,
+        0.192,
+        7.10140831
+      ],
+      "rotationY": -1.0471975511965976,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "One independent r8.2..8.39m raised trim"
+    },
+    {
+      "id": "f03-t-pool-tile-9",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        2.75532071,
+        0.192,
+        6.65193263
+      ],
+      "rotationY": -1.1780972450961724,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Small independently movable 7.5deg r7.2..8.2m tile"
+    },
+    {
+      "id": "f03-t-pool-trim-9",
+      "assetId": "f03-t-stone-pool-trim-1m",
+      "label": "f03-t-stone-pool-trim-1m",
+      "position": [
+        3.13800415,
+        0.192,
+        7.57581217
+      ],
+      "rotationY": -1.1780972450961724,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "One independent r8.2..8.39m raised trim"
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderPass": true,
+    "ownerGlbModelPass": false,
+    "source": "F03 4 accepted render boards",
+    "actualSlipCertificate": false
+  }
+}
