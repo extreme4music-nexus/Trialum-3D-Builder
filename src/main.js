@@ -860,6 +860,7 @@ function addListeners(){
  ui.categoryFilter.addEventListener("change",renderCatalogue);
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
+ $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");
  $("openProject").onclick=()=>ui.projectFileInput.click();
  $("openS7Project").onclick=()=>openRoomPreset("f01");
  $("scenePreset").onchange=e=>openRoomPreset(e.target.value);
@@ -943,6 +944,12 @@ async function startup(){
   if(!response.ok)throw Error("HTTP "+response.status);
   const library=await response.json();
   state.catalog=library.assets||[];
+  const physicalCount=state.catalog.filter(a=>a.src?.endsWith(".glb")).length;
+  const lightCount=state.catalog.filter(a=>/^s7-l(?:f[1-3]|w[1-2]|c[1-3])-/.test(a.id)&&a.src?.endsWith(".glb")).length;
+  const versionNode=$("builderLibraryVersion");
+  if(versionNode)versionNode.textContent="BUILDER · "+physicalCount+" GLB · LED "+lightCount+"/24";
+  $("openLightingGallery").disabled=lightCount!==24;
+  if(lightCount!==24)say("Локалниот Builder каталог има само "+lightCount+"/24 LED модели. Провери MAIN Pull и рестартирај го локалниот сервер.",true);
   for(const item of state.catalog)state.registry.set(item.id,item);
  }catch(err){say("Каталогот не е достапен: "+err.message,true);}
  // Built-in placeholders are harmless editor-only components.
