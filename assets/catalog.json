@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum complete white cream marble F01 A–I catalogue — 47 genuine GLB models",
+  "name": "Trialum 3D Builder — F01 21 cream + F02 29 black + 26 original rooms · 76 physical GLBs",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -848,8 +848,530 @@
       "roughness": 0.86,
       "notes": "1m wet-adjacent visual design. Original F01-A mineral basecolor, embedded more pronounced micro-normal + genuine 40x40 shallow texture mesh; 60mm slab/4mm bevel. Physical anti-slip certification NOT implied.",
       "gameplayWrites": 0
+    },
+    {
+      "id": "f02-black-marble-full",
+      "name": "F02-A · ЦРН мермер · цела плочка 1×1 m",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-full.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-half-first",
+      "name": "F02-B · ЦРН мермер · половина прва",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-half-first.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-half-second",
+      "name": "F02-B · ЦРН мермер · половина втора",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-half-second.glb",
+      "dimensions": [
+        1,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-quarter-c1",
+      "name": "F02-C · ЦРН мермер · quarter c1",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-quarter-c1.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-quarter-c2",
+      "name": "F02-C · ЦРН мермер · quarter c2",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-quarter-c2.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-quarter-c3",
+      "name": "F02-C · ЦРН мермер · quarter c3",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-quarter-c3.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-quarter-c4",
+      "name": "F02-C · ЦРН мермер · quarter c4",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-quarter-c4.glb",
+      "dimensions": [
+        0.5,
+        0.06,
+        0.5
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-edge-north",
+      "name": "F02-D · ЦРН мермер · edge north",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-edge-north.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-edge-south",
+      "name": "F02-D · ЦРН мермер · edge south",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-edge-south.glb",
+      "dimensions": [
+        1,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-edge-east",
+      "name": "F02-D · ЦРН мермер · edge east",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-edge-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-edge-west",
+      "name": "F02-D · ЦРН мермер · edge west",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-edge-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-corner-north-west",
+      "name": "F02-E · ЦРН мермер · corner north west",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-corner-north-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-corner-north-east",
+      "name": "F02-E · ЦРН мермер · corner north east",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-corner-north-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-corner-south-east",
+      "name": "F02-E · ЦРН мермер · corner south east",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-corner-south-east.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-corner-south-west",
+      "name": "F02-E · ЦРН мермер · corner south west",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-corner-south-west.glb",
+      "dimensions": [
+        0.06,
+        0.056,
+        0.06
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-l-corner-showcase-north-west",
+      "name": "F02-E-SHOWCASE · ЦРН мермер · l corner showcase north west",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-l-corner-showcase-north-west.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-l-corner-showcase-north-east",
+      "name": "F02-E-SHOWCASE · ЦРН мермер · l corner showcase north east",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-l-corner-showcase-north-east.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-l-corner-showcase-south-east",
+      "name": "F02-E-SHOWCASE · ЦРН мермер · l corner showcase south east",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-l-corner-showcase-south-east.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-l-corner-showcase-south-west",
+      "name": "F02-E-SHOWCASE · ЦРН мермер · l corner showcase south west",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-l-corner-showcase-south-west.glb",
+      "dimensions": [
+        1,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-raised-border-showcase-north",
+      "name": "F02-D-SHOWCASE · ЦРН мермер · raised border showcase north",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-raised-border-showcase-north.glb",
+      "dimensions": [
+        1,
+        0.135,
+        0.19
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-raised-border-showcase-south",
+      "name": "F02-D-SHOWCASE · ЦРН мермер · raised border showcase south",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-raised-border-showcase-south.glb",
+      "dimensions": [
+        1,
+        0.135,
+        0.19
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-raised-border-showcase-east",
+      "name": "F02-D-SHOWCASE · ЦРН мермер · raised border showcase east",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-raised-border-showcase-east.glb",
+      "dimensions": [
+        0.19,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-raised-border-showcase-west",
+      "name": "F02-D-SHOWCASE · ЦРН мермер · raised border showcase west",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-raised-border-showcase-west.glb",
+      "dimensions": [
+        0.19,
+        0.135,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-radial-wedge",
+      "name": "F02-F · ЦРН мермер · мала закривена G01 плочка",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-radial-wedge.glb",
+      "dimensions": [
+        1.062,
+        0.06,
+        1.064
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-pool-trim-1m",
+      "name": "F02-G · ЦРН мермер · закривен раб ~1 m",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-pool-trim-1m.glb",
+      "dimensions": [
+        0.26,
+        0.135,
+        1.09
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-pool-trim-half",
+      "name": "F02-G · ЦРН мермер · закривен раб половина",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-pool-trim-half.glb",
+      "dimensions": [
+        0.208,
+        0.135,
+        0.545
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-pool-trim-3m-showcase",
+      "name": "F02-G · ЦРН мермер · долг закривен раб ~3,26 m",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-pool-trim-3m-showcase.glb",
+      "dimensions": [
+        0.816,
+        0.135,
+        3.211
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-matte-service",
+      "name": "F02-H · ЦРН мермер · мат сервисен мермер",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-matte-service.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
+    },
+    {
+      "id": "f02-black-marble-fine-textured-wet",
+      "name": "F02-I · ЦРН мермер · микротекстура за влажна патека",
+      "category": "Мермер F02 · оригинални GLB",
+      "src": "assets/models/f02-black-marble-fine-textured-wet.glb",
+      "dimensions": [
+        1,
+        0.06,
+        1
+      ],
+      "placement": "floor",
+      "source": "Source-derived owner-approved black-white mineral veining / tools/b1/build-s7-f02-black-marble.py",
+      "approval": "OWNER RENDER PASS; PHYSICAL GLB CI PASS; OWNER IN-BUILDER MODEL REVIEW PENDING",
+      "notes": "Real glTF2 solid, original black render vein atlas, 4mm typical bevel. Long L/showcase parts are additional optional architectural pieces; no game installation.",
+      "gameplayWrites": 0,
+      "materialFamily": "F02 black with white and grey veins",
+      "ownerModelPass": false
     }
   ],
-  "assetLibraryVersion": "2026-11-18-F01-HI-47-real-glbs",
-  "genuineGlbCount": 47
+  "assetLibraryVersion": "2026-11-18-f02-black-marble-76-real-glbs",
+  "genuineGlbCount": 76
 }
