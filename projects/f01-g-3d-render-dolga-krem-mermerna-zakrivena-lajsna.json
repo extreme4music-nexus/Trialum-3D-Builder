@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-f01-g-standalone-3d-marble-showcase",
+  "name": "F01-G · 3D рендер: ДОЛГА крем-мермерна закривена лајсна",
+  "description": "Stand-alone F01-G real 3.26m continuous marble trim matches LEFT approved product render; 1m and half beside it for comparison. Can orbit/select/edit each GLB independently.",
+  "room": {
+    "width": 12,
+    "depth": 8,
+    "height": 3,
+    "gridSize": 0.05,
+    "showWalls": false,
+    "floorColor": "#282c33",
+    "wallColor": "#465058"
+  },
+  "instances": [
+    {
+      "id": "showcase-long",
+      "assetId": "f01-g-pool-trim-3m-showcase",
+      "label": "ДОЛГА 3,26m како на рендерот",
+      "position": [
+        -1.75,
+        0,
+        -1.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Frozen F01-A warm ivory PBR and curved real solid, owner visual QA pending."
+    },
+    {
+      "id": "modular-1m",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "Модуларна ~1m",
+      "position": [
+        2.1,
+        0,
+        0.3
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Frozen F01-A warm ivory PBR and curved real solid, owner visual QA pending."
+    },
+    {
+      "id": "modular-half",
+      "assetId": "f01-g-pool-trim-half",
+      "label": "Половина ~0,54m",
+      "position": [
+        3.2,
+        0,
+        0.3
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Frozen F01-A warm ivory PBR and curved real solid, owner visual QA pending."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
