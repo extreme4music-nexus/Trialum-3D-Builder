@@ -1,0 +1,66 @@
+name: F03 grey-green stone — 54 owner-approved-render genuine GLBs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/b1/build-s7-f03-stone.py'
+      - 'assets/materials/f03-s-approved-render-atlas-rgb160.zlib.b64'
+      - 'assets/materials/f03-t-approved-render-atlas-rgb160.zlib.b64'
+      - 'tests/f03-verify.py'
+      - '.github/workflows/f03-stone-real-glbs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: trialum-builder-f03-54-real-stone-glbs
+  cancel-in-progress: false
+jobs:
+  build-54-stone-glbs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Checkout private 3D Builder main with Git history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Rebuild two authentic reference-derived atlases and 54 closed solid GLBs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/b1/build-s7-f03-stone.py > /tmp/trialum-f03-build-evidence.json
+          python3 tests/f03-verify.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("build/s7-floor-f03")
+          m=json.loads((p/"qa-manifest.json").read_text())
+          assert len(list(p.glob("f03-[st]-stone-*.glb")))==54
+          assert all(x["size"]>0 for x in m["models"])
+          assert not m["ownerGlbPass"] and not m["gameplayWrites"]
+          print("PASS: owner render approved; model/device visual QA still pending")
+          PY
+          mkdir -p assets/models assets/materials
+          cp build/s7-floor-f03/f03-[st]-stone-*.glb assets/models/
+          cp build/s7-floor-f03/f03-[st]-reference-derived-atlas.png assets/materials/
+          cp build/s7-floor-f03/f03-[st]-subtle-normal.png assets/materials/
+          cp build/s7-floor-f03/qa-manifest.json assets/materials/f03-glb-sha-manifest.json
+      - name: Physically Git-commit exactly 54 genuine F03 GLBs without touching owner designs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "trialum-f03-stone-build-bot"
+          git config user.email "trialum-f03-build-bot@users.noreply.github.com"
+          git add assets/models/f03-[st]-stone-*.glb
+          git add assets/materials/f03-[st]-reference-derived-atlas.png
+          git add assets/materials/f03-[st]-subtle-normal.png
+          git add assets/materials/f03-glb-sha-manifest.json
+          if git diff --cached --quiet; then
+            echo "All 54 physical GLB files already exist with identical bytes."
+          else
+            git commit -m "build(builder F03): 54 genuine reference-matched smooth and finely textured stone GLBs"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
+          echo "No force push, no changes to Classic, game logic or owner project files."
