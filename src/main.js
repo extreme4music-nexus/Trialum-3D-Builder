@@ -703,6 +703,7 @@ const ROOM_PRESETS=Object.freeze({
  "f01-f":"trialum-f01-f-radial-wedge-review.json",
  "f01-g":"trialum-f01-g-pool-curb-g01-preview.json",
  "f01-g-showcase":"trialum-f01-g-curved-trim-showcase.json",
+ "f01-hi":"trialum-f01-h-i-cream-marble-finishes-review.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
@@ -735,6 +736,7 @@ async function openRoomPreset(key){
     controls.update();
   }
   if(key==="f01-g-showcase"){camera.position.set(8,5,9);controls.target.set(0,.2,0);controls.update();}
+  if(key==="f01-hi"){camera.position.set(5.5,5.8,7.8);controls.target.set(0,.16,.35);controls.update();}
   try{localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(state.project));}catch{}
   say("Вчитана вистинска GLB просторија: "+data.name+" · "+data.instances.length+" елементи.");
  }catch(e){say("Не можам да ја отворам просторијата: "+e.message,true)}
