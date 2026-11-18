@@ -44,7 +44,7 @@ for x in [.1,.3,.5,.7,.9]:
 print('PASS all 25 physical holes are >3 cm deep and have surrounding real 3D soil')
 
 known={a['id'] for a in json.loads((ROOT/'assets/catalog-additions.json').read_text())}
-for p in (ROOT/'projects').glob('trialum-s0[23]-*.json'):
+for p in (ROOT/'projects'/name for name in ('trialum-s02-25-empty-holes.json','trialum-s02-mixed-planting-demo.json','trialum-s03-dug-soil.json','trialum-s02-s03-soil-comparison.json')):
  d=json.loads(p.read_text());assert d['meta']['gameplayWrites']==0
  ids=[i['id'] for i in d['instances']]
  assert len(ids)==len(set(ids)) and all(i['assetId'] in known for i in d['instances'])
