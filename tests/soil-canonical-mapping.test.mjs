@@ -18,7 +18,7 @@ test("S01/S02/S03 taxonomy is explicit and non-deceptive",()=>{
 test("existing exact soil binary stays byte-identical while canonical S01 asset resolves",()=>{
  const c=file("assets/catalog.json");
  const models=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(models.length,150);
+ assert.equal(models.length,210);
  const map=new Map(models.map(x=>[x.id,x]));
  assert.ok(map.has("s01-dug-turnover"));
  assert.ok(!map.has("s03-dug-turnover"));
