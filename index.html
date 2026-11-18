@@ -51,6 +51,7 @@
           <option value="f03-s-g01">💧 F03-S · мазен камен околу G01</option>
           <option value="f03-t-g01">💧 F03-T · текстуриран камен околу G01</option>
         </select>
+        <button id="soilMatrixTool" title="Уреди 25 визуелни места на избраната S02 почвена коцка (демо, без gameplay)">🌱 Матрица 5×5</button>
         <button id="openS7Project" title="Вчитај активен Trialum S7 F01 проект">S7 F01</button>
         <button id="openProject" title="Отвори JSON проект">Отвори</button>
         <button id="saveProject" class="accent" title="Зачувај во папка на GitHub Desktop">Зачувај</button>
@@ -164,6 +165,18 @@
     </main>
     <div class="bottomline"><span>TWCS · Trialum World Construction System</span><span id="footerNote">Локален проект · нема синхронизација со играта</span></div>
   </div>
+  <section id="soilMatrixPanel" class="soil-matrix-panel" hidden aria-label="Матрица за садење S02 — дизајнерски преглед">
+    <div class="soil-matrix-heading">
+      <strong>🌱 S02 · Матрица за садење 5×5</strong>
+      <button id="soilMatrixClose" type="button" aria-label="Затвори">×</button>
+    </div>
+    <p>Кликни на место за да додадеш или тргнеш <strong>само земјена влошка</strong>. Непополнетите дупки остануваат отворени.</p>
+    <label for="soilMatrixTarget">Почвена коцка</label>
+    <select id="soilMatrixTarget" aria-label="Избери S02 почвена коцка"></select>
+    <div id="soilMatrixCells" class="soil-matrix-cells" role="group" aria-label="25 адресабилни места во 5 редови и 5 колони"></div>
+    <p id="soilMatrixStatus" class="soil-matrix-status" aria-live="polite"></p>
+    <p class="soil-matrix-disclaimer">Дизајнерска симулација. Вистинската игра и понатаму има само 5 места по леа; овој панел не создава plantId или нов капацитет.</p>
+  </section>
   <input id="projectFileInput" type="file" accept=".json,application/json" hidden>
   <input id="glbFileInput" type="file" accept=".glb,model/gltf-binary" multiple hidden>
   <script src="./src/boot-diagnostics.js"></script>
