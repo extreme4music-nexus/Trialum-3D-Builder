@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-g01-real-pool-f01-f-f01-g-curb-overlay-preview-20261118",
+  "name": "F01-G · закривен мермерен раб + F01-F околу вистински G01",
+  "description": "Approved concept image: warm ivory polished raised curved edge band (F01-G) alongside seven real individual F01-F tiles around original basin and rail. Every tile/curb remains separately movable. Owner GLB review only; no gameplay/physics modification.",
+  "room": {
+    "width": 34,
+    "depth": 34,
+    "height": 5.5,
+    "gridSize": 0.05,
+    "showWalls": false,
+    "floorColor": "#253b3d",
+    "wallColor": "#305f5d"
+  },
+  "instances": [
+    {
+      "id": "g01-original-g01-main-basin",
+      "assetId": "g01-main-basin",
+      "label": "Вистински G01 централен базен",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB; remains authoritative design only, 4 aquatic slots total. The new tiles are a 6cm visual resurface at y=0.192 above walkway top=0.19; no live scene installation."
+    },
+    {
+      "id": "g01-original-g01-satellite-basins",
+      "assetId": "g01-satellite-basins",
+      "label": "Трите постојни G01 помошни базени",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB; remains authoritative design only, 4 aquatic slots total. The new tiles are a 6cm visual resurface at y=0.192 above walkway top=0.19; no live scene installation."
+    },
+    {
+      "id": "g01-original-g01-walkway-and-railings",
+      "assetId": "g01-walkway-and-railings",
+      "label": "Вистинска G01 кружна патека и ограда",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB; remains authoritative design only, 4 aquatic slots total. The new tiles are a 6cm visual resurface at y=0.192 above walkway top=0.19; no live scene installation."
+    },
+    {
+      "id": "g01-original-g01-crossing-bridge",
+      "assetId": "g01-crossing-bridge",
+      "label": "Вистински G01 мост",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB; remains authoritative design only, 4 aquatic slots total. The new tiles are a 6cm visual resurface at y=0.192 above walkway top=0.19; no live scene installation."
+    },
+    {
+      "id": "g01-original-g01-water-surfaces-animated",
+      "assetId": "g01-water-surfaces-animated",
+      "label": "Вистинска G01 анимирана вода",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB; remains authoritative design only, 4 aquatic slots total. The new tiles are a 6cm visual resurface at y=0.192 above walkway top=0.19; no live scene installation."
+    },
+    {
+      "id": "f01-f-pool-03",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мала крем плочка покрај базен · 4/48",
+      "position": [
+        6.65193263,
+        0.192,
+        2.75532071
+      ],
+      "rotationY": -0.3926990817,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real standalone 1m annular marble tile; 6mm grout between repeatable modules, centered beside G01 rail r=7.1m. NOT oversized outer wedge; safe sample only, not 360° installed."
+    },
+    {
+      "id": "f01-f-pool-04",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мала крем плочка покрај базен · 5/48",
+      "position": [
+        6.23538291,
+        0.192,
+        3.6
+      ],
+      "rotationY": -0.5235987756,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real standalone 1m annular marble tile; 6mm grout between repeatable modules, centered beside G01 rail r=7.1m. NOT oversized outer wedge; safe sample only, not 360° installed."
+    },
+    {
+      "id": "f01-f-pool-05",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мала крем плочка покрај базен · 6/48",
+      "position": [
+        5.71214405,
+        0.192,
+        4.38308229
+      ],
+      "rotationY": -0.6544984695,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real standalone 1m annular marble tile; 6mm grout between repeatable modules, centered beside G01 rail r=7.1m. NOT oversized outer wedge; safe sample only, not 360° installed."
+    },
+    {
+      "id": "f01-f-pool-06",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мала крем плочка покрај базен · 7/48",
+      "position": [
+        5.09116882,
+        0.192,
+        5.09116882
+      ],
+      "rotationY": -0.7853981634,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real standalone 1m annular marble tile; 6mm grout between repeatable modules, centered beside G01 rail r=7.1m. NOT oversized outer wedge; safe sample only, not 360° installed."
+    },
+    {
+      "id": "f01-f-pool-07",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мала крем плочка покрај базен · 8/48",
+      "position": [
+        4.38308229,
+        0.192,
+        5.71214405
+      ],
+      "rotationY": -0.9162978573,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real standalone 1m annular marble tile; 6mm grout between repeatable modules, centered beside G01 rail r=7.1m. NOT oversized outer wedge; safe sample only, not 360° installed."
+    },
+    {
+      "id": "f01-f-pool-08",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мала крем плочка покрај базен · 9/48",
+      "position": [
+        3.6,
+        0.192,
+        6.23538291
+      ],
+      "rotationY": -1.0471975512,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real standalone 1m annular marble tile; 6mm grout between repeatable modules, centered beside G01 rail r=7.1m. NOT oversized outer wedge; safe sample only, not 360° installed."
+    },
+    {
+      "id": "f01-f-pool-09",
+      "assetId": "f01-f-radial-wedge",
+      "label": "F01-F · мала крем плочка покрај базен · 10/48",
+      "position": [
+        2.75532071,
+        0.192,
+        6.65193263
+      ],
+      "rotationY": -1.1780972451,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real standalone 1m annular marble tile; 6mm grout between repeatable modules, centered beside G01 rail r=7.1m. NOT oversized outer wedge; safe sample only, not 360° installed."
+    },
+    {
+      "id": "f01-g-poolside-curb-03",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "F01-G · вистинска крем мермерна лајсна 4/48",
+      "position": [
+        7.57581217,
+        0.192,
+        3.13800415
+      ],
+      "rotationY": -0.3926990817,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Raised polished G01 external tile edge r=8.2-8.39; 135mm real height, 190mm radial width, 8mm bevel, 6mm seam. No change to walkway physics; owner visual QA."
+    },
+    {
+      "id": "f01-g-poolside-curb-04",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "F01-G · вистинска крем мермерна лајсна 5/48",
+      "position": [
+        7.10140831,
+        0.192,
+        4.1
+      ],
+      "rotationY": -0.5235987756,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Raised polished G01 external tile edge r=8.2-8.39; 135mm real height, 190mm radial width, 8mm bevel, 6mm seam. No change to walkway physics; owner visual QA."
+    },
+    {
+      "id": "f01-g-poolside-curb-05",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "F01-G · вистинска крем мермерна лајсна 6/48",
+      "position": [
+        6.50549739,
+        0.192,
+        4.99184372
+      ],
+      "rotationY": -0.6544984695,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Raised polished G01 external tile edge r=8.2-8.39; 135mm real height, 190mm radial width, 8mm bevel, 6mm seam. No change to walkway physics; owner visual QA."
+    },
+    {
+      "id": "f01-g-poolside-curb-06",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "F01-G · вистинска крем мермерна лајсна 7/48",
+      "position": [
+        5.79827561,
+        0.192,
+        5.79827561
+      ],
+      "rotationY": -0.7853981634,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Raised polished G01 external tile edge r=8.2-8.39; 135mm real height, 190mm radial width, 8mm bevel, 6mm seam. No change to walkway physics; owner visual QA."
+    },
+    {
+      "id": "f01-g-poolside-curb-07",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "F01-G · вистинска крем мермерна лајсна 8/48",
+      "position": [
+        4.99184372,
+        0.192,
+        6.50549739
+      ],
+      "rotationY": -0.9162978573,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Raised polished G01 external tile edge r=8.2-8.39; 135mm real height, 190mm radial width, 8mm bevel, 6mm seam. No change to walkway physics; owner visual QA."
+    },
+    {
+      "id": "f01-g-poolside-curb-08",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "F01-G · вистинска крем мермерна лајсна 9/48",
+      "position": [
+        4.1,
+        0.192,
+        7.10140831
+      ],
+      "rotationY": -1.0471975512,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Raised polished G01 external tile edge r=8.2-8.39; 135mm real height, 190mm radial width, 8mm bevel, 6mm seam. No change to walkway physics; owner visual QA."
+    },
+    {
+      "id": "f01-g-poolside-curb-09",
+      "assetId": "f01-g-pool-trim-1m",
+      "label": "F01-G · вистинска крем мермерна лајсна 10/48",
+      "position": [
+        3.13800415,
+        0.192,
+        7.57581217
+      ],
+      "rotationY": -1.1780972451,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Raised polished G01 external tile edge r=8.2-8.39; 135mm real height, 190mm radial width, 8mm bevel, 6mm seam. No change to walkway physics; owner visual QA."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerApprovedVisualReference": true,
+    "ownerCorrectedPhysicalModelPass": false,
+    "sourceGeometry": "tools/b1/build-agro-g01-watercore.py",
+    "sourceRingRadii": [
+      7.2,
+      9.15
+    ],
+    "newTileBandRadii": [
+      7.2,
+      8.2
+    ],
+    "sampleCount": 7,
+    "previewPurpose": "REAL G01 model with small tiles IN SITU, replaces previously rejected isolated outer wedge",
+    "resurfaceRequiresSeparateApprovalBeforeGameInstallation": true,
+    "ownerApprovedF01GConceptImage": true,
+    "ownerApprovedF01GPhysicalGLB": false,
+    "realF01GFiles": 3,
+    "realF01GInstances": 7,
+    "sourceG01": true,
+    "previewOnly": true
+  }
+}
