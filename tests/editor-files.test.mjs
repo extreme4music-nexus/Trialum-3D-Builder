@@ -20,11 +20,11 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
  assert.doesNotMatch(source,/fetch\([^)]*\/api\/(?:player|social|inventory)/i);
  assert.doesNotMatch(html,/three\.js.*cdn|http:\/\/[a-z]/i);
 });
-test("catalogue contains all 42 historical and derived Trialum room GLBs",()=>{
+test("catalogue contains all 45 historical and derived Trialum room GLBs",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(glbs.length,42);
- assert.equal(new Set(glbs.map(x=>x.id)).size,42);
+ assert.equal(glbs.length,45);
+ assert.equal(new Set(glbs.map(x=>x.id)).size,45);
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
  assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
@@ -106,4 +106,30 @@ test("owner-render-approved F01-F has isolated Builder 3D review preset, never i
  }
  assert.match(file("index.html"),/value="f01-f"/);
  assert.match(file("src/main.js"),/"f01-f":"trialum-f01-f-radial-wedge-review.json"/);
+});
+
+test("F01-G includes real G01 assembled 7-curb preview plus continuous long showcase",()=>{
+ const c=JSON.parse(file("assets/catalog.json")); const known=new Set(c.assets.map(a=>a.id));
+ const ids=["f01-g-pool-trim-1m","f01-g-pool-trim-half","f01-g-pool-trim-3m-showcase"];
+ assert.ok(ids.every(id=>known.has(id)));
+ const p=JSON.parse(file("projects/trialum-f01-g-pool-curb-g01-preview.json"));
+ assert.equal(p.meta.gameplayWrites,0);
+ assert.equal(p.meta.officialScene,false);
+ assert.equal(p.instances.filter(x=>x.assetId==="f01-g-pool-trim-1m").length,7);
+ assert.equal(p.instances.filter(x=>x.assetId==="f01-f-radial-wedge").length,7);
+ assert.ok(p.instances.some(x=>x.assetId==="g01-main-basin"));
+ assert.ok(p.instances.some(x=>x.assetId==="g01-walkway-and-railings"));
+ for(let idx=3;idx<=9;idx++){
+  const item=p.instances.find(x=>x.id==="f01-g-poolside-curb-"+String(idx).padStart(2,"0"));
+  assert.ok(item);
+  const rad=idx*Math.PI/24;
+  assert.ok(Math.abs(item.position[0]-8.2*Math.cos(rad))<1e-7);
+  assert.ok(Math.abs(item.position[2]-8.2*Math.sin(rad))<1e-7);
+  assert.ok(Math.abs(item.rotationY+rad)<1e-9);
+ }
+ const showcase=JSON.parse(file("projects/trialum-f01-g-curved-trim-showcase.json"));
+ assert.ok(showcase.instances.some(x=>x.assetId==="f01-g-pool-trim-3m-showcase"));
+ assert.equal(showcase.meta.officialScene,false);
+ assert.match(file("index.html"),/value="f01-g"/);
+ assert.match(file("index.html"),/value="f01-g-showcase"/);
 });
