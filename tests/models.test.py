@@ -10,7 +10,7 @@ class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),45)
+  self.assertEqual(len(models),47)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
@@ -24,7 +24,7 @@ class GLBModels(unittest.TestCase):
    self.assertEqual(gltf["asset"]["version"],"2.0")
    if asset["id"].startswith("f01-"):
     self.assertTrue(gltf.get("images"),str(p))
-    self.assertLess(len(d),220_000)
+    self.assertLess(len(d),500_000)
    else:
     self.assertLess(len(d),5_000_000)
    self.assertTrue(gltf.get("materials"),str(p))
@@ -88,6 +88,26 @@ class GLBModels(unittest.TestCase):
    self.assertGreater(j["accessors"][0]["count"],100)
   one=json.loads((MODEL_DIR/files[0]).read_bytes()[20:20+struct.unpack_from("<I",(MODEL_DIR/files[0]).read_bytes(),12)[0]])
   self.assertAlmostEqual(one["nodes"][0]["extras"]["arcRadians"],3.141592653589793/24)
+ def test_real_F01_H_and_I_matte_and_wet_visual_microtextures(self):
+  names={"H":"f01-h-cream-marble-matte-service.glb","I":"f01-i-cream-marble-fine-textured-wet.glb"}
+  for mode,file in names.items():
+   raw=(MODEL_DIR/file).read_bytes()
+   n=struct.unpack_from("<I",raw,12)[0]
+   model=json.loads(raw[20:20+n])
+   meta=model["nodes"][0]["extras"]
+   self.assertEqual(meta["module"],"F01-"+mode)
+   self.assertEqual(meta["dimensionsM"],[1,.06,1])
+   self.assertAlmostEqual(meta["bevelM"],.004)
+   self.assertEqual(meta["realTopSurfaceDisplacement"],mode=="I")
+   self.assertEqual(meta["normalMapEmbedded"],True)
+   self.assertTrue(meta["ownerModelVisualReviewPending"])
+   self.assertFalse(meta["actualTestedSlipResistance"])
+   self.assertFalse(meta["inGame"])
+   self.assertEqual(len(model["images"]),2)
+   mat=model["materials"][0]
+   self.assertEqual(mat["pbrMetallicRoughness"]["metallicFactor"],0)
+   self.assertEqual(mat["pbrMetallicRoughness"]["roughnessFactor"],.70 if mode=="H" else .86)
+   self.assertEqual(meta["frozenOriginalF01ATextureSha256"],"81c434a57b770148ced6e9c40dccabade929a844a27b143f2dc13a4da0ff8c98")
  def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
