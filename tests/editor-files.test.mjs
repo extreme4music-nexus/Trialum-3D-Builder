@@ -20,11 +20,11 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
  assert.doesNotMatch(source,/fetch\([^)]*\/api\/(?:player|social|inventory)/i);
  assert.doesNotMatch(html,/three\.js.*cdn|http:\/\/[a-z]/i);
 });
-test("catalogue contains all 45 historical and derived Trialum room GLBs",()=>{
+test("catalogue contains all 47 historical and derived Trialum room GLBs",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(glbs.length,45);
- assert.equal(new Set(glbs.map(x=>x.id)).size,45);
+ assert.equal(glbs.length,47);
+ assert.equal(new Set(glbs.map(x=>x.id)).size,47);
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
  assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
@@ -132,4 +132,27 @@ test("F01-G includes real G01 assembled 7-curb preview plus continuous long show
  assert.equal(showcase.meta.officialScene,false);
  assert.match(file("index.html"),/value="f01-g"/);
  assert.match(file("index.html"),/value="f01-g-showcase"/);
+});
+
+test("last F01 white-cream marble family has real distinct H and I GLBs and owner preview",()=>{
+ const c=JSON.parse(file("assets/catalog.json"));const byId=new Map(c.assets.map(a=>[a.id,a]));
+ assert.equal(c.genuineGlbCount,47);
+ const a=byId.get("f01-a");
+ const h=byId.get("f01-h-honed-service"),i=byId.get("f01-i-wet-fine-texture");
+ assert.ok(a&&h&&i);
+ assert.notEqual(h.src,i.src);
+ assert.equal(h.roughness,.70);
+ assert.equal(i.roughness,.86);
+ assert.equal(h.dimensions[0],1);
+ assert.equal(i.dimensions[0],1);
+ assert.ok(c.assets.filter(a=>a.id.startsWith("f01-g-pool-trim-")).every(a=>a.approval.includes("OWNER MODEL VISUAL PASS")));
+ const p=JSON.parse(file("projects/trialum-f01-h-i-cream-marble-finishes-review.json"));
+ assert.equal(p.instances.filter(x=>x.assetId===h.id).length,2);
+ assert.equal(p.instances.filter(x=>x.assetId===i.id).length,2);
+ assert.equal(p.instances.filter(x=>x.assetId==="f01-a").length,1);
+ assert.equal(p.meta.gameplayWrites,0);
+ assert.equal(p.meta.officialScene,false);
+ assert.equal(p.meta.actualCertifiedSlipResistance,false);
+ assert.match(file("index.html"),/value="f01-hi"/);
+ assert.match(file("src/main.js"),/"f01-hi":"trialum-f01-h-i-cream-marble-finishes-review.json"/);
 });
