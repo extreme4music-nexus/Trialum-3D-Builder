@@ -125,7 +125,8 @@ jobs:
           x=p.read_text(encoding='utf8')
           old="for p in (ROOT/'projects').glob('*.json'):"
           assert old in x,'Unexpected original soil test layout'
-          p.write_text(x.replace(old,"for p in (ROOT/'projects').glob('trialum-s0[23]-*.json'):"),encoding='utf8')
+          fixed="for p in (ROOT/'projects'/name for name in ('trialum-s02-25-empty-holes.json','trialum-s02-mixed-planting-demo.json','trialum-s03-dug-soil.json','trialum-s02-s03-soil-comparison.json')):"
+          p.write_text(x.replace(old,fixed),encoding='utf8')
           PY
           /tmp/trialum-soil-venv/bin/python tests/soil-glb.test.py
           /tmp/trialum-soil-venv/bin/python tools/b1/build-s7-s03-untreated.py > /tmp/s7-s03-15-build.json
