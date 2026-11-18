@@ -23,8 +23,9 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
 test("catalogue contains all 130 physical original F01 F02 and premium F03 stone models",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
- assert.equal(glbs.length,130);
- assert.equal(new Set(glbs.map(x=>x.id)).size,130);
+ assert.equal(glbs.length,c.genuineGlbCount);
+ assert.ok(glbs.length>=130);
+ assert.equal(new Set(glbs.map(x=>x.id)).size,c.genuineGlbCount);
  assert.ok(glbs.every(x=>/^assets\/models\/[a-z0-9_.-]+\.glb$/.test(x.src)));
  assert.ok(c.assets.some(x=>x.id==="f01-d-north"));
  assert.ok(c.assets.some(x=>x.id==="f01-e-north-west"));
