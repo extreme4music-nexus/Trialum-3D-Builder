@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-f03-smooth-texture-comparison",
+  "name": "F03 · МАЗЕН наспроти СУПТИЛНО РАПАВ камен",
+  "description": "Owner approved all F03 3D render boards; 54 genuine watertight GLBs ready for visual on-device QA. No gameplay integration.",
+  "room": {
+    "width": 14,
+    "depth": 19,
+    "height": 4.3,
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#4b554f",
+    "wallColor": "#57675c"
+  },
+  "instances": [
+    {
+      "id": "f03-compare-s-0",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -2.5,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-t-0",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
+      "position": [
+        2.5,
+        0,
+        -5.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-s-1",
+      "assetId": "f03-s-stone-half-first",
+      "label": "f03-s-stone-half-first",
+      "position": [
+        -2.5,
+        0,
+        -2.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-t-1",
+      "assetId": "f03-t-stone-half-first",
+      "label": "f03-t-stone-half-first",
+      "position": [
+        2.5,
+        0,
+        -2.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-s-2",
+      "assetId": "f03-s-stone-quarter-c1",
+      "label": "f03-s-stone-quarter-c1",
+      "position": [
+        -2.5,
+        0,
+        -0.09999999999999964
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-t-2",
+      "assetId": "f03-t-stone-quarter-c1",
+      "label": "f03-t-stone-quarter-c1",
+      "position": [
+        2.5,
+        0,
+        -0.09999999999999964
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-s-3",
+      "assetId": "f03-s-stone-l-corner-showcase-north-west",
+      "label": "f03-s-stone-l-corner-showcase-north-west",
+      "position": [
+        -2.5,
+        0,
+        2.6000000000000014
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-t-3",
+      "assetId": "f03-t-stone-l-corner-showcase-north-west",
+      "label": "f03-t-stone-l-corner-showcase-north-west",
+      "position": [
+        2.5,
+        0,
+        2.6000000000000014
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-s-4",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        -2.5,
+        0,
+        5.300000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    },
+    {
+      "id": "f03-compare-t-4",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        2.5,
+        0,
+        5.300000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": ""
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderPass": true,
+    "ownerGlbModelPass": false,
+    "source": "F03 4 accepted render boards",
+    "actualSlipCertificate": false
+  }
+}
