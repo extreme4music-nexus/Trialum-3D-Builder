@@ -503,6 +503,7 @@ function useProject(raw,fromDisk=false){
  recordSnapshot();
  if(fromDisk)markSaved();else markChanged();
  say("Отворен проект: "+project.name+" · "+project.instances.length+" предмети.");
+ if(!$("soilMatrixPanel").hidden)renderSoilMatrix();
 }
 function collectProject(){
  state.project.name=ui.projectName.value.trim().slice(0,100)||"Без име";
@@ -693,6 +694,86 @@ async function githubSync(action){
  }finally{btn.disabled=false;}
 }
 
+/* S02 — visual 5×5 soil slot editor. This UI NEVER creates a gameplay plantId.
+   Canonical game still owns four terrestrial beds x five actual plant slots. */
+const SOIL_BASE_ASSET="s02-25-planting-grid";
+const SOIL_PLUG_ASSET="s02-fill-plug";
+function soilBases(){return state.project.instances.filter(x=>x.assetId===SOIL_BASE_ASSET);}
+function soilSlotPosition(tile,row,col){
+ const scale=tile.scale||[1,1,1],angle=tile.rotationY||0;
+ const x=(.1+.2*(col-1))*scale[0],z=(.1+.2*(row-1))*scale[2];
+ return [
+  +(tile.position[0]+Math.cos(angle)*x+Math.sin(angle)*z).toFixed(5),
+  +(tile.position[1]+.12*scale[1]).toFixed(5),
+  +(tile.position[2]-Math.sin(angle)*x+Math.cos(angle)*z).toFixed(5)
+ ];
+}
+function existingSoilPlug(tile,row,col){
+ const p=soilSlotPosition(tile,row,col);
+ return state.project.instances.find(x=>x.assetId===SOIL_PLUG_ASSET&&
+  Math.abs(x.position[0]-p[0])<.027&&Math.abs(x.position[1]-p[1])<.027&&
+  Math.abs(x.position[2]-p[2])<.027);
+}
+function soilTarget(){
+ const id=$("soilMatrixTarget").value;
+ return soilBases().find(x=>x.id===id)||null;
+}
+function renderSoilMatrix(){
+ const panel=$("soilMatrixPanel");if(panel.hidden)return;
+ const tileList=soilBases();
+ if(!tileList.length){panel.hidden=true;say("Нема S02 коцка во оваа сцена. Отвори ја S02 тест-сцената.",true);return;}
+ const selector=$("soilMatrixTarget");
+ const previous=selector.value;
+ selector.replaceChildren();
+ for(const tile of tileList){
+  const opt=document.createElement("option");opt.value=tile.id;
+  opt.textContent=tile.label||tile.id;selector.append(opt);
+ }
+ selector.value=tileList.some(x=>x.id===previous)?previous:
+   tileList.some(x=>x.id===state.selectedId)?state.selectedId:tileList[0].id;
+ const tile=soilTarget();
+ const board=$("soilMatrixCells");board.replaceChildren();
+ let occupied=0;
+ for(let row=1;row<=5;row++)for(let col=1;col<=5;col++){
+  const plugged=!!existingSoilPlug(tile,row,col);
+  if(plugged)occupied++;
+  const key="R"+String(row).padStart(2,"0")+"C"+String(col).padStart(2,"0");
+  const btn=document.createElement("button");btn.type="button";
+  btn.dataset.slot=key;btn.dataset.occupied=String(plugged);
+  btn.setAttribute("aria-pressed",String(plugged));
+  btn.title=key+" · "+(plugged?"пополнина земја; кликни да ја тргнеш":"отворена дупка; кликни да ставиш земјена влошка");
+  btn.textContent=plugged?"●":"○";
+  const small=document.createElement("span");small.style.fontSize="9px";small.textContent=String(row)+"·"+String(col);
+  btn.append(small);
+  btn.onclick=()=>toggleSoilPreviewSlot(row,col);
+  board.append(btn);
+ }
+ $("soilMatrixStatus").textContent=
+  occupied+" пополнети / "+(25-occupied)+" отворени · најмногу 5 прегледни влошки на коцка.";
+}
+function toggleSoilPreviewSlot(row,col){
+ const tile=soilTarget();if(!tile)return;
+ const p=soilSlotPosition(tile,row,col);
+ const current=existingSoilPlug(tile,row,col);
+ if(current){
+  // Remove only the design-only soil plug; optional preview sprout at the same
+  // socket must not be left floating without its soil collar.
+  state.project.instances=state.project.instances.filter(x=>
+    x.id!==current.id&&!(x.assetId==="s02-demo-seedling"&&
+      Math.abs(x.position[0]-p[0])<.027&&Math.abs(x.position[2]-p[2])<.027));
+ }else{
+  let total=0;
+  for(let r=1;r<=5;r++)for(let c=1;c<=5;c++)if(existingSoilPlug(tile,r,c))total++;
+  if(total>=5){say("Во прегледот дозволуваме најмногу 5 влошки на коцка. Во играта важи 5 по леа.",true);return;}
+  const cell="R"+String(row).padStart(2,"0")+"C"+String(col).padStart(2,"0");
+  state.project.instances.push({id:id(),assetId:SOIL_PLUG_ASSET,
+    label:"ДЕМО земја · "+cell,position:p,rotationY:tile.rotationY||0,
+    scale:(tile.scale||[1,1,1]).slice(),layer:"props",locked:false,
+    visible:true,binding:"",note:"DESIGN-ONLY: independently removable plug; valid plantId must come from canonical game engine, not 25-grid UI."});
+ }
+ rebuildScene();markChanged();renderSoilMatrix();
+}
+
 const ROOM_PRESETS=Object.freeze({
  atrium:"trialum-agro-atrium.json",
  warehouse:"trialum-food-warehouse.json",
@@ -713,6 +794,10 @@ const ROOM_PRESETS=Object.freeze({
  "f03-compare":"trialum-f03-smooth-vs-textured-compare.json",
  "f03-s-g01":"trialum-f03-s-g01-pool-preview.json",
  "f03-t-g01":"trialum-f03-t-g01-pool-preview.json",
+ "soil-empty":"trialum-s02-25-empty-holes.json",
+ "soil-mixed":"trialum-s02-mixed-planting-demo.json",
+ "soil-dug":"trialum-s03-dug-soil.json",
+ "soil-compare":"trialum-s02-s03-soil-comparison.json",
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
@@ -766,6 +851,13 @@ function addListeners(){
  $("openProject").onclick=()=>ui.projectFileInput.click();
  $("openS7Project").onclick=()=>openRoomPreset("f01");
  $("scenePreset").onchange=e=>openRoomPreset(e.target.value);
+ $("soilMatrixTool").onclick=()=>{
+   const panel=$("soilMatrixPanel");
+   if(!soilBases().length){say("Прво отвори S02 почвена сцена со 25 дупки.",true);return;}
+   panel.hidden=!panel.hidden;if(!panel.hidden)renderSoilMatrix();
+ };
+ $("soilMatrixClose").onclick=()=>{$("soilMatrixPanel").hidden=true;};
+ $("soilMatrixTarget").onchange=renderSoilMatrix;
  ui.projectFileInput.onchange=async e=>{
   try{await fileOpen(e.target.files?.[0])}catch(err){say("Неправилен проект: "+err.message,true)}
   e.target.value="";
