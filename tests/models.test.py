@@ -10,7 +10,7 @@ class GLBModels(unittest.TestCase):
  def test_every_real_catalog_file_exists_and_loads_as_valid_glb2(self):
   assets=json.loads(CAT.read_text(encoding="utf-8"))["assets"]
   models=[x for x in assets if isinstance(x.get("src"),str) and x["src"].endswith(".glb")]
-  self.assertEqual(len(models),47)
+  self.assertEqual(len(models),76)
   for asset in models:
    p=ROOT/asset["src"]
    self.assertTrue(p.is_file(),str(p))
@@ -108,6 +108,30 @@ class GLBModels(unittest.TestCase):
    self.assertEqual(mat["pbrMetallicRoughness"]["metallicFactor"],0)
    self.assertEqual(mat["pbrMetallicRoughness"]["roughnessFactor"],.70 if mode=="H" else .86)
    self.assertEqual(meta["frozenOriginalF01ATextureSha256"],"81c434a57b770148ced6e9c40dccabade929a844a27b143f2dc13a4da0ff8c98")
+
+ def test_approved_render_F02_29_real_veined_black_marble(self):
+  manifest=json.loads((ROOT/"assets/materials/f02-glb-sha-manifest.json").read_text(encoding="utf8"))
+  self.assertEqual(len(manifest["models"]),29)
+  self.assertEqual(manifest["atlasSha256"],"397184703cbb45563a953dbf178243060e499ae8815e95c3170753db1fe0599e")
+  expected=("full","half-first","half-second","quarter-c1","quarter-c4","edge-north","edge-west",
+            "corner-north-east","l-corner-showcase-north-east","raised-border-showcase-north",
+            "radial-wedge","pool-trim-1m","pool-trim-half","pool-trim-3m-showcase",
+            "matte-service","fine-textured-wet")
+  for name in expected:self.assertTrue((MODEL_DIR/("f02-black-marble-"+name+".glb")).is_file(),name)
+  for item in manifest["models"]:
+   raw=(MODEL_DIR/item["file"]).read_bytes()
+   self.assertEqual(hashlib.sha256(raw).hexdigest(),item["sha256"])
+   length=struct.unpack_from("<I",raw,12)[0]
+   g=json.loads(raw[20:20+length])
+   self.assertEqual(g["asset"]["version"],"2.0")
+   self.assertTrue(g["meshes"][0]["primitives"][0]["attributes"]["NORMAL"]>=0)
+   self.assertTrue(g.get("images"))
+   self.assertTrue(g["nodes"][0]["extras"]["ownerRenderApproval"])
+   self.assertFalse(g["nodes"][0]["extras"]["ownerGlbModelPass"])
+   self.assertFalse(g["nodes"][0]["extras"]["inGame"])
+   self.assertEqual(g["nodes"][0]["extras"]["gameplayWrites"],0)
+   self.assertEqual(g["materials"][0]["pbrMetallicRoughness"]["metallicFactor"],0)
+  self.assertGreater(next(x for x in manifest["models"] if x["module"]=="F02-I")["triangles"],1000)
  def test_frozen_owner_approved_F01_A_SHA(self):
   p=MODEL_DIR/"f01-marble-cream-full.glb"
   self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),ORIGINAL_F01_A)
