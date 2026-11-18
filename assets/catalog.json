@@ -2470,9 +2470,9 @@
       "gameplayWrites": 0
     },
     {
-      "id": "s03-dug-turnover",
-      "name": "S03 · Ископана почва · без дупки",
-      "category": "Почва · S03 ископана",
+      "id": "s01-dug-turnover",
+      "name": "S01 · Свежо ископана / разорана почва · без дупки",
+      "category": "Почва · S01 ископана",
       "src": "assets/models/s03-dug-turnover-soil.glb",
       "dimensions": [
         1,
@@ -2482,10 +2482,13 @@
       "placement": "floor",
       "origin": "Y-up. S02 base local [0..1] XZ, plugs/rings/demos pivot at 0,0,0",
       "source": "Approved Trialum soil renders + deterministic soil GLB generator 2026-11-18",
-      "approval": "OWNER CONCEPT RENDERS PASS; PHYSICAL GLB OWNER REVIEW PENDING",
-      "note": "owner approved SECOND render; legacy S7 document calls loose dug soil S01, map before gameplay",
+      "approval": "OWNER APPROVED CONCEPT (HISTORIC S03 IMAGE), CANONICAL S01; ORIGINAL BINARY OWNER QA PENDING",
+      "note": "Owner-approved soil 3D render; canon S01 per original S7 specification. Filename retains historical S03 for byte-for-byte compatibility. Real S03 untreated soil remains UNBUILT.",
       "ownerModelPass": false,
-      "gameplayWrites": 0
+      "gameplayWrites": 0,
+      "canonicalSoilState": "S01",
+      "legacySourceGlb": "s03-dug-turnover-soil.glb",
+      "legacyAssetId": "s03-dug-turnover"
     },
     {
       "id": "s02-fill-plug",
