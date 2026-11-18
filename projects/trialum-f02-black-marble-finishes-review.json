@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-f02-black-marble-3-finish-owner-review",
+  "name": "F02 · ПОЛИРАН / МАТ / МИКРОТЕКСТУРА · споредба",
+  "description": "A1 high-gloss, H honed service matte and I tactile wet-adjacent with same white-grey veins. Not a certified anti-slip surface; visual finish comparison only.",
+  "room": {
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#333538",
+    "wallColor": "#45474c",
+    "width": 12,
+    "depth": 8,
+    "height": 3.4
+  },
+  "instances": [
+    {
+      "id": "f02-finish-A",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-finish-A",
+      "position": [
+        -3.5,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Compare same original reference-black marble image with different roughness and engraved relief; physically certified friction not claimed."
+    },
+    {
+      "id": "f02-finish-H",
+      "assetId": "f02-black-marble-matte-service",
+      "label": "f02-finish-H",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Compare same original reference-black marble image with different roughness and engraved relief; physically certified friction not claimed."
+    },
+    {
+      "id": "f02-finish-I",
+      "assetId": "f02-black-marble-fine-textured-wet",
+      "label": "f02-finish-I",
+      "position": [
+        3.5,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Compare same original reference-black marble image with different roughness and engraved relief; physically certified friction not claimed."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderApproved": true,
+    "ownerPhysicalModelsReviewPending": true,
+    "created": "2026-11-18"
+  }
+}
