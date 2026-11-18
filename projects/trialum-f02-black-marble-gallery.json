@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-f02-black-marble-29-genuine-model-gallery",
+  "name": "F02 · 29 ЦРНИ МЕРМЕРНИ GLB · изложбена библиотека",
+  "description": "All 29 genuine owner-render-reference black marble models: full, two halves, four quarters, four tiny exposed borders, four 60mm corner caps, four actual L-shaped showcase corners, four raised long showcase borders, F02-F pool curve, three F02-G raised curves, H/I finishes. Every model individually movable. Not installed in game.",
+  "room": {
+    "gridSize": 0.1,
+    "showWalls": false,
+    "floorColor": "#333538",
+    "wallColor": "#45474c",
+    "width": 25,
+    "depth": 24,
+    "height": 5.6
+  },
+  "instances": [
+    {
+      "id": "f02-gallery-full",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-gallery-full",
+      "position": [
+        -9.3,
+        0,
+        -10.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. full; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-half-first",
+      "assetId": "f02-black-marble-half-first",
+      "label": "f02-gallery-half-first",
+      "position": [
+        -4.800000000000001,
+        0,
+        -10.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. half-first; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-half-second",
+      "assetId": "f02-black-marble-half-second",
+      "label": "f02-gallery-half-second",
+      "position": [
+        -0.3000000000000007,
+        0,
+        -10.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. half-second; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-quarter-c1",
+      "assetId": "f02-black-marble-quarter-c1",
+      "label": "f02-gallery-quarter-c1",
+      "position": [
+        4.199999999999999,
+        0,
+        -10.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. quarter-c1; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-quarter-c2",
+      "assetId": "f02-black-marble-quarter-c2",
+      "label": "f02-gallery-quarter-c2",
+      "position": [
+        8.7,
+        0,
+        -10.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. quarter-c2; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-quarter-c3",
+      "assetId": "f02-black-marble-quarter-c3",
+      "label": "f02-gallery-quarter-c3",
+      "position": [
+        -9.3,
+        0,
+        -6.800000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. quarter-c3; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-quarter-c4",
+      "assetId": "f02-black-marble-quarter-c4",
+      "label": "f02-gallery-quarter-c4",
+      "position": [
+        -4.800000000000001,
+        0,
+        -6.800000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. quarter-c4; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-edge-north",
+      "assetId": "f02-black-marble-edge-north",
+      "label": "f02-gallery-edge-north",
+      "position": [
+        -0.3000000000000007,
+        0,
+        -6.800000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. edge-north; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-edge-south",
+      "assetId": "f02-black-marble-edge-south",
+      "label": "f02-gallery-edge-south",
+      "position": [
+        4.199999999999999,
+        0,
+        -6.800000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. edge-south; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-edge-east",
+      "assetId": "f02-black-marble-edge-east",
+      "label": "f02-gallery-edge-east",
+      "position": [
+        8.7,
+        0,
+        -6.800000000000001
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. edge-east; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-edge-west",
+      "assetId": "f02-black-marble-edge-west",
+      "label": "f02-gallery-edge-west",
+      "position": [
+        -9.3,
+        0,
+        -2.8000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. edge-west; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-corner-north-west",
+      "assetId": "f02-black-marble-corner-north-west",
+      "label": "f02-gallery-corner-north-west",
+      "position": [
+        -4.800000000000001,
+        0,
+        -2.8000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. corner-north-west; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-corner-north-east",
+      "assetId": "f02-black-marble-corner-north-east",
+      "label": "f02-gallery-corner-north-east",
+      "position": [
+        -0.3000000000000007,
+        0,
+        -2.8000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. corner-north-east; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-corner-south-east",
+      "assetId": "f02-black-marble-corner-south-east",
+      "label": "f02-gallery-corner-south-east",
+      "position": [
+        4.199999999999999,
+        0,
+        -2.8000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. corner-south-east; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-corner-south-west",
+      "assetId": "f02-black-marble-corner-south-west",
+      "label": "f02-gallery-corner-south-west",
+      "position": [
+        8.7,
+        0,
+        -2.8000000000000007
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. corner-south-west; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-l-corner-showcase-north-west",
+      "assetId": "f02-black-marble-l-corner-showcase-north-west",
+      "label": "f02-gallery-l-corner-showcase-north-west",
+      "position": [
+        -9.3,
+        0,
+        1.1999999999999993
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. l-corner-showcase-north-west; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-l-corner-showcase-north-east",
+      "assetId": "f02-black-marble-l-corner-showcase-north-east",
+      "label": "f02-gallery-l-corner-showcase-north-east",
+      "position": [
+        -4.800000000000001,
+        0,
+        1.1999999999999993
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. l-corner-showcase-north-east; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-l-corner-showcase-south-east",
+      "assetId": "f02-black-marble-l-corner-showcase-south-east",
+      "label": "f02-gallery-l-corner-showcase-south-east",
+      "position": [
+        -0.3000000000000007,
+        0,
+        1.1999999999999993
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. l-corner-showcase-south-east; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-l-corner-showcase-south-west",
+      "assetId": "f02-black-marble-l-corner-showcase-south-west",
+      "label": "f02-gallery-l-corner-showcase-south-west",
+      "position": [
+        4.199999999999999,
+        0,
+        1.1999999999999993
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. l-corner-showcase-south-west; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-raised-border-showcase-north",
+      "assetId": "f02-black-marble-raised-border-showcase-north",
+      "label": "f02-gallery-raised-border-showcase-north",
+      "position": [
+        8.7,
+        0,
+        1.1999999999999993
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. raised-border-showcase-north; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-raised-border-showcase-south",
+      "assetId": "f02-black-marble-raised-border-showcase-south",
+      "label": "f02-gallery-raised-border-showcase-south",
+      "position": [
+        -9.3,
+        0,
+        5.199999999999999
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. raised-border-showcase-south; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-raised-border-showcase-east",
+      "assetId": "f02-black-marble-raised-border-showcase-east",
+      "label": "f02-gallery-raised-border-showcase-east",
+      "position": [
+        -4.800000000000001,
+        0,
+        5.199999999999999
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. raised-border-showcase-east; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-raised-border-showcase-west",
+      "assetId": "f02-black-marble-raised-border-showcase-west",
+      "label": "f02-gallery-raised-border-showcase-west",
+      "position": [
+        -0.3000000000000007,
+        0,
+        5.199999999999999
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. raised-border-showcase-west; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-radial-wedge",
+      "assetId": "f02-black-marble-radial-wedge",
+      "label": "f02-gallery-radial-wedge",
+      "position": [
+        4.199999999999999,
+        0,
+        5.199999999999999
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. radial-wedge; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-pool-trim-1m",
+      "assetId": "f02-black-marble-pool-trim-1m",
+      "label": "f02-gallery-pool-trim-1m",
+      "position": [
+        8.7,
+        0,
+        5.199999999999999
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. pool-trim-1m; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-pool-trim-half",
+      "assetId": "f02-black-marble-pool-trim-half",
+      "label": "f02-gallery-pool-trim-half",
+      "position": [
+        -9.3,
+        0,
+        9.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. pool-trim-half; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-pool-trim-3m-showcase",
+      "assetId": "f02-black-marble-pool-trim-3m-showcase",
+      "label": "f02-gallery-pool-trim-3m-showcase",
+      "position": [
+        -4.800000000000001,
+        0,
+        9.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. pool-trim-3m-showcase; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-matte-service",
+      "assetId": "f02-black-marble-matte-service",
+      "label": "f02-gallery-matte-service",
+      "position": [
+        -0.3000000000000007,
+        0,
+        9.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. matte-service; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    },
+    {
+      "id": "f02-gallery-fine-textured-wet",
+      "assetId": "f02-black-marble-fine-textured-wet",
+      "label": "f02-gallery-fine-textured-wet",
+      "position": [
+        4.199999999999999,
+        0,
+        9.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Original black-white render-derived texture. fine-textured-wet; selectable/editable. Larger special curved borders are showcase parts, not merged in game."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerRenderApproved": true,
+    "ownerPhysicalModelsReviewPending": true,
+    "created": "2026-11-18"
+  }
+}
