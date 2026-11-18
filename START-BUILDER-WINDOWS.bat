@@ -40,12 +40,16 @@ if not exist "assets\models\greenhouse-shell.glb" goto incomplete
 if not exist "assets\models\g01-main-basin.glb" goto incomplete
 if not exist "assets\models\g01-water-surfaces-animated.glb" goto incomplete
 if not exist "assets\models\aquaglow-mature.glb" goto incomplete
+if not exist "assets\models\f01-marble-cream-radial-wedge.glb" goto incomplete
+if not exist "assets\models\f01-g-cream-marble-pool-trim-1m.glb" goto incomplete
+if not exist "assets\models\f01-g-cream-marble-pool-trim-half.glb" goto incomplete
+if not exist "assets\models\f01-g-cream-marble-pool-trim-3m-showcase.glb" goto incomplete
 goto ready
 :incomplete
 echo.
 echo Some original Trialum room GLBs are missing from this local clone.
 echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
-echo All 42 models MUST be present; do not use a half-empty catalogue.
+echo All 45 models MUST be present; do not use a half-empty catalogue.
 echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause
 exit /b 1
