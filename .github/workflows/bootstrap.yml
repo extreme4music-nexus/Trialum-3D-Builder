@@ -50,7 +50,7 @@ jobs:
           node --check tools/b1/build-food-warehouse.mjs
           node --check tools/b1/generate-glb.mjs
 
-      - name: Build all 76 real GLBs (F01 + original Trialum rooms + derived annexes) and pinned Three.js
+      - name: Build all 130 real GLBs (F01 + original Trialum rooms + derived annexes) and pinned Three.js
         shell: bash
         run: |
           set -euo pipefail
@@ -64,8 +64,14 @@ jobs:
           cp build/s7-floor-f01/F01-HI/*.glb assets/models/
           python3 tools/b1/build-s7-f02-black-marble.py > /tmp/f02-black-real-glb-manifest.json
           cp build/s7-floor-f02/*.glb assets/models/
+          python3 tools/b1/build-s7-f03-stone.py > /tmp/f03-54-stone-glb-manifest.json
+          python3 tests/f03-verify.py
+          cp build/s7-floor-f03/f03-[st]-stone-*.glb assets/models/
+          cp build/s7-floor-f03/f03-[st]-reference-derived-atlas.png assets/materials/
+          cp build/s7-floor-f03/f03-[st]-subtle-normal.png assets/materials/
+          cp build/s7-floor-f03/qa-manifest.json assets/materials/f03-glb-sha-manifest.json
           python3 tests/models.test.py
-          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 76
+          test "$(find assets/models -maxdepth 1 -type f -name '*.glb' | wc -l)" -eq 130
           test -f vendor/three.module.js
           test -f vendor/three.core.js
           test -f vendor/addons/loaders/GLTFLoader.js
@@ -80,11 +86,11 @@ jobs:
           set -euo pipefail
           git config user.name "trialum-builder-bot"
           git config user.email "trialum-builder-bot@users.noreply.github.com"
-          git add assets/models vendor assets/TRIALUM_LEGACY_GLB_MANIFEST.json assets/materials/f02-black-marble-exact-reference-atlas.png assets/materials/f02-glb-sha-manifest.json
+          git add assets/models vendor assets/TRIALUM_LEGACY_GLB_MANIFEST.json assets/materials/f02-black-marble-exact-reference-atlas.png assets/materials/f02-glb-sha-manifest.json assets/materials/f03-glb-sha-manifest.json assets/materials/f03-[st]-reference-derived-atlas.png assets/materials/f03-[st]-subtle-normal.png
           if git diff --staged --quiet; then
-            echo "All 76 physical GLBs and pinned Three modules already current."
+            echo "All 130 physical GLBs and pinned Three modules already current."
           else
-            git commit -m "build(builder): ship all 76 original/derived Trialum GLBs and pinned Three.js 0.180.0"
+            git commit -m "build(builder): ship all 130 original/derived Trialum GLBs and pinned Three.js 0.180.0"
             # Owner may have pushed more Builder layouts after this run started.
             # Rebase on latest main; NEVER force-push or erase human changes.
             git fetch origin main
@@ -104,7 +110,7 @@ jobs:
           curl -fsS http://127.0.0.1:8765/ | grep -q "Trialum World Builder"
           curl -fsS -o /tmp/f01-real-glb http://127.0.0.1:8765/assets/models/f01-marble-cream-full.glb
           cmp /tmp/f01-real-glb assets/models/f01-marble-cream-full.glb
-          for model in atrium warehouse-shell food-cold-annex-shell food-packing-annex-shell greenhouse-shell g01-main-basin g01-water-surfaces-animated aquaglow-mature pilot-room f01-marble-cream-radial-wedge f01-g-cream-marble-pool-trim-1m f01-g-cream-marble-pool-trim-half f01-g-cream-marble-pool-trim-3m-showcase f01-h-cream-marble-matte-service f01-i-cream-marble-fine-textured-wet f02-black-marble-full f02-black-marble-l-corner-showcase-north-west f02-black-marble-radial-wedge f02-black-marble-fine-textured-wet; do
+          for model in atrium warehouse-shell food-cold-annex-shell food-packing-annex-shell greenhouse-shell g01-main-basin g01-water-surfaces-animated aquaglow-mature pilot-room f01-marble-cream-radial-wedge f01-g-cream-marble-pool-trim-1m f01-g-cream-marble-pool-trim-half f01-g-cream-marble-pool-trim-3m-showcase f01-h-cream-marble-matte-service f01-i-cream-marble-fine-textured-wet f02-black-marble-full f02-black-marble-l-corner-showcase-north-west f02-black-marble-radial-wedge f02-black-marble-fine-textured-wet f03-s-stone-full f03-t-stone-full f03-s-stone-l-corner-showcase-north-west f03-t-stone-radial-wedge; do
             curl -fsS -o "/tmp/$model.glb" "http://127.0.0.1:8765/assets/models/$model.glb"
             cmp "/tmp/$model.glb" "assets/models/$model.glb"
           done
@@ -112,9 +118,9 @@ jobs:
           cmp /tmp/trialum-vendored-three.module.js vendor/three.module.js
           grep -q 'three' /tmp/trialum-vendored-three.module.js
           ! curl -fsS http://127.0.0.1:8765/.git/config
-          echo "PASS: localhost server serves real 76-GLB library + room assets + pinned Three.js."
+          echo "PASS: localhost server serves real 130-GLB library + room assets + pinned Three.js."
 
       - name: Save successful CI details (no APK, no game-state changes)
         run: |
-          echo "TWCS Builder initialized with 76 real historical/derived GLB models."
+          echo "TWCS Builder initialized with 130 real historical/derived GLB models."
           echo "No Android APK, no Play upload, no source Trialum repo changes."
