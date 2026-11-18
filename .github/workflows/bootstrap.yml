@@ -80,7 +80,7 @@ jobs:
           # Source image + deterministic source code + four design scenes are
           # preserved inside the private repo as a checked base64 tar.zlib bundle.
           python3 - <<'PY'
-          import io,tarfile,hashlib,base64,zlib
+          import io,tarfile,hashlib,base64,zlib,json
           from pathlib import Path
           source=Path('assets/source/s7-soil-approved-visual-source.tar.zlib.b64')
           data=''.join(source.read_text(encoding='ascii').split())
