@@ -1,5 +1,8 @@
 # TRIALUM 3D WORLD BUILDER — COMPLETE RECOVERY HANDOFF
 
+> **LATEST MASTER HANDOFF — 18.11.2026:** User approved all four F03 3D render boards. **54 genuine F03-S/T stone GLB meshes (27 smooth + 27 gently micro-textured)** now exist as physically Git-tracked identical binaries in Builder `main` and Trialum `feature/lw-d-s7-f03-gray-green-stone-render-review-20261118`. Builder catalogue now has **130 real GLB models**, plus **six new F03 editable studio/G01 preview scenes** in the room picker. The source generator, approved-photo-derived S/T atlas data, SHA per file, local geometry QA and both GitHub Actions jobs are verified. **Read [CURRENT authoritative F03 handoff](S7_F03_54_REAL_STONE_GLB_DELIVERY_20261118.md) before continuing**. Earlier 11/15/41/42/45/47/76 counts are HISTORICAL. **Owner has approved F03 render designs, NOT yet the physical WebGL GLBs.** Game main, Classic, Android/Play and authoritative stock/world state are unchanged. Isolated source PR #100 remains DRAFT.
+
+
 ## 🖤 F02 — сите 29 вистински GLB модели од одобрениот црн мермер (18.11.2026)
 
 Builder main сега има **76 физички GLB модели**: оригиналните 47 + **29 црни мермерни F02**. Шарата е изведена од одобрениот студиски рендер — темна црна основа со долги бели и ситни сиво-сребрени мермерни жилки, зачувана во заедничка текстура вградена во вистинските GLB фајлови. Сите 29 бинарни модели имаат идентични Git-хешови во Builder и изолирана Trialum развојна гранка. Не се замени со еднобојни црни блокови.
