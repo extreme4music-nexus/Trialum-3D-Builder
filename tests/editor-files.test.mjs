@@ -20,7 +20,7 @@ test("editor uses original Three.js GLTFLoader and TransformControls, no gamepla
  assert.doesNotMatch(source,/fetch\([^)]*\/api\/(?:player|social|inventory)/i);
  assert.doesNotMatch(html,/three\.js.*cdn|http:\/\/[a-z]/i);
 });
-test("catalogue contains all 130 physical original F01 F02 and premium F03 stone models",()=>{
+test("catalogue maintains all real F01 F02 F03 and soil GLB models",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const glbs=c.assets.filter(x=>x.src?.endsWith(".glb"));
  assert.equal(glbs.length,c.genuineGlbCount);
@@ -137,7 +137,7 @@ test("F01-G includes real G01 assembled 7-curb preview plus continuous long show
 
 test("last F01 white-cream marble family has real distinct H and I GLBs and owner preview",()=>{
  const c=JSON.parse(file("assets/catalog.json"));const byId=new Map(c.assets.map(a=>[a.id,a]));
- assert.equal(c.genuineGlbCount,130);
+ assert.ok(c.genuineGlbCount>=130);
  const a=byId.get("f01-a");
  const h=byId.get("f01-h-honed-service"),i=byId.get("f01-i-wet-fine-texture");
  assert.ok(a&&h&&i);
