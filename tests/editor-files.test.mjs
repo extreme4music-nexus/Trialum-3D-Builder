@@ -53,7 +53,7 @@ test("official S7 builder project contains original GLB modules, not demo primit
  assert.ok(p.instances.every(i=>i.assetId.startsWith("f01-")));
  assert.equal(p.meta.gameplayWrites,0);
  assert.equal(p.meta.officialScene,false);
- assert.match(file("src/main.js"),/"f01":"trialum-s7-f01-production.json"/);
+ assert.match(file("src/main.js"),/f01:"trialum-s7-f01-production.json"/);
 });
 
 test("existing source rooms and two warehouse annexes have editable non-demo JSON",()=>{
