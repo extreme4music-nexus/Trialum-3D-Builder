@@ -302,12 +302,24 @@ def add_floor(items,v):
  # ONLY floor palette differs between variants. No changes to machinery, G01, racks or plant placements.
  a,b,c,d=PALETTE[v]
  n=0
+ occupied={}
  def tile(x,z,kind="main",orientation=0):
   nonlocal n
   palette={"main":a,"contrast":b,"service":c,"accent":d}
-  asset=palette[kind];n+=1
+  asset=palette[kind]
+  cell=(round(x,3),round(z,3))
+  if cell in occupied:
+   # G00L service styling overrides old annulus styling in the SAME cell.
+   # Never render two coplanar physical floor GLBs: avoids z-fighting.
+   existing=items[occupied[cell]]
+   existing["assetId"]=asset;existing["label"]=asset
+   existing["rotationY"]=round(orientation,7)
+   existing["note"]="Merged identical floor cell; service/passage tile has priority."
+   return
+  n+=1
   add(items,"floor-"+str(n),asset,x,0,z,"floor",orientation,
        "S7 visual-only modular tile; floor tile may be moved/replaced by owner")
+  occupied[cell]=len(items)-1
  # G01 dry annulus: reserve actual main basin and three satellite pools.
  for x in range(-15,16):
   for z in range(-15,16):
@@ -343,6 +355,23 @@ def add_floor(items,v):
    kind="service" if x%5==0 or z%6==0 else "main"
    if v==4:kind=("main","contrast","accent","service")[(x+z)%4]
    tile(x,z,kind)
+ # Remove duplicate pads above; restore 773 UNIQUE floor modules by completing
+ # dry perimeter safety trim on the actual G01 pad (r <= 16.3m), far outside
+ # all four original physical pool apertures. All four designs stay 873 items.
+ for x in range(-16,17):
+  if n>=773:break
+  for z in range(-16,17):
+   if n>=773:break
+   radius=math.hypot(x,z)
+   if not 14.75<=radius<=16.1:continue
+   if any(math.hypot(x-cx,z-cz)<3 for cx,cz in ((-10,0),(10,1),(0,-11))):continue
+   if (x,z) in occupied:continue
+   if any(math.hypot(x-r["position"][0],z-r["position"][2])<.75 for r in items):continue
+   kind="accent" if (x+z)%6==0 else "main"
+   if v==4:kind=("main","contrast","accent","service")[(x+2*z)%4]
+   tile(x,z,kind)
+ assert n==773,("not enough nonoverlapping floor cells",n)
+ assert len({(round(x["position"][0],3),round(x["position"][2],3)) for x in items})==773
  return n
 
 def garden(v,catalog):
