@@ -1163,6 +1163,7 @@ function tick(){
  renderer.render(scene,camera);
 }
 async function startup(){
+ const requestedPreset=new URLSearchParams(window.location.search).get("preset");
  try{
   const response=await fetch(CATALOG_URL,{cache:"no-store"});
   if(!response.ok)throw Error("HTTP "+response.status);
@@ -1194,12 +1195,26 @@ async function startup(){
  ])if(!state.registry.has(item.id))state.registry.set(item.id,item);
  let data;let recoveredLocalDraft=false;
  try{const saved=localStorage.getItem(LOCAL_AUTOSAVE);if(saved){data=JSON.parse(saved);recoveredLocalDraft=true;}}catch{}
+ // Explicit QA URL requests only this review scene, without deleting local
+ // drafts in IndexedDB/localStorage or touching any original gameplay state.
+ if(requestedPreset==="garden-master"){
+  const preview=await fetch("./projects/trialum-s7-master-garden-review.json",{cache:"no-store"});
+  if(!preview.ok)throw Error("MASTER GARDEN HTTP "+preview.status);
+  data=await preview.json();
+  recoveredLocalDraft=false;
+ }
  if(!data)try{const r=await fetch("./projects/trialum-s7-f01-production.json");if(r.ok)data=await r.json()}catch{}
  try{state.project=data?sanitizeProject(data):createProject()}catch{state.project=createProject()}
  for(const asset of state.project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
  refreshCategories();roomHelpers();addListeners();await rebuildScene();recordSnapshot();
+ if(requestedPreset==="garden-master"){
+  state.gridOn=false;
+  if(grid)grid.visible=false;
+  $("toggleGrid").classList.remove("active");
+  frameCurrentRoom();
+ }
  if(recoveredLocalDraft){state.dirty=true;ui.saveIndicator.textContent="● Локална копија · треба Git зачувување";ui.saveIndicator.style.color="#edb979";}
  else markSaved();
  updateCounters();
