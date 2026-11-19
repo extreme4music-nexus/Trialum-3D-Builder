@@ -1,0 +1,28 @@
+name: S7 MASTER visual reconstruction isolated checks
+on:
+  push:
+    branches: ['feature/s7-master-garden-visual-rebuild-20261119']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  design-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Builder script and preexisting project regressions
+        run: |
+          node --check src/main.js
+          node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs tests/s7-master-review.test.mjs
+          python3 tests/handoff_git_safety.test.py
+      - name: Report current isolated review branch
+        run: |
+          echo "Preview branch only; neither Trialum game nor Builder main is edited." >> "$GITHUB_STEP_SUMMARY"
+          git status --short
