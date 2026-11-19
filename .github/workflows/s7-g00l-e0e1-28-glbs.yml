@@ -1,0 +1,132 @@
+name: S7 E0/E1 G-00L — build 28 approved actual GLBs and Builder galleries
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/g00l/s7-e0e1-28-source.tar.gz.b64'
+      - '.github/workflows/s7-g00l-e0e1-28-glbs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: trialum-builder-g00l-e0e1-28
+  cancel-in-progress: false
+jobs:
+  build-28-real-glbs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Checkout owner Builder main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Extract exact verified source (no owner file replacement)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import io,tarfile,gzip,base64,hashlib
+          text=Path('assets/g00l/s7-e0e1-28-source.tar.gz.b64').read_text().strip()
+          assert hashlib.sha256(text.encode()).hexdigest()=='23ac56ec795de710df47a65fb8fe4ab0e9e01f6b5895ed48c4fbc15c12cc1709'
+          wanted={'build-s7-g00l-e0e1.py':'tools/b1/build-s7-g00l-e0e1.py','s7-g00l-e0e1-verify.py':'tests/s7-g00l-e0e1-verify.py','S7_G00L_E0E1_HANDOFF_20261119.md':'docs/S7_G00L_E0E1_HANDOFF_20261119.md'}
+          with tarfile.open(fileobj=io.BytesIO(gzip.decompress(base64.b64decode(text))),mode='r:') as f:
+           members=f.getmembers()
+           assert len(members)==3 and set(m.name for m in members)==set(wanted)
+           for m in members:
+            assert m.isfile() and m.size<100000
+            dest=Path(wanted[m.name]);data=f.extractfile(m).read()
+            if dest.exists():assert dest.read_bytes()==data,'Refuse to overwrite '+str(dest)
+            dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
+          PY
+      - name: Build, parse and verify 28 actual geometry/PBR GLBs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --quiet 'numpy==2.3.5' 'trimesh==4.11.1' 'networkx==3.6.1'
+          python3 tools/b1/build-s7-g00l-e0e1.py
+          python3 tests/s7-g00l-e0e1-verify.py
+      - name: Merge catalogue and 7 galleries without touching gameplay
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('assets/catalog.json');catalog=json.loads(path.read_text(encoding='utf8'))
+          incoming=json.loads(Path('assets/s7-e0e1/s7-e0e1-catalog-additions.json').read_text(encoding='utf8'))
+          ids={x['id']:x for x in catalog['assets']}
+          assert len(incoming)==28
+          for item in incoming:
+           if item['id'] in ids:assert ids[item['id']]['src']==item['src'],'G00L ID collision'
+           else:catalog['assets'].append(item)
+          count=sum(str(a.get('src','')).endswith('.glb') for a in catalog['assets'])
+          assert count==320,count
+          assert len(catalog['assets'])==len({a['id'] for a in catalog['assets']})
+          catalog['genuineGlbCount']=count
+          catalog['assetLibraryVersion']='2026-11-19-s7-g00l-e0e1-320-real-glbs'
+          path.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          h=Path('index.html');s=h.read_text(encoding='utf8')
+          if 'id="openG00LE0E1Gallery"' not in s:
+           anchor='<button id="openIrrigationGallery"'
+           assert anchor in s
+           s=s.replace(anchor,'<button id="openG00LE0E1Gallery" class="accent" title="Отвори 28 реални GLB модули за G-00L">🪴 G-00L 28</button>\n        '+anchor,1)
+          if '<option value="g00l-e0e1-all"' not in s:
+           anchor='<option value="lights-all"'
+           assert anchor in s
+           entries=[('all','СИТЕ 28 модули'),('rs','RS полици за садници'),('rm','RM полици за зрели растенија'),('st','ST резервни делови'),('desk','W работна станица'),('accessories','LT/CN додатоци'),('layout','Г-00L предложен распоред')]
+           options=''.join('<option value="g00l-e0e1-'+k+'">🪴 G-00L · '+name+'</option>\n          ' for k,name in entries)
+           s=s.replace(anchor,options+anchor,1)
+          h.write_text(s,encoding='utf8')
+          p=Path('src/main.js');s=p.read_text(encoding='utf8')
+          if '"g00l-e0e1-all":' not in s:
+           token=' "irrigation-all":';assert token in s
+           mapping=''.join(' "g00l-e0e1-'+key+'":"trialum-g00l-e0e1-'+key+'-review.json",\n' for key in ('all','rs','rm','st','desk','accessories'))
+           mapping+=' "g00l-e0e1-layout":"trialum-g00l-e0e1-layout-concept.json",\n'
+           s=s.replace(token,mapping+token,1)
+          if '$("openG00LE0E1Gallery").onclick' not in s:
+           token=' $("openIrrigationGallery").onclick';assert token in s
+           s=s.replace(token,' $("openG00LE0E1Gallery").onclick=()=>openRoomPreset("g00l-e0e1-all");\n'+token,1)
+          if 'g00lCount' not in s:
+           token='  for(const item of state.catalog)state.registry.set(item.id,item);';assert token in s
+           s=s.replace(token,'  const g00lCount=state.catalog.filter(a=>/^s7-e0e1-/.test(a.id)&&a.src?.endsWith(".glb")).length;\n  $("openG00LE0E1Gallery").disabled=g00lCount!==28;\n  if(g00lCount!==28)say("Некомплетна G-00L библиотека "+g00lCount+"/28. Направи Fetch/Pull и рестарт.",true);\n'+token,1)
+          p.write_text(s,encoding='utf8')
+          tests=Path('tests/editor-files.test.mjs');s=tests.read_text(encoding='utf8')
+          s=s.replace('[150,210,234,292]','[150,210,234,292,320]')
+          if 'G00L twenty-eight real GLBs' not in s:
+           s+='\ntest("G00L twenty-eight real GLBs appear in Builder one-click scene",()=>{\n const c=JSON.parse(file("assets/catalog.json"));\n const items=c.assets.filter(a=>a.id.startsWith("s7-e0e1-")&&a.src.endsWith(".glb"));\n assert.equal(items.length,28);assert.equal(c.genuineGlbCount,320);\n const h=file("index.html"),j=file("src/main.js");\n assert.match(h,/id="openG00LE0E1Gallery"/);assert.match(j,/openRoomPreset\\("g00l-e0e1-all"\\)/);\n for(const name of ["all","rs","rm","st","desk","accessories","layout"]){\n  assert.ok(h.includes(\'value="g00l-e0e1-\'+name+\'"\'));\n  assert.ok(j.includes(\'"g00l-e0e1-\'+name+\'"\'));\n }\n const gallery=JSON.parse(file("projects/trialum-g00l-e0e1-all-review.json"));assert.equal(gallery.instances.length,28);\n});\n'
+          tests.write_text(s,encoding='utf8')
+          boot=Path('.github/workflows/bootstrap.yml');v=boot.read_text(encoding='utf8')
+          v=v.replace('assert len(glbs) in (150,210,234,292),len(glbs)','assert len(glbs) in (150,210,234,292,320),len(glbs)')
+          boot.write_text(v,encoding='utf8')
+          win=Path('START-BUILDER-WINDOWS.bat');v=win.read_text(encoding='utf8')
+          needle='goto ready\n:incomplete'
+          assert needle in v
+          if 's7-e0e1-rs01-nursery-3-tier.glb' not in v:
+           checks='if not exist "assets\\models\\s7-e0e1-rs01-nursery-3-tier.glb" goto incomplete\nif not exist "assets\\models\\s7-e0e1-rm02-mature-double.glb" goto incomplete\nif not exist "projects\\trialum-g00l-e0e1-all-review.json" goto incomplete\n'
+           v=v.replace(needle,checks+needle,1)
+          v=v.replace('All 234 models MUST be present, including 24 lights','All 320 models MUST be present, including 28 G00L objects')
+          win.write_text(v,encoding='utf8')
+          PY
+          python3 tests/s7-g00l-e0e1-verify.py
+          node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
+          test "$(find assets/models -maxdepth 1 -name '*.glb' -type f | wc -l)" -eq 320
+      - name: Commit 28 binary models, 7 scenes, catalog and visible controls to Builder main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-g00l-assets-build-bot'
+          git config user.email 'trialum-g00l-28@users.noreply.github.com'
+          git add -f assets/models/s7-e0e1-*.glb
+          git add assets/s7-e0e1/*.json tools/b1/build-s7-g00l-e0e1.py tests/s7-g00l-e0e1-verify.py docs/S7_G00L_E0E1_HANDOFF_20261119.md
+          git add projects/trialum-g00l-e0e1-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
+          if git diff --cached --quiet; then echo 'All 28 physical GLB models already present and indexed'; exit 0; fi
+          git commit -m 'feat(S7 G-00L): ship 28 genuine E0/E1 3D assets, seven Builder galleries, no gameplay writes'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
