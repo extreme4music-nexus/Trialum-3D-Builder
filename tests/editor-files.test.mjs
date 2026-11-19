@@ -308,3 +308,14 @@ test("S7-F robotics eighteen real GLBs and eight Builder galleries",()=>{
  for(const v of ["all","heroes","machines","transports","robot","tools","g00l-preview","rig-demo"]){assert.ok(h.includes('value="s7f-'+v+'"'));assert.ok(j.includes('"s7f-'+v+'"'));}
  assert.equal(JSON.parse(file("projects/trialum-s7-f-all.json")).instances.length,18);
 });
+
+test("single-clip S7-F robot animation preview prevents concurrent actions",()=>{
+ const h=file("index.html"),j=file("src/main.js");
+ for(const name of ["animationControls","animationClip","animationPlay","animationStop"]){
+  assert.ok(h.includes('id="'+name+'"'),"Missing robot animation control "+name);
+ }
+ assert.match(j,/mixer\.stopAllAction\(\)/);
+ assert.match(j,/mixer\.clipAction\(defaultClip\)\.reset\(\)\.play\(\)/);
+ assert.doesNotMatch(j,/for\(const clip of clips\)mixer\.clipAction\(clip\)\.play\(\)/);
+ assert.match(j,/function playSelectedAnimation\(/);
+});
