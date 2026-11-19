@@ -411,7 +411,7 @@ def main():
    else:catalog["assets"].append(row);byid[asset_id]=row
    generated.append({"id":asset_id,"bytes":len(binary),"sha256":hashlib.sha256(binary).hexdigest()})
  assert len(generated)==22,len(generated)
- catalog["genuineGlbCount"]=sum(a.get("src","").endswith(".glb") for a in catalog["assets"])
+ catalog["genuineGlbCount"]=sum(str(a.get("src") or "").endswith(".glb") for a in catalog["assets"])
  assert catalog["genuineGlbCount"]==360,catalog["genuineGlbCount"]
  catalog["assetLibraryVersion"]="2026-11-19-s7-complete-flora-and-four-gardens-360"
  catalog["name"]="Trialum 3D World Builder — 360 genuine GLBs, 4 canonical plants, 4 S7 full gardens"
