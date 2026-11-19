@@ -70,12 +70,19 @@ if not exist "projects\trialum-g00l-e0e1-all-review.json" goto incomplete
 if not exist "assets\models\s7-f-r01-humanoid.glb" goto incomplete
 if not exist "assets\models\s7-f-e01-excavator.glb" goto incomplete
 if not exist "projects\trialum-s7-f-all.json" goto incomplete
+rem The complete 362-GLB MASTER garden must be present after any MAIN pull.
+if not exist "projects\trialum-s7-master-garden-review.json" goto incomplete
+if not exist "assets\models\s7-master-g01-edge-finish.glb" goto incomplete
+if not exist "assets\models\s7-master-g00l-glass-service-wing.glb" goto incomplete
+if not exist "assets\models\lumemoss-mature.glb" goto incomplete
+if not exist "assets\models\glowfern-mature.glb" goto incomplete
+if not exist "assets\models\mineralreed-mature.glb" goto incomplete
 goto ready
 :incomplete
 echo.
 echo Some original Trialum room GLBs are missing from this local clone.
 echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
-echo All 338 models MUST be present, including 28 G00L objects; do not use a half-empty catalogue.
+echo All 362 models MUST be present, including the G01 trim, G00L annex and MASTER garden scene.
 echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause
 exit /b 1
@@ -88,7 +95,7 @@ if not errorlevel 1 (
   if errorlevel 17 goto portbusy
 )
 echo.
-echo Verified lighting files: S7 floor strip, G01 chandelier, 24-model gallery.
+echo Verified 362 GLBs: MASTER GARDEN water, plants, G00L annex and 24 light assets.
 echo Your builder is at http://127.0.0.1:8765/
 echo Keep this window open while you edit.
 echo.
