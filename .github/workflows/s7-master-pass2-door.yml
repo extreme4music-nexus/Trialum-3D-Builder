@@ -1,0 +1,61 @@
+name: S7 MASTER PASS2 — genuine G00L glass room door GLB
+on:
+  push:
+    branches: ['feature/s7-master-garden-pass2-stone-water-door-20261119']
+    paths:
+      - 'tools/b1/build-s7-pass2-glass-door.py'
+      - '.github/workflows/s7-master-pass2-door.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: s7-master-pass2-door
+  cancel-in-progress: false
+jobs:
+  door-glb:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and verify real glTF2 hinged glass door (animation 10 sec)
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/b1/build-s7-pass2-glass-door.py
+          python3 tools/b1/build-s7-pass2-glass-door.py
+          python3 - <<'PY'
+          import json,struct
+          from pathlib import Path
+          p=Path('assets/models/s7-pass2-g00l-glass-partition-door.glb')
+          data=p.read_bytes()
+          assert data[:4]==b'glTF'
+          assert struct.unpack_from('<I',data,8)[0]==len(data)
+          n=struct.unpack_from('<I',data,12)[0]
+          gltf=json.loads(data[20:20+n])
+          assert gltf['asset']['version']=='2.0'
+          assert len(gltf['meshes'])==2
+          assert len(gltf['animations'])==1
+          assert gltf['animations'][0]['name']=='door-open-hold-close-10s'
+          assert len(gltf['animations'][0]['channels'])==1
+          assert gltf['asset']['extras']['doorGapMeters']==2.3
+          assert gltf['asset']['extras']['gameplayWrites']==0
+          cat=json.loads(Path('assets/catalog.json').read_text())
+          assert cat['genuineGlbCount']==363
+          print('PASS: genuine hinged door GLB, open/close animation and 363 real models')
+          PY
+      - name: Commit physical GLB and updated catalog to design branch only
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-pass2-geometry-bot'
+          git config user.email 'trialum-pass2@users.noreply.github.com'
+          git add -f assets/models/s7-pass2-g00l-glass-partition-door.glb
+          git add assets/catalog.json assets/s7-pass2-g00l-door-manifest.json
+          if git diff --staged --quiet; then echo 'Already current'; exit 0; fi
+          git commit -m 'assets(S7 PASS2): physical animated glass entry partition and door'
+          git fetch origin feature/s7-master-garden-pass2-stone-water-door-20261119
+          git rebase origin/feature/s7-master-garden-pass2-stone-water-door-20261119
+          git push origin HEAD:feature/s7-master-garden-pass2-stone-water-door-20261119
