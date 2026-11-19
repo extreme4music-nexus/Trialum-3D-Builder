@@ -5,14 +5,14 @@ The branch diff adds/replaces only handoff/approved-scene.json and handoff/manif
 import json, math, os, re, subprocess, tempfile
 from pathlib import Path
 
-ALLOWED_BRANCH=re.compile(r"^design/s7-garden-v[1-4]$")
+ALLOWED_BRANCH=re.compile(r"^design/(?:s7-garden-v[1-4]|s7-master-pass2)$")
 
 def validate_handoff(payload, GitFault):
  if not isinstance(payload,dict) or set(payload)!={"branch","project","manifest"}:
   raise GitFault("HANDOFF_PAYLOAD","Expected branch, project and manifest only","Use the Builder handoff button.")
  branch=payload["branch"]
  if not isinstance(branch,str) or not ALLOWED_BRANCH.fullmatch(branch):
-  raise GitFault("HANDOFF_BRANCH","Only design/s7-garden-v1..v4 can receive a handoff","Choose one of four safe garden branches.")
+  raise GitFault("HANDOFF_BRANCH","Only design/s7-garden-v1..v4 or design/s7-master-pass2 can receive a handoff","Choose one of four safe garden branches.")
  scene=payload["project"];manifest=payload["manifest"]
  if not isinstance(scene,dict) or scene.get("schemaVersion")!=1 or not isinstance(scene.get("instances"),list):
   raise GitFault("HANDOFF_SCENE","Expected an editable Builder schemaVersion=1 scene","Open a Builder garden first.")
