@@ -668,49 +668,69 @@ async function exportBundle(){
 
 
 
-/** A reviewable design-to-game handoff, NEVER an implicit game-engine edit. */
-async function exportDesignHandoff(){
+/** One strict scene data contract for both ZIP download and dedicated Git design branch. */
+function designHandoffPayload(){
  const project=collectProject();
  const branch=$("handoffBranch").value;
- if(!/^design\/s7-garden-v[1-4]$/.test(branch)){say("Недозволена дизајнерска гранка.",true);return;}
- const btn=$("exportHandoff");
- btn.disabled=true;
+ if(!/^design\/s7-garden-v[1-4]$/.test(branch))throw Error("Недозволена дизајнерска гранка.");
+ const used=[...new Set(project.instances.filter(x=>x.visible).map(x=>x.assetId))];
+ const missing=used.filter(id=>!state.registry.has(id));
+ if(missing.length)throw Error("Недостапни GLB IDs: "+missing.slice(0,6).join(", "));
+ const library=used.map(id=>{
+  const a=state.registry.get(id);
+  return {assetId:id,src:a.src||null,category:a.category||null,dimensions:a.dimensions||null};
+ });
+ const local=library.filter(x=>x.src?.startsWith("local:"));
+ if(local.length)throw Error("Прво зачувај ги личните GLB во Builder репо: "+local.map(x=>x.assetId).join(", "));
+ const manifest={
+  schemaVersion:1,kind:"TRIALUM_BUILDER_DESIGN_HANDOFF",targetBranch:branch,
+  targetRepository:"extreme4music-nexus/Trialum-3D-Builder",
+  requestedGameBranch:"feature/lw-d-s7-owner-garden-review",
+  ownerApproval:"PENDING",gameMainWrites:false,liveGameStateWrites:false,
+  sceneProjectId:project.projectId,sceneName:project.name,
+  libraryVersion:state.catalogVersion,sourceProject:"handoff/approved-scene.json",
+  referencedAssets:library,canonicalLimits:{landBeds:4,slotsPerBed:5,aquaticSlots:4},
+  instructions:"Visual owner approval and engine authorization required. Game main, Classic gameplay, inventory, plants and save data must remain untouched."
+ };
+ return {branch,project,manifest};
+}
+async function exportDesignHandoff(){
+ const btn=$("exportHandoff");btn.disabled=true;
  try{
-  const used=[...new Set(project.instances.filter(x=>x.visible).map(x=>x.assetId))];
-  const missing=used.filter(id=>!state.registry.has(id));
-  if(missing.length)throw Error("Не се достапни GLB IDs: "+missing.slice(0,6).join(", "));
-  const library=used.map(id=>{
-   const a=state.registry.get(id);
-   return {assetId:id,src:a.src||null,category:a.category||null,dimensions:a.dimensions||null};
-  });
-  const local=library.filter(x=>x.src?.startsWith("local:"));
-  if(local.length)throw Error("Прво зачувај ги личните GLB во Builder репо: "+local.map(x=>x.assetId).join(", "));
-  const handoff={
-   schemaVersion:1,
-   kind:"TRIALUM_BUILDER_DESIGN_HANDOFF",
-   targetBranch:branch,
-   targetRepository:"extreme4music-nexus/Trialum-3D-Builder",
-   requestedGameBranch:"feature/lw-d-s7-owner-garden-review",
-   ownerApproval:"PENDING",
-   gameMainWrites:false,liveGameStateWrites:false,
-   sceneProjectId:project.projectId,
-   sceneName:project.name,
-   libraryVersion:state.catalogVersion,
-   sourceProject:"handoff/approved-scene.json",
-   referencedAssets:library,
-   canonicalLimits:{landBeds:4,slotsPerBed:5,aquaticSlots:4},
-   instructions:"Review in Builder. Owner visual PASS is required. Only then implement asset placement in isolated Trialum game branch; never merge game main or edit inventories directly."
-  };
+  const {branch,project,manifest}=designHandoffPayload();
   const files=[
    ["handoff/approved-scene.json",JSON.stringify(project,null,2)+"\n"],
-   ["handoff/manifest.json",JSON.stringify(handoff,null,2)+"\n"],
-   ["handoff/README.md","# Trialum Builder — owner garden handoff\n\nTarget: "+branch+" (Builder repo).\nKeep exact physical GLB paths, positions, names, pivots.\nHuman owner visual PASS required before any engine integration.\nDo not change game main, classic gameplay, plant IDs or plant capacities.\n"]
+   ["handoff/manifest.json",JSON.stringify(manifest,null,2)+"\n"],
+   ["handoff/README.md","# Trialum S7 greenhouse — owner preview handoff\n\nBuilder design branch: "+branch+".\nThe game has NOT been modified. Owner PASS is required.\n"]
   ];
   downloadBlob(makeZip(files),"TRIALUM-"+branch.replaceAll("/","-")+"-HANDOFF.zip");
-  say("Извезен одделен handoff ZIP за "+branch+". Сè уште не е пушнат GitHub branch.");
- }catch(e){say("Handoff: "+e.message,true);}
+  say("Преземен handoff ZIP за "+branch+". Не е објавено на GitHub.");
+ }catch(e){say("Handoff ZIP: "+e.message,true);}
  finally{btn.disabled=false;}
 }
+/** Explicit owner push to a data-only Builder design branch, never game repo. */
+async function publishHandoffBranch(){
+ const btn=$("publishHandoff");
+ try{
+  const payload=designHandoffPayload();
+  if(!confirm("Да ги објавам САМО handoff/approved-scene.json и manifest.json во гранка "+payload.branch+" на Builder репото? Нема промена на Trialum играта, main или други локални фајлови."))return;
+  btn.disabled=true;
+  const response=await fetch("./api/git-status",{cache:"no-store"});
+  const status=await response.json();
+  if(!status.ok)throw Error(gitErrorMessage(status));
+  const bytes=JSON.stringify(payload);
+  if(new TextEncoder().encode(bytes).length>3_000_000)throw Error("Handoff е преголем за безбеден Git извоз.");
+  const res=await fetch("./api/handoff-publish",{
+   method:"POST",headers:{"Content-Type":"application/json","X-Trialum-CSRF":status.csrf},
+   body:bytes
+  });
+  const result=await res.json();
+  if(!result.ok)throw Error(gitErrorMessage(result));
+  say("GitHub branch готов: "+result.branch+" · commit "+result.commit.slice(0,12)+". Само дизајнерски JSON; играта не е променета.");
+ }catch(e){say("Гранка: "+e.message,true);}
+ finally{btn.disabled=false;}
+}
+
 function isTyping(e){return ["INPUT","TEXTAREA","SELECT"].includes(document.activeElement?.tagName)||document.activeElement?.isContentEditable}
 function handleKey(e){
  if(isTyping(e))return;
@@ -962,6 +982,7 @@ function addListeners(){
  $("newProject").onclick=newProject;
  $("packagePreset").onchange=e=>{const key=e.target.value;if(key)openRoomPreset(key);e.target.value="";};
  $("exportHandoff").onclick=exportDesignHandoff;
+ $("publishHandoff").onclick=publishHandoffBranch;
 
  $("openProject").onclick=()=>ui.projectFileInput.click();
  $("scenePreset").onchange=e=>openRoomPreset(e.target.value);
