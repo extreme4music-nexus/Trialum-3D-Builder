@@ -105,9 +105,6 @@ jobs:
           assert '[210,234,292]' in v or '[210,234,292,320]' in v
           v=v.replace('[210,234,292]','[210,234,292,320]')
           soil.write_text(v,encoding='utf8')
-          boot=Path('.github/workflows/bootstrap.yml');v=boot.read_text(encoding='utf8')
-          v=v.replace('assert len(glbs) in (150,210,234,292),len(glbs)','assert len(glbs) in (150,210,234,292,320),len(glbs)')
-          boot.write_text(v,encoding='utf8')
           win=Path('START-BUILDER-WINDOWS.bat');v=win.read_text(encoding='utf8')
           needle='goto ready\n:incomplete'
           assert needle in v
@@ -128,7 +125,7 @@ jobs:
           git config user.email 'trialum-g00l-28@users.noreply.github.com'
           git add -f assets/models/s7-e0e1-*.glb
           git add assets/s7-e0e1/*.json tools/b1/build-s7-g00l-e0e1.py tests/s7-g00l-e0e1-verify.py docs/S7_G00L_E0E1_HANDOFF_20261119.md
-          git add projects/trialum-g00l-e0e1-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
+          git add projects/trialum-g00l-e0e1-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs START-BUILDER-WINDOWS.bat
           if git diff --cached --quiet; then echo 'All 28 physical GLB models already present and indexed'; exit 0; fi
           git commit -m 'feat(S7 G-00L): ship 28 genuine E0/E1 3D assets, seven Builder galleries, no gameplay writes'
           git fetch origin main
