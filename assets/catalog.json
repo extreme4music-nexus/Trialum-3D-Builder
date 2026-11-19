@@ -6536,6 +6536,6 @@
       "pivotStandard": "Y-up; physical floor y≈0; attach named joints via glTF nodes"
     }
   ],
-  "assetLibraryVersion": "2026-11-19-s7-f-visible-338-real-glbs",
+  "assetLibraryVersion": "2026-11-18-floor-mixed-338-glbs",
   "genuineGlbCount": 338
 }
