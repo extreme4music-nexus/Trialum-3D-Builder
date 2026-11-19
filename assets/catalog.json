@@ -7160,8 +7160,25 @@
       "gameplayWrites": 0,
       "ownerVisualPass": false,
       "source": "tools/b1/build-s7-g00l-annex.py"
+    },
+    {
+      "id": "s7-pass2-g00l-glass-partition-door",
+      "name": "G-00L · стаклена просторија со вистинска анимирана врата",
+      "category": "Градина S7 · Завршни елементи",
+      "src": "assets/models/s7-pass2-g00l-glass-partition-door.glb",
+      "dimensions": [
+        0.14,
+        4.82,
+        9.0
+      ],
+      "placement": "floor",
+      "visualOnly": true,
+      "gameplayWrites": 0,
+      "ownerVisualPass": false,
+      "doorAnimation": "door-open-hold-close-10s",
+      "source": "tools/b1/build-s7-pass2-glass-door.py"
     }
   ],
-  "assetLibraryVersion": "2026-11-19-s7-master-g00l-glass-annex-362",
-  "genuineGlbCount": 362
+  "assetLibraryVersion": "2026-11-19-S7-MASTER-PASS2-door-stone-hoses-363",
+  "genuineGlbCount": 363
 }

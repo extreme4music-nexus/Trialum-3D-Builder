@@ -58,8 +58,25 @@ export function sanitizeProject(raw){
    zones:{"G-00L":"service left of entrance","G-01":"water 4 slots",
      "G-02":"bed-1","G-03":"bed-2","G-04":"bed-3","G-05":"bed-4"},
    capacity:{beds:4,slotsPerBed:5,aquaticSlots:4},
-   floorTileCount:p.instances.filter(x=>x.id.startsWith("floor-")).length,
-   floorPalette:typeof rawMeta.floorPalette==="string"?rawMeta.floorPalette.slice(0,100):"custom owner layout"
+   floorTileCount:p.instances.filter(x=>x.layer==="floor").length,
+   floorPalette:typeof rawMeta.floorPalette==="string"?rawMeta.floorPalette.slice(0,100):"custom owner layout",
+   ...(p.projectId.startsWith("trialum-s7-master-garden-pass2")?{
+    version:"MASTER_PASS_2",ownerApproval:"PENDING",engineIntegration:"NOT_STARTED",
+    originalMainGameUntouched:true,
+    baseProjectId:"trialum-s7-master-garden-visual-rebuild-20261119",
+    water:{mainBasin:1,satellites:3,animated:true,canonicalAquaticSlots:4},
+    irrigation:{mode:"PUMP_FILTER_HOSE",dripIrrigation:false,visualOnly:true},
+    s7Door:{assetId:"s7-pass2-g00l-glass-partition-door",doorWidthMeters:2.3,
+     clip:"door-open-hold-close-10s",collisionRuntime:"NOT_CONNECTED"},
+    nursery:{canonicalLandBeds:4,canonicalSlotsPerBed:5,decorativeSeedlingsOnly:true,
+     density:"straight rows, no new game slots"},
+    floorPattern:{waterBlack:"f02-black-marble-full",walkwayWhite:"f01-a",
+     nurseryStoneS:"f03-s-stone-full",nurseryStoneT:"f03-t-stone-full"},
+    nextEngineHandoff:{schemaVersion:1,authority:"DESIGN_ONLY",ownerApproval:"PENDING",
+     inventoryWrites:false,gameplayWrites:false,collisionBinding:false,
+     requestedSystems:["water-pumping","hydro-resources","plant-growth-health",
+      "nursery-display","robot-tasks","door-navigation","device-animation"]}
+   }:{})
   }:{})
  };
  p.assets=Array.isArray(raw.assets)?raw.assets.filter(a=>a&&typeof a==="object"&&typeof a.id==="string"&&

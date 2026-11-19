@@ -1,0 +1,63 @@
+name: S7 MASTER PASS2 — verify complete scene and real WebGL preview
+on:
+  push:
+    branches: ['feature/s7-master-garden-pass2-stone-water-door-20261119']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: s7-master-pass2-preview
+  cancel-in-progress: true
+jobs:
+  verify-and-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Builder and official four-bed design invariants
+        run: |
+          set -euo pipefail
+          node --check src/main.js
+          node --test tests/s7-master-pass2.test.mjs tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
+          python3 -m py_compile scripts/server.py
+          python3 tests/handoff_git_safety.test.py
+      - name: Run original localhost Builder (never game or production)
+        run: |
+          python3 scripts/server.py > /tmp/trialum-builder-pass2.log 2>&1 &
+          for i in $(seq 1 60); do
+            curl -sf http://127.0.0.1:8765/index.html >/dev/null && break
+            sleep 1
+          done
+          curl -sf 'http://127.0.0.1:8765/projects/trialum-s7-master-garden-pass2.json' -o /tmp/scene.json
+          curl -sf 'http://127.0.0.1:8765/assets/models/s7-pass2-g00l-glass-partition-door.glb' -o /tmp/door.glb
+          test -s /tmp/door.glb
+      - name: Capture nine close-up real Chromium WebGL screenshots
+        run: |
+          set -euo pipefail
+          mkdir -p screenshots
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          for view in overview water g00l door desk bed1 bed2 bed3 bed4; do
+            echo "WebGL PASS2 camera: $view"
+            timeout 115s "$CHROME" --headless=new --no-sandbox --disable-dev-shm-usage \
+              --enable-webgl --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader \
+              --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=45000 \
+              --screenshot="screenshots/S7-PASS2-$view-WEBGL.png" \
+              "http://127.0.0.1:8765/?preset=garden-master&view=$view" \
+              >>screenshots/chrome.log 2>&1
+            test -s "screenshots/S7-PASS2-$view-WEBGL.png"
+          done
+          file screenshots/S7-PASS2-*-WEBGL.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: S7-MASTER-PASS2-9-REAL-WEBGL-VIEWS
+          path: |
+            screenshots/S7-PASS2-*-WEBGL.png
+            screenshots/chrome.log
+          retention-days: 30
+          if-no-files-found: error

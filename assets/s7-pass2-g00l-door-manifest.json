@@ -1,0 +1,12 @@
+{
+  "id": "s7-pass2-g00l-glass-partition-door",
+  "binary": "assets/models/s7-pass2-g00l-glass-partition-door.glb",
+  "sha256": "4ac1408aff4effb9ccfb24dc8e236473d08cac35026c07c5bafef5eaa7ecb39e",
+  "bytes": 19440,
+  "staticMeshCount": 2,
+  "animations": 1,
+  "durationSeconds": 10,
+  "visualOnly": true,
+  "collisionRuntime": "PENDING",
+  "source": "tools/b1/build-s7-pass2-glass-door.py"
+}

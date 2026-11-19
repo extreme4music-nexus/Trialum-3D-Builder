@@ -158,9 +158,9 @@ jobs:
            if old is not None:assert old['src']==new['src']
            else:doc['assets'].append(new)
           glbs=[a for a in doc['assets'] if (a.get('src') or '').endswith('.glb')]
-          assert len(glbs) in (150,210,234,292,320,338,360,361,362),len(glbs)
+          assert len(glbs) in (150,210,234,292,320,338,360,361,362,363),len(glbs)
           doc['genuineGlbCount']=len(glbs)
-          doc['assetLibraryVersion']=('2026-11-19-s7-master-g00l-glass-annex-362' if len(glbs)==362 else '2026-11-19-s7-complete-flora-and-four-gardens-360' if len(glbs)==360 else '2026-11-18-floor-mixed-'+str(len(glbs))+'-glbs')
+          doc['assetLibraryVersion']=('2026-11-19-S7-MASTER-PASS2-door-stone-hoses-363' if len(glbs)==363 else '2026-11-19-s7-master-g00l-glass-annex-362' if len(glbs)==362 else '2026-11-19-s7-complete-flora-and-four-gardens-360' if len(glbs)==360 else '2026-11-18-floor-mixed-'+str(len(glbs))+'-glbs')
           cat.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
           expected={
            's02-planting-bed-5x5-empty.glb':'7ead405a5ac39c9efef81d3e402cb454fa35ebd07c5933bb00a7877496c83b11',

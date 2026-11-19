@@ -1,6 +1,21 @@
 # Trialum 3D World Builder (TWCS)
 
-## 🌿 CURRENT MAIN DELIVERY — S7 MASTER GARDEN, 362 GLBs
+## 🌿 MASTER GARDEN PASS 2 — latest review build / 363 REAL GLBs
+
+**NOW FOR OWNER VISUAL REVIEW.** This replaces the older PASS1 as the **default MASTER** scene; it does not remove PASS1 or V1–V4. New file: `projects/trialum-s7-master-garden-pass2.json` (**703 editable objects**, currently with 363 physical GLBs in Builder library).
+
+**Normal delivery:** GitHub Desktop → `Trialum-3D-Builder` → `main` → Fetch/Pull → close old server → `START-BUILDER-WINDOWS.bat` → open `http://127.0.0.1:8765/` and Ctrl+F5. The first PASS2 upgrade opens the new scene automatically if your saved scene was the previous official PASS1; other custom saved drafts are preserved. The drop-down **Избери 3D просторија → MASTER PASS 2** always opens the new garden. PASS1 remains available as archived `garden-pass1`.
+
+**What was physically built:** G00L one genuine **animated hinged glass door GLB** with 2.3m opening and full room partition; desk/monitor/tabletop peripherals moved to the REAR of the glazed service room; four canonical 5-slot beds with **upright straight 0.59m planted rows**; 88 additional decorative seedling previews in existing soil, while canonical capacities stay unchanged; four non-drip bed pumps/reservoirs/filters/valves/hose paths plus G00L shared water plant; 67 modular black F02 marble panels around clear 1+3 G01 water holes, 61 white F01 panels on surrounding walks, ordered F03-S/T stone nursery paths, 32 clean stone-frame slabs and 19 curved stone water accents; 12 gap closure tiles. Retains **animated original water and existing flora clips**. 363rd GLB is `assets/models/s7-pass2-g00l-glass-partition-door.glb`.
+
+**How to inspect nine real WebGL angles:** Start local Builder then open `http://127.0.0.1:8765/?preset=garden-master&view=water`. Substitute `overview`, `door`, `desk`, `g00l`, `bed1`, `bed2`, `bed3`, `bed4`. Orbit, move, scale and save any asset; send exported JSON back to the development chat. The door animation, water movement and visual seedlings do not change original gameplay state.
+
+**Design/handoff source of truth:** [S7 MASTER GARDEN PASS2 full build spec](docs/S7_MASTER_GARDEN_PASS2_FULL_BUILD_SPEC_20261119.md). **OWNER VISUAL PASS PENDING.** The next **3 tile-only variants** are not final until approved. The simulation **engine master rebuild** is a separate later agreement; no Trialum game repo / Play Store writes in this Builder pass.
+
+---
+
+
+## 🗂️ ARCHIVED PREVIOUS DELIVERY — S7 MASTER PASS 1, 362 GLBs
 
 **After GitHub Desktop MAIN Fetch/Pull**, close the old Builder server on port 8765, run `START-BUILDER-WINDOWS.bat` from the updated Builder checkout, and open `http://127.0.0.1:8765/`. On the first run after this upgrade, the **fully composed MASTER garden** is opened instead of the original F01 materials gallery. The previous local autosave is retained under a separate backup key and can be restored via the new **Мој претходен проект** button. Subsequent visits resume the user's current autosave normally. The dropdown **Избери 3D просторија → MASTER GARDEN** always opens the preview on demand.
 

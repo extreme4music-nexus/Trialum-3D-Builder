@@ -20,6 +20,8 @@ const ui=Object.fromEntries(ids.map(id=>[id,$(id)]));
 const LOCAL_AUTOSAVE="trialum-3d-builder:scene-v1";
 const S7_WELCOME_KEY="trialum-3d-builder:s7-master-first-run-v1";
 const S7_PREVIOUS_DRAFT_KEY="trialum-3d-builder:s7-pre-upgrade-draft-v1";
+const PASS2_WELCOME_KEY="trialum-3d-builder:s7-pass2-first-view-v1";
+const PASS2_PREVIOUS_DRAFT_KEY="trialum-3d-builder:s7-pass2-pre-upgrade-draft-v1";
 const CATALOG_URL="./assets/catalog.json";
 const S7_F_ALL="S7-F · СИТЕ 18";
 const GLB_MAX_BYTES=32*1024*1024;
@@ -981,7 +983,8 @@ const ROOM_PRESETS=Object.freeze({
  packing:"trialum-packing-room.json",
  greenhouse:"trialum-agro-greenhouse.json",
  g01:"trialum-g01-water-core.json",
- "garden-master":"trialum-s7-master-garden-review.json",
+ "garden-master":"trialum-s7-master-garden-pass2.json",
+ "garden-pass1":"trialum-s7-master-garden-review.json",
  "f01-f":"trialum-f01-f-radial-wedge-review.json",
  "f01-g":"trialum-f01-g-pool-curb-g01-preview.json",
  "f01-g-showcase":"trialum-f01-g-curved-trim-showcase.json",
@@ -1066,7 +1069,10 @@ function applyGardenCameraBookmark(view){
  // No gameplay or physics coordinates are altered.
  const perspectives={
   water:{eye:[15,9,13],target:[0,-.15,-1]},
-  g00l:{eye:[-5.4,3.05,22.6],target:[-12.1,1.25,13.0]},
+  g00l:{eye:[-5.8,3.2,14.6],target:[-11.6,1.2,21.4]},
+  door:{eye:[0.4,2.8,19.9],target:[-4.6,1.5,20.0]},
+  desk:{eye:[-6.7,2.8,18.8],target:[-10.1,1.03,22.3]},
+  overview:{eye:[22,26,20],target:[-2,0,-16]},
   bed1:{eye:[-22,7,-1],target:[-30.2,.4,-9.2]},
   bed2:{eye:[-21,7,-28],target:[-30,.4,-38.4]},
   bed3:{eye:[7,7,-48],target:[-2,.4,-56.7]},
@@ -1132,7 +1138,7 @@ function addListeners(){
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
  $("restorePreUpgradeDraft").onclick=()=>{
-  const raw=localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
+  const raw=localStorage.getItem(PASS2_PREVIOUS_DRAFT_KEY)||localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
   if(!raw){say("Нема зачуван претходен дизајн.",true);return;}
   if(state.dirty&&!confirm("Тековната сцена има незачувани измени. Прво зачувај JSON. Сепак да го отворам претходниот проект?"))return;
   try{
@@ -1264,21 +1270,26 @@ async function startup(){
  // New Builder installations and EXISTING F01 users should SEE the real garden,
  // not the old empty F01 gallery. Preserve their old autosave separately.
  // After the first upgraded launch, the owner's own autosave takes priority.
+ const pass2NeedsWelcome=!localStorage.getItem(PASS2_WELCOME_KEY);
+ const previousMaster=/^trialum-s7-master-garden-visual-rebuild-20261119$/.test(String(savedDraft?.projectId||""));
  const openMaster=requestedPreset==="garden-master"||
-   (requestedPreset===null&&(firstMasterLaunch||!savedDraft));
+   (requestedPreset===null&&(firstMasterLaunch||!savedDraft||(pass2NeedsWelcome&&previousMaster)));
  if(openMaster){
-  const preview=await fetch("./projects/trialum-s7-master-garden-review.json",{cache:"no-store"});
+  const preview=await fetch("./projects/trialum-s7-master-garden-pass2.json",{cache:"no-store"});
   if(!preview.ok)throw Error("MASTER GARDEN HTTP "+preview.status);
   data=await preview.json();
   welcomedMaster=true;
-  if(firstMasterLaunch){
+  if(firstMasterLaunch||pass2NeedsWelcome){
    try{
     if(savedDraft&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY))
      localStorage.setItem(S7_PREVIOUS_DRAFT_KEY,JSON.stringify(savedDraft));
     // Replace the OLD startup autosave only after its separately restorable
     // backup exists. Otherwise next page load would show the old F01 scene again.
+    if(savedDraft&&!localStorage.getItem(PASS2_PREVIOUS_DRAFT_KEY))
+     localStorage.setItem(PASS2_PREVIOUS_DRAFT_KEY,JSON.stringify(savedDraft));
     localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(data));
     localStorage.setItem(S7_WELCOME_KEY,"1");
+    localStorage.setItem(PASS2_WELCOME_KEY,"1");
    }catch{}
   }
  }else if(savedDraft){
@@ -1291,7 +1302,7 @@ async function startup(){
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
  refreshCategories();roomHelpers();addListeners();
- $("restorePreUpgradeDraft").hidden=!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
+ $("restorePreUpgradeDraft").hidden=!localStorage.getItem(PASS2_PREVIOUS_DRAFT_KEY)&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
  await rebuildScene();recordSnapshot();
  if(welcomedMaster){
   state.gridOn=false;
