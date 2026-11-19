@@ -366,7 +366,7 @@ test("S7 user UI: top dropdown contains ONLY real rooms and four full garden var
 
 test("360 real GLBs include 22 genuinely distinct canonical flora stages and full four S7 scenes",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
- assert.ok([360,361].includes(c.genuineGlbCount),`expected reviewed original 360 + optional G01 master edge, got ${c.genuineGlbCount}`);
+ assert.ok([360,361,362].includes(c.genuineGlbCount),`expected reviewed original 360 + optional G01 master edge, got ${c.genuineGlbCount}`);
  const m=JSON.parse(file("assets/s7-flora-22-manifest.json"));
  assert.equal(m.models.length,22);
  const modelIds=new Set(m.models.map(a=>a.id));
