@@ -1131,6 +1131,18 @@ function addListeners(){
  });
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
+ $("restorePreUpgradeDraft").onclick=()=>{
+  const raw=localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
+  if(!raw){say("Нема зачуван претходен дизајн.",true);return;}
+  if(state.dirty&&!confirm("Тековната сцена има незачувани измени. Прво зачувај JSON. Сепак да го отворам претходниот проект?"))return;
+  try{
+   useProject(JSON.parse(raw),true);
+   state.saveHandle=null;
+   frameCurrentRoom();
+   try{localStorage.setItem(LOCAL_AUTOSAVE,raw)}catch{}
+   say("Вратен е претходниот локален проект, без бришење на резервната копија.");
+  }catch(e){say("Не можам да ја вратам резервната копија: "+e.message,true);}
+ };
  $("packagePreset").onchange=e=>{const key=e.target.value;if(key)openRoomPreset(key);e.target.value="";};
  $("exportHandoff").onclick=exportDesignHandoff;
  $("publishHandoff").onclick=publishHandoffBranch;
@@ -1275,7 +1287,9 @@ async function startup(){
  for(const asset of state.project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
- refreshCategories();roomHelpers();addListeners();await rebuildScene();recordSnapshot();
+ refreshCategories();roomHelpers();addListeners();
+ $("restorePreUpgradeDraft").hidden=!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
+ await rebuildScene();recordSnapshot();
  if(welcomedMaster){
   state.gridOn=false;
   if(grid)grid.visible=false;
