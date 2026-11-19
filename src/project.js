@@ -46,6 +46,22 @@ export function sanitizeProject(raw){
    binding:name(it.binding,"",120),note:name(it.note,"",500),
   };
  }).filter(Boolean);
+ // Preserve only SAFE, canonical review metadata when round-tripping a full
+ // S7 greenhouse through the editor. Never honor game-state/write flags from JSON.
+ const rawMeta=raw.meta&&typeof raw.meta==="object"&&!Array.isArray(raw.meta)?raw.meta:{};
+ const isGarden=/^trialum-s7-complete-garden-v[1-4]/.test(p.projectId);
+ p.meta={
+  editorVersion:"0.1.0",gameplayWrites:0,officialScene:false,
+  ...(isGarden?{
+   ownerVisualPass:false,reviewOnly:true,
+   physicalCutoutQARequired:true,
+   zones:{"G-00L":"service left of entrance","G-01":"water 4 slots",
+     "G-02":"bed-1","G-03":"bed-2","G-04":"bed-3","G-05":"bed-4"},
+   capacity:{beds:4,slotsPerBed:5,aquaticSlots:4},
+   floorTileCount:p.instances.filter(x=>x.id.startsWith("floor-")).length,
+   floorPalette:typeof rawMeta.floorPalette==="string"?rawMeta.floorPalette.slice(0,100):"custom owner layout"
+  }:{})
+ };
  p.assets=Array.isArray(raw.assets)?raw.assets.filter(a=>a&&typeof a==="object"&&typeof a.id==="string"&&
       (a.src||a.kind)).slice(0,500).map(a=>({
     id:name(a.id,"asset",120),name:name(a.name,"Модел",100),
