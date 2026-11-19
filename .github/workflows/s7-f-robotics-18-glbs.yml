@@ -1,0 +1,125 @@
+name: S7-F robotics — 18 genuine glTF2 machine, transporter and humanoid GLBs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/s7-f/s7-f-18-source.tar.gz.b64'
+      - '.github/workflows/s7-f-robotics-18-glbs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: trialum-builder-s7-f-robotics-18
+  cancel-in-progress: false
+jobs:
+  build-18-real-glbs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify and extract exact original robotics source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import io,gzip,tarfile,base64,hashlib
+          from pathlib import Path
+          body=Path('assets/s7-f/s7-f-18-source.tar.gz.b64').read_text().strip()
+          assert hashlib.sha256(body.encode()).hexdigest()=='19f9747b9b824a0ac12c6cdc1c55ed5f7be9c77efc00666aab7f8582de0dc5d3'
+          expected={'build_s7_f_robotics.py':'tools/b1/build_s7_f_robotics.py','verify_s7_f_robotics.py':'tests/verify_s7_f_robotics.py','S7_F_ROBOTICS_18_GLB_HANDOFF_20261119.md':'docs/S7_F_ROBOTICS_18_GLB_HANDOFF_20261119.md'}
+          with tarfile.open(fileobj=io.BytesIO(gzip.decompress(base64.b64decode(body))),mode='r:') as pack:
+           ms=pack.getmembers();assert set(m.name for m in ms)==set(expected)
+           for m in ms:
+            assert m.isfile() and m.size<100000 and '/' not in m.name
+            data=pack.extractfile(m).read();dest=Path(expected[m.name]);dest.parent.mkdir(parents=True,exist_ok=True)
+            if dest.exists():assert dest.read_bytes()==data,'Refusing overwrite '+str(dest)
+            else:dest.write_bytes(data)
+          PY
+      - name: Build and verify physical 18 GLB, 6 hero animation clip sets and 8 scenes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --quiet 'numpy==2.3.5' 'trimesh==4.11.1' 'networkx==3.6.1' 'scipy==1.17.0'
+          python3 tools/b1/build_s7_f_robotics.py > /tmp/s7-f-robotics-build-evidence.json
+          python3 tests/verify_s7_f_robotics.py
+          test "$(find assets/models -maxdepth 1 -name 's7-f-*.glb' -type f | wc -l)" -eq 18
+      - name: Add 18 real meshes to catalog and eight visible Builder scenes without gameplay changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          cat=Path('assets/catalog.json');obj=json.loads(cat.read_text(encoding='utf8'))
+          incoming=json.loads(Path('assets/s7-f/s7-f-catalog-additions.json').read_text(encoding='utf8'))
+          assert len(incoming)==18
+          existing={a['id']:a for a in obj['assets']}
+          for item in incoming:
+           assert Path(item['src']).is_file(),item['src']
+           if item['id'] in existing:assert existing[item['id']]['src']==item['src']
+           else:obj['assets'].append(item)
+          count=sum(str(a.get('src','')).endswith('.glb') for a in obj['assets']);assert count==338,count
+          assert len(obj['assets'])==len({x['id'] for x in obj['assets']})
+          obj['genuineGlbCount']=count;obj['assetLibraryVersion']='2026-11-19-s7-f-robotics-338-real-glbs'
+          cat.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          h=Path('index.html');s=h.read_text(encoding='utf8')
+          if 'id="openS7FRobots"' not in s:
+           token='<button id="openG00LE0E1Gallery"';assert token in s
+           s=s.replace(token,'<button id="openS7FRobots" class="accent" title="18 вистински GLB модели E01/E02/T01–T03/R01">🤖 S7-F 18</button>\n        '+token,1)
+          if '<option value="s7f-all"' not in s:
+           token='<option value="g00l-e0e1-all"';assert token in s
+           views={'all':'Сите 18 машини и робот','heroes':'6 главни модели','machines':'E01/E02 машини','transports':'T01/T02/T03 транспортери','robot':'R01 робот, алат и док','tools':'Заменливи делови','g00l-preview':'Сервисна G-00L сцена','rig-demo':'Демо зглобови и клипови'}
+           opts=''.join('<option value="s7f-'+k+'">🤖 S7-F · '+v+'</option>\n          ' for k,v in views.items())
+           s=s.replace(token,opts+token,1)
+          h.write_text(s,encoding='utf8')
+          p=Path('src/main.js');s=p.read_text(encoding='utf8')
+          if '"s7f-all":' not in s:
+           token=' "g00l-e0e1-all":';assert token in s
+           mapping=''.join(' "s7f-'+k+'":"trialum-s7-f-'+k+'.json",\n' for k in ('all','heroes','machines','transports','robot','tools','g00l-preview','rig-demo'))
+           s=s.replace(token,mapping+token,1)
+          if '$('+'"openS7FRobots"'+').onclick' not in s:
+           token=' $('+'"openG00LE0E1Gallery"'+').onclick';assert token in s
+           s=s.replace(token,' $('+'"openS7FRobots"'+').onclick=()=>openRoomPreset("s7f-all");\n'+token,1)
+          if 'const roboticsCount' not in s:
+           token='  for(const item of state.catalog)state.registry.set(item.id,item);';assert token in s
+           s=s.replace(token,'  const roboticsCount=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length;\n  $('+'"openS7FRobots"'+').disabled=roboticsCount!==18;\n  if(roboticsCount!==18)say("Стар Builder каталог: "+roboticsCount+"/18 роботи. Fetch/Pull и рестарт.",true);\n'+token,1)
+          p.write_text(s,encoding='utf8')
+          tests=Path('tests/editor-files.test.mjs');s=tests.read_text(encoding='utf8')
+          s=s.replace('[150,210,234,292,320]','[150,210,234,292,320,338]')
+          s=s.replace('assert.equal(c.genuineGlbCount,320);','assert.ok(c.genuineGlbCount>=320);')
+          if 'S7-F robotics eighteen real GLBs' not in s:
+           s+='\ntest("S7-F robotics eighteen real GLBs and eight Builder galleries",()=>{\n const c=JSON.parse(file("assets/catalog.json")); const a=c.assets.filter(x=>x.id.startsWith("s7-f-")&&x.src?.endsWith(".glb"));\n assert.equal(a.length,18);assert.equal(c.genuineGlbCount,338);\n const h=file("index.html"),j=file("src/main.js");\n assert.match(h,/id="openS7FRobots"/);assert.match(j,/openRoomPreset\\("s7f-all"\\)/);\n for(const v of ["all","heroes","machines","transports","robot","tools","g00l-preview","rig-demo"]){assert.ok(h.includes(\'value="s7f-\'+v+\'"\'));assert.ok(j.includes(\'"s7f-\'+v+\'"\'));}\n assert.equal(JSON.parse(file("projects/trialum-s7-f-all.json")).instances.length,18);\n});\n'
+          tests.write_text(s,encoding='utf8')
+          boot=Path('.github/workflows/bootstrap.yml');s=boot.read_text(encoding='utf8')
+          s=s.replace('assert len(glbs) in (150,210,234,292,320),len(glbs)','assert len(glbs) in (150,210,234,292,320,338),len(glbs)')
+          boot.write_text(s,encoding='utf8')
+          bat=Path('START-BUILDER-WINDOWS.bat');s=bat.read_text(encoding='utf8')
+          if 's7-f-r01-humanoid.glb' not in s:
+           token='goto ready\n:incomplete';assert token in s
+           s=s.replace(token,'if not exist "assets\\models\\s7-f-r01-humanoid.glb" goto incomplete\nif not exist "assets\\models\\s7-f-e01-excavator.glb" goto incomplete\nif not exist "projects\\trialum-s7-f-all.json" goto incomplete\n'+token,1)
+          s=s.replace('All 320 models MUST be present','All 338 models MUST be present')
+          bat.write_text(s,encoding='utf8')
+          PY
+          python3 tests/verify_s7_f_robotics.py
+          node --test tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs
+          test "$(find assets/models -maxdepth 1 -name '*.glb' -type f | wc -l)" -eq 338
+      - name: Commit 18 genuine binaries and visible Builder controls on Builder main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-s7-f-robotics-builder-bot'
+          git config user.email 'trialum-s7-f-robotics@users.noreply.github.com'
+          git add -f assets/models/s7-f-*.glb
+          git add assets/s7-f/*.json tools/b1/build_s7_f_robotics.py tests/verify_s7_f_robotics.py docs/S7_F_ROBOTICS_18_GLB_HANDOFF_20261119.md
+          git add projects/trialum-s7-f-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
+          if git diff --staged --quiet; then echo 'All 18 genuine robotics GLB models already committed'; exit 0; fi
+          git commit -m 'feat(S7-F builder): 18 original robot/machine GLBs, rig clips, 8 editable QA galleries'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
