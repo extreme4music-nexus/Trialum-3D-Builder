@@ -11879,48 +11879,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed1-stone-border-1-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -21.193,
-        0.021,
-        -2.5058
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed1-stone-border-1-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -20.3452,
-        0.021,
-        -5.279
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed1-seedling-2-1",
       "assetId": "lumemoss-seedling",
       "label": "lumemoss-seedling",
@@ -11961,48 +11919,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed1-stone-border-2-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -19.819,
-        0.021,
-        -7.0005
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed1-stone-border-2-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -18.9712,
-        0.021,
-        -9.7737
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed1-seedling-3-1",
@@ -12047,48 +11963,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed1-stone-border-3-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -25.1618,
-        0.021,
-        -3.7192
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed1-stone-border-3-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -24.314,
-        0.021,
-        -6.4924
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed1-seedling-4-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -12129,216 +12003,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed1-stone-border-4-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -23.7879,
-        0.021,
-        -8.2139
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed1-stone-border-4-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -22.9401,
-        0.021,
-        -10.9871
-      ],
-      "rotationY": -1.2740903539558606,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed1-round-stone-1",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -23.8372,
-        0.101,
-        -8.4495
-      ],
-      "rotationY": 0,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed1-round-stone-2",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -24.9502,
-        0.101,
-        -5.7625
-      ],
-      "rotationY": 0.7853981633974483,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed1-round-stone-3",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -27.6372,
-        0.101,
-        -4.6495
-      ],
-      "rotationY": 1.5707963267948966,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed1-round-stone-4",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -30.3242,
-        0.101,
-        -5.7625
-      ],
-      "rotationY": 2.356194490192345,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed1-round-stone-5",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -31.4372,
-        0.101,
-        -8.4495
-      ],
-      "rotationY": 3.141592653589793,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed1-round-stone-6",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -30.3242,
-        0.101,
-        -11.1365
-      ],
-      "rotationY": 3.9269908169872414,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed1-round-stone-7",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -27.6372,
-        0.101,
-        -12.2495
-      ],
-      "rotationY": 4.71238898038469,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed1-round-stone-8",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -24.9502,
-        0.101,
-        -11.1365
-      ],
-      "rotationY": 5.497787143782138,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
     },
     {
       "id": "pass2-bed1-supply-hose-1",
@@ -12488,48 +12152,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed2-stone-border-1-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -17.1054,
-        0.021,
-        -13.2854
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-1-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -14.8202,
-        0.021,
-        -15.0708
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed2-seedling-2-1",
       "assetId": "glowfern-seedling",
       "label": "glowfern-seedling",
@@ -12570,48 +12192,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed2-stone-border-2-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11.0379,
-        0.021,
-        -18.0261
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-2-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -8.7527,
-        0.021,
-        -19.8115
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed2-seedling-3-1",
@@ -12656,48 +12236,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed2-stone-border-3-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -19.6603,
-        0.021,
-        -16.5555
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-3-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -17.3751,
-        0.021,
-        -18.3409
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed2-seedling-4-1",
       "assetId": "lumemoss-seedling",
       "label": "lumemoss-seedling",
@@ -12738,48 +12276,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed2-stone-border-4-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -13.5928,
-        0.021,
-        -21.2962
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-4-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -11.3076,
-        0.021,
-        -23.0816
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed2-seedling-5-1",
@@ -12824,48 +12320,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed2-stone-border-5-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -22.2152,
-        0.021,
-        -19.8256
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-5-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -19.93,
-        0.021,
-        -21.611
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed2-seedling-6-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -12906,48 +12360,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed2-stone-border-6-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -16.1476,
-        0.021,
-        -24.5663
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-6-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -13.8624,
-        0.021,
-        -26.3517
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed2-seedling-7-1",
@@ -12992,48 +12404,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed2-stone-border-7-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -24.7701,
-        0.021,
-        -23.0957
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-7-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -22.4849,
-        0.021,
-        -24.8811
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed2-seedling-8-1",
       "assetId": "glowfern-seedling",
       "label": "glowfern-seedling",
@@ -13074,48 +12444,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed2-stone-border-8-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -18.703,
-        0.021,
-        -27.837
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-8-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -16.4178,
-        0.021,
-        -29.6224
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed2-seedling-9-1",
@@ -13160,48 +12488,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed2-stone-border-9-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -27.3254,
-        0.021,
-        -26.3664
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-9-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -25.0402,
-        0.021,
-        -28.1518
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed2-seedling-10-1",
       "assetId": "lumemoss-seedling",
       "label": "lumemoss-seedling",
@@ -13242,48 +12528,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed2-stone-border-10-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -21.2579,
-        0.021,
-        -31.1071
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-10-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -18.9727,
-        0.021,
-        -32.8925
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed2-seedling-11-1",
@@ -13328,48 +12572,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed2-stone-border-11-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -29.8803,
-        0.021,
-        -29.6365
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-11-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -27.5951,
-        0.021,
-        -31.4219
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed2-seedling-12-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -13410,216 +12612,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed2-stone-border-12-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -23.8124,
-        0.021,
-        -34.3767
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-stone-border-12-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -21.5272,
-        0.021,
-        -36.1621
-      ],
-      "rotationY": -0.6632251157578452,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed2-round-stone-1",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -24.4589,
-        0.101,
-        -36.1697
-      ],
-      "rotationY": 0,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed2-round-stone-2",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -25.5719,
-        0.101,
-        -33.4827
-      ],
-      "rotationY": 0.7853981633974483,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed2-round-stone-3",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -28.2589,
-        0.101,
-        -32.3697
-      ],
-      "rotationY": 1.5707963267948966,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed2-round-stone-4",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -30.9459,
-        0.101,
-        -33.4827
-      ],
-      "rotationY": 2.356194490192345,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed2-round-stone-5",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -32.0589,
-        0.101,
-        -36.1697
-      ],
-      "rotationY": 3.141592653589793,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed2-round-stone-6",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -30.9459,
-        0.101,
-        -38.8567
-      ],
-      "rotationY": 3.9269908169872414,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed2-round-stone-7",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -28.2589,
-        0.101,
-        -39.9697
-      ],
-      "rotationY": 4.71238898038469,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed2-round-stone-8",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -25.5719,
-        0.101,
-        -38.8567
-      ],
-      "rotationY": 5.497787143782138,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
     },
     {
       "id": "pass2-bed2-supply-hose-1",
@@ -13769,48 +12761,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-1-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -7.029,
-        0.021,
-        -20.767
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-1-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -4.1308,
-        0.021,
-        -20.8682
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-2-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -13851,48 +12801,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-2-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2.6651,
-        0.021,
-        -21.1058
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-2-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        5.5633,
-        0.021,
-        -21.207
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed3-seedling-3-1",
@@ -13937,48 +12845,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-3-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -7.1739,
-        0.021,
-        -24.915
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-3-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -4.2757,
-        0.021,
-        -25.0162
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-4-1",
       "assetId": "glowfern-seedling",
       "label": "glowfern-seedling",
@@ -14019,48 +12885,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-4-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2.5202,
-        0.021,
-        -25.2538
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-4-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        5.4184,
-        0.021,
-        -25.355
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed3-seedling-5-1",
@@ -14105,48 +12929,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-5-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -7.3187,
-        0.021,
-        -29.062
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-5-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -4.4205,
-        0.021,
-        -29.1632
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-6-1",
       "assetId": "lumemoss-seedling",
       "label": "lumemoss-seedling",
@@ -14187,48 +12969,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-6-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2.3754,
-        0.021,
-        -29.4008
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-6-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        5.2736,
-        0.021,
-        -29.502
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed3-seedling-7-1",
@@ -14273,48 +13013,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-7-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -7.4635,
-        0.021,
-        -33.21
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-7-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -4.5653,
-        0.021,
-        -33.3112
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-8-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -14355,48 +13053,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-8-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2.2306,
-        0.021,
-        -33.5478
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-8-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        5.1288,
-        0.021,
-        -33.649
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed3-seedling-9-1",
@@ -14441,48 +13097,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-9-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -7.6084,
-        0.021,
-        -37.357
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-9-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -4.7102,
-        0.021,
-        -37.4582
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-10-1",
       "assetId": "glowfern-seedling",
       "label": "glowfern-seedling",
@@ -14523,48 +13137,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-10-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2.0857,
-        0.021,
-        -37.6958
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-10-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        4.9839,
-        0.021,
-        -37.797
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed3-seedling-11-1",
@@ -14609,48 +13181,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-11-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -7.7532,
-        0.021,
-        -41.505
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-11-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -4.855,
-        0.021,
-        -41.6062
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-12-1",
       "assetId": "lumemoss-seedling",
       "label": "lumemoss-seedling",
@@ -14691,48 +13221,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-12-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        1.9409,
-        0.021,
-        -41.8428
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-12-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        4.8391,
-        0.021,
-        -41.944
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed3-seedling-13-1",
@@ -14777,48 +13265,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-13-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -7.898,
-        0.021,
-        -45.652
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-13-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -4.9998,
-        0.021,
-        -45.7532
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-14-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -14859,48 +13305,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-14-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        1.7961,
-        0.021,
-        -45.9908
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-14-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        4.6943,
-        0.021,
-        -46.092
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed3-seedling-15-1",
@@ -14945,48 +13349,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed3-stone-border-15-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -8.0429,
-        0.021,
-        -49.8
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-15-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        -5.1447,
-        0.021,
-        -49.9012
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed3-seedling-16-1",
       "assetId": "glowfern-seedling",
       "label": "glowfern-seedling",
@@ -15027,216 +13389,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed3-stone-border-16-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        1.6512,
-        0.021,
-        -50.1378
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-stone-border-16-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        4.5494,
-        0.021,
-        -50.239
-      ],
-      "rotationY": -0.03490658503988659,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed3-round-stone-1",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        1.9189,
-        0.101,
-        -53.8672
-      ],
-      "rotationY": 0,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed3-round-stone-2",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        0.8059,
-        0.101,
-        -51.1802
-      ],
-      "rotationY": 0.7853981633974483,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed3-round-stone-3",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -1.8811,
-        0.101,
-        -50.0672
-      ],
-      "rotationY": 1.5707963267948966,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed3-round-stone-4",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -4.5681,
-        0.101,
-        -51.1802
-      ],
-      "rotationY": 2.356194490192345,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed3-round-stone-5",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -5.6811,
-        0.101,
-        -53.8672
-      ],
-      "rotationY": 3.141592653589793,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed3-round-stone-6",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        -4.5681,
-        0.101,
-        -56.5542
-      ],
-      "rotationY": 3.9269908169872414,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed3-round-stone-7",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        -1.8811,
-        0.101,
-        -57.6672
-      ],
-      "rotationY": 4.71238898038469,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed3-round-stone-8",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        0.8059,
-        0.101,
-        -56.5542
-      ],
-      "rotationY": 5.497787143782138,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
     },
     {
       "id": "pass2-bed3-supply-hose-1",
@@ -15386,48 +13538,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed4-stone-border-1-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        8.2057,
-        0.021,
-        -20.1113
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-1-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        10.5217,
-        0.021,
-        -18.3661
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed4-seedling-2-1",
       "assetId": "lumemoss-seedling",
       "label": "lumemoss-seedling",
@@ -15468,48 +13578,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed4-stone-border-2-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        14.7541,
-        0.021,
-        -15.176
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-2-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        17.0701,
-        0.021,
-        -13.4308
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed4-seedling-3-1",
@@ -15554,48 +13622,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed4-stone-border-3-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        10.7033,
-        0.021,
-        -23.4259
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-3-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        13.0193,
-        0.021,
-        -21.6807
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed4-seedling-4-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -15636,48 +13662,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed4-stone-border-4-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        17.2522,
-        0.021,
-        -18.491
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-4-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        19.5682,
-        0.021,
-        -16.7458
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed4-seedling-5-1",
@@ -15722,48 +13706,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed4-stone-border-5-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        13.2009,
-        0.021,
-        -26.7402
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-5-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        15.5169,
-        0.021,
-        -24.995
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed4-seedling-6-1",
       "assetId": "glowfern-seedling",
       "label": "glowfern-seedling",
@@ -15804,48 +13746,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed4-stone-border-6-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        19.7497,
-        0.021,
-        -21.8053
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-6-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        22.0657,
-        0.021,
-        -20.0601
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed4-seedling-7-1",
@@ -15890,48 +13790,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed4-stone-border-7-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        15.6981,
-        0.021,
-        -30.0541
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-7-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        18.0141,
-        0.021,
-        -28.3089
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed4-seedling-8-1",
       "assetId": "lumemoss-seedling",
       "label": "lumemoss-seedling",
@@ -15972,48 +13830,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed4-stone-border-8-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        22.2469,
-        0.021,
-        -25.1192
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-8-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        24.5629,
-        0.021,
-        -23.374
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed4-seedling-9-1",
@@ -16058,48 +13874,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed4-stone-border-9-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        18.1961,
-        0.021,
-        -33.3691
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-9-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        20.5121,
-        0.021,
-        -31.6239
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed4-seedling-10-1",
       "assetId": "mineralreed-seedling",
       "label": "mineralreed-seedling",
@@ -16140,48 +13914,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed4-stone-border-10-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        24.7449,
-        0.021,
-        -28.4342
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-10-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        27.0609,
-        0.021,
-        -26.689
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
     },
     {
       "id": "pass2-bed4-seedling-11-1",
@@ -16226,48 +13958,6 @@
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
     },
     {
-      "id": "pass2-bed4-stone-border-11-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        20.6933,
-        0.021,
-        -36.6829
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-11-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        23.0093,
-        0.021,
-        -34.9377
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
       "id": "pass2-bed4-seedling-12-1",
       "assetId": "glowfern-seedling",
       "label": "glowfern-seedling",
@@ -16308,216 +13998,6 @@
       "visible": true,
       "binding": "",
       "note": "Прав густ мини-ред расади во постојна земјена жардиниера, само визуелен. 5 канонски слотови/леа непроменети."
-    },
-    {
-      "id": "pass2-bed4-stone-border-12-L",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        27.2421,
-        0.021,
-        -31.748
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-stone-border-12-R",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        29.5581,
-        0.021,
-        -30.0028
-      ],
-      "rotationY": 0.6457718232379019,
-      "scale": [
-        1.05,
-        1,
-        1.05
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "F03 камени плочки на раб од расадните жардиниери; нема преклопување со почва."
-    },
-    {
-      "id": "pass2-bed4-round-stone-1",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        32.0251,
-        0.101,
-        -37.456
-      ],
-      "rotationY": 0,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed4-round-stone-2",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        30.9121,
-        0.101,
-        -34.769
-      ],
-      "rotationY": 0.7853981633974483,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed4-round-stone-3",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        28.2251,
-        0.101,
-        -33.656
-      ],
-      "rotationY": 1.5707963267948966,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed4-round-stone-4",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        25.5381,
-        0.101,
-        -34.769
-      ],
-      "rotationY": 2.356194490192345,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed4-round-stone-5",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        24.4251,
-        0.101,
-        -37.456
-      ],
-      "rotationY": 3.141592653589793,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed4-round-stone-6",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        25.5381,
-        0.101,
-        -40.143
-      ],
-      "rotationY": 3.9269908169872414,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed4-round-stone-7",
-      "assetId": "f03-s-stone-radial-wedge",
-      "label": "f03-s-stone-radial-wedge",
-      "position": [
-        28.2251,
-        0.101,
-        -41.256
-      ],
-      "rotationY": 4.71238898038469,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
-    },
-    {
-      "id": "pass2-bed4-round-stone-8",
-      "assetId": "f03-t-stone-radial-wedge",
-      "label": "f03-t-stone-radial-wedge",
-      "position": [
-        30.9121,
-        0.101,
-        -40.143
-      ],
-      "rotationY": 5.497787143782138,
-      "scale": [
-        0.84,
-        1,
-        0.84
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Осум камени кружни декоративни GLB сегменти на приод до главна леа."
     },
     {
       "id": "pass2-bed4-supply-hose-1",
@@ -16623,6 +14103,678 @@
       "visible": true,
       "binding": "",
       "note": "Вентил пред леа; engine water transfer PENDING."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-1",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -27.3759,
+        0.022,
+        -6.226
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-2",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -26.7765,
+        0.022,
+        -8.1864
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-3",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -26.1772,
+        0.022,
+        -10.1468
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-4",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -34.4526,
+        0.022,
+        -8.3895
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-5",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -33.8532,
+        0.022,
+        -10.35
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-6",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -33.2538,
+        0.022,
+        -12.3104
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-7",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -31.382,
+        0.022,
+        -5.7777
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed1-stone-frame-8",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-02",
+      "position": [
+        -29.2477,
+        0.022,
+        -12.7587
+      ],
+      "rotationY": -1.2740903539558606,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-1",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -29.3202,
+        0.022,
+        -34.1984
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-2",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -27.7048,
+        0.022,
+        -35.4605
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-3",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -26.0893,
+        0.022,
+        -36.7226
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-4",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -33.8761,
+        0.022,
+        -40.0297
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-5",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -32.2607,
+        0.022,
+        -41.2918
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-6",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -30.6452,
+        0.022,
+        -42.5539
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-7",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -32.859,
+        0.022,
+        -36.129
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed2-stone-frame-8",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-03",
+      "position": [
+        -27.1065,
+        0.022,
+        -40.6233
+      ],
+      "rotationY": -0.6632251157578452,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-1",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -3.8984,
+        0.022,
+        -52.8962
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-2",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -1.8497,
+        0.022,
+        -52.9677
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-3",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        0.1991,
+        0.022,
+        -53.0393
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-4",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -4.1567,
+        0.022,
+        -60.2917
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-5",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -2.1079,
+        0.022,
+        -60.3632
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-6",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -0.0592,
+        0.022,
+        -60.4347
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-7",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -5.6266,
+        0.022,
+        -56.5381
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-8",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        1.669,
+        0.022,
+        -56.7928
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-1",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        26.0463,
+        0.022,
+        -37.971
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-2",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        27.6835,
+        0.022,
+        -36.7372
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-3",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        29.3207,
+        0.022,
+        -35.5035
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-4",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        30.4997,
+        0.022,
+        -43.8809
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-5",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        32.1369,
+        0.022,
+        -42.6471
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-6",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        33.7741,
+        0.022,
+        -41.4134
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-7",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        26.9952,
+        0.022,
+        -41.8888
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed4-stone-frame-8",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-05",
+      "position": [
+        32.8252,
+        0.022,
+        -37.4956
+      ],
+      "rotationY": 0.6457718232379019,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
     }
   ],
   "assets": [],
@@ -16647,7 +14799,7 @@
       "slotsPerBed": 5,
       "aquaticSlots": 4
     },
-    "floorTileCount": 490,
+    "floorTileCount": 402,
     "floorPalette": "MASTER · original cream greenhouse shell + actual footpaths",
     "source": "G01 geometry from original shell / S7 V3 blueprint",
     "generation": "manual S7 master rebuild from video review 2026-11-19",
@@ -16678,10 +14830,12 @@
     "pass2Nursery": {
       "straightMiniRows": true,
       "additionalDecorativeSeedlings": 88,
-      "newStoneTiles": 116,
-      "circularWedges": 32,
+      "newStoneTiles": 60,
+      "circularWedges": 0,
       "noDrip": true,
-      "supplyHoseModules": 20
+      "supplyHoseModules": 20,
+      "orderedStoneFramePanels": 32,
+      "looseStoneBordersRemoved": 88
     }
   }
 }
