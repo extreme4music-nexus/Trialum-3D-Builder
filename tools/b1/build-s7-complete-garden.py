@@ -112,7 +112,7 @@ class Plant:
     self.beam((x,.03*k,z),(x*.86,top,z*.86),.032*k,self.root)
     self.ellipsoid((x*.86,top,z*.86),.10*k,.16*k,.09*k,self.green)
     if k>.45 and not dead and i%2==0:self.ellipsoid((x*.88,top+.08*k,z*.88),.033*k,.048*k,.033*k,self.bloom)
- elif self.sp=="glowfern":
+  elif self.sp=="glowfern":
    n=5 if k<.5 else 7
    for i in range(n):
     a=TAU*i/n
@@ -124,7 +124,7 @@ class Plant:
       pos=.22+.19*j
       x=length*pos*math.cos(a);z=length*pos*math.sin(a)
       self.ellipsoid((x,.25*k+h*(1-pos*.5),z),.022*k,.022*k,.022*k,self.bloom,7,4)
- elif self.sp=="mineralreed":
+  elif self.sp=="mineralreed":
    n=4 if k<.5 else 6
    for i in range(n):
     a=TAU*i/n;d=.13*k if k>.5 else .08*k
@@ -138,7 +138,7 @@ class Plant:
       x=top[0]+.06*k*math.cos(a+TAU*j/3)
       z=top[2]+.06*k*math.sin(a+TAU*j/3)
       self.beam((top[0],top[1]-.10*k,top[2]),(x,top[1]+.1*k,z),.014*k,self.vein)
- else:
+  else:
    n=5 if k<.5 else 9
    for i in range(n):
     a=TAU*i/n
