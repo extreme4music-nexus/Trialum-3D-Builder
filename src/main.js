@@ -18,6 +18,8 @@ const ids=["projectName","saveIndicator","assetSearch","categoryFilter","catalog
  "toggleGrid","glbFileInput","projectFileInput","animationControls","animationClip"];
 const ui=Object.fromEntries(ids.map(id=>[id,$(id)]));
 const LOCAL_AUTOSAVE="trialum-3d-builder:scene-v1";
+const S7_WELCOME_KEY="trialum-3d-builder:s7-master-first-run-v1";
+const S7_PREVIOUS_DRAFT_KEY="trialum-3d-builder:s7-pre-upgrade-draft-v1";
 const CATALOG_URL="./assets/catalog.json";
 const S7_F_ALL="S7-F · СИТЕ 18";
 const GLB_MAX_BYTES=32*1024*1024;
@@ -1240,23 +1242,41 @@ async function startup(){
   {id:"wall-panel",name:"Ѕиден панел · тест",category:"Градежни блокови",
    dimensions:[1,1,.10],placement:"wall",color:"#668e87"}
  ])if(!state.registry.has(item.id))state.registry.set(item.id,item);
- let data;let recoveredLocalDraft=false;
- try{const saved=localStorage.getItem(LOCAL_AUTOSAVE);if(saved){data=JSON.parse(saved);recoveredLocalDraft=true;}}catch{}
- // Explicit QA URL requests only this review scene, without deleting local
- // drafts in IndexedDB/localStorage or touching any original gameplay state.
- if(requestedPreset==="garden-master"){
+ let data;let recoveredLocalDraft=false;let welcomedMaster=false;
+ let savedDraft;
+ try{
+  const saved=localStorage.getItem(LOCAL_AUTOSAVE);
+  if(saved)savedDraft=JSON.parse(saved);
+ }catch{}
+ const firstMasterLaunch=!localStorage.getItem(S7_WELCOME_KEY);
+ // New Builder installations and EXISTING F01 users should SEE the real garden,
+ // not the old empty F01 gallery. Preserve their old autosave separately.
+ // After the first upgraded launch, the owner's own autosave takes priority.
+ const openMaster=requestedPreset==="garden-master"||
+   (requestedPreset===null&&(firstMasterLaunch||!savedDraft));
+ if(openMaster){
   const preview=await fetch("./projects/trialum-s7-master-garden-review.json",{cache:"no-store"});
   if(!preview.ok)throw Error("MASTER GARDEN HTTP "+preview.status);
   data=await preview.json();
-  recoveredLocalDraft=false;
+  welcomedMaster=true;
+  if(firstMasterLaunch){
+   try{
+    if(savedDraft&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY))
+     localStorage.setItem(S7_PREVIOUS_DRAFT_KEY,JSON.stringify(savedDraft));
+    localStorage.setItem(S7_WELCOME_KEY,"1");
+   }catch{}
+  }
+ }else if(savedDraft){
+  data=savedDraft;
+  recoveredLocalDraft=true;
  }
- if(!data)try{const r=await fetch("./projects/trialum-s7-f01-production.json");if(r.ok)data=await r.json()}catch{}
+ if(!data)try{const r=await fetch("./projects/trialum-s7-master-garden-review.json",{cache:"no-store"});if(r.ok)data=await r.json()}catch{}
  try{state.project=data?sanitizeProject(data):createProject()}catch{state.project=createProject()}
  for(const asset of state.project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
  refreshCategories();roomHelpers();addListeners();await rebuildScene();recordSnapshot();
- if(requestedPreset==="garden-master"){
+ if(welcomedMaster){
   state.gridOn=false;
   if(grid)grid.visible=false;
   $("toggleGrid").classList.remove("active");
@@ -1270,6 +1290,7 @@ async function startup(){
  tick();
  say((recoveredLocalDraft?"Вратена локална копија (Зачувај во GitHub папка). ":"")+
  "Trialum Builder е подготвен · "+state.catalog.length+" оригинални модели во каталогот.");
+ if(welcomedMaster)say("🌿 Отворена е целосната S7 MASTER GARDEN со вода, растенија и G-00L. Старите локални проекти се зачувани во резервна копија (кога постоеле).");
  if(!state.catalog.length)say("Нема GLB каталог. Стартувај scripts/build_assets.py или провери GitHub Actions.",true);
 }
 startup().catch(e=>{console.error(e);say("Грешка при стартување: "+e.message,true);});
