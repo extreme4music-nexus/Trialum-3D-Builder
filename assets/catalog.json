@@ -7128,8 +7128,24 @@
       "runtimeIntegration": false,
       "gameplayWrites": 0,
       "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "s7-master-g01-edge-finish",
+      "name": "G-01 · мазен кружен раб (192 сегменти)",
+      "category": "Градина S7 · Завршни елементи",
+      "src": "assets/models/s7-master-g01-edge-finish.glb",
+      "dimensions": [
+        34.86,
+        0.211,
+        34.86
+      ],
+      "placement": "floor",
+      "visualOnly": true,
+      "gameplayWrites": 0,
+      "ownerVisualPass": false,
+      "source": "tools/b1/build-s7-master-g01-finish.py"
     }
   ],
-  "assetLibraryVersion": "2026-11-19-s7-complete-flora-and-four-gardens-360",
-  "genuineGlbCount": 360
+  "assetLibraryVersion": "2026-11-19-s7-master-review-smoothed-g01-361",
+  "genuineGlbCount": 361
 }

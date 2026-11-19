@@ -7068,6 +7068,27 @@
       "visible": true,
       "binding": "",
       "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-g01-edge-finish",
+      "assetId": "s7-master-g01-edge-finish",
+      "label": "G-01 · професионален непрекинат кружен завршеток",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "192-segment circular anti-jagged finish, explicitly outside all 4 water apertures, no gameplay write."
     }
   ],
   "assets": [],
