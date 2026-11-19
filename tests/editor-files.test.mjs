@@ -383,6 +383,7 @@ test("360 real GLBs include 22 genuinely distinct canonical flora stages and ful
   const p=JSON.parse(file("projects/trialum-s7-complete-garden-v"+i+".json"));
   assert.equal(p.instances.length,873);
   assert.equal(p.instances.filter(x=>x.id.startsWith("floor-")).length,773);
+  assert.equal(new Set(p.instances.filter(x=>x.id.startsWith("floor-")).map(x=>x.position[0].toFixed(3)+","+x.position[2].toFixed(3))).size,773,"No overlapping physical floor tile positions");
   const objects=p.instances.filter(x=>!x.id.startsWith("floor-"));
   assert.equal(objects.length,100);
   if(!stable)stable=objects;
