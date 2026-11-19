@@ -44,6 +44,9 @@ test("master keeps greenhouse physics independent, rooted supports and all true 
  assert.ok(!p.instances.some(x=>x.id.startsWith("floor-")),"Old 773 jagged overlay tiles must be REMOVED from MASTER");
  assert.match(source,/function alignGardenObjectToSupport\(obj,rec\)/);
  assert.match(source,/new THREE\.Box3\(\)\.setFromObject\(obj\)/);
+ assert.match(source,/function centerGardenFloorPivot\(obj,rec\)/);
+ assert.match(source,/obj\.position\.x-=mid\.x/);
+ assert.match(source,/obj\.position\.z-=mid\.z/);
  assert.match(source,/if\(rec\.layer!=="props"&&!floorFixture\)return/);
  assert.match(source,/obj\.position\.y\+=delta/);
 });
@@ -94,4 +97,16 @@ test("G-00L desk accessories rest on measured real .918m surface and R01 is near
  assert.ok(Math.hypot(robot.position[0]-dock.position[0],robot.position[2]-dock.position[2])<1.5);
  assert.equal(p.instances.filter(x=>x.id.startsWith("g00l-rs-")).length,2);
  assert.equal(p.instances.filter(x=>x.id.startsWith("g00l-rm-")).length,4);
+});
+
+test("g00l floor supports racks and tool; no legacy 773-square overlay",()=>{
+ const terrace=p.instances.filter(x=>x.id.startsWith("master-g00l-floor-"));
+ assert.equal(terrace.length,45);
+ assert.ok(terrace.some(x=>x.position[2]===6));
+ assert.ok(terrace.some(x=>x.position[2]===22));
+ assert.equal(new Set(terrace.map(x=>x.position[0]+","+x.position[2])).size,45);
+ const tool=p.instances.find(x=>x.id==="g00l-equipment-13");
+ const tray=p.instances.find(x=>x.id==="g00l-equipment-10");
+ assert.equal(tool.position[1],.94);
+ assert.ok(tray.position[1]>=.7 && tray.position[1]<1);
 });
