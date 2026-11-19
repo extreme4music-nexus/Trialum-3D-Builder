@@ -1,0 +1,147 @@
+{
+  "generator": "S7.8-G",
+  "models": [
+    {
+      "id": "lumemoss-seedling",
+      "bytes": 65536,
+      "sha256": "88d0a459c349e3a2f66571fb84dd580fcc849e5f7eaf4e72ac2ac9b75031fab8"
+    },
+    {
+      "id": "lumemoss-young",
+      "bytes": 91516,
+      "sha256": "5f63f4b27846fa2bed5fc18dc15e461ab054eb838f1da388ca7703cd96ecb86f"
+    },
+    {
+      "id": "lumemoss-growing",
+      "bytes": 130896,
+      "sha256": "d8cba027b6885b8e060f1fc8ce5901867bcccbb3bb96bc1a4fc0a59187eed677"
+    },
+    {
+      "id": "lumemoss-mature",
+      "bytes": 130848,
+      "sha256": "25ca1fcb07949b8ecb564b4e7e985577835492bbf8070076347d036055ec5457"
+    },
+    {
+      "id": "lumemoss-ready-for-transplant",
+      "bytes": 130900,
+      "sha256": "db45707a2a82af38c7debd4c08ab75001f357cbc1789490c53930f44b0148e7c"
+    },
+    {
+      "id": "lumemoss-weakened",
+      "bytes": 130828,
+      "sha256": "b4db94d43d586b45eea4549eba14198438d1475deac9808bcc6f41a580a435a4"
+    },
+    {
+      "id": "lumemoss-dead",
+      "bytes": 71068,
+      "sha256": "14e809319a3bd7be6b38f1e461c0fed6b03f9bd809b3247847017cce7597b1d5"
+    },
+    {
+      "id": "glowfern-seedling",
+      "bytes": 73284,
+      "sha256": "ca3a8a534a4dda407ee93b5dede1e6ecb6db6373dd18cec8bac9c80a9fc3ee16"
+    },
+    {
+      "id": "glowfern-young",
+      "bytes": 73268,
+      "sha256": "08b730fe92c2f96536d5d0ca8c575ccd18e1f26ecafac5ba916023379702a2ec"
+    },
+    {
+      "id": "glowfern-growing",
+      "bytes": 189172,
+      "sha256": "8447481b37ba2f2d6a16c210a961011c0f7460960eedaa1c2540e37bc62a7ca0"
+    },
+    {
+      "id": "glowfern-mature",
+      "bytes": 189144,
+      "sha256": "d25678fd27c1cb343e1afaee8a65893879d0f17e32c0732c2bef85a35723a666"
+    },
+    {
+      "id": "glowfern-ready-for-transplant",
+      "bytes": 189256,
+      "sha256": "3dc999e1d4cd24c9ce735e288b43c4ccfdae60fd5c139c1ff8209bab9671571c"
+    },
+    {
+      "id": "glowfern-weakened",
+      "bytes": 189132,
+      "sha256": "78a3c59ae975a61b8c0ad7ab6e50a06870bb5b60d5fd8c3b7901b21df655917e"
+    },
+    {
+      "id": "glowfern-dead",
+      "bytes": 102260,
+      "sha256": "a168ad909c6cb21233493816ec36e17b84bdf2f576fa03fdd476899a46c2d821"
+    },
+    {
+      "id": "mineralreed-seedling",
+      "bytes": 87328,
+      "sha256": "18c18cd497291936077abe972bdd046ee95a58846a13d28a10a3bfe0a58a4ae9"
+    },
+    {
+      "id": "mineralreed-young",
+      "bytes": 87312,
+      "sha256": "7e839ad77fb48f1a6c28b901e2f6c61cdc33fab1d695c15d568024b87d8e5693"
+    },
+    {
+      "id": "mineralreed-growing",
+      "bytes": 156908,
+      "sha256": "a270b9cdef91c20f04bc846e34bc1eabf4711881298045226ece8a8f8358ec1d"
+    },
+    {
+      "id": "mineralreed-mature",
+      "bytes": 156900,
+      "sha256": "3e4ffa47796164570e11f7d0c19deb28fb6e12557f8beacd64d6476013ea22e8"
+    },
+    {
+      "id": "mineralreed-ready-for-transplant",
+      "bytes": 156960,
+      "sha256": "3b1a67a6cf3cdae144f5ca4984c52339486a84cb93042624307a5979ca63c644"
+    },
+    {
+      "id": "mineralreed-weakened",
+      "bytes": 156096,
+      "sha256": "3ab2a15d554f55af8bc20c697d7d9df5cde3ee99dee9c5d63b187846372f8f0c"
+    },
+    {
+      "id": "mineralreed-dead",
+      "bytes": 128832,
+      "sha256": "53b496540758655dd99118f588cb77f78f40d7eb27cc824e09bef89401d5bc59"
+    },
+    {
+      "id": "aquaglow-ready-for-transplant",
+      "bytes": 146172,
+      "sha256": "d9aef64e30af7c018c73c8ba8ae87102ce1db62926dae72a51900988096149b4"
+    }
+  ],
+  "scenes": [
+    {
+      "path": "projects/trialum-s7-complete-garden-v1.json",
+      "instances": 873,
+      "floorTiles": 773
+    },
+    {
+      "path": "projects/trialum-s7-complete-garden-v2.json",
+      "instances": 873,
+      "floorTiles": 773
+    },
+    {
+      "path": "projects/trialum-s7-complete-garden-v3.json",
+      "instances": 873,
+      "floorTiles": 773
+    },
+    {
+      "path": "projects/trialum-s7-complete-garden-v4.json",
+      "instances": 873,
+      "floorTiles": 773
+    }
+  ],
+  "canonicalPlantSpecies": [
+    "lumemoss",
+    "glowfern",
+    "mineralreed",
+    "aquaglow"
+  ],
+  "newGlbCount": 22,
+  "totalGlbCount": 360,
+  "gameplayWrites": 0,
+  "ownerVisualPass": false
+}

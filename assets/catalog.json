@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum 3D World Builder — 338 physical GLBs, including 18 S7-F robots and 24 S7-L lights",
+  "name": "Trialum 3D World Builder — 360 genuine GLBs, 4 canonical plants, 4 S7 full gardens",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -6534,8 +6534,602 @@
       "gameplayIntegration": false,
       "animationClips": [],
       "pivotStandard": "Y-up; physical floor y≈0; attach named joints via glTF nodes"
+    },
+    {
+      "id": "lumemoss-seedling",
+      "name": "Лумемос · расад",
+      "category": "Растенија S7 · Лумемос",
+      "src": "assets/models/lumemoss-seedling.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "lumemoss",
+      "medium": "terrestrial",
+      "visualStage": "seedling",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "lumemoss-young",
+      "name": "Лумемос · младо",
+      "category": "Растенија S7 · Лумемос",
+      "src": "assets/models/lumemoss-young.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "lumemoss",
+      "medium": "terrestrial",
+      "visualStage": "young",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "lumemoss-growing",
+      "name": "Лумемос · расте",
+      "category": "Растенија S7 · Лумемос",
+      "src": "assets/models/lumemoss-growing.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "lumemoss",
+      "medium": "terrestrial",
+      "visualStage": "growing",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "lumemoss-mature",
+      "name": "Лумемос · зрело",
+      "category": "Растенија S7 · Лумемос",
+      "src": "assets/models/lumemoss-mature.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "lumemoss",
+      "medium": "terrestrial",
+      "visualStage": "mature",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "lumemoss-ready-for-transplant",
+      "name": "Лумемос · подготвено за пресадување",
+      "category": "Растенија S7 · Лумемос",
+      "src": "assets/models/lumemoss-ready-for-transplant.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "lumemoss",
+      "medium": "terrestrial",
+      "visualStage": "ready-for-transplant",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "lumemoss-weakened",
+      "name": "Лумемос · ослабено",
+      "category": "Растенија S7 · Лумемос",
+      "src": "assets/models/lumemoss-weakened.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "lumemoss",
+      "medium": "terrestrial",
+      "visualStage": "weakened",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "lumemoss-dead",
+      "name": "Лумемос · увенато",
+      "category": "Растенија S7 · Лумемос",
+      "src": "assets/models/lumemoss-dead.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "lumemoss",
+      "medium": "terrestrial",
+      "visualStage": "dead",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "glowfern-seedling",
+      "name": "Светлопапрат · расад",
+      "category": "Растенија S7 · Светлопапрат",
+      "src": "assets/models/glowfern-seedling.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "glowfern",
+      "medium": "terrestrial",
+      "visualStage": "seedling",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "glowfern-young",
+      "name": "Светлопапрат · младо",
+      "category": "Растенија S7 · Светлопапрат",
+      "src": "assets/models/glowfern-young.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "glowfern",
+      "medium": "terrestrial",
+      "visualStage": "young",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "glowfern-growing",
+      "name": "Светлопапрат · расте",
+      "category": "Растенија S7 · Светлопапрат",
+      "src": "assets/models/glowfern-growing.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "glowfern",
+      "medium": "terrestrial",
+      "visualStage": "growing",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "glowfern-mature",
+      "name": "Светлопапрат · зрело",
+      "category": "Растенија S7 · Светлопапрат",
+      "src": "assets/models/glowfern-mature.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "glowfern",
+      "medium": "terrestrial",
+      "visualStage": "mature",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "glowfern-ready-for-transplant",
+      "name": "Светлопапрат · подготвено за пресадување",
+      "category": "Растенија S7 · Светлопапрат",
+      "src": "assets/models/glowfern-ready-for-transplant.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "glowfern",
+      "medium": "terrestrial",
+      "visualStage": "ready-for-transplant",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "glowfern-weakened",
+      "name": "Светлопапрат · ослабено",
+      "category": "Растенија S7 · Светлопапрат",
+      "src": "assets/models/glowfern-weakened.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "glowfern",
+      "medium": "terrestrial",
+      "visualStage": "weakened",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "glowfern-dead",
+      "name": "Светлопапрат · увенато",
+      "category": "Растенија S7 · Светлопапрат",
+      "src": "assets/models/glowfern-dead.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "glowfern",
+      "medium": "terrestrial",
+      "visualStage": "dead",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "mineralreed-seedling",
+      "name": "Минерална трска · расад",
+      "category": "Растенија S7 · Минерална трска",
+      "src": "assets/models/mineralreed-seedling.glb",
+      "dimensions": [
+        1.15,
+        1.5,
+        1.15
+      ],
+      "placement": "floor",
+      "speciesId": "mineralreed",
+      "medium": "terrestrial",
+      "visualStage": "seedling",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "mineralreed-young",
+      "name": "Минерална трска · младо",
+      "category": "Растенија S7 · Минерална трска",
+      "src": "assets/models/mineralreed-young.glb",
+      "dimensions": [
+        1.15,
+        1.5,
+        1.15
+      ],
+      "placement": "floor",
+      "speciesId": "mineralreed",
+      "medium": "terrestrial",
+      "visualStage": "young",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "mineralreed-growing",
+      "name": "Минерална трска · расте",
+      "category": "Растенија S7 · Минерална трска",
+      "src": "assets/models/mineralreed-growing.glb",
+      "dimensions": [
+        1.15,
+        1.5,
+        1.15
+      ],
+      "placement": "floor",
+      "speciesId": "mineralreed",
+      "medium": "terrestrial",
+      "visualStage": "growing",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "mineralreed-mature",
+      "name": "Минерална трска · зрело",
+      "category": "Растенија S7 · Минерална трска",
+      "src": "assets/models/mineralreed-mature.glb",
+      "dimensions": [
+        1.15,
+        1.5,
+        1.15
+      ],
+      "placement": "floor",
+      "speciesId": "mineralreed",
+      "medium": "terrestrial",
+      "visualStage": "mature",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "mineralreed-ready-for-transplant",
+      "name": "Минерална трска · подготвено за пресадување",
+      "category": "Растенија S7 · Минерална трска",
+      "src": "assets/models/mineralreed-ready-for-transplant.glb",
+      "dimensions": [
+        1.15,
+        1.5,
+        1.15
+      ],
+      "placement": "floor",
+      "speciesId": "mineralreed",
+      "medium": "terrestrial",
+      "visualStage": "ready-for-transplant",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "mineralreed-weakened",
+      "name": "Минерална трска · ослабено",
+      "category": "Растенија S7 · Минерална трска",
+      "src": "assets/models/mineralreed-weakened.glb",
+      "dimensions": [
+        1.15,
+        1.5,
+        1.15
+      ],
+      "placement": "floor",
+      "speciesId": "mineralreed",
+      "medium": "terrestrial",
+      "visualStage": "weakened",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "mineralreed-dead",
+      "name": "Минерална трска · увенато",
+      "category": "Растенија S7 · Минерална трска",
+      "src": "assets/models/mineralreed-dead.glb",
+      "dimensions": [
+        1.15,
+        1.5,
+        1.15
+      ],
+      "placement": "floor",
+      "speciesId": "mineralreed",
+      "medium": "terrestrial",
+      "visualStage": "dead",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
+    },
+    {
+      "id": "aquaglow-ready-for-transplant",
+      "name": "Аквалум · подготвено за пресадување",
+      "category": "Растенија S7 · Аквалум",
+      "src": "assets/models/aquaglow-ready-for-transplant.glb",
+      "dimensions": [
+        0.85,
+        1.1,
+        0.85
+      ],
+      "placement": "floor",
+      "speciesId": "aquaglow",
+      "medium": "aquatic",
+      "visualStage": "ready-for-transplant",
+      "animationClips": [
+        "idle-sway",
+        "machine-pass",
+        "water-react",
+        "root-settle",
+        "growth-crossfade",
+        "droop"
+      ],
+      "ownerVisualPass": false,
+      "runtimeIntegration": false,
+      "gameplayWrites": 0,
+      "source": "tools/b1/build-s7-complete-garden.py"
     }
   ],
-  "assetLibraryVersion": "2026-11-18-floor-mixed-338-glbs",
-  "genuineGlbCount": 338
+  "assetLibraryVersion": "2026-11-19-s7-complete-flora-and-four-gardens-360",
+  "genuineGlbCount": 360
 }
