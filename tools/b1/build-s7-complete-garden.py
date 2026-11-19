@@ -364,7 +364,7 @@ def garden(v,catalog):
  # For every variant exact same non-floor sequence; ONLY chosen floor palette and tile IDs vary.
  items=tiles+items
  ids={x["id"] for x in items}
- assert len(ids)==len(items)
+ assert len(ids)==len(items),str([id for id in ids if sum(x["id"]==id for x in items)>1][:20])
  assert len([x for x in items if x["id"].endswith("real-bed")])==4
  assert len([x for x in items if "-plant-preview-" in x["id"]])==20
  assert len([x for x in items if x["id"].startswith("aquatic-slot-")])==4
