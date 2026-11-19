@@ -952,6 +952,7 @@ async function openRoomPreset(key){
   // Never keep the save handle for the previously opened room.
   state.saveHandle=null;
   useProject(data,true);
+  if(/^garden-v[1-4]$/.test(key))$("handoffBranch").value="design/s7-garden-v"+key.slice(-1);
   frameCurrentRoom();
   if(key==="f01-f"||key==="f01-g"||key==="f02-g01"||key==="f03-s-g01"||key==="f03-t-g01"){
     // Focus on the TRUE G01 north-east poolside arc (22.5–75 degrees).
@@ -1077,7 +1078,7 @@ async function startup(){
 
   if(g00lCount!==28)say("Некомплетна G-00L библиотека "+g00lCount+"/28. Направи Fetch/Pull и рестарт.",true);
   const roboticsCount=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length;
-  $("packagePreset").disabled=roboticsCount!==18;
+  // Other packages and plant previews remain available even if an optional S7-F batch is missing.
   if(roboticsCount!==18)say("Стар Builder каталог: "+roboticsCount+"/18 роботи. Fetch/Pull и рестарт.",true);
   for(const item of state.catalog)state.registry.set(item.id,item);
  }catch(err){say("Каталогот не е достапен: "+err.message,true);}
