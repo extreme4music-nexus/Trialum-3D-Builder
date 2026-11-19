@@ -667,49 +667,50 @@ async function exportBundle(){
 }
 
 
-/* Explicit download of original bundled S7-F binary GLBs. The general "ZIP ↓"
- * exports imported assets only; it intentionally does NOT include stock GLBs.
- * This exporter includes all 18 independently named glTF2 binaries. */
-async function downloadS7FModels(){
- const btn=$("downloadS7FGLB");
- const models=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).sort((a,b)=>a.id.localeCompare(b.id));
- if(models.length!==18){say("Не може ZIP: локалниот каталог има "+models.length+"/18 S7-F GLB. GitHub Desktop Pull, затвори стар сервер и отвори го новиот.",true);return;}
+
+/** A reviewable design-to-game handoff, NEVER an implicit game-engine edit. */
+async function exportDesignHandoff(){
+ const project=collectProject();
+ const branch=$("handoffBranch").value;
+ if(!/^design\/s7-garden-v[1-4]$/.test(branch)){say("Недозволена дизајнерска гранка.",true);return;}
+ const btn=$("exportHandoff");
  btn.disabled=true;
  try{
-  const files=[["README-S7-F.txt","Trialum S7-F — 18 original REAL glTF2 GLB files.\nGroups: E01/E02/T01/T02/T03/R01, 3 GLBs each.\nUnpack with paths preserved into Trialum-3D-Builder.\nThese are visual QA assets, NOT connected to live gameplay.\n"]];
-  for(let i=0;i<models.length;i++){
-   const a=models[i],url="./"+a.src;
-   const response=await fetch(url,{cache:"no-store"});
-   if(!response.ok)throw Error(a.id+" · HTTP "+response.status);
-   const bytes=new Uint8Array(await response.arrayBuffer());
-   if(bytes.length<20||String.fromCharCode(...bytes.slice(0,4))!=="glTF")throw Error(a.id+" не е вистински GLB");
-   files.push([a.src,bytes]);
-   $("s7fStatus").textContent="📦 Подготвувам GLB "+(i+1)+"/18…";
-  }
-  for(const path of ["assets/s7-f/s7-f-manifest.json","assets/s7-f/s7-f-catalog-additions.json","projects/trialum-s7-f-all.json","projects/trialum-s7-f-robot.json"]){
-   const res=await fetch("./"+path,{cache:"no-store"});
-   if(!res.ok)throw Error(path+" · HTTP "+res.status);
-   files.push([path,await res.text()]);
-  }
-  downloadBlob(makeZip(files),"TRIALUM-S7-F-ALL-18-REAL-GLB.zip");
-  say("Симнати се сите 18 вистински S7-F GLB + R01 + каталог и сцени (ZIP).");
- }catch(e){say("Неуспешен S7-F GLB ZIP: "+e.message,true);}
- finally{
-  btn.disabled=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length!==18;
-  const robotics=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length;
-  const robot=state.catalog.filter(a=>a.id?.startsWith("s7-f-r01-")&&a.src?.endsWith(".glb")).length;
-  $("s7fStatus").textContent="🤖 S7-F "+robotics+"/18 · R01 "+robot+"/3 · верзија "+(state.catalogVersion||"непозната");
- }
+  const used=[...new Set(project.instances.filter(x=>x.visible).map(x=>x.assetId))];
+  const missing=used.filter(id=>!state.registry.has(id));
+  if(missing.length)throw Error("Не се достапни GLB IDs: "+missing.slice(0,6).join(", "));
+  const library=used.map(id=>{
+   const a=state.registry.get(id);
+   return {assetId:id,src:a.src||null,category:a.category||null,dimensions:a.dimensions||null};
+  });
+  const local=library.filter(x=>x.src?.startsWith("local:"));
+  if(local.length)throw Error("Прво зачувај ги личните GLB во Builder репо: "+local.map(x=>x.assetId).join(", "));
+  const handoff={
+   schemaVersion:1,
+   kind:"TRIALUM_BUILDER_DESIGN_HANDOFF",
+   targetBranch:branch,
+   targetRepository:"extreme4music-nexus/Trialum-3D-Builder",
+   requestedGameBranch:"feature/lw-d-s7-owner-garden-review",
+   ownerApproval:"PENDING",
+   gameMainWrites:false,liveGameStateWrites:false,
+   sceneProjectId:project.projectId,
+   sceneName:project.name,
+   libraryVersion:state.catalogVersion,
+   sourceProject:"handoff/approved-scene.json",
+   referencedAssets:library,
+   canonicalLimits:{landBeds:4,slotsPerBed:5,aquaticSlots:4},
+   instructions:"Review in Builder. Owner visual PASS is required. Only then implement asset placement in isolated Trialum game branch; never merge game main or edit inventories directly."
+  };
+  const files=[
+   ["handoff/approved-scene.json",JSON.stringify(project,null,2)+"\n"],
+   ["handoff/manifest.json",JSON.stringify(handoff,null,2)+"\n"],
+   ["handoff/README.md","# Trialum Builder — owner garden handoff\n\nTarget: "+branch+" (Builder repo).\nKeep exact physical GLB paths, positions, names, pivots.\nHuman owner visual PASS required before any engine integration.\nDo not change game main, classic gameplay, plant IDs or plant capacities.\n"]
+  ];
+  downloadBlob(makeZip(files),"TRIALUM-"+branch.replaceAll("/","-")+"-HANDOFF.zip");
+  say("Извезен одделен handoff ZIP за "+branch+". Сè уште не е пушнат GitHub branch.");
+ }catch(e){say("Handoff: "+e.message,true);}
+ finally{btn.disabled=false;}
 }
-function showS7FCategory(group){
- const category=group==="all"?S7_F_ALL:"S7-F · R01";
- if(group==="r01"&&!state.catalog.some(a=>a.category===category)){say("R01 не е во овој локален каталог — Pull од main.",true);return;}
- ui.assetSearch.value="";
- ui.categoryFilter.value=category;
- renderCatalogue();
- say(group==="all"?"Прикажани се сите 18 S7-F машини, транспортери и R01 робот.":"Прикажани се трите вистински R01 GLB: робот, алат и полнач.");
-}
-
 function isTyping(e){return ["INPUT","TEXTAREA","SELECT"].includes(document.activeElement?.tagName)||document.activeElement?.isContentEditable}
 function handleKey(e){
  if(isTyping(e))return;
@@ -876,6 +877,10 @@ const ROOM_PRESETS=Object.freeze({
  "metal-m02":"trialum-s7-metal-m02-20-glbs.json",
  "metal-m03":"trialum-s7-metal-m03-20-glbs.json",
  "metal-compare":"trialum-s7-metal-3-finishes-service-compare.json",
+ "garden-v1":"trialum-s7-complete-garden-v1.json",
+ "garden-v2":"trialum-s7-complete-garden-v2.json",
+ "garden-v3":"trialum-s7-complete-garden-v3.json",
+ "garden-v4":"trialum-s7-complete-garden-v4.json",
  "s7f-all":"trialum-s7-f-all.json",
  "s7f-heroes":"trialum-s7-f-heroes.json",
  "s7f-machines":"trialum-s7-f-machines.json",
@@ -955,17 +960,10 @@ function addListeners(){
  ui.categoryFilter.addEventListener("change",renderCatalogue);
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
- $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");
- $("openS7FRobots").onclick=()=>openRoomPreset("s7f-all");
- $("filterS7F").onclick=()=>showS7FCategory("all");
- $("filterR01").onclick=()=>showS7FCategory("r01");
- $("downloadS7FGLB").onclick=downloadS7FModels;
- $("animationPlay").onclick=()=>playSelectedAnimation(ui.animationClip.value);
- $("animationStop").onclick=()=>playSelectedAnimation(null);
- $("openG00LE0E1Gallery").onclick=()=>openRoomPreset("g00l-e0e1-all");
- $("openIrrigationGallery").onclick=()=>openRoomPreset("irrigation-all");
+ $("packagePreset").onchange=e=>{const key=e.target.value;if(key)openRoomPreset(key);e.target.value="";};
+ $("exportHandoff").onclick=exportDesignHandoff;
+
  $("openProject").onclick=()=>ui.projectFileInput.click();
- $("openS7Project").onclick=()=>openRoomPreset("f01");
  $("scenePreset").onchange=e=>openRoomPreset(e.target.value);
  $("soilMatrixTool").onclick=()=>{
    const panel=$("soilMatrixPanel");
@@ -1052,18 +1050,13 @@ async function startup(){
   const lightCount=state.catalog.filter(a=>/^s7-l(?:f[1-3]|w[1-2]|c[1-3])-/.test(a.id)&&a.src?.endsWith(".glb")).length;
   const versionNode=$("builderLibraryVersion");
   if(versionNode)versionNode.textContent="BUILDER · "+physicalCount+" GLB · LED "+lightCount+"/24 · S7-F "+state.catalog.filter(a=>a.id?.startsWith("s7-f-")).length+"/18";
-  $("openLightingGallery").disabled=lightCount!==24;
+  // Package controls are in the left selector; all individual assets remain in the catalogue.
   if(lightCount!==24)say("Локалниот Builder каталог има само "+lightCount+"/24 LED модели. Провери MAIN Pull и рестартирај го локалниот сервер.",true);
   const g00lCount=state.catalog.filter(a=>/^s7-e0e1-/.test(a.id)&&a.src?.endsWith(".glb")).length;
-  $("openG00LE0E1Gallery").disabled=g00lCount!==28;
+
   if(g00lCount!==28)say("Некомплетна G-00L библиотека "+g00lCount+"/28. Направи Fetch/Pull и рестарт.",true);
   const roboticsCount=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length;
-  $("openS7FRobots").disabled=roboticsCount!==18;
-  $("filterS7F").disabled=roboticsCount!==18;
-  $("downloadS7FGLB").disabled=roboticsCount!==18;
-  const r01Count=state.catalog.filter(a=>a.id?.startsWith("s7-f-r01-")&&a.src?.endsWith(".glb")).length;
-  $("filterR01").disabled=r01Count!==3;
-  $("s7fStatus").textContent="🤖 S7-F "+roboticsCount+"/18 · R01 "+r01Count+"/3 · верзија "+state.catalogVersion;
+  $("packagePreset").disabled=roboticsCount!==18;
   if(roboticsCount!==18)say("Стар Builder каталог: "+roboticsCount+"/18 роботи. Fetch/Pull и рестарт.",true);
   for(const item of state.catalog)state.registry.set(item.id,item);
  }catch(err){say("Каталогот не е достапен: "+err.message,true);}
