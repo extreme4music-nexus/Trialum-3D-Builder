@@ -274,7 +274,7 @@ test("one-click 24-light gallery remains visible after pulling Builder main",()=
  assert.match(html,/id="openLightingGallery"/);
  assert.match(html,/id="builderLibraryVersion"/);
  assert.match(js,/\$\("openLightingGallery"\)\.onclick=\(\)=>openRoomPreset\("lights-all"\)/);
- assert.match(js,/LED "\+lightCount\+"\/24"/);
+ assert.match(js,/LED "\+lightCount\+"\/24 · S7-F /);
  for(const item of ["lights-all","lights-floor","lights-wall","lights-ceiling","lights-g01"]){
   assert.ok(html.includes('value="'+item+'"'),item+" not in room selector");
   assert.ok(js.includes('"'+item+'":"trialum-s7-lights-'),item+" route missing");
