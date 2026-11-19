@@ -64,6 +64,44 @@ jobs:
               assert all(x['assetId'] in ids for x in p['instances'])
           print('PASS: 22 original GLBs, six animations each, four full scenes, 4x5+4 canonical slots')
           PY
+      - name: Package all 28 staged plant GLBs and four finished editable gardens
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, zipfile
+          root=Path('.')
+          manifest=json.loads(Path('assets/s7-flora-22-manifest.json').read_text())
+          ids=[x['id'] for x in manifest['models']]
+          ids+=['aquaglow-sprout','aquaglow-young','aquaglow-growing','aquaglow-mature','aquaglow-weakened','aquaglow-dead']
+          assert len(set(ids))==28
+          out=Path('dist')
+          out.mkdir(exist_ok=True)
+          with zipfile.ZipFile(out/'TRIALUM-S7-ALL-28-FLORA-GLB-AND-4-GARDENS.zip','w',zipfile.ZIP_DEFLATED,compresslevel=7) as zip:
+              for id in ids:
+                  path=Path('assets/models')/(id+'.glb')
+                  assert path.is_file(),path
+                  zip.write(path,path.as_posix())
+              for p in ['assets/s7-flora-22-manifest.json','assets/catalog.json',
+                        'docs/S7_COMPLETE_GARDEN_UI_PLANTS_HANDOFF_20261119.md']:
+                  if Path(p).exists():zip.write(p,p)
+              for v in (1,2,3,4):
+                  name=f'projects/trialum-s7-complete-garden-v{v}.json'
+                  zip.write(name,name)
+              zip.writestr('README-INSTALL.txt',
+                  'Unzip in the ROOT of Trialum-3D-Builder if desired.\n'
+                  'These are visual Builder assets, not game engine integrations.\n'
+                  'Total 28 plant GLBs and 4 complete editable greenhouse JSONs.\n')
+          print('PASS 28 plant binaries, 4 editable garden JSONs')
+          PY
+      - uses: actions/upload-artifact@v4
+        name: Download S7 full flora and garden pack
+        with:
+          name: TRIALUM-S7-FLORA28-GARDENS4-REAL-GLB
+          path: dist/TRIALUM-S7-ALL-28-FLORA-GLB-AND-4-GARDENS.zip
+          if-no-files-found: error
+          retention-days: 90
       - name: Commit generated GLBs + catalog + review scenes to Builder main only
         run: |
           set -euo pipefail
