@@ -1,16 +1,48 @@
 # Trialum 3D World Builder (TWCS)
 
-## 🤖 S7-F — сите 18 роботи, машини и транспортери + директен GLB ZIP (19.11.2026)
+## 🌿 S7 — NOVEMBER 19 2026 — 360 real GLB + four complete editable garden layouts
 
-Веќе постојат **18 вистински S7-F GLB** (по три за E01, E02, T01, T02, T03 и R01) во `assets/models/s7-f-*.glb`. R01 = **хуманоиден сервисен робот**, негов алат и полнач; **не е светилка**. S7-LF/LC/LW се посебни 24 LED модели / прстенести лустери.
+**AUTHORITATIVE CURRENT GUIDE.** Previously recorded milestones below are historical; any old note saying that a GLB gallery lives under "Избери 3D просторија…" is obsolete.
 
-Во левиот дел **Библиотека** притисни **🤖 S7-F · сите 18**, **🦾 R01 · 3 GLB** или во **Категорија** избери **S7-F · СИТЕ 18 (E01–R01)**. За сите оригинални GLB фајлови притисни **📦 S7-F GLB ZIP ↓**: внатре има точно 18 физички `.glb`, R01, манифест, каталог и тест-сцени. Постоечкото општо **ZIP ↓** е за твојата тековна сцена и локално увезени модели и **не** ги пакува стандардните 338 GLB од библиотеката.
+### Where to find everything
 
-На горниот статус ќе пишува **S7-F 18/18**, а под филтерот **R01 3/3** и локална верзија. Ако не ги гледаш овие три нови копчиња, не си во тековниот Builder: во GitHub Desktop избери токму `extreme4music-nexus/Trialum-3D-Builder` → `main` → **Fetch origin / Pull origin**. Зачувај ги незачуваните сцени, затвори го **стариот локален сервер**, стартувај `START-BUILDER-WINDOWS.bat` од новата клонирана папка и освежи `http://127.0.0.1:8765/` со **Ctrl+F5**. Не го бриши клонот, `.git` или своите дизајни.
+- **TOP → "Избери 3D просторија…"** contains REAL rooms: Agro Atrium, Warehouse, Cold Storage, Packing, Greenhouse, G01 water core; plus **four complete garden options V1/V2/V3/V4**. No standalone GLB packages here.
+- **LEFT → "📦 Готови пакети / тест сцени"** contains all 53 previously visible GLB gallery packages (S7 F01 original 70 tiles, marble F01–F03, soil S01–S03, M01–M03, robotics S7-F/R01, irrigation I01–I06, lighting LED, G-00L fixtures). Select a package to open its fully editable QA scene.
+- **LEFT → "Категорија"** contains every asset category including individual **S7-F · E01/E02/T01/T02/T03/R01** and each of the four plant species. Select an individual GLB model card, then "Постави" to add it to the scene. Search matches IDs like `s7-f-r01-humanoid`.
+- Removed all special top `S7-F 18`, `G-00L 28`, `IRR 58`, `LED 24`, `S7 F01` buttons and left S7-F/R01/ZIP quick buttons.
 
-За непосредно отворање во сцена, горе кликни **🤖 S7-F 18**, или во **Избери 3D просторија…** одбери **S7-F · Сите 18 машини и робот** / **S7-F · R01 робот, алат и док**. Овие се прегледни 3D модели со анимациски клипови; физичко одобрување од сопственикот и поврзување со engine/gameplay се посебни фази.
+### New 22 real 3D plant binaries (total 360)
 
+Based strictly on the Trialum original canonical flora:
+`lumemoss` (land), `glowfern` (land), `mineralreed` (land), and `aquaglow` (G01 water).
 
+- Land: **7 physical GLBs per species**: seedling, young, growing, mature, ready-for-transplant, weakened, dead (21).
+- Water: **existing 6 Aquaglow GLBs preserved**, plus `aquaglow-ready-for-transplant.glb` (1 new).
+- 22 new glTF2 GLBs, 6 preview animation clips each: `idle-sway`, `machine-pass`, `water-react`, `root-settle`, `growth-crossfade`, `droop`. These visual clips do not perform original engine growth.
+- Source `tools/b1/build-s7-complete-garden.py`, generated SHA-256 manifest `assets/s7-flora-22-manifest.json`, all physical models in `assets/models/`.
+
+### Four fully equipped edit-ready greenhouse variants
+
+`projects/trialum-s7-complete-garden-v{1,2,3,4}.json`, **873 model instances each**. All have **exactly the same non-floor assets** and exact same physical placement: original greenhouse shell, true G01 water core, original G00L *left at entry* with two nursery RS racks plus four larger RM racks, hologram workstation, empty transport/maintenance machines and R01, four beds G02..G05, irrigation per bed, G01 and per-finger lighting, 4 aquatic and 20 terrestrial **preview** plants.
+
+Only **773 floor tiles** change material palette and pattern:
+V1 cream-white marble, V2 black marble contrast, V3 grey-green stone, V4 mixed mosaic. Every tile, rack, hose, lamp, robot and plant has an independent Builder scene object ID and can be moved/rotated/redecorated and saved as JSON.
+
+**Not gameplay:** 25 holes on a S02 tile are only geometry. The canonical engine remains 4 land beds × 5 real slots + 4 aquatic slots. Preview plants are NOT active plantIds, racks do NOT contain invented inventory. All garden scenes have `officialScene:false`, `gameplayWrites:0` and `ownerVisualPass:false`. Pool cutout alignment, physical fit and FPS/visual fidelity require the owner's inspection before use in the game.
+
+### Own Git branch for chosen design
+
+After changing a V1–V4 garden, use top `Handoff · Градина V1…V4` selector (automatically matches opened starter variant), then **🌿 Handoff ↓** to download a self-contained JSON+manifest ZIP. Or **🌿 Гранка ↑** and explicitly confirm to create/update `design/s7-garden-v1` etc. in the **Builder repo only**. The local Python localhost server builds a data-only Git commit in an isolated temporary index, writes **only two handoff files** (`handoff/approved-scene.json`, `handoff/manifest.json`) on that branch, and pushes normally (never force, no checkout, no Game main changes). The chosen branch contains inherited Builder sources but its **branch diff** only contains the two handoff files. You may also use the ZIP manually if GitHub Desktop authentication is unavailable. On Node fallback there is no secure Git publishing, but ZIP still works.
+
+Do not confuse clicking handoff with approving visuals or installing to Trialum. The game implementation stage uses a separate `feature/lw-d-s7-owner-garden-review` branch **only after your physical model and layout PASS** and independent original-engine QA.
+
+**Getting the version:** GitHub Desktop `Trialum-3D-Builder` → `main` → Fetch origin / Pull origin → close the old localhost server → `START-BUILDER-WINDOWS.bat` → `http://127.0.0.1:8765/` → Ctrl+F5. The header should read `BUILDER · 360 GLB`. Preserve your personal JSON drafts; never erase `.git` or your own scenes.
+
+**Handoff/next steps:** [S7 completed visual Builder handoff](docs/S7_COMPLETE_GARDEN_UI_PLANTS_HANDOFF_20261119.md). S7.8-G visuals are now built; next is **owner visual/pass** then **S7.8-H (original-engine action contracts, runtime placement, simulation integration and mobile QA)** and **S7.8-I (complete regression and owner acceptance)**. These next stages are NOT implemented by this editor work.
+
+---
+
+## Historical milestones and instructions (older counts/menus are archived)
 
 ## 🌱 Нови S02/S03 почвени GLB и интерактивна 5×5 матрица — 18.11.2026
 
