@@ -214,6 +214,20 @@ function sceneGroupFor(rec){
  group.visible=rec.visible;
  return group;
 }
+function alignGardenObjectToSupport(obj,rec){
+ // GLB authors use different pivots. Treat an editable object's scene Y
+ // as the top of the supporting surface, NOT its arbitrary GLB mesh origin.
+ // Never touch physical shell, below-grade water or structural basin models.
+ if(!isGreenhouseGardenProject())return;
+ const floorFixture=rec.layer==="decor"&&/^s7-lf[1-3]-/.test(rec.assetId);
+ if(rec.layer!=="props"&&!floorFixture)return;
+ const bbox=new THREE.Box3().setFromObject(obj);
+ if(!Number.isFinite(bbox.min.y)||!Number.isFinite(bbox.max.y))return;
+ const delta=-bbox.min.y;
+ if(Math.abs(delta)<1e-5)return;
+ obj.position.y+=delta;
+ obj.userData.floorSupportOffset=delta;
+}
 function styleOriginalG01Water(root){
  // Retain the original 4-node, 2-morph-target glTF water and 6-second loop;
  // this fixes its viewer material without replacing water with fake geometry.
@@ -246,6 +260,7 @@ async function renderInstance(rec){
   const obj=await modelObject(asset);
   if(state.instanceMeshes.get(rec.id)!==root)return;
   if(rec.assetId==="g01-water-surfaces-animated")styleOriginalG01Water(obj);
+  alignGardenObjectToSupport(obj,rec);
   root.add(obj);
   const clips=state.modelAnimations.get(asset.id)||[];
   if(clips.length){
