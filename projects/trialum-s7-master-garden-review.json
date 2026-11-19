@@ -774,11 +774,11 @@
       "assetId": "s7-c-irr01-bed-control-compact",
       "label": "s7-c-irr01-bed-control-compact",
       "position": [
-        -29.97,
-        0.1,
-        -5.607
+        -26.028,
+        0.04,
+        -4.82
       ],
-      "rotationY": -1.27409,
+      "rotationY": -1.274,
       "scale": [
         1,
         1,
@@ -788,18 +788,18 @@
       "locked": false,
       "visible": true,
       "binding": "preview:bed-1",
-      "note": "Per-bed panel, read-only until engine contract."
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-1-irrig-1",
       "assetId": "s7-i01-feed-distributor-4",
       "label": "s7-i01-feed-distributor-4",
       "position": [
-        -28.453,
-        0.1,
-        -4.412
+        -26.895,
+        0.13,
+        -4.72
       ],
-      "rotationY": -1.27409,
+      "rotationY": -1.274,
       "scale": [
         1,
         1,
@@ -809,18 +809,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-1-irrig-2",
       "assetId": "s7-i02-pump-compact",
       "label": "s7-i02-pump-compact",
       "position": [
-        -29.33,
-        0.1,
-        -5.307
+        -28.091,
+        0.13,
+        -5.085
       ],
-      "rotationY": -1.27409,
+      "rotationY": -1.274,
       "scale": [
         1,
         1,
@@ -830,18 +830,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-1-irrig-3",
       "assetId": "s7-i03-hose-soft-arch-1m",
       "label": "s7-i03-hose-soft-arch-1m",
       "position": [
-        -29.965,
-        0.1,
-        -6.651
+        -26.584,
+        0.14,
+        -5.566
       ],
-      "rotationY": -1.27409,
+      "rotationY": -1.274,
       "scale": [
         1,
         1,
@@ -851,18 +851,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-1-irrig-4",
       "assetId": "s7-i04-tee",
       "label": "s7-i04-tee",
       "position": [
-        -29.749,
-        0.1,
-        -7.527
+        -27.828,
+        0.14,
+        -5.946
       ],
-      "rotationY": -1.27409,
+      "rotationY": -1.274,
       "scale": [
         1,
         1,
@@ -872,18 +872,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-1-irrig-5",
       "assetId": "s7-i05-dripline-1m",
       "label": "s7-i05-dripline-1m",
       "position": [
-        -29.545,
-        0.1,
-        -8.196
+        -28.569,
+        0.17,
+        -7.113
       ],
-      "rotationY": -1.27409,
+      "rotationY": -1.274,
       "scale": [
         1,
         1,
@@ -893,18 +893,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
     },
     {
       "id": "bed-1-irrig-6",
       "assetId": "s7-i06-replacement-cartridge",
       "label": "s7-i06-replacement-cartridge",
       "position": [
-        -28.971,
-        0.1,
-        -9.903
+        -27.662,
+        0.32,
+        -5.634
       ],
-      "rotationY": -1.27409,
+      "rotationY": -1.274,
       "scale": [
         1,
         1,
@@ -914,7 +914,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-1-plant-preview-1",
@@ -1089,11 +1089,11 @@
       "assetId": "s7-c-irr01-bed-control-compact",
       "label": "s7-c-irr01-bed-control-compact",
       "position": [
-        -31.8,
-        0.1,
-        -35.18
+        -30.204,
+        0.04,
+        -31.35
       ],
-      "rotationY": -0.663225,
+      "rotationY": -0.663,
       "scale": [
         1,
         1,
@@ -1103,18 +1103,18 @@
       "locked": false,
       "visible": true,
       "binding": "preview:bed-2",
-      "note": "Per-bed panel, read-only until engine contract."
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-2-irrig-1",
       "assetId": "s7-i01-feed-distributor-4",
       "label": "s7-i01-feed-distributor-4",
       "position": [
-        -31.243,
-        0.1,
-        -33.33
+        -30.973,
+        0.13,
+        -31.765
       ],
-      "rotationY": -0.663225,
+      "rotationY": -0.663,
       "scale": [
         1,
         1,
@@ -1124,18 +1124,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-2-irrig-2",
       "assetId": "s7-i02-pump-compact",
       "label": "s7-i02-pump-compact",
       "position": [
-        -31.448,
-        0.1,
-        -34.566
+        -31.742,
+        0.13,
+        -32.75
       ],
-      "rotationY": -0.663225,
+      "rotationY": -0.663,
       "scale": [
         1,
         1,
@@ -1145,18 +1145,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-2-irrig-3",
       "assetId": "s7-i03-hose-soft-arch-1m",
       "label": "s7-i03-hose-soft-arch-1m",
       "position": [
-        -31.197,
-        0.1,
-        -36.032
+        -30.233,
+        0.14,
+        -32.28
       ],
-      "rotationY": -0.663225,
+      "rotationY": -0.663,
       "scale": [
         1,
         1,
@@ -1166,18 +1166,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-2-irrig-4",
       "assetId": "s7-i04-tee",
       "label": "s7-i04-tee",
       "position": [
-        -30.518,
-        0.1,
-        -36.625
+        -31.033,
+        0.14,
+        -33.304
       ],
-      "rotationY": -0.663225,
+      "rotationY": -0.663,
       "scale": [
         1,
         1,
@@ -1187,18 +1187,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-2-irrig-5",
       "assetId": "s7-i05-dripline-1m",
       "label": "s7-i05-dripline-1m",
       "position": [
-        -29.967,
-        0.1,
-        -37.056
+        -29.788,
+        0.17,
+        -35.609
       ],
-      "rotationY": -0.663225,
+      "rotationY": -0.663,
       "scale": [
         1,
         1,
@@ -1208,18 +1208,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
     },
     {
       "id": "bed-2-irrig-6",
       "assetId": "s7-i06-replacement-cartridge",
       "label": "s7-i06-replacement-cartridge",
       "position": [
-        -28.517,
-        0.1,
-        -38.125
+        -31.076,
+        0.32,
+        -32.954
       ],
-      "rotationY": -0.663225,
+      "rotationY": -0.663,
       "scale": [
         1,
         1,
@@ -1229,7 +1229,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-2-plant-preview-1",
@@ -1404,11 +1404,11 @@
       "assetId": "s7-c-irr01-bed-control-compact",
       "label": "s7-c-irr01-bed-control-compact",
       "position": [
-        -5.328,
-        0.1,
-        -55.148
+        -7.287,
+        0.04,
+        -51.077
       ],
-      "rotationY": -0.034907,
+      "rotationY": -0.035,
       "scale": [
         1,
         1,
@@ -1418,18 +1418,18 @@
       "locked": false,
       "visible": true,
       "binding": "preview:bed-3",
-      "note": "Per-bed panel, read-only until engine contract."
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-3-irrig-1",
       "assetId": "s7-i01-feed-distributor-4",
       "label": "s7-i01-feed-distributor-4",
       "position": [
-        -5.965,
-        0.1,
-        -53.324
+        -7.665,
+        0.13,
+        -51.864
       ],
-      "rotationY": -0.034907,
+      "rotationY": -0.035,
       "scale": [
         1,
         1,
@@ -1439,18 +1439,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-3-irrig-2",
       "assetId": "s7-i02-pump-compact",
       "label": "s7-i02-pump-compact",
       "position": [
-        -5.403,
-        0.1,
-        -54.445
+        -7.708,
+        0.13,
+        -53.113
       ],
-      "rotationY": -0.034907,
+      "rotationY": -0.035,
       "scale": [
         1,
         1,
@@ -1460,18 +1460,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-3-irrig-3",
       "assetId": "s7-i03-hose-soft-arch-1m",
       "label": "s7-i03-hose-soft-arch-1m",
       "position": [
-        -4.339,
-        0.1,
-        -55.482
+        -6.764,
+        0.14,
+        -51.846
       ],
-      "rotationY": -0.034907,
+      "rotationY": -0.035,
       "scale": [
         1,
         1,
@@ -1481,18 +1481,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-3-irrig-4",
       "assetId": "s7-i04-tee",
       "label": "s7-i04-tee",
       "position": [
-        -3.441,
-        0.1,
-        -55.564
+        -6.809,
+        0.14,
+        -53.145
       ],
-      "rotationY": -0.034907,
+      "rotationY": -0.035,
       "scale": [
         1,
         1,
@@ -1502,18 +1502,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-3-irrig-5",
       "assetId": "s7-i05-dripline-1m",
       "label": "s7-i05-dripline-1m",
       "position": [
-        -2.742,
-        0.1,
-        -55.588
+        -3.448,
+        0.17,
+        -54.313
       ],
-      "rotationY": -0.034907,
+      "rotationY": -0.035,
       "scale": [
         1,
         1,
@@ -1523,18 +1523,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
     },
     {
       "id": "bed-3-irrig-6",
       "assetId": "s7-i06-replacement-cartridge",
       "label": "s7-i06-replacement-cartridge",
       "position": [
-        -0.941,
-        0.1,
-        -55.601
+        -7.05,
+        0.32,
+        -52.886
       ],
-      "rotationY": -0.034907,
+      "rotationY": -0.035,
       "scale": [
         1,
         1,
@@ -1544,7 +1544,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-3-plant-preview-1",
@@ -1719,11 +1719,11 @@
       "assetId": "s7-c-irr01-bed-control-compact",
       "label": "s7-c-irr01-bed-control-compact",
       "position": [
-        26.352,
-        0.1,
-        -40.62
+        22.867,
+        0.04,
+        -38.238
       ],
-      "rotationY": 0.645772,
+      "rotationY": 0.646,
       "scale": [
         1,
         1,
@@ -1733,18 +1733,18 @@
       "locked": false,
       "visible": true,
       "binding": "preview:bed-4",
-      "note": "Per-bed panel, read-only until engine contract."
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-4-irrig-1",
       "assetId": "s7-i01-feed-distributor-4",
       "label": "s7-i01-feed-distributor-4",
       "position": [
-        24.71,
-        0.1,
-        -39.604
+        23.069,
+        0.13,
+        -39.088
       ],
-      "rotationY": 0.645772,
+      "rotationY": 0.646,
       "scale": [
         1,
         1,
@@ -1754,18 +1754,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-4-irrig-2",
       "assetId": "s7-i02-pump-compact",
       "label": "s7-i02-pump-compact",
       "position": [
-        25.851,
-        0.1,
-        -40.121
+        23.821,
+        0.13,
+        -40.086
       ],
-      "rotationY": 0.645772,
+      "rotationY": 0.646,
       "scale": [
         1,
         1,
@@ -1775,18 +1775,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-4-irrig-3",
       "assetId": "s7-i03-hose-soft-arch-1m",
       "label": "s7-i03-hose-soft-arch-1m",
       "position": [
-        27.331,
-        0.1,
-        -40.258
+        23.757,
+        0.14,
+        -38.506
       ],
-      "rotationY": 0.645772,
+      "rotationY": 0.646,
       "scale": [
         1,
         1,
@@ -1796,18 +1796,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-4-irrig-4",
       "assetId": "s7-i04-tee",
       "label": "s7-i04-tee",
       "position": [
-        28.08,
-        0.1,
-        -39.756
+        24.54,
+        0.14,
+        -39.544
       ],
-      "rotationY": 0.645772,
+      "rotationY": 0.646,
       "scale": [
         1,
         1,
@@ -1817,18 +1817,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-4-irrig-5",
       "assetId": "s7-i05-dripline-1m",
       "label": "s7-i05-dripline-1m",
       "position": [
-        28.639,
-        0.1,
-        -39.335
+        27.288,
+        0.17,
+        -38.788
       ],
-      "rotationY": 0.645772,
+      "rotationY": 0.646,
       "scale": [
         1,
         1,
@@ -1838,18 +1838,18 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
     },
     {
       "id": "bed-4-irrig-6",
       "assetId": "s7-i06-replacement-cartridge",
       "label": "s7-i06-replacement-cartridge",
       "position": [
-        30.047,
-        0.1,
-        -38.212
+        24.19,
+        0.32,
+        -39.495
       ],
-      "rotationY": 0.645772,
+      "rotationY": 0.646,
       "scale": [
         1,
         1,
@@ -1859,7 +1859,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "I01–I06 representative hardware, preview only; no water transfer."
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
     },
     {
       "id": "bed-4-plant-preview-1",
@@ -7299,6 +7299,342 @@
       "visible": true,
       "binding": "",
       "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-bed-1-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        -27.338,
+        0.02,
+        -5.325
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-1-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -28.325,
+        0.17,
+        -7.74
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-1-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -28.068,
+        0.17,
+        -8.581
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-1-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -27.81,
+        0.17,
+        -9.423
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-2-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        -30.987,
+        0.02,
+        -32.515
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-2-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -29.229,
+        0.17,
+        -35.983
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-2-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -28.536,
+        0.17,
+        -36.524
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-2-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -27.842,
+        0.17,
+        -37.066
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-3-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        -7.236,
+        0.02,
+        -52.479
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-3-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -2.776,
+        0.17,
+        -54.286
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-3-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -1.897,
+        0.17,
+        -54.317
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-3-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -1.017,
+        0.17,
+        -54.348
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-4-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        23.789,
+        0.02,
+        -39.296
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-4-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        27.793,
+        0.17,
+        -38.345
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-4-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        28.496,
+        0.17,
+        -37.815
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-4-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        29.199,
+        0.17,
+        -37.286
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 pipe length aligned to physical soil edge; flow requires original engine integration."
     }
   ],
   "assets": [],
