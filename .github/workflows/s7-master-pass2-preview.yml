@@ -37,12 +37,12 @@ jobs:
           curl -sf 'http://127.0.0.1:8765/projects/trialum-s7-master-garden-pass2.json' -o /tmp/scene.json
           curl -sf 'http://127.0.0.1:8765/assets/models/s7-pass2-g00l-glass-partition-door.glb' -o /tmp/door.glb
           test -s /tmp/door.glb
-      - name: Capture six close-up real Chromium WebGL screenshots
+      - name: Capture nine close-up real Chromium WebGL screenshots
         run: |
           set -euo pipefail
           mkdir -p screenshots
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          for view in water g00l bed1 bed2 bed3 bed4; do
+          for view in overview water g00l door desk bed1 bed2 bed3 bed4; do
             echo "WebGL PASS2 camera: $view"
             timeout 115s "$CHROME" --headless=new --no-sandbox --disable-dev-shm-usage \
               --enable-webgl --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader \
@@ -55,7 +55,7 @@ jobs:
           file screenshots/S7-PASS2-*-WEBGL.png
       - uses: actions/upload-artifact@v4
         with:
-          name: S7-MASTER-PASS2-6-REAL-WEBGL-VIEWS
+          name: S7-MASTER-PASS2-9-REAL-WEBGL-VIEWS
           path: |
             screenshots/S7-PASS2-*-WEBGL.png
             screenshots/chrome.log
