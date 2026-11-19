@@ -1044,6 +1044,22 @@ function frameCurrentRoom(){
  camera.far=Math.max(800,size*12);
  camera.updateProjectionMatrix();controls.update();
 }
+function applyGardenCameraBookmark(view){
+ // Optional visual-QA camera-only bookmarks; user can orbit/move everything.
+ // No gameplay or physics coordinates are altered.
+ const perspectives={
+  water:{eye:[15,9,13],target:[0,-.15,-1]},
+  g00l:{eye:[-3.3,7.2,23.5],target:[-11.6,.5,13.1]},
+  bed1:{eye:[-22,7,-1],target:[-30.2,.4,-9.2]},
+  bed2:{eye:[-21,7,-28],target:[-30,.4,-38.4]},
+  bed3:{eye:[7,7,-48],target:[-2,.4,-56.7]},
+  bed4:{eye:[39,7,-31],target:[30.8,.4,-39.7]}
+ };
+ const preset=perspectives[view];if(!preset||!isGreenhouseGardenProject())return;
+ camera.position.fromArray(preset.eye);
+ controls.target.fromArray(preset.target);
+ camera.far=900;camera.updateProjectionMatrix();controls.update();
+}
 async function openRoomPreset(key){
  const file=ROOM_PRESETS[key];if(!file)return;
  if(state.dirty&&!confirm("Има незачувани измени. Да ја отвориме другата просторија?"))return;
@@ -1230,6 +1246,7 @@ async function startup(){
   if(grid)grid.visible=false;
   $("toggleGrid").classList.remove("active");
   frameCurrentRoom();
+  applyGardenCameraBookmark(new URLSearchParams(window.location.search).get("view"));
  }
  if(recoveredLocalDraft){state.dirty=true;ui.saveIndicator.textContent="● Локална копија · треба Git зачувување";ui.saveIndicator.style.color="#edb979";}
  else markSaved();
