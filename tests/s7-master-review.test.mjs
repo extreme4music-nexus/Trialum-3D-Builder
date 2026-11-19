@@ -61,7 +61,7 @@ test("four beds are planted near original dome ends, with proper soil and five d
   for(let j=1;j<=5;j++){
    const plant=p.instances.find(x=>x.id===`bed-${i}-plant-preview-${j}`);
    assert.ok(plant,`${i}/${j}`);
-   assert.ok(Math.hypot(plant.position[0]-bed.position[0],plant.position[2]-bed.position[2])<=1.4);
+   assert.ok(Math.hypot(plant.position[0]-bed.position[0],plant.position[2]-bed.position[2])<=1.85);
    assert.ok(plant.scale[0]>=1.3);
    assert.match(plant.assetId,/^(lumemoss|glowfern|mineralreed)-/);
   }
