@@ -1,11 +1,9 @@
 name: Trialum S7.8-D — 58 genuine irrigation and flexible-hose GLBs
+# HISTORICAL 292-GLB bootstrap. The 58 irrigation assets are already
+# committed and verified in the now-362-GLB current Builder library.
+# Do not automatically regenerate the old 292 asset catalog and old top
+# buttons on unrelated pushes. Modern source of truth is bootstrap.yml.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'assets/irrigation/s7-irrigation-58-source.tar.gz.b64'
-      - '.github/workflows/s7-irrigation-58-glbs.yml'
-      - 'tests/soil-canonical-mapping.test.mjs'
   workflow_dispatch:
 permissions:
   contents: write
