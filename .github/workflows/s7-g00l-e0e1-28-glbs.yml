@@ -101,6 +101,10 @@ jobs:
           if 'G00L twenty-eight real GLBs' not in s:
            s+='\ntest("G00L twenty-eight real GLBs appear in Builder one-click scene",()=>{\n const c=JSON.parse(file("assets/catalog.json"));\n const items=c.assets.filter(a=>a.id.startsWith("s7-e0e1-")&&a.src.endsWith(".glb"));\n assert.equal(items.length,28);assert.equal(c.genuineGlbCount,320);\n const h=file("index.html"),j=file("src/main.js");\n assert.match(h,/id="openG00LE0E1Gallery"/);assert.match(j,/openRoomPreset\\("g00l-e0e1-all"\\)/);\n for(const name of ["all","rs","rm","st","desk","accessories","layout"]){\n  assert.ok(h.includes(\'value="g00l-e0e1-\'+name+\'"\'));\n  assert.ok(j.includes(\'"g00l-e0e1-\'+name+\'"\'));\n }\n const gallery=JSON.parse(file("projects/trialum-g00l-e0e1-all-review.json"));assert.equal(gallery.instances.length,28);\n});\n'
           tests.write_text(s,encoding='utf8')
+          soil=Path('tests/soil-canonical-mapping.test.mjs');v=soil.read_text(encoding='utf8')
+          assert '[210,234,292]' in v or '[210,234,292,320]' in v
+          v=v.replace('[210,234,292]','[210,234,292,320]')
+          soil.write_text(v,encoding='utf8')
           boot=Path('.github/workflows/bootstrap.yml');v=boot.read_text(encoding='utf8')
           v=v.replace('assert len(glbs) in (150,210,234,292),len(glbs)','assert len(glbs) in (150,210,234,292,320),len(glbs)')
           boot.write_text(v,encoding='utf8')
@@ -124,7 +128,7 @@ jobs:
           git config user.email 'trialum-g00l-28@users.noreply.github.com'
           git add -f assets/models/s7-e0e1-*.glb
           git add assets/s7-e0e1/*.json tools/b1/build-s7-g00l-e0e1.py tests/s7-g00l-e0e1-verify.py docs/S7_G00L_E0E1_HANDOFF_20261119.md
-          git add projects/trialum-g00l-e0e1-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
+          git add projects/trialum-g00l-e0e1-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
           if git diff --cached --quiet; then echo 'All 28 physical GLB models already present and indexed'; exit 0; fi
           git commit -m 'feat(S7 G-00L): ship 28 genuine E0/E1 3D assets, seven Builder galleries, no gameplay writes'
           git fetch origin main
