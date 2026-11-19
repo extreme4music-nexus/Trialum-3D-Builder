@@ -42,3 +42,9 @@ input[type=checkbox]{accent-color:#65bb91;box-shadow:none}.topbar{height:70px;ba
 #handoffBranch{max-width:205px;border-color:#548f79}
 #publishHandoff{background:#366e57}
 @media(max-width:1000px){#handoffBranch{max-width:155px}}
+
+/* The header stays usable on a 1400px monitor even with explicit handoff actions. */
+.topbar{gap:12px}
+.top-actions{min-width:0;flex:1;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#6fa18b #1c2a2b;padding:3px 0 7px;align-items:center}
+.top-actions>*{flex:0 0 auto}
+.top-actions #scenePreset{max-width:210px}
