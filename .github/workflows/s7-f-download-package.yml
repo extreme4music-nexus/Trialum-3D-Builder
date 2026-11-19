@@ -1,0 +1,55 @@
+name: S7-F — verified 18-GLB downloadable package
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/s7-f-download-package.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package-s7-f:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate all 18 genuine GLBs against SHA-256 manifest
+        run: |
+          python3 - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          manifest=json.loads(Path('assets/s7-f/s7-f-manifest.json').read_text(encoding='utf-8'))
+          models=manifest['models']
+          assert len(models)==18
+          for model in models:
+              path=Path('assets/models')/(model['id']+'.glb')
+              data=path.read_bytes()
+              assert data[:4]==b'glTF', path
+              assert len(data)==model['bytes'], path
+              assert hashlib.sha256(data).hexdigest()==model['sha256'], path
+          assert len([x for x in models if x['id'].startswith('s7-f-r01-')])==3
+          print('PASS: 18/18 exact GLB binaries, including R01 x3')
+          PY
+      - name: Prepare standalone downloadable ZIP
+        run: |
+          python3 - <<'PY'
+          import json, zipfile
+          from pathlib import Path
+          root=Path('.')
+          manifest=json.loads(Path('assets/s7-f/s7-f-manifest.json').read_text(encoding='utf-8'))
+          dist=Path('dist');dist.mkdir(exist_ok=True)
+          with zipfile.ZipFile(dist/'TRIALUM-S7-F-ALL-18-REAL-GLB.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+              z.writestr('README-S7-F.txt','Trialum S7-F: E01/E02/T01/T02/T03/R01, 3 GLBs each (18 total).\nBuilder category: S7-F, R01. GLBs are preview-only pending owner visual approval.\n')
+              for item in manifest['models']:
+                  p=Path('assets/models')/(item['id']+'.glb')
+                  z.write(p,arcname=str(p))
+              for p in ['assets/s7-f/s7-f-manifest.json','assets/s7-f/s7-f-catalog-additions.json','projects/trialum-s7-f-all.json','projects/trialum-s7-f-robot.json','docs/S7_F_ROBOTICS_18_GLB_HANDOFF_20261119.md']:
+                  z.write(p,arcname=p)
+          print('Wrote',dist/'TRIALUM-S7-F-ALL-18-REAL-GLB.zip')
+          PY
+      - name: Download 18 original S7-F GLBs
+        uses: actions/upload-artifact@v4
+        with:
+          name: TRIALUM-S7-F-ALL-18-REAL-GLB
+          path: dist/TRIALUM-S7-F-ALL-18-REAL-GLB.zip
+          if-no-files-found: error
+          retention-days: 90
