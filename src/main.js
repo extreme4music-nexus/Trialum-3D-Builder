@@ -19,6 +19,7 @@ const ids=["projectName","saveIndicator","assetSearch","categoryFilter","catalog
 const ui=Object.fromEntries(ids.map(id=>[id,$(id)]));
 const LOCAL_AUTOSAVE="trialum-3d-builder:scene-v1";
 const CATALOG_URL="./assets/catalog.json";
+const S7_F_ALL="S7-F · СИТЕ 18";
 const GLB_MAX_BYTES=32*1024*1024;
 const loader=new GLTFLoader();
 const math=THREE.MathUtils;
@@ -370,7 +371,7 @@ function renderCatalogue(){
  ui.catalog.replaceChildren();
  let n=0;
  for(const asset of state.registry.values()){
-  if(cat&&asset.category!==cat)continue;
+  if(cat===S7_F_ALL?!asset.id.startsWith("s7-f-"):(cat&&asset.category!==cat))continue;
   if(search&&!((asset.name+" "+asset.id+" "+asset.category).toLocaleLowerCase("mk").includes(search)))continue;
   n++;
   const b=document.createElement("button");b.className="asset-card"+(state.selectedAssetId===asset.id?" selected":"");
@@ -388,10 +389,10 @@ function refreshCategories(){
  const val=ui.categoryFilter.value;
  const categories=[...new Set([...state.registry.values()].map(a=>a.category||"Останато"))].sort();
  ui.categoryFilter.replaceChildren();
- for(const [v,label]of [["","Сите категории"],...categories.map(x=>[x,x])]){
+ for(const [v,label]of [["","Сите категории"],[S7_F_ALL,"🤖 S7-F · СИТЕ 18 (E01–R01)"],...categories.map(x=>[x,x])]){
   const op=document.createElement("option");op.value=v;op.textContent=label;ui.categoryFilter.append(op);
  }
- ui.categoryFilter.value=categories.includes(val)?val:"";
+ ui.categoryFilter.value=(categories.includes(val)||val===S7_F_ALL)?val:"";
  renderCatalogue();
 }
 function setTool(tool){
@@ -665,6 +666,50 @@ async function exportBundle(){
  say("Извезен ZIP. За автоматско додавање GLB во Git repo користи Зачувај.");
 }
 
+
+/* Explicit download of original bundled S7-F binary GLBs. The general "ZIP ↓"
+ * exports imported assets only; it intentionally does NOT include stock GLBs.
+ * This exporter includes all 18 independently named glTF2 binaries. */
+async function downloadS7FModels(){
+ const btn=$("downloadS7FGLB");
+ const models=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).sort((a,b)=>a.id.localeCompare(b.id));
+ if(models.length!==18){say("Не може ZIP: локалниот каталог има "+models.length+"/18 S7-F GLB. GitHub Desktop Pull, затвори стар сервер и отвори го новиот.",true);return;}
+ btn.disabled=true;
+ try{
+  const files=[["README-S7-F.txt","Trialum S7-F — 18 original REAL glTF2 GLB files.\nGroups: E01/E02/T01/T02/T03/R01, 3 GLBs each.\nUnpack with paths preserved into Trialum-3D-Builder.\nThese are visual QA assets, NOT connected to live gameplay.\n"]];
+  for(let i=0;i<models.length;i++){
+   const a=models[i],url="./"+a.src;
+   const response=await fetch(url,{cache:"no-store"});
+   if(!response.ok)throw Error(a.id+" · HTTP "+response.status);
+   const bytes=new Uint8Array(await response.arrayBuffer());
+   if(bytes.length<20||String.fromCharCode(...bytes.slice(0,4))!=="glTF")throw Error(a.id+" не е вистински GLB");
+   files.push([a.src,bytes]);
+   $("s7fStatus").textContent="📦 Подготвувам GLB "+(i+1)+"/18…";
+  }
+  for(const path of ["assets/s7-f/s7-f-manifest.json","assets/s7-f/s7-f-catalog-additions.json","projects/trialum-s7-f-all.json","projects/trialum-s7-f-robot.json"]){
+   const res=await fetch("./"+path,{cache:"no-store"});
+   if(!res.ok)throw Error(path+" · HTTP "+res.status);
+   files.push([path,await res.text()]);
+  }
+  downloadBlob(makeZip(files),"TRIALUM-S7-F-ALL-18-REAL-GLB.zip");
+  say("Симнати се сите 18 вистински S7-F GLB + R01 + каталог и сцени (ZIP).");
+ }catch(e){say("Неуспешен S7-F GLB ZIP: "+e.message,true);}
+ finally{
+  btn.disabled=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length!==18;
+  const robotics=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length;
+  const robot=state.catalog.filter(a=>a.id?.startsWith("s7-f-r01-")&&a.src?.endsWith(".glb")).length;
+  $("s7fStatus").textContent="🤖 S7-F "+robotics+"/18 · R01 "+robot+"/3 · верзија "+(state.catalogVersion||"непозната");
+ }
+}
+function showS7FCategory(group){
+ const category=group==="all"?S7_F_ALL:"S7-F · R01";
+ if(group==="r01"&&!state.catalog.some(a=>a.category===category)){say("R01 не е во овој локален каталог — Pull од main.",true);return;}
+ ui.assetSearch.value="";
+ ui.categoryFilter.value=category;
+ renderCatalogue();
+ say(group==="all"?"Прикажани се сите 18 S7-F машини, транспортери и R01 робот.":"Прикажани се трите вистински R01 GLB: робот, алат и полнач.");
+}
+
 function isTyping(e){return ["INPUT","TEXTAREA","SELECT"].includes(document.activeElement?.tagName)||document.activeElement?.isContentEditable}
 function handleKey(e){
  if(isTyping(e))return;
@@ -912,6 +957,9 @@ function addListeners(){
  $("newProject").onclick=newProject;
  $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");
  $("openS7FRobots").onclick=()=>openRoomPreset("s7f-all");
+ $("filterS7F").onclick=()=>showS7FCategory("all");
+ $("filterR01").onclick=()=>showS7FCategory("r01");
+ $("downloadS7FGLB").onclick=downloadS7FModels;
  $("animationPlay").onclick=()=>playSelectedAnimation(ui.animationClip.value);
  $("animationStop").onclick=()=>playSelectedAnimation(null);
  $("openG00LE0E1Gallery").onclick=()=>openRoomPreset("g00l-e0e1-all");
@@ -999,10 +1047,11 @@ async function startup(){
   if(!response.ok)throw Error("HTTP "+response.status);
   const library=await response.json();
   state.catalog=library.assets||[];
+  state.catalogVersion=library.assetLibraryVersion||"unknown";
   const physicalCount=state.catalog.filter(a=>a.src?.endsWith(".glb")).length;
   const lightCount=state.catalog.filter(a=>/^s7-l(?:f[1-3]|w[1-2]|c[1-3])-/.test(a.id)&&a.src?.endsWith(".glb")).length;
   const versionNode=$("builderLibraryVersion");
-  if(versionNode)versionNode.textContent="BUILDER · "+physicalCount+" GLB · LED "+lightCount+"/24";
+  if(versionNode)versionNode.textContent="BUILDER · "+physicalCount+" GLB · LED "+lightCount+"/24 · S7-F "+state.catalog.filter(a=>a.id?.startsWith("s7-f-")).length+"/18";
   $("openLightingGallery").disabled=lightCount!==24;
   if(lightCount!==24)say("Локалниот Builder каталог има само "+lightCount+"/24 LED модели. Провери MAIN Pull и рестартирај го локалниот сервер.",true);
   const g00lCount=state.catalog.filter(a=>/^s7-e0e1-/.test(a.id)&&a.src?.endsWith(".glb")).length;
@@ -1010,6 +1059,11 @@ async function startup(){
   if(g00lCount!==28)say("Некомплетна G-00L библиотека "+g00lCount+"/28. Направи Fetch/Pull и рестарт.",true);
   const roboticsCount=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length;
   $("openS7FRobots").disabled=roboticsCount!==18;
+  $("filterS7F").disabled=roboticsCount!==18;
+  $("downloadS7FGLB").disabled=roboticsCount!==18;
+  const r01Count=state.catalog.filter(a=>a.id?.startsWith("s7-f-r01-")&&a.src?.endsWith(".glb")).length;
+  $("filterR01").disabled=r01Count!==3;
+  $("s7fStatus").textContent="🤖 S7-F "+roboticsCount+"/18 · R01 "+r01Count+"/3 · верзија "+state.catalogVersion;
   if(roboticsCount!==18)say("Стар Builder каталог: "+roboticsCount+"/18 роботи. Fetch/Pull и рестарт.",true);
   for(const item of state.catalog)state.registry.set(item.id,item);
  }catch(err){say("Каталогот не е достапен: "+err.message,true);}
