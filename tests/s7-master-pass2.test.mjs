@@ -75,9 +75,11 @@ test("black and white genuine marble does NOT seal any G01 water opening",()=>{
   for(const [hx,hz,r] of pools)
    assert.ok(Math.hypot(xx-hx,zz-hz)>r+half+.05,"Marble across water: "+x.id);
  }
- assert.equal(objs.filter(x=>/pass2-bed\d+-round-stone-/.test(x.id)).length,32);
+ assert.equal(objs.filter(x=>/pass2-bed\d+-stone-frame-/.test(x.id)).length,32);
  assert.equal(objs.filter(x=>/pass2-bed\d+-seedling-/.test(x.id)).length,88);
- assert.equal(objs.filter(x=>/pass2-bed\d+-stone-border-/.test(x.id)).length,88);
+ assert.equal(objs.filter(x=>/pass2-bed\d+-stone-border-/.test(x.id)).length,0);
+ assert.equal(objs.filter(x=>/pass2-bed\d+-round-stone-/.test(x.id)).length,0);
+ assert.ok(objs.filter(x=>x.id.startsWith("pass2-g01-stone-accent-")).length>=14);
 });
 test("Builder JSON roundtrip retains safe engine PASS2 instructions",()=>{
  const p=sanitizeProject(after);
