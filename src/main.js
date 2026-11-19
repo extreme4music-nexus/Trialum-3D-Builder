@@ -230,6 +230,20 @@ function sceneGroupFor(rec){
  group.visible=rec.visible;
  return group;
 }
+function centerGardenFloorPivot(obj,rec){
+ // Critical original geometry contract: S02 5x5 and S03 soil GLBs are modeled
+ // from [0,0] to [1,1] (local LOWER-LEFT), NOT around an origin at their center.
+ // A 4.65m soil patch thus used to extend ~2.3m away from its five plants.
+ // Recenter real model bounds BEFORE the parent root rotates/scales the instance.
+ if(!isGreenhouseGardenProject()||rec.layer!=="floor")return;
+ const bounds=new THREE.Box3().setFromObject(obj);
+ if(!Number.isFinite(bounds.min.x)||!Number.isFinite(bounds.max.x)||
+    !Number.isFinite(bounds.min.z)||!Number.isFinite(bounds.max.z))return;
+ const mid=bounds.getCenter(new THREE.Vector3());
+ obj.position.x-=mid.x;
+ obj.position.z-=mid.z;
+ obj.userData.floorPivotCentered=true;
+}
 function alignGardenObjectToSupport(obj,rec){
  // GLB authors use different pivots. Treat an editable object's scene Y
  // as the top of the supporting surface, NOT its arbitrary GLB mesh origin.
@@ -276,6 +290,7 @@ async function renderInstance(rec){
   const obj=await modelObject(asset);
   if(state.instanceMeshes.get(rec.id)!==root)return;
   if(rec.assetId==="g01-water-surfaces-animated")styleOriginalG01Water(obj);
+  centerGardenFloorPivot(obj,rec);
   alignGardenObjectToSupport(obj,rec);
   root.add(obj);
   const clips=state.modelAnimations.get(asset.id)||[];
