@@ -319,3 +319,26 @@ test("single-clip S7-F robot animation preview prevents concurrent actions",()=>
  assert.doesNotMatch(j,/for\(const clip of clips\)mixer\.clipAction\(clip\)\.play\(\)/);
  assert.match(j,/function playSelectedAnimation\(/);
 });
+
+
+test("S7-F and R01 models are directly discoverable and all original binaries exportable",()=>{
+ const h=file("index.html"),src=file("src/main.js"),catalog=JSON.parse(file("assets/catalog.json"));
+ const parts=catalog.assets.filter(a=>a.id.startsWith("s7-f-")&&a.src?.endsWith(".glb"));
+ const robots=parts.filter(a=>a.id.startsWith("s7-f-r01-"));
+ assert.equal(parts.length,18);
+ assert.equal(robots.length,3);
+ assert.equal(new Set(parts.map(a=>a.id)).size,18);
+ for(const id of ["filterS7F","filterR01","downloadS7FGLB","s7fStatus"]){
+   assert.ok(h.includes('id="'+id+'"'),id);
+   assert.ok(src.includes('"'+id+'"'),id);
+ }
+ assert.match(src,/const S7_F_ALL=/);
+ assert.match(src,/function showS7FCategory/);
+ assert.match(src,/async function downloadS7FModels/);
+ assert.match(src,/downloadBlob\(makeZip\(files\),"TRIALUM-S7-F-ALL-18-REAL-GLB\.zip"\)/);
+ assert.ok(h.includes('value="s7f-robot"'));
+ assert.ok(h.includes('value="s7f-all"'));
+ const all=JSON.parse(file("projects/trialum-s7-f-all.json"));
+ assert.equal(all.instances.length,18);
+ assert.ok(all.instances.every(x=>parts.some(a=>a.id===x.assetId)));
+});
