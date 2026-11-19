@@ -161,6 +161,15 @@
         </div>
         <div id="inspector" hidden>
           <div id="selectedAssetTitle" class="selected-title"></div>
+          <div id="animationControls" hidden>
+            <label class="field-label" for="animationClip">🎞️ GLB анимација (3D преглед)</label>
+            <select id="animationClip" aria-label="Одбери една анимација за избраниот 3D модел"></select>
+            <div class="two-buttons">
+              <button id="animationPlay" type="button">▶ Пушти</button>
+              <button id="animationStop" type="button">■ Стоп</button>
+            </div>
+            <small class="helptext">Само визуелен преглед во Builder — не извршува задачи во играта.</small>
+          </div>
           <label class="field-label" for="objLabel">Име на предмет</label>
           <input id="objLabel" maxlength="100">
           <p class="field-label">Позиција (метри)</p>
