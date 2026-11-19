@@ -29,10 +29,7 @@
       </div>
       <nav class="top-actions" aria-label="Проекти">
         <button id="newProject" title="Нова сцена">Ново</button>
-        <button id="openS7FRobots" class="accent" title="18 вистински GLB модели E01/E02/T01–T03/R01">🤖 S7-F 18</button>
-        <button id="openG00LE0E1Gallery" class="accent" title="Отвори 28 реални GLB модули за G-00L">🪴 G-00L 28</button>
-        <button id="openIrrigationGallery" class="accent" title="Отвори ги 58-те вистински GLB модели за наводнување">💧 IRR 58</button>
-        <button id="openLightingGallery" class="accent" title="Отвори ги сите 24 вистински 3D светилки во нова сцена, без рачно увезување">💡 LED 24</button>
+
         <select id="scenePreset" title="Вчитај вистински Trialum GLB простор" aria-label="3D простории од Trialum">
           <option value="">🏛️ Избери 3D просторија…</option>
           <option value="atrium">🏛️ Агро лоби</option>
@@ -41,6 +38,38 @@
           <option value="packing">📦 Пакување</option>
           <option value="greenhouse">🌿 Стаклена градина</option>
           <option value="g01">💧 G01 водно јадро</option>
+          <option value="garden-v1">🌿 Градина · Варијанта 1 — крем патеки</option>
+          <option value="garden-v2">🌿 Градина · Варијанта 2 — темен мермер</option>
+          <option value="garden-v3">🌿 Градина · Варијанта 3 — сиво-зелен камен</option>
+          <option value="garden-v4">🌿 Градина · Варијанта 4 — комбиниран мозаик</option>
+        </select>
+        <button id="soilMatrixTool" title="Уреди 25 визуелни места на избраната S02 почвена коцка (демо, без gameplay)">🌱 Матрица 5×5</button>
+
+        <button id="openProject" title="Отвори JSON проект">Отвори</button>
+        <button id="saveProject" class="accent" title="Зачувај во папка на GitHub Desktop">Зачувај</button>
+        <button id="gitPull" title="Преземи последни измени од GitHub; претходно зачувај">GitHub ↓</button>
+        <button id="gitPublish" title="Commit и Push само на зачувани дизајни кон Builder main">GitHub ↑</button>
+        <button id="exportProject" title="Преземи JSON проект">JSON ↓</button>
+        <button id="exportLivingSpace" title="Извези Living Spaces дизајн за идниот во-игра уредувач, без gameplay измени">Дом JSON ↓</button>
+        <button id="exportBundle" title="Преземи ZIP со GLB и сцена">ZIP ↓</button>
+        <select id="handoffBranch" aria-label="Гранка за дизајнерски handoff" title="Избери цел на handoff, без промена на оригиналната игра">
+          <option value="design/s7-garden-v1">🌿 Handoff · Градина V1</option>
+          <option value="design/s7-garden-v2">🌿 Handoff · Градина V2</option>
+          <option value="design/s7-garden-v3">🌿 Handoff · Градина V3</option>
+          <option value="design/s7-garden-v4">🌿 Handoff · Градина V4</option>
+        </select>
+        <button id="exportHandoff" class="accent" title="Извези одобрлив JSON и manifest за посебен дизајнерски бранч, без автоматско менување на играта">🌿 Handoff ↓</button>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <aside class="left sidebar">
+        <div class="panel-heading"><h2>Библиотека</h2><span id="assetCounter">0 модели</span></div>
+        
+        <label for="packagePreset" class="library-field-label">📦 Готови пакети / тест сцени</label>
+        <select id="packagePreset" aria-label="Готови пакети и модели">
+          <option value="">📦 Избери цел пакет за работа…</option>
+          <option value="f01">🤍 S7 F01 · Оригинален мермерен сет (70)</option>
           <option value="f01-f">🤍 F01-F · 7 МАЛИ плочки околу G01 (тест)</option>
           <option value="f01-g">🤍 F01-G · 7 закривени рабови ОКОЛУ G01</option>
           <option value="f01-g-showcase">✨ F01-G · Долга мермерна лајсна 3D</option>
@@ -95,30 +124,12 @@
           <option value="lights-g01">💡 G01 · лустер 1+4 прстени</option>
           <option value="soil-compare">🌿 S01/S02 · споредба почвени коцки</option>
         </select>
-        <button id="soilMatrixTool" title="Уреди 25 визуелни места на избраната S02 почвена коцка (демо, без gameplay)">🌱 Матрица 5×5</button>
-        <button id="openS7Project" title="Вчитај активен Trialum S7 F01 проект">S7 F01</button>
-        <button id="openProject" title="Отвори JSON проект">Отвори</button>
-        <button id="saveProject" class="accent" title="Зачувај во папка на GitHub Desktop">Зачувај</button>
-        <button id="gitPull" title="Преземи последни измени од GitHub; претходно зачувај">GitHub ↓</button>
-        <button id="gitPublish" title="Commit и Push само на зачувани дизајни кон Builder main">GitHub ↑</button>
-        <button id="exportProject" title="Преземи JSON проект">JSON ↓</button>
-        <button id="exportLivingSpace" title="Извези Living Spaces дизајн за идниот во-игра уредувач, без gameplay измени">Дом JSON ↓</button>
-        <button id="exportBundle" title="Преземи ZIP со GLB и сцена">ZIP ↓</button>
-      </nav>
-    </header>
+        <p class="helper">Пакетот отвора уредлива сцена. Поединечните GLB остануваат подолу во каталогот.</p>
 
-    <main class="layout">
-      <aside class="left sidebar">
-        <div class="panel-heading"><h2>Библиотека</h2><span id="assetCounter">0 модели</span></div>
         <p class="helper">Избери модел, па кликни на теренот.</p>
         <input id="assetSearch" type="search" placeholder="Пребарај модел…" aria-label="Пребарај модел">
         <select id="categoryFilter" aria-label="Категорија"><option value="">Сите категории</option></select>
-        <div class="s7f-quick" role="group" aria-label="S7-F роботи и модели">
-          <button id="filterS7F" title="Покажи ги сите 18 S7-F модели во левиот каталог">🤖 S7-F · сите 18</button>
-          <button id="filterR01" title="Само робот R01, неговиот алат и станицата за полнење">🦾 R01 · 3 GLB</button>
-          <button id="downloadS7FGLB" class="accent" title="Преземи ZIP со 18 физички GLB, manifest, категории и две сцени">📦 S7-F GLB ZIP ↓</button>
-        </div>
-        <small class="s7f-library-status" id="s7fStatus" role="status" aria-live="polite">🤖 S7-F библиотека · проверка…</small>
+        
         <div id="catalog" class="catalog" role="listbox" aria-label="3Д модели"></div>
         <div class="import-zone">
           <button id="importGlb" class="full">＋ Додај GLB модел</button>
