@@ -350,7 +350,7 @@ test("S7 user UI: top dropdown contains ONLY real rooms and four full garden var
  assert.ok(room);assert.ok(packages);
  const roomIds=[...room.matchAll(/<option value="([^"]+)"/g)].map(m=>m[1]).filter(Boolean);
  assert.deepEqual(roomIds,["atrium","warehouse","cold","packing","greenhouse","g01",
-    "garden-master","garden-v1","garden-v2","garden-v3","garden-v4"]);
+    "garden-master","garden-pass1","garden-v1","garden-v2","garden-v3","garden-v4"]);
  for(const preset of ["f01","s7f-all","s7f-robot","g00l-e0e1-all","lights-all",
     "irrigation-all","f02-gallery","f03-all","soil-dug","metal-all"])
   assert.ok(packages.includes('value="'+preset+'"'),"Missing left package "+preset);
@@ -366,7 +366,7 @@ test("S7 user UI: top dropdown contains ONLY real rooms and four full garden var
 
 test("360 real GLBs include 22 genuinely distinct canonical flora stages and full four S7 scenes",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
- assert.ok([360,361,362].includes(c.genuineGlbCount),`expected reviewed original 360 + optional G01 master edge, got ${c.genuineGlbCount}`);
+ assert.ok([360,361,362,363].includes(c.genuineGlbCount),`expected reviewed original 360 + optional G01 master edge, got ${c.genuineGlbCount}`);
  const m=JSON.parse(file("assets/s7-flora-22-manifest.json"));
  assert.equal(m.models.length,22);
  const modelIds=new Set(m.models.map(a=>a.id));
