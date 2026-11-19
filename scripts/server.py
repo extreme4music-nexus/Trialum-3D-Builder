@@ -7,6 +7,7 @@ import base64,hashlib,json,os,re,secrets,subprocess,tempfile,threading
 from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
+from handoff_git import publish_handoff
 ROOT=Path(__file__).resolve().parents[1]
 HOST="127.0.0.1"
 TOKEN=secrets.token_urlsafe(32)
@@ -191,6 +192,30 @@ class Handler(SimpleHTTPRequestHandler):
 
  def do_POST(self):
   route=urlsplit(self.path).path
+  if route=="/api/handoff-publish":
+   if not self.allowed_origin() or self.headers.get("X-Trialum-CSRF")!=TOKEN or self.headers.get("Content-Type")!="application/json":
+    self.respond(403,{"ok":False,"code":"INVALID_SESSION","error":"Invalid origin or session"});return
+   try:
+    length=int(self.headers.get("Content-Length","0"))
+   except (ValueError,OverflowError):
+    length=-1
+   if length<32 or length>3000000:
+    self.respond(400,{"ok":False,"code":"HANDOFF_TOO_LARGE","error":"Handoff JSON must be 32B..3MB"});return
+   try:
+    payload=json.loads(self.rfile.read(length))
+   except (ValueError,UnicodeError):
+    self.respond(400,{"ok":False,"code":"HANDOFF_BAD_JSON","error":"Invalid JSON"});return
+   if not LOCK.acquire(blocking=False):
+    self.respond(409,{"ok":False,"code":"GIT_BUSY","error":"Another Git operation is running"});return
+   try:
+    result=publish_handoff(payload,ROOT,guard,git,GitFault)
+    self.respond(200,{"ok":True,**result})
+   except (GitFault,RuntimeError,subprocess.TimeoutExpired,FileNotFoundError,ValueError,TypeError) as e:
+    self.respond(409,failure(e))
+   finally:
+    LOCK.release()
+   return
+
   if route not in ("/api/git-pull","/api/git-publish"):
    self.respond(404,{"ok":False,"code":"UNKNOWN_ROUTE","error":"Unknown route"});return
   if not self.allowed_origin() or self.headers.get("X-Trialum-CSRF")!=TOKEN or self.headers.get("Content-Type")!="application/json":
