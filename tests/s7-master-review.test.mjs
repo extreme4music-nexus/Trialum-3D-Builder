@@ -110,3 +110,28 @@ test("g00l floor supports racks and tool; no legacy 773-square overlay",()=>{
  assert.equal(tool.position[1],.94);
  assert.ok(tray.position[1]>=.7 && tray.position[1]<1);
 });
+
+test("G00L open glass canopy covers real service area without altering original central greenhouse",()=>{
+ const annex=p.instances.filter(x=>x.id==="master-g00l-glass-annex");
+ assert.equal(annex.length,1);
+ assert.equal(annex[0].assetId,"s7-master-g00l-glass-service-wing");
+ assert.equal(annex[0].layer,"structure");
+ const connectors=p.instances.filter(x=>x.id.startsWith("master-g00l-entrance-connector-"));
+ assert.equal(connectors.length,8);
+ assert.equal(new Set(connectors.map(x=>x.position[0]+","+x.position[2])).size,8);
+ const manifest=json("assets/s7-master-g00l-annex-manifest.json");
+ assert.equal(manifest.gameplayWrites,0);
+ assert.equal(manifest.originalShellUnmodified,true);
+ assert.equal(manifest.openServiceZone,true);
+ const b=fs.readFileSync("assets/models/s7-master-g00l-glass-service-wing.glb");
+ assert.equal(b.subarray(0,4).toString(),"glTF");
+ assert.equal(b.readUInt32LE(8),b.length);
+ const len=b.readUInt32LE(12);
+ const doc=JSON.parse(b.subarray(20,20+len).toString("utf8"));
+ assert.equal(doc.asset.version,"2.0");
+ assert.equal(doc.asset.extras.isFifthFinger,false);
+ assert.equal(doc.asset.extras.originalGreenhouseUnmodified,true);
+ assert.equal(doc.materials[0].alphaMode,"BLEND");
+ assert.equal(doc.meshes[0].primitives.length,3);
+ assert.equal(catalog.genuineGlbCount,362);
+});
