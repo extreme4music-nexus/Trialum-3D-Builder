@@ -99,6 +99,10 @@ function textureColor(asset){
  return "#9cbdb1";
 }
 
+function isGreenhouseGardenProject(){
+ const id=String(state.project?.projectId||"");
+ return /^trialum-s7-(?:complete-garden-v[1-4]|master-garden)/.test(id);
+}
 function roomHelpers(){
  state.roomMeshes.forEach(x=>helpers.remove(x));
  state.roomMeshes.length=0;wallMeshes=[];
@@ -108,6 +112,10 @@ function roomHelpers(){
  floorMesh.rotation.x=-Math.PI/2;
  floorMesh.position.y=-.018;
  floorMesh.name="ReferenceFloor_NoGameplay";
+ // The original physical greenhouse-shell GLB already includes its own holed
+ // floor. The old full rectangular helper plane at Y=-.018 sealed all four
+ // aquatic basins whose animated water surface is at Y=-.235.
+ floorMesh.visible=!isGreenhouseGardenProject();
  helpers.add(floorMesh);state.roomMeshes.push(floorMesh);
  grid=new THREE.GridHelper(Math.max(width,depth),Math.round(Math.max(width,depth)/gridStep()),0x63a68f,0x415a58);
  grid.position.y=.003;
@@ -206,6 +214,26 @@ function sceneGroupFor(rec){
  group.visible=rec.visible;
  return group;
 }
+function styleOriginalG01Water(root){
+ // Retain the original 4-node, 2-morph-target glTF water and 6-second loop;
+ // this fixes its viewer material without replacing water with fake geometry.
+ root.traverse(child=>{
+  if(!child.isMesh)return;
+  const source=child.material;
+  const water=source.clone();
+  water.transparent=true;
+  water.depthWrite=false;
+  water.side=THREE.DoubleSide;
+  water.opacity=0.88;
+  water.metalness=0.06;
+  water.roughness=0.19;
+  water.color.setRGB(0.12,0.68,0.81);
+  if(water.emissive){water.emissive.setRGB(0.015,0.085,0.105);water.emissiveIntensity=1.2;}
+  water.needsUpdate=true;
+  child.material=water;
+  child.renderOrder=2;
+ });
+}
 async function renderInstance(rec){
  const old=state.instanceMeshes.get(rec.id);
  if(old){if(gizmo.object===old)gizmo.detach();contentRoot.remove(old);state.animationMixers.delete(rec.id);}
@@ -217,11 +245,14 @@ async function renderInstance(rec){
  try{
   const obj=await modelObject(asset);
   if(state.instanceMeshes.get(rec.id)!==root)return;
+  if(rec.assetId==="g01-water-surfaces-animated")styleOriginalG01Water(obj);
   root.add(obj);
   const clips=state.modelAnimations.get(asset.id)||[];
   if(clips.length){
    const mixer=new THREE.AnimationMixer(obj);
-   const defaultClip=clips.find(c=>c.name==="idle")||clips[0];
+   const defaultClip=rec.assetId==="g01-water-surfaces-animated"
+    ?(clips.find(c=>c.name==="G01_WATER_RIPPLES_LOOP_6S")||clips[0])
+    :(clips.find(c=>c.name==="idle-sway")||clips.find(c=>c.name==="idle")||clips[0]);
    mixer.clipAction(defaultClip).reset().play();
    state.animationMixers.set(rec.id,mixer);
    if(state.selectedId===rec.id)refreshInspector();
