@@ -342,3 +342,62 @@ test("S7-F and R01 models are directly discoverable and all original binaries ex
  assert.equal(all.instances.length,18);
  assert.ok(all.instances.every(x=>parts.some(a=>a.id===x.assetId)));
 });
+
+test("S7 user UI: top dropdown contains ONLY real rooms and four full garden variants",()=>{
+ const html=file("index.html"),js=file("src/main.js");
+ const room=html.match(/<select id="scenePreset"[^>]*>([\s\S]*?)<\/select>/)?.[1];
+ const packages=html.match(/<select id="packagePreset"[^>]*>([\s\S]*?)<\/select>/)?.[1];
+ assert.ok(room);assert.ok(packages);
+ const roomIds=[...room.matchAll(/<option value="([^"]+)"/g)].map(m=>m[1]).filter(Boolean);
+ assert.deepEqual(roomIds,["atrium","warehouse","cold","packing","greenhouse","g01",
+    "garden-v1","garden-v2","garden-v3","garden-v4"]);
+ for(const preset of ["f01","s7f-all","s7f-robot","g00l-e0e1-all","lights-all",
+    "irrigation-all","f02-gallery","f03-all","soil-dug","metal-all"])
+  assert.ok(packages.includes('value="'+preset+'"'),"Missing left package "+preset);
+ for(const id of ["openS7FRobots","openG00LE0E1Gallery","openLightingGallery",
+   "openIrrigationGallery","openS7Project","filterS7F","filterR01","downloadS7FGLB"])
+  assert.ok(!html.includes('id="'+id+'"'),"Obsolete top/quick model control: "+id);
+ for(const id of ["packagePreset","modelQuickSelect","categoryFilter","handoffBranch","exportHandoff","publishHandoff"])
+  assert.ok(html.includes('id="'+id+'"'),id);
+ assert.match(js,/function refreshIndividualModelPicker/);
+ assert.match(js,/function publishHandoffBranch/);
+ assert.match(js,/\.onclick=publishHandoffBranch/);
+});
+
+test("360 real GLBs include 22 genuinely distinct canonical flora stages and full four S7 scenes",()=>{
+ const c=JSON.parse(file("assets/catalog.json"));
+ assert.equal(c.genuineGlbCount,360);
+ const m=JSON.parse(file("assets/s7-flora-22-manifest.json"));
+ assert.equal(m.models.length,22);
+ const modelIds=new Set(m.models.map(a=>a.id));
+ assert.equal(modelIds.size,22);
+ for(const sp of ["lumemoss","glowfern","mineralreed"]){
+  for(const stage of ["seedling","young","growing","mature","ready-for-transplant","weakened","dead"])
+   assert.ok(modelIds.has(sp+"-"+stage),sp+"-"+stage);
+ }
+ assert.ok(modelIds.has("aquaglow-ready-for-transplant"));
+ for(const stage of ["sprout","young","growing","mature","weakened","dead"])
+  assert.ok(c.assets.some(a=>a.id==="aquaglow-"+stage));
+ let stable=null;
+ for(let i=1;i<=4;i++){
+  const p=JSON.parse(file("projects/trialum-s7-complete-garden-v"+i+".json"));
+  assert.equal(p.instances.length,873);
+  assert.equal(p.instances.filter(x=>x.id.startsWith("floor-")).length,773);
+  const objects=p.instances.filter(x=>!x.id.startsWith("floor-"));
+  assert.equal(objects.length,100);
+  if(!stable)stable=objects;
+  else assert.deepEqual(objects,stable);
+  assert.equal(p.meta.gameplayWrites,0);
+  assert.equal(p.meta.officialScene,false);
+  assert.equal(p.meta.ownerVisualPass,false);
+  assert.equal(p.meta.capacity.beds,4);
+  assert.equal(p.meta.capacity.slotsPerBed,5);
+  assert.equal(p.meta.capacity.aquaticSlots,4);
+  assert.equal(p.instances.filter(x=>x.id.includes("-plant-preview-")).length,20);
+  assert.equal(p.instances.filter(x=>x.id.startsWith("aquatic-slot-")).length,4);
+  assert.equal(p.instances.filter(x=>x.id.startsWith("g00l-rs-")).length,2);
+  assert.equal(p.instances.filter(x=>x.id.startsWith("g00l-rm-")).length,4);
+  assert.ok(p.instances.some(x=>x.assetId==="g01-water-surfaces-animated"));
+  assert.ok(p.instances.some(x=>x.assetId==="s7-f-r01-humanoid"));
+ }
+});
