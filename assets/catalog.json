@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "name": "Trialum real 130 GLB studio assets — F01 ivory marble, F02 black marble, F03 smooth and subtly textured sage grey stone, original rooms",
+  "name": "Trialum 3D World Builder — 338 physical GLBs, including 18 S7-F robots and 24 S7-L lights",
   "units": "m",
   "upAxis": "Y",
   "assets": [
@@ -4095,7 +4095,7 @@
       "category": "Светилки S7 · L-F1",
       "src": "assets/models/s7-lf1-perimeter-straight-1m.glb",
       "dimensions": [
-        1.0,
+        1,
         0.041,
         0.092
       ],
@@ -4242,9 +4242,9 @@
       "category": "Светилки S7 · L-F3",
       "src": "assets/models/s7-lf3-glass-floor-square-1m.glb",
       "dimensions": [
-        1.0,
+        1,
         0.0915,
-        1.0
+        1
       ],
       "placement": "floor",
       "source": "tools/b1/build-s7-lights.py / S7 visual brief REF-05",
@@ -4284,9 +4284,9 @@
       "category": "Светилки S7 · L-F3",
       "src": "assets/models/s7-lf3-glass-floor-square-service.glb",
       "dimensions": [
-        1.0,
+        1,
         0.0915,
-        1.0
+        1
       ],
       "placement": "floor",
       "source": "tools/b1/build-s7-lights.py / S7 visual brief REF-05",
@@ -5681,7 +5681,7 @@
       "category": "RS · Расадници",
       "src": "assets/models/s7-e0e1-rs03-nursery-mobile.glb",
       "dimensions": [
-        1.0,
+        1,
         1.792,
         0.633
       ],
@@ -6536,6 +6536,6 @@
       "pivotStandard": "Y-up; physical floor y≈0; attach named joints via glTF nodes"
     }
   ],
-  "assetLibraryVersion": "2026-11-18-floor-mixed-338-glbs",
+  "assetLibraryVersion": "2026-11-19-s7-f-visible-338-real-glbs",
   "genuineGlbCount": 338
 }
