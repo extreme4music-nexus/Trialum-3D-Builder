@@ -1,0 +1,11 @@
+{
+  "id": "s7-master-g00l-glass-service-wing",
+  "path": "assets/models/s7-master-g00l-glass-service-wing.glb",
+  "bytes": 59124,
+  "sha256": "890cf03c33fd9ac2c09589c62687bb0f643064605c091bfaca5a9a0490bd15aa",
+  "openServiceZone": true,
+  "roofOnlyOutsideOriginalDome": true,
+  "originalShellUnmodified": true,
+  "gameplayWrites": 0,
+  "ownerVisualPass": false
+}

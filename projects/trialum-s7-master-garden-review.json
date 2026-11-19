@@ -7635,6 +7635,195 @@
       "visible": true,
       "binding": "",
       "note": "G-05 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-g00l-glass-annex",
+      "assetId": "s7-master-g00l-glass-service-wing",
+      "label": "G-00L · отворен стаклен сервисен анекс",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 owner review: original central glass dome remains untouched; G-00L left of entrance remains open to main greenhouse."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z17",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z17",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z19",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        19
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z19",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        19
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z21",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        21
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z21",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        21
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z23",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        23
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z23",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        23
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
     }
   ],
   "assets": [],

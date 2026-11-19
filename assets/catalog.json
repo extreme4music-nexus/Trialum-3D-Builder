@@ -7144,8 +7144,24 @@
       "gameplayWrites": 0,
       "ownerVisualPass": false,
       "source": "tools/b1/build-s7-master-g01-finish.py"
+    },
+    {
+      "id": "s7-master-g00l-glass-service-wing",
+      "name": "G-00L · стаклен отворен сервисен анекс",
+      "category": "Градина S7 · Завршни елементи",
+      "src": "assets/models/s7-master-g00l-glass-service-wing.glb",
+      "dimensions": [
+        16.2,
+        5.23,
+        20.2
+      ],
+      "placement": "floor",
+      "visualOnly": true,
+      "gameplayWrites": 0,
+      "ownerVisualPass": false,
+      "source": "tools/b1/build-s7-g00l-annex.py"
     }
   ],
-  "assetLibraryVersion": "2026-11-19-s7-master-review-smoothed-g01-361",
-  "genuineGlbCount": 361
+  "assetLibraryVersion": "2026-11-19-s7-master-g00l-glass-annex-362",
+  "genuineGlbCount": 362
 }
