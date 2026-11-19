@@ -113,6 +113,12 @@
         <p class="helper">Избери модел, па кликни на теренот.</p>
         <input id="assetSearch" type="search" placeholder="Пребарај модел…" aria-label="Пребарај модел">
         <select id="categoryFilter" aria-label="Категорија"><option value="">Сите категории</option></select>
+        <div class="s7f-quick" role="group" aria-label="S7-F роботи и модели">
+          <button id="filterS7F" title="Покажи ги сите 18 S7-F модели во левиот каталог">🤖 S7-F · сите 18</button>
+          <button id="filterR01" title="Само робот R01, неговиот алат и станицата за полнење">🦾 R01 · 3 GLB</button>
+          <button id="downloadS7FGLB" class="accent" title="Преземи ZIP со 18 физички GLB, manifest, категории и две сцени">📦 S7-F GLB ZIP ↓</button>
+        </div>
+        <small class="s7f-library-status" id="s7fStatus" role="status" aria-live="polite">🤖 S7-F библиотека · проверка…</small>
         <div id="catalog" class="catalog" role="listbox" aria-label="3Д модели"></div>
         <div class="import-zone">
           <button id="importGlb" class="full">＋ Додај GLB модел</button>
