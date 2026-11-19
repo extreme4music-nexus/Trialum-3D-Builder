@@ -1064,7 +1064,7 @@ function applyGardenCameraBookmark(view){
  // No gameplay or physics coordinates are altered.
  const perspectives={
   water:{eye:[15,9,13],target:[0,-.15,-1]},
-  g00l:{eye:[-3.3,7.2,23.5],target:[-11.6,.5,13.1]},
+  g00l:{eye:[-5.4,3.05,22.6],target:[-12.1,1.25,13.0]},
   bed1:{eye:[-22,7,-1],target:[-30.2,.4,-9.2]},
   bed2:{eye:[-21,7,-28],target:[-30,.4,-38.4]},
   bed3:{eye:[7,7,-48],target:[-2,.4,-56.7]},
