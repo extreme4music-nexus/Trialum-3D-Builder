@@ -564,8 +564,8 @@
       "assetId": "s7-e0e1-cn01-seedling-tray-demo",
       "label": "s7-e0e1-cn01-seedling-tray-demo",
       "position": [
-        -12.7,
-        0,
+        -15.3,
+        0.73,
         15.7
       ],
       "rotationY": 0,
@@ -578,7 +578,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "Расаден послужавник на под за проверка; премести го на реален стојач по owner PASS."
+      "note": "Декоративен расаден сад поставен на физичка полица од RS01, без gameplay inventory."
     },
     {
       "id": "g00l-equipment-11",
@@ -627,9 +627,9 @@
       "assetId": "s7-f-r01-repair-tool",
       "label": "s7-f-r01-repair-tool",
       "position": [
-        -8.7,
+        -9.2,
         0.94,
-        13.9
+        13.88
       ],
       "rotationY": 0,
       "scale": [
@@ -641,7 +641,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+      "note": "R01 repair tool placed on desk surface, physically rooted using real GLB bounds."
     },
     {
       "id": "g00l-equipment-14",
@@ -2112,741 +2112,6 @@
       "visible": true,
       "binding": "",
       "note": "Builder visual scene only; no gameplay writes"
-    },
-    {
-      "id": "master-g00l-floor-1",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -16,
-        0.01,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-2",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -16,
-        0.01,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-3",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -16,
-        0.01,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-4",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -16,
-        0.01,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-5",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -16,
-        0.01,
-        17
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-6",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -16,
-        0.01,
-        19
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-7",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -16,
-        0.01,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-8",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -14,
-        0.01,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-9",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -14,
-        0.01,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-10",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -14,
-        0.01,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-11",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -14,
-        0.01,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-12",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -14,
-        0.01,
-        17
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-13",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -14,
-        0.01,
-        19
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-14",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -14,
-        0.01,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-15",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -12,
-        0.01,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-16",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -12,
-        0.01,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-17",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -12,
-        0.01,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-18",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -12,
-        0.01,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-19",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -12,
-        0.01,
-        17
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-20",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -12,
-        0.01,
-        19
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-21",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -12,
-        0.01,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-22",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -10,
-        0.01,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-23",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -10,
-        0.01,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-24",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -10,
-        0.01,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-25",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -10,
-        0.01,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-26",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -10,
-        0.01,
-        17
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-27",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -10,
-        0.01,
-        19
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-28",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -10,
-        0.01,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-29",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -8,
-        0.01,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-30",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -8,
-        0.01,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-31",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -8,
-        0.01,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-32",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -8,
-        0.01,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-33",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -8,
-        0.01,
-        17
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-34",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
-      "position": [
-        -8,
-        0.01,
-        19
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
-    },
-    {
-      "id": "master-g00l-floor-35",
-      "assetId": "f03-s-stone-full",
-      "label": "F03-S A · МАЗЕН природен камен · full.glb",
-      "position": [
-        -8,
-        0.01,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        2,
-        1,
-        2
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Визуелна сервисна G-00L подлога, 2×2 м; индивидуално уредлива."
     },
     {
       "id": "master-G-02-soil-base",
@@ -7089,6 +6354,951 @@
       "visible": true,
       "binding": "",
       "note": "192-segment circular anti-jagged finish, explicitly outside all 4 water apertures, no gameplay write."
+    },
+    {
+      "id": "master-g00l-floor-1",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 1",
+      "position": [
+        -16,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-2",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 2",
+      "position": [
+        -16,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-3",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 3",
+      "position": [
+        -16,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-4",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 4",
+      "position": [
+        -16,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-5",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 5",
+      "position": [
+        -16,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-6",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 6",
+      "position": [
+        -16,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-7",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 7",
+      "position": [
+        -16,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-8",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 8",
+      "position": [
+        -16,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-9",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 9",
+      "position": [
+        -16,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-10",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 10",
+      "position": [
+        -14,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-11",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 11",
+      "position": [
+        -14,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-12",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 12",
+      "position": [
+        -14,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-13",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 13",
+      "position": [
+        -14,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-14",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 14",
+      "position": [
+        -14,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-15",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 15",
+      "position": [
+        -14,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-16",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 16",
+      "position": [
+        -14,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-17",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 17",
+      "position": [
+        -14,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-18",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 18",
+      "position": [
+        -14,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-19",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 19",
+      "position": [
+        -12,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-20",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 20",
+      "position": [
+        -12,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-21",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 21",
+      "position": [
+        -12,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-22",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 22",
+      "position": [
+        -12,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-23",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 23",
+      "position": [
+        -12,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-24",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 24",
+      "position": [
+        -12,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-25",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 25",
+      "position": [
+        -12,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-26",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 26",
+      "position": [
+        -12,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-27",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 27",
+      "position": [
+        -12,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-28",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 28",
+      "position": [
+        -10,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-29",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 29",
+      "position": [
+        -10,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-30",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 30",
+      "position": [
+        -10,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-31",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 31",
+      "position": [
+        -10,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-32",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 32",
+      "position": [
+        -10,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-33",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 33",
+      "position": [
+        -10,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-34",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 34",
+      "position": [
+        -10,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-35",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 35",
+      "position": [
+        -10,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-36",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 36",
+      "position": [
+        -10,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-37",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 37",
+      "position": [
+        -8,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-38",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 38",
+      "position": [
+        -8,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-39",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 39",
+      "position": [
+        -8,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-40",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 40",
+      "position": [
+        -8,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-41",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 41",
+      "position": [
+        -8,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-42",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 42",
+      "position": [
+        -8,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-43",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 43",
+      "position": [
+        -8,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-44",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 44",
+      "position": [
+        -8,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-45",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 45",
+      "position": [
+        -8,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
     }
   ],
   "assets": [],
