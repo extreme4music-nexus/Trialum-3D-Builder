@@ -50,7 +50,8 @@ controls.maxDistance=220;
 controls.maxPolarAngle=Math.PI*.49;
 controls.mouseButtons={LEFT:THREE.MOUSE.PAN,MIDDLE:THREE.MOUSE.DOLLY,RIGHT:THREE.MOUSE.ROTATE};
 controls.target.set(0,0,0);
-scene.add(new THREE.HemisphereLight(0xe4f4ec,0x61706b,2.4));
+const hemisphere=new THREE.HemisphereLight(0xe4f4ec,0x61706b,2.4);
+scene.add(hemisphere);
 const sunlight=new THREE.DirectionalLight(0xffffff,3.2);
 sunlight.position.set(-5,14,9);scene.add(sunlight);
 const fill=new THREE.DirectionalLight(0x88b7b9,1.0);
@@ -104,6 +105,21 @@ function isGreenhouseGardenProject(){
  return /^trialum-s7-(?:complete-garden-v[1-4]|master-garden)/.test(id);
 }
 function roomHelpers(){
+ // Match the forest/glass palette while preserving general Builder lighting in
+ // all other non-garden rooms. The old 2.4/3.2/1.45 exposure clipped marble to white.
+ if(isGreenhouseGardenProject()){
+  hemisphere.intensity=1.15;
+  sunlight.intensity=1.8;
+  fill.intensity=.56;
+  renderer.toneMappingExposure=1.04;
+  scene.fog.near=78;scene.fog.far=180;
+ }else{
+  hemisphere.intensity=2.4;
+  sunlight.intensity=3.2;
+  fill.intensity=1.0;
+  renderer.toneMappingExposure=1.45;
+  scene.fog.near=55;scene.fog.far=150;
+ }
  state.roomMeshes.forEach(x=>helpers.remove(x));
  state.roomMeshes.length=0;wallMeshes=[];
  const {width,depth,height,showWalls,floorColor,wallColor}=state.project.room;
