@@ -805,6 +805,13 @@ const ROOM_PRESETS=Object.freeze({
  "metal-m02":"trialum-s7-metal-m02-20-glbs.json",
  "metal-m03":"trialum-s7-metal-m03-20-glbs.json",
  "metal-compare":"trialum-s7-metal-3-finishes-service-compare.json",
+ "g00l-e0e1-all":"trialum-g00l-e0e1-all-review.json",
+ "g00l-e0e1-rs":"trialum-g00l-e0e1-rs-review.json",
+ "g00l-e0e1-rm":"trialum-g00l-e0e1-rm-review.json",
+ "g00l-e0e1-st":"trialum-g00l-e0e1-st-review.json",
+ "g00l-e0e1-desk":"trialum-g00l-e0e1-desk-review.json",
+ "g00l-e0e1-accessories":"trialum-g00l-e0e1-accessories-review.json",
+ "g00l-e0e1-layout":"trialum-g00l-e0e1-layout-concept.json",
  "irrigation-all":"trialum-s7-irrigation-all-glbs.json",
  "irrigation-i01":"trialum-s7-irrigation-i01-gallery.json",
  "irrigation-i02":"trialum-s7-irrigation-i02-gallery.json",
@@ -870,6 +877,7 @@ function addListeners(){
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
  $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");
+ $("openG00LE0E1Gallery").onclick=()=>openRoomPreset("g00l-e0e1-all");
  $("openIrrigationGallery").onclick=()=>openRoomPreset("irrigation-all");
  $("openProject").onclick=()=>ui.projectFileInput.click();
  $("openS7Project").onclick=()=>openRoomPreset("f01");
@@ -960,6 +968,9 @@ async function startup(){
   if(versionNode)versionNode.textContent="BUILDER · "+physicalCount+" GLB · LED "+lightCount+"/24";
   $("openLightingGallery").disabled=lightCount!==24;
   if(lightCount!==24)say("Локалниот Builder каталог има само "+lightCount+"/24 LED модели. Провери MAIN Pull и рестартирај го локалниот сервер.",true);
+  const g00lCount=state.catalog.filter(a=>/^s7-e0e1-/.test(a.id)&&a.src?.endsWith(".glb")).length;
+  $("openG00LE0E1Gallery").disabled=g00lCount!==28;
+  if(g00lCount!==28)say("Некомплетна G-00L библиотека "+g00lCount+"/28. Направи Fetch/Pull и рестарт.",true);
   for(const item of state.catalog)state.registry.set(item.id,item);
  }catch(err){say("Каталогот не е достапен: "+err.message,true);}
  // Built-in placeholders are harmless editor-only components.

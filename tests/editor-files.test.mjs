@@ -230,7 +230,7 @@ test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-stat
  const ids=new Set(catalogue.assets.map(a=>a.id));
  for(const id of ["s02-25-planting-grid","s01-dug-turnover","s02-fill-plug","s02-slot-ring","s02-demo-seedling"])
   assert.ok(ids.has(id),"Missing soil GLB in catalogue: "+id);
- assert.ok([150,210,234,292].includes(catalogue.genuineGlbCount));
+ assert.ok([150,210,234,292,320].includes(catalogue.genuineGlbCount));
  const grid=JSON.parse(file("assets/soil-slot-matrix.json"));
  assert.equal(grid.slotCount,25);
  assert.equal(grid.canonicalPlantSlotsPerBed,5);
@@ -285,4 +285,17 @@ test("one-click 24-light gallery remains visible after pulling Builder main",()=
  assert.match(launcher,/s7-lf1-perimeter-straight-1m\.glb/);
  assert.match(launcher,/s7-lc1-g01-1plus4-ring-chandelier\.glb/);
  assert.match(launcher,/goto portbusy/);
+});
+
+test("G00L twenty-eight real GLBs appear in Builder one-click scene",()=>{
+ const c=JSON.parse(file("assets/catalog.json"));
+ const items=c.assets.filter(a=>a.id.startsWith("s7-e0e1-")&&a.src.endsWith(".glb"));
+ assert.equal(items.length,28);assert.equal(c.genuineGlbCount,320);
+ const h=file("index.html"),j=file("src/main.js");
+ assert.match(h,/id="openG00LE0E1Gallery"/);assert.match(j,/openRoomPreset\("g00l-e0e1-all"\)/);
+ for(const name of ["all","rs","rm","st","desk","accessories","layout"]){
+  assert.ok(h.includes('value="g00l-e0e1-'+name+'"'));
+  assert.ok(j.includes('"g00l-e0e1-'+name+'"'));
+ }
+ const gallery=JSON.parse(file("projects/trialum-g00l-e0e1-all-review.json"));assert.equal(gallery.instances.length,28);
 });
