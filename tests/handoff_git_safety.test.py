@@ -31,6 +31,7 @@ class HandoffTests(unittest.TestCase):
     p=sample(candidate)
     with self.assertRaises(Fault):
      validate_handoff(p,Fault)
+  assert validate_handoff(sample("design/s7-master-pass2"),Fault)[0]=="design/s7-master-pass2"
   p=sample();p["project"]["meta"]["gameplayWrites"]=1
   with self.assertRaises(Fault):validate_handoff(p,Fault)
   p=sample();p["project"]["meta"]["officialScene"]=True
