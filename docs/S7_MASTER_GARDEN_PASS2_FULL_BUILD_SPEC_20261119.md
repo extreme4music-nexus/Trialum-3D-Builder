@@ -28,14 +28,14 @@
 | Desk | Original W01 desk and W02 chair moved to room rear (z=22.3 and z=20.92), with W03 monitor at Y=0.93, W05 keyboard/W06 mouse at Y=0.94; workstation tower and repair tool repositioned |
 | G01 water | All four original physical basins and original morph water clip untouched, helper floor stays off for S7 greenhouse |
 | Water floor | 67 individual F02 black marble panels + 61 individual F01 white panels; **geometric clearance checks** ensure each avoids all four physical water openings |
-| Decorative circles | 19 central F03 wedge accents and 32 circular nursery F03-S/T radial wedges |
+| Decorative circles | 19 central F03 wedge accents beside G01 water; 32 **clean, rectilinear F03-S/T frame panels** around the four beds (no loose radial pieces near nursery soil) |
 | Nursery | 20 canonical main land specimens remain exactly five per bed, spaced at 0.59m in straight rows; 88 **additional decorative seedling PREVIEWS** within 44 existing soil islands |
-| Natural stone | 88 F03-S/T stone borders beside existing soil islands; portions of nursery promenades retiled with F03 natural stone |
+| Natural stone | 32 F03-S/T stone bed-frame modules in continuous, organized borders; loose scattered stone squares were **removed**; portions of nursery promenades retiled with F03 natural stone |
 | Water hardware | Existing per-bed equipment rearranged; original 4 driplines **replaced** with non-drip flexible hoses; real I01 tank, I02 pumps/filters, I03 hoses, I04 valves, I06 sensors and visible G00L shared water station |
 | Gap closures | 8 path-connector modules and 4 door-threshold modular tiles, each independently editable |
 | Archive | Original `trialum-s7-master-garden-review.json` and historical V1–V4 scenes remain intact |
 
-The PASS 2 catalog contains **363 genuine GLBs** (previous 362 + one original animated glass door GLB). Scene contains **791 editable objects**. Existing stock models have not been overwritten. All parts can be repositioned/rotated/scaled in the Builder inspector and exported to JSON.
+The PASS 2 catalog contains **363 genuine GLBs** (previous 362 + one original animated glass door GLB). Scene contains **703 editable objects**. Existing stock models have not been overwritten. All parts can be repositioned/rotated/scaled in the Builder inspector and exported to JSON.
 
 ### Real material and physical layout zones
 
@@ -72,7 +72,7 @@ Current constraints remain unchanged: **4 land beds × 5 original gameplay slots
 - No `s7-i05-*` drip emitters/dripline assets exist in PASS 2; pumps, hoses, filters and valves are present.
 - G01 overlay tile corners never intersect a water aperture; F02 black around water and F01 white remainder; stone in nursery and circular motifs.
 - Test Builder JSON serialize→deserialize round-trip and safe `meta.nextEngineHandoff` persistence with `gameplayWrites=0`.
-- Headless Chromium screenshots for water, G00L and all four beds to catch visual clashes; user visual inspection must still follow.
+- Headless Chromium screenshots for water, G00L, the **glass door**, rear workstation, full overview and all four beds to catch visual clashes; user visual inspection must still follow.
 
 ## 5 · Subsequent three material variations (NOT implemented before PASS)
 
