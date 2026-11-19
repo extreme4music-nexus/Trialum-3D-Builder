@@ -67,12 +67,15 @@ if not exist "projects\trialum-s7-lights-all-24-glbs.json" goto incomplete
 if not exist "assets\models\s7-e0e1-rs01-nursery-3-tier.glb" goto incomplete
 if not exist "assets\models\s7-e0e1-rm02-mature-double.glb" goto incomplete
 if not exist "projects\trialum-g00l-e0e1-all-review.json" goto incomplete
+if not exist "assets\models\s7-f-r01-humanoid.glb" goto incomplete
+if not exist "assets\models\s7-f-e01-excavator.glb" goto incomplete
+if not exist "projects\trialum-s7-f-all.json" goto incomplete
 goto ready
 :incomplete
 echo.
 echo Some original Trialum room GLBs are missing from this local clone.
 echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
-echo All 320 models MUST be present, including 28 G00L objects; do not use a half-empty catalogue.
+echo All 338 models MUST be present, including 28 G00L objects; do not use a half-empty catalogue.
 echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause
 exit /b 1

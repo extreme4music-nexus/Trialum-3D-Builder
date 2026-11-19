@@ -230,7 +230,7 @@ test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-stat
  const ids=new Set(catalogue.assets.map(a=>a.id));
  for(const id of ["s02-25-planting-grid","s01-dug-turnover","s02-fill-plug","s02-slot-ring","s02-demo-seedling"])
   assert.ok(ids.has(id),"Missing soil GLB in catalogue: "+id);
- assert.ok([150,210,234,292,320].includes(catalogue.genuineGlbCount));
+ assert.ok([150,210,234,292,320,338].includes(catalogue.genuineGlbCount));
  const grid=JSON.parse(file("assets/soil-slot-matrix.json"));
  assert.equal(grid.slotCount,25);
  assert.equal(grid.canonicalPlantSlotsPerBed,5);
@@ -290,7 +290,7 @@ test("one-click 24-light gallery remains visible after pulling Builder main",()=
 test("G00L twenty-eight real GLBs appear in Builder one-click scene",()=>{
  const c=JSON.parse(file("assets/catalog.json"));
  const items=c.assets.filter(a=>a.id.startsWith("s7-e0e1-")&&a.src.endsWith(".glb"));
- assert.equal(items.length,28);assert.equal(c.genuineGlbCount,320);
+ assert.equal(items.length,28);assert.ok(c.genuineGlbCount>=320);
  const h=file("index.html"),j=file("src/main.js");
  assert.match(h,/id="openG00LE0E1Gallery"/);assert.match(j,/openRoomPreset\("g00l-e0e1-all"\)/);
  for(const name of ["all","rs","rm","st","desk","accessories","layout"]){
@@ -298,4 +298,13 @@ test("G00L twenty-eight real GLBs appear in Builder one-click scene",()=>{
   assert.ok(j.includes('"g00l-e0e1-'+name+'"'));
  }
  const gallery=JSON.parse(file("projects/trialum-g00l-e0e1-all-review.json"));assert.equal(gallery.instances.length,28);
+});
+
+test("S7-F robotics eighteen real GLBs and eight Builder galleries",()=>{
+ const c=JSON.parse(file("assets/catalog.json")); const a=c.assets.filter(x=>x.id.startsWith("s7-f-")&&x.src?.endsWith(".glb"));
+ assert.equal(a.length,18);assert.equal(c.genuineGlbCount,338);
+ const h=file("index.html"),j=file("src/main.js");
+ assert.match(h,/id="openS7FRobots"/);assert.match(j,/openRoomPreset\("s7f-all"\)/);
+ for(const v of ["all","heroes","machines","transports","robot","tools","g00l-preview","rig-demo"]){assert.ok(h.includes('value="s7f-'+v+'"'));assert.ok(j.includes('"s7f-'+v+'"'));}
+ assert.equal(JSON.parse(file("projects/trialum-s7-f-all.json")).instances.length,18);
 });

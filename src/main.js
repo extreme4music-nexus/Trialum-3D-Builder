@@ -805,6 +805,14 @@ const ROOM_PRESETS=Object.freeze({
  "metal-m02":"trialum-s7-metal-m02-20-glbs.json",
  "metal-m03":"trialum-s7-metal-m03-20-glbs.json",
  "metal-compare":"trialum-s7-metal-3-finishes-service-compare.json",
+ "s7f-all":"trialum-s7-f-all.json",
+ "s7f-heroes":"trialum-s7-f-heroes.json",
+ "s7f-machines":"trialum-s7-f-machines.json",
+ "s7f-transports":"trialum-s7-f-transports.json",
+ "s7f-robot":"trialum-s7-f-robot.json",
+ "s7f-tools":"trialum-s7-f-tools.json",
+ "s7f-g00l-preview":"trialum-s7-f-g00l-preview.json",
+ "s7f-rig-demo":"trialum-s7-f-rig-demo.json",
  "g00l-e0e1-all":"trialum-g00l-e0e1-all-review.json",
  "g00l-e0e1-rs":"trialum-g00l-e0e1-rs-review.json",
  "g00l-e0e1-rm":"trialum-g00l-e0e1-rm-review.json",
@@ -877,6 +885,7 @@ function addListeners(){
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
  $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");
+ $("openS7FRobots").onclick=()=>openRoomPreset("s7f-all");
  $("openG00LE0E1Gallery").onclick=()=>openRoomPreset("g00l-e0e1-all");
  $("openIrrigationGallery").onclick=()=>openRoomPreset("irrigation-all");
  $("openProject").onclick=()=>ui.projectFileInput.click();
@@ -971,6 +980,9 @@ async function startup(){
   const g00lCount=state.catalog.filter(a=>/^s7-e0e1-/.test(a.id)&&a.src?.endsWith(".glb")).length;
   $("openG00LE0E1Gallery").disabled=g00lCount!==28;
   if(g00lCount!==28)say("Некомплетна G-00L библиотека "+g00lCount+"/28. Направи Fetch/Pull и рестарт.",true);
+  const roboticsCount=state.catalog.filter(a=>a.id?.startsWith("s7-f-")&&a.src?.endsWith(".glb")).length;
+  $("openS7FRobots").disabled=roboticsCount!==18;
+  if(roboticsCount!==18)say("Стар Builder каталог: "+roboticsCount+"/18 роботи. Fetch/Pull и рестарт.",true);
   for(const item of state.catalog)state.registry.set(item.id,item);
  }catch(err){say("Каталогот не е достапен: "+err.message,true);}
  // Built-in placeholders are harmless editor-only components.
