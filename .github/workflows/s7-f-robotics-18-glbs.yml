@@ -99,9 +99,6 @@ jobs:
           soil=Path('tests/soil-canonical-mapping.test.mjs');v=soil.read_text(encoding='utf8')
           v=v.replace('[210,234,292,320]','[210,234,292,320,338]')
           soil.write_text(v,encoding='utf8')
-          boot=Path('.github/workflows/bootstrap.yml');s=boot.read_text(encoding='utf8')
-          s=s.replace('assert len(glbs) in (150,210,234,292,320),len(glbs)','assert len(glbs) in (150,210,234,292,320,338),len(glbs)')
-          boot.write_text(s,encoding='utf8')
           bat=Path('START-BUILDER-WINDOWS.bat');s=bat.read_text(encoding='utf8')
           if 's7-f-r01-humanoid.glb' not in s:
            token='goto ready\n:incomplete';assert token in s
@@ -120,7 +117,7 @@ jobs:
           git config user.email 'trialum-s7-f-robotics@users.noreply.github.com'
           git add -f assets/models/s7-f-*.glb
           git add assets/s7-f/*.json tools/b1/build_s7_f_robotics.py tests/verify_s7_f_robotics.py docs/S7_F_ROBOTICS_18_GLB_HANDOFF_20261119.md
-          git add projects/trialum-s7-f-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
+          git add projects/trialum-s7-f-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs START-BUILDER-WINDOWS.bat
           if git diff --staged --quiet; then echo 'All 18 genuine robotics GLB models already committed'; exit 0; fi
           git commit -m 'feat(S7-F builder): 18 original robot/machine GLBs, rig clips, 8 editable QA galleries'
           git fetch origin main
