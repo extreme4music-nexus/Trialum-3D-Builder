@@ -8496,6 +8496,3345 @@
       "visible": true,
       "binding": "",
       "note": "Црева/пумпа/филтер кај леа, нема капка-по-капка."
+    },
+    {
+      "id": "pass2-g01-marble-1-6",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -13.6,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-1-7",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -13.6,
+        0.022,
+        -3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-1-8",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -13.6,
+        0.022,
+        -1.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-1-10",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -13.6,
+        0.022,
+        1.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-1-11",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -13.6,
+        0.022,
+        3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-1-12",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -13.6,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-2-4",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -11.9,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-2-5",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -11.9,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-2-6",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -11.9,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-2-7",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -11.9,
+        0.022,
+        -3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-2-11",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -11.9,
+        0.022,
+        3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-2-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -11.9,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-2-13",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -11.9,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-2-14",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -11.9,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-3-3",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -10.2,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-3-4",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -10.2,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-3-5",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -10.2,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-3-6",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -10.2,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-3-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -10.2,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-3-13",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -10.2,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-3-14",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -10.2,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-3-15",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -10.2,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-4-2",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -8.5,
+        0.022,
+        -11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-4-3",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -8.5,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-4-4",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -8.5,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-4-5",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -8.5,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-4-6",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -8.5,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-4-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -8.5,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-4-13",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -8.5,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-4-14",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -8.5,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-4-15",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -8.5,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-4-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -8.5,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-5-2",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -6.8,
+        0.022,
+        -11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-5-3",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -6.8,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-5-4",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -6.8,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-5-5",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -6.8,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-5-6",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -6.8,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-5-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -6.8,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-5-13",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -6.8,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-5-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -6.8,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-5-15",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -6.8,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-5-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -6.8,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-6-1",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -5.1,
+        0.022,
+        -13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-6-2",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -5.1,
+        0.022,
+        -11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-6-3",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -5.1,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-6-4",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -5.1,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-6-5",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -5.1,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-6-13",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -5.1,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-6-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -5.1,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-6-15",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -5.1,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-6-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -5.1,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-6-17",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -5.1,
+        0.022,
+        13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-7-1",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -3.4,
+        0.022,
+        -13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-7-4",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -3.4,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-7-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -3.4,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-7-15",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -3.4,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-7-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -3.4,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-7-17",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -3.4,
+        0.022,
+        13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-8-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -1.7,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-8-15",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        -1.7,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-8-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -1.7,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-8-17",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -1.7,
+        0.022,
+        13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-9-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        0,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-9-15",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        0,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-9-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        0,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-9-17",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        0,
+        0.022,
+        13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-10-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        1.7,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-10-15",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        1.7,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-10-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        1.7,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-10-17",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        1.7,
+        0.022,
+        13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-11-1",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        3.4,
+        0.022,
+        -13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-11-4",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        3.4,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-11-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        3.4,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-11-15",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        3.4,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-11-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        3.4,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-11-17",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        3.4,
+        0.022,
+        13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-12-1",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        5.1,
+        0.022,
+        -13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-12-2",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        5.1,
+        0.022,
+        -11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-12-3",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        5.1,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-12-4",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        5.1,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-12-5",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        5.1,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-12-13",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        5.1,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-12-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        5.1,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-12-15",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        5.1,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-12-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        5.1,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-12-17",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        5.1,
+        0.022,
+        13.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-13-2",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        6.8,
+        0.022,
+        -11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-13-3",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        6.8,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-13-4",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        6.8,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-13-5",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        6.8,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-13-6",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        6.8,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-13-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        6.8,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-13-13",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        6.8,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-13-14",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        6.8,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-13-15",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        6.8,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-13-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        6.8,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-14-2",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        8.5,
+        0.022,
+        -11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-14-3",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        8.5,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-14-4",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        8.5,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-14-5",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        8.5,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-14-6",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        8.5,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-14-7",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        8.5,
+        0.022,
+        -3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-14-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        8.5,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-14-13",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        8.5,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-14-14",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        8.5,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-14-15",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        8.5,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-14-16",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        8.5,
+        0.022,
+        11.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-15-3",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        10.2,
+        0.022,
+        -10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-15-4",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        10.2,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-15-5",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        10.2,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-15-6",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        10.2,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-15-7",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        10.2,
+        0.022,
+        -3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-15-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        10.2,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-15-13",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        10.2,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-15-14",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        10.2,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-15-15",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        10.2,
+        0.022,
+        10.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-16-4",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        11.9,
+        0.022,
+        -8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-16-5",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        11.9,
+        0.022,
+        -6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-16-6",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        11.9,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-16-7",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        11.9,
+        0.022,
+        -3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-16-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        11.9,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-16-13",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        11.9,
+        0.022,
+        6.8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-16-14",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        11.9,
+        0.022,
+        8.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-17-6",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        13.6,
+        0.022,
+        -5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-17-7",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        13.6,
+        0.022,
+        -3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Бел F01 мермер по главната G01 патека."
+    },
+    {
+      "id": "pass2-g01-marble-17-8",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        13.6,
+        0.022,
+        -1.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-17-11",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        13.6,
+        0.022,
+        3.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-marble-17-12",
+      "assetId": "f02-black-marble-full",
+      "label": "f02-black-marble-full",
+      "position": [
+        13.6,
+        0.022,
+        5.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Црн F02 мермер околу вистинските G01 водни отвори, не над нив."
+    },
+    {
+      "id": "pass2-g01-stone-accent-0",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        14.45,
+        0.091,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-1",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        13.7428,
+        0.091,
+        4.4653
+      ],
+      "rotationY": 0.314159,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-2",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        11.6903,
+        0.091,
+        8.4935
+      ],
+      "rotationY": 0.628319,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-3",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        8.4935,
+        0.091,
+        11.6903
+      ],
+      "rotationY": 0.942478,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-4",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        4.4653,
+        0.091,
+        13.7428
+      ],
+      "rotationY": 1.256637,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-5",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        0,
+        0.091,
+        14.45
+      ],
+      "rotationY": 1.570796,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-6",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        -4.4653,
+        0.091,
+        13.7428
+      ],
+      "rotationY": 1.884956,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-7",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        -8.4935,
+        0.091,
+        11.6903
+      ],
+      "rotationY": 2.199115,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-8",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        -11.6903,
+        0.091,
+        8.4935
+      ],
+      "rotationY": 2.513274,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-9",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        -13.7428,
+        0.091,
+        4.4653
+      ],
+      "rotationY": 2.827433,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-10",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        -14.45,
+        0.091,
+        0
+      ],
+      "rotationY": 3.141593,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-11",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        -13.7428,
+        0.091,
+        -4.4653
+      ],
+      "rotationY": 3.455752,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-12",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        -11.6903,
+        0.091,
+        -8.4935
+      ],
+      "rotationY": 3.769911,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-13",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        -8.4935,
+        0.091,
+        -11.6903
+      ],
+      "rotationY": 4.08407,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-14",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        -4.4653,
+        0.091,
+        -13.7428
+      ],
+      "rotationY": 4.39823,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-16",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        4.4653,
+        0.091,
+        -13.7428
+      ],
+      "rotationY": 5.026548,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-17",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        8.4935,
+        0.091,
+        -11.6903
+      ],
+      "rotationY": 5.340708,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-18",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        11.6903,
+        0.091,
+        -8.4935
+      ],
+      "rotationY": 5.654867,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-19",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        13.7428,
+        0.091,
+        -4.4653
+      ],
+      "rotationY": 5.969026,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-path-fill-1-L",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -17.4918,
+        0.022,
+        -4.2498
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-1-R",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -16.8778,
+        0.022,
+        -6.258
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-2-L",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -11.8908,
+        0.022,
+        -13.5141
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-2-R",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -10.236,
+        0.022,
+        -14.807
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-3-L",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -1.6765,
+        0.022,
+        -17.9224
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-3-R",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        0.4222,
+        0.022,
+        -17.9957
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-4-L",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        9.976,
+        0.022,
+        -14.9834
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-4-R",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        11.6532,
+        0.022,
+        -13.7196
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-g00l-door-threshold-1",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -4.1,
+        0.022,
+        19.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
+    },
+    {
+      "id": "pass2-g00l-door-threshold-2",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -2.2,
+        0.022,
+        19.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
+    },
+    {
+      "id": "pass2-g00l-door-threshold-3",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -4.1,
+        0.022,
+        21.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
+    },
+    {
+      "id": "pass2-g00l-door-threshold-4",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -2.2,
+        0.022,
+        21.15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.7,
+        1,
+        1.7
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
     }
   ],
   "assets": [],
@@ -8520,7 +11859,7 @@
       "slotsPerBed": 5,
       "aquaticSlots": 4
     },
-    "floorTileCount": 773,
+    "floorTileCount": 370,
     "floorPalette": "MASTER · original cream greenhouse shell + actual footpaths",
     "source": "G01 geometry from original shell / S7 V3 blueprint",
     "generation": "manual S7 master rebuild from video review 2026-11-19",
@@ -8539,6 +11878,14 @@
     "finalVariantsAfterOwnerPass": true,
     "irrigationMode": "HOSE_PUMP_FILTER_NO_DRIP",
     "layoutApproval": "PENDING",
-    "pass2Setup": "door; rear-workstation; 20 straight plants; no drip; 4 edge pumps"
+    "pass2Setup": "door; rear-workstation; 20 straight plants; no drip; 4 edge pumps",
+    "pass2Floor": {
+      "waterPanelsBlackF02": 67,
+      "waterPanelsWhiteF01": 61,
+      "roundF03Accent": 19,
+      "closedGaps": 12,
+      "mosaicType": "real GLB F01/F02/F03; floor models independently movable",
+      "aquaticOpeningsPreserved": 4
+    }
   }
 }
