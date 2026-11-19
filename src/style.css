@@ -48,3 +48,7 @@ input[type=checkbox]{accent-color:#65bb91;box-shadow:none}.topbar{height:70px;ba
 .top-actions{min-width:0;flex:1;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#6fa18b #1c2a2b;padding:3px 0 7px;align-items:center}
 .top-actions>*{flex:0 0 auto}
 .top-actions #scenePreset{max-width:210px}
+
+#modelQuickSelect{width:100%;max-width:100%;margin:0 0 10px;border-color:#4e776c;background:#20352e;text-overflow:ellipsis}
+#modelQuickSelect optgroup{font-weight:800;background:#19312a;color:#dfede6}
+#modelQuickSelect option{font-weight:400;padding:5px;color:#f0f6f0}
