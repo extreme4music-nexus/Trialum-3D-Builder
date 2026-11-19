@@ -11,7 +11,7 @@ import {exportLivingSpace} from "./living-spaces-adapter.js";
 
 const $=id=>document.getElementById(id);
 const ids=["projectName","saveIndicator","assetSearch","categoryFilter","catalog",
- "assetCounter","objectCounter","objectList","sceneCanvas","viewport","statusText",
+ "modelQuickSelect","assetCounter","objectCounter","objectList","sceneCanvas","viewport","statusText",
  "noSelection","inspector","selectedAssetTitle","objLabel","posX","posY","posZ",
  "rotY","scaleVal","layerSelect","binding","objLocked","objVisible","roomWidth",
  "roomDepth","roomHeight","showWalls","surfaceMode","gridStep","snapEnabled",
@@ -385,6 +385,34 @@ function renderCatalogue(){
  if(!n){const p=document.createElement("p");p.className="helper";p.textContent="Нема такви модели.";ui.catalog.append(p);}
  updateCounters();
 }
+function refreshIndividualModelPicker(){
+ // Every ORIGINAL physical model (not placeholder) is a native select option.
+ // Keep the exact assetId; use optgroups to make 360+ models navigable.
+ const select=ui.modelQuickSelect;
+ const old=select.value;
+ select.replaceChildren(new Option("⬡ Избери GLB од сите категории…",""));
+ const groups=new Map();
+ const known=[...state.registry.values()]
+  .filter(a=>typeof a.id==="string" && typeof a.src==="string" &&
+    (a.src.endsWith(".glb")||a.src.startsWith("local:")))
+  .sort((a,b)=>String(a.name).localeCompare(String(b.name),"mk"));
+ for(const a of known){
+  const category=a.category||"Останати GLB";
+  if(!groups.has(category))groups.set(category,[]);
+  groups.get(category).push(a);
+ }
+ for(const category of [...groups.keys()].sort((a,b)=>a.localeCompare(b,"mk"))){
+  const group=document.createElement("optgroup");
+  group.label=category;
+  for(const a of groups.get(category)){
+   const option=document.createElement("option");
+   option.value=a.id;option.textContent=a.name+" · "+a.id;
+   group.append(option);
+  }
+  select.append(group);
+ }
+ select.value=known.some(a=>a.id===old)?old:"";
+}
 function refreshCategories(){
  const val=ui.categoryFilter.value;
  const categories=[...new Set([...state.registry.values()].map(a=>a.category||"Останато"))].sort();
@@ -393,6 +421,7 @@ function refreshCategories(){
   const op=document.createElement("option");op.value=v;op.textContent=label;ui.categoryFilter.append(op);
  }
  ui.categoryFilter.value=(categories.includes(val)||val===S7_F_ALL)?val:"";
+ refreshIndividualModelPicker();
  renderCatalogue();
 }
 function setTool(tool){
@@ -979,6 +1008,16 @@ function addListeners(){
  document.querySelectorAll("[data-tool]").forEach(b=>b.addEventListener("click",()=>setTool(b.dataset.tool)));
  ui.assetSearch.addEventListener("input",renderCatalogue);
  ui.categoryFilter.addEventListener("change",renderCatalogue);
+ ui.modelQuickSelect.addEventListener("change",()=>{
+  const id=ui.modelQuickSelect.value;
+  const asset=assetById(id);
+  if(!asset)return;
+  ui.assetSearch.value="";
+  if([...ui.categoryFilter.options].some(o=>o.value===asset.category))
+   ui.categoryFilter.value=asset.category;
+  renderCatalogue();
+  chooseAsset(id);
+ });
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
  $("packagePreset").onchange=e=>{const key=e.target.value;if(key)openRoomPreset(key);e.target.value="";};
