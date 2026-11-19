@@ -1275,6 +1275,9 @@ async function startup(){
    try{
     if(savedDraft&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY))
      localStorage.setItem(S7_PREVIOUS_DRAFT_KEY,JSON.stringify(savedDraft));
+    // Replace the OLD startup autosave only after its separately restorable
+    // backup exists. Otherwise next page load would show the old F01 scene again.
+    localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(data));
     localStorage.setItem(S7_WELCOME_KEY,"1");
    }catch{}
   }
