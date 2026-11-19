@@ -31,19 +31,22 @@ jobs:
           mkdir -p screenshots
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
           echo "Headless renderer: $CHROME"
-          timeout 110s "$CHROME" --headless=new --no-sandbox --disable-dev-shm-usage \
-            --enable-webgl --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader \
-            --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=45000 \
-            --screenshot=screenshots/S7-MASTER-G01-WEBGL.png \
-            'http://127.0.0.1:8765/?preset=garden-master' \
-            >screenshots/chrome.log 2>&1
-          test -s screenshots/S7-MASTER-G01-WEBGL.png
-          file screenshots/S7-MASTER-G01-WEBGL.png
+          for view in water g00l bed1 bed2 bed3 bed4; do
+            echo "Render QA camera: $view"
+            timeout 110s "$CHROME" --headless=new --no-sandbox --disable-dev-shm-usage \
+              --enable-webgl --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader \
+              --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=45000 \
+              --screenshot="screenshots/S7-MASTER-$view-WEBGL.png" \
+              "http://127.0.0.1:8765/?preset=garden-master&view=$view" \
+              >>screenshots/chrome.log 2>&1
+            test -s "screenshots/S7-MASTER-$view-WEBGL.png"
+          done
+          file screenshots/S7-MASTER-*-WEBGL.png
       - uses: actions/upload-artifact@v4
         with:
           name: S7-MASTER-REVIEW-WEBGL-SCREENSHOT
           path: |
-            screenshots/S7-MASTER-G01-WEBGL.png
+            screenshots/S7-MASTER-*-WEBGL.png
             screenshots/chrome.log
           if-no-files-found: error
           retention-days: 14
