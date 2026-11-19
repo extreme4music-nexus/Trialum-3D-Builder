@@ -1,0 +1,78 @@
+name: S7-G genuine flora 22 GLBs and four full greenhouse designs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/b1/build-s7-complete-garden.py'
+      - '.github/workflows/s7-complete-gardens.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: trialum-builder-s7-complete-garden
+  cancel-in-progress: false
+jobs:
+  build-real-plants-and-four-gardens:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate original real glTF2 plant geometry and four editable garden JSONs
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/b1/build-s7-complete-garden.py
+          python3 tools/b1/build-s7-complete-garden.py
+      - name: Verify genuine GLBs, animations, exact plant roster and layout invariants
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, struct, hashlib
+          from pathlib import Path
+          c=json.loads(Path('assets/catalog.json').read_text())
+          assert c['genuineGlbCount']==360
+          m=json.loads(Path('assets/s7-flora-22-manifest.json').read_text())
+          assert len(m['models'])==22
+          for v in m['models']:
+              p=Path('assets/models')/(v['id']+'.glb')
+              raw=p.read_bytes()
+              assert len(raw)==v['bytes'] and hashlib.sha256(raw).hexdigest()==v['sha256'],p
+              assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw),p
+              ln=struct.unpack_from('<I',raw,12)[0]
+              gltf=json.loads(raw[20:20+ln])
+              assert gltf['asset']['version']=='2.0' and len(gltf['meshes'])>=2,v
+              assert len(gltf['animations'])==6, v
+              assert {a['name'] for a in gltf['animations']}==set(('idle-sway','machine-pass','water-react','root-settle','growth-crossfade','droop'))
+          identical=None
+          for i in (1,2,3,4):
+              p=json.loads(Path(f'projects/trialum-s7-complete-garden-v{i}.json').read_text())
+              assert p['schemaVersion']==1 and p['meta']['gameplayWrites']==0
+              assert not p['meta']['officialScene'] and len(p['instances'])<6000
+              assert len({x['id'] for x in p['instances']})==len(p['instances'])
+              assert len([x for x in p['instances'] if '-plant-preview-' in x['id']])==20
+              assert len([x for x in p['instances'] if x['id'].startswith('aquatic-slot-')])==4
+              assert len([x for x in p['instances'] if x['id'].endswith('-real-bed')])==4
+              canon=[x for x in p['instances'] if not x['id'].startswith('floor-')]
+              if identical is None:identical=canon
+              else:assert canon==identical,'Only floor tiles may vary'
+              ids={x['id'] for x in c['assets']}
+              assert all(x['assetId'] in ids for x in p['instances'])
+          print('PASS: 22 original GLBs, six animations each, four full scenes, 4x5+4 canonical slots')
+          PY
+      - name: Commit generated GLBs + catalog + review scenes to Builder main only
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-builder-s7-flora-bot'
+          git config user.email 'trialum-builder-s7-flora@users.noreply.github.com'
+          git add -f assets/models/lumemoss-*.glb assets/models/glowfern-*.glb assets/models/mineralreed-*.glb assets/models/aquaglow-ready-for-transplant.glb
+          git add assets/catalog.json assets/s7-flora-22-manifest.json projects/trialum-s7-complete-garden-v*.json
+          if git diff --staged --quiet; then echo "Models and gardens already current"; exit 0; fi
+          git commit -m 'feat(S7-G): 22 real staged flora GLBs + four owner-editable full garden scenes'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
