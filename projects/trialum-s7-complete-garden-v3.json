@@ -200,7 +200,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-10",
@@ -452,12 +452,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-22",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -13,
         0,
@@ -473,12 +473,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-23",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -13,
         0,
@@ -494,7 +494,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-24",
@@ -515,7 +515,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-25",
@@ -708,8 +708,8 @@
     },
     {
       "id": "floor-34",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -12,
         0,
@@ -725,12 +725,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-35",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -12,
         0,
@@ -746,12 +746,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-36",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -12,
         0,
@@ -767,7 +767,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-37",
@@ -788,7 +788,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-38",
@@ -809,7 +809,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-39",
@@ -981,8 +981,8 @@
     },
     {
       "id": "floor-47",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -11,
         0,
@@ -998,7 +998,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-48",
@@ -1019,12 +1019,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-49",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -11,
         0,
@@ -1040,7 +1040,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-50",
@@ -1061,7 +1061,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-51",
@@ -1082,7 +1082,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-52",
@@ -1103,7 +1103,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-53",
@@ -1296,8 +1296,8 @@
     },
     {
       "id": "floor-62",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -10,
         0,
@@ -1313,12 +1313,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-63",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -10,
         0,
@@ -1334,12 +1334,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-64",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -10,
         0,
@@ -1355,12 +1355,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-65",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -10,
         0,
@@ -1376,12 +1376,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-66",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -10,
         0,
@@ -1397,12 +1397,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-67",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -10,
         0,
@@ -1418,12 +1418,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-68",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -10,
         0,
@@ -1439,7 +1439,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-69",
@@ -1670,7 +1670,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-80",
@@ -1691,12 +1691,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-81",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -9,
         0,
@@ -1712,7 +1712,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-82",
@@ -1733,7 +1733,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-83",
@@ -1754,12 +1754,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-84",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -9,
         0,
@@ -1775,12 +1775,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-85",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -9,
         0,
@@ -1796,7 +1796,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-86",
@@ -1817,7 +1817,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-87",
@@ -2006,12 +2006,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-96",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -8,
         0,
@@ -2027,7 +2027,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-97",
@@ -2048,12 +2048,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-98",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -8,
         0,
@@ -2069,12 +2069,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-99",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -8,
         0,
@@ -2090,7 +2090,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-100",
@@ -2111,7 +2111,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-101",
@@ -2132,12 +2132,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-102",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -8,
         0,
@@ -2153,7 +2153,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-103",
@@ -2325,8 +2325,8 @@
     },
     {
       "id": "floor-111",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -7,
         0,
@@ -2342,12 +2342,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-112",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -7,
         0,
@@ -2363,12 +2363,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-113",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -7,
         0,
@@ -2384,7 +2384,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-114",
@@ -2405,7 +2405,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-115",
@@ -2426,7 +2426,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-116",
@@ -2447,12 +2447,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-117",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -7,
         0,
@@ -2468,7 +2468,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-118",
@@ -2489,7 +2489,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-119",
@@ -3522,8 +3522,8 @@
     },
     {
       "id": "floor-168",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -3,
         0,
@@ -3539,7 +3539,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-169",
@@ -3728,7 +3728,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-178",
@@ -3875,7 +3875,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-185",
@@ -4005,8 +4005,8 @@
     },
     {
       "id": "floor-191",
-      "assetId": "m02-metal-full",
-      "label": "m02-metal-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         0,
         0,
@@ -4022,7 +4022,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-192",
@@ -4169,7 +4169,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-199",
@@ -4341,8 +4341,8 @@
     },
     {
       "id": "floor-207",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         2,
         0,
@@ -4358,7 +4358,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-208",
@@ -4593,8 +4593,8 @@
     },
     {
       "id": "floor-219",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         3,
         0,
@@ -4610,7 +4610,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+      "note": "Merged identical floor cell; service/passage tile has priority."
     },
     {
       "id": "floor-220",
@@ -7895,7 +7895,7 @@
       "position": [
         -3,
         0,
-        14
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -7916,7 +7916,7 @@
       "position": [
         -3,
         0,
-        15
+        16
       ],
       "rotationY": 0,
       "scale": [
@@ -7937,7 +7937,7 @@
       "position": [
         -3,
         0,
-        16
+        17
       ],
       "rotationY": 0,
       "scale": [
@@ -7958,7 +7958,7 @@
       "position": [
         -3,
         0,
-        17
+        18
       ],
       "rotationY": 0,
       "scale": [
@@ -7979,7 +7979,7 @@
       "position": [
         -3,
         0,
-        18
+        19
       ],
       "rotationY": 0,
       "scale": [
@@ -8000,7 +8000,7 @@
       "position": [
         -3,
         0,
-        19
+        20
       ],
       "rotationY": 0,
       "scale": [
@@ -8021,7 +8021,7 @@
       "position": [
         -3,
         0,
-        20
+        21
       ],
       "rotationY": 0,
       "scale": [
@@ -8042,7 +8042,7 @@
       "position": [
         -3,
         0,
-        21
+        22
       ],
       "rotationY": 0,
       "scale": [
@@ -8063,7 +8063,7 @@
       "position": [
         -3,
         0,
-        22
+        23
       ],
       "rotationY": 0,
       "scale": [
@@ -8084,7 +8084,7 @@
       "position": [
         -3,
         0,
-        23
+        24
       ],
       "rotationY": 0,
       "scale": [
@@ -8100,12 +8100,12 @@
     },
     {
       "id": "floor-386",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -3,
+        -2,
         0,
-        24
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -8126,7 +8126,7 @@
       "position": [
         -2,
         0,
-        14
+        16
       ],
       "rotationY": 0,
       "scale": [
@@ -8147,7 +8147,7 @@
       "position": [
         -2,
         0,
-        15
+        17
       ],
       "rotationY": 0,
       "scale": [
@@ -8163,12 +8163,12 @@
     },
     {
       "id": "floor-389",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
       "position": [
         -2,
         0,
-        16
+        18
       ],
       "rotationY": 0,
       "scale": [
@@ -8189,7 +8189,7 @@
       "position": [
         -2,
         0,
-        17
+        19
       ],
       "rotationY": 0,
       "scale": [
@@ -8205,12 +8205,12 @@
     },
     {
       "id": "floor-391",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -2,
         0,
-        18
+        20
       ],
       "rotationY": 0,
       "scale": [
@@ -8231,7 +8231,7 @@
       "position": [
         -2,
         0,
-        19
+        21
       ],
       "rotationY": 0,
       "scale": [
@@ -8252,7 +8252,7 @@
       "position": [
         -2,
         0,
-        20
+        22
       ],
       "rotationY": 0,
       "scale": [
@@ -8273,7 +8273,7 @@
       "position": [
         -2,
         0,
-        21
+        23
       ],
       "rotationY": 0,
       "scale": [
@@ -8289,12 +8289,12 @@
     },
     {
       "id": "floor-395",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
       "position": [
         -2,
         0,
-        22
+        24
       ],
       "rotationY": 0,
       "scale": [
@@ -8313,9 +8313,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -2,
+        -1,
         0,
-        23
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -8331,12 +8331,12 @@
     },
     {
       "id": "floor-397",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -2,
+        -1,
         0,
-        24
+        16
       ],
       "rotationY": 0,
       "scale": [
@@ -8357,7 +8357,7 @@
       "position": [
         -1,
         0,
-        14
+        17
       ],
       "rotationY": 0,
       "scale": [
@@ -8373,12 +8373,12 @@
     },
     {
       "id": "floor-399",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
       "position": [
         -1,
         0,
-        15
+        18
       ],
       "rotationY": 0,
       "scale": [
@@ -8399,7 +8399,7 @@
       "position": [
         -1,
         0,
-        16
+        19
       ],
       "rotationY": 0,
       "scale": [
@@ -8420,7 +8420,7 @@
       "position": [
         -1,
         0,
-        17
+        20
       ],
       "rotationY": 0,
       "scale": [
@@ -8436,12 +8436,12 @@
     },
     {
       "id": "floor-402",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -1,
         0,
-        18
+        21
       ],
       "rotationY": 0,
       "scale": [
@@ -8462,7 +8462,7 @@
       "position": [
         -1,
         0,
-        19
+        22
       ],
       "rotationY": 0,
       "scale": [
@@ -8483,69 +8483,6 @@
       "position": [
         -1,
         0,
-        20
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-405",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -1,
-        0,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-406",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -1,
-        0,
-        22
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-407",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -1,
-        0,
         23
       ],
       "rotationY": 0,
@@ -8561,7 +8498,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-408",
+      "id": "floor-405",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -8582,13 +8519,76 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-409",
+      "id": "floor-406",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
         0,
         0,
-        14
+        15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-407",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        0,
+        0,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-408",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        0,
+        0,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-409",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
+      "position": [
+        0,
+        0,
+        18
       ],
       "rotationY": 0,
       "scale": [
@@ -8609,7 +8609,7 @@
       "position": [
         0,
         0,
-        15
+        19
       ],
       "rotationY": 0,
       "scale": [
@@ -8630,7 +8630,7 @@
       "position": [
         0,
         0,
-        16
+        20
       ],
       "rotationY": 0,
       "scale": [
@@ -8651,7 +8651,7 @@
       "position": [
         0,
         0,
-        17
+        21
       ],
       "rotationY": 0,
       "scale": [
@@ -8667,12 +8667,12 @@
     },
     {
       "id": "floor-413",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         0,
         0,
-        18
+        22
       ],
       "rotationY": 0,
       "scale": [
@@ -8693,7 +8693,7 @@
       "position": [
         0,
         0,
-        19
+        23
       ],
       "rotationY": 0,
       "scale": [
@@ -8709,12 +8709,12 @@
     },
     {
       "id": "floor-415",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
       "position": [
         0,
         0,
-        20
+        24
       ],
       "rotationY": 0,
       "scale": [
@@ -8733,9 +8733,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
+        1,
         0,
-        0,
-        21
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -8754,9 +8754,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
+        1,
         0,
-        0,
-        22
+        16
       ],
       "rotationY": 0,
       "scale": [
@@ -8775,9 +8775,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
+        1,
         0,
-        0,
-        23
+        17
       ],
       "rotationY": 0,
       "scale": [
@@ -8796,9 +8796,9 @@
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
+        1,
         0,
-        0,
-        24
+        18
       ],
       "rotationY": 0,
       "scale": [
@@ -8819,7 +8819,7 @@
       "position": [
         1,
         0,
-        14
+        19
       ],
       "rotationY": 0,
       "scale": [
@@ -8840,7 +8840,7 @@
       "position": [
         1,
         0,
-        15
+        20
       ],
       "rotationY": 0,
       "scale": [
@@ -8861,7 +8861,7 @@
       "position": [
         1,
         0,
-        16
+        21
       ],
       "rotationY": 0,
       "scale": [
@@ -8882,111 +8882,6 @@
       "position": [
         1,
         0,
-        17
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-424",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        1,
-        0,
-        18
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-425",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        1,
-        0,
-        19
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-426",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        1,
-        0,
-        20
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-427",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        1,
-        0,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-428",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        1,
-        0,
         22
       ],
       "rotationY": 0,
@@ -9002,7 +8897,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-429",
+      "id": "floor-424",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -9023,13 +8918,118 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-430",
+      "id": "floor-425",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
         1,
         0,
         24
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-426",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        2,
+        0,
+        15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-427",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        2,
+        0,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-428",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        2,
+        0,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-429",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
+      "position": [
+        2,
+        0,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-430",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        2,
+        0,
+        19
       ],
       "rotationY": 0,
       "scale": [
@@ -9050,7 +9050,7 @@
       "position": [
         2,
         0,
-        14
+        20
       ],
       "rotationY": 0,
       "scale": [
@@ -9071,7 +9071,7 @@
       "position": [
         2,
         0,
-        15
+        21
       ],
       "rotationY": 0,
       "scale": [
@@ -9092,7 +9092,7 @@
       "position": [
         2,
         0,
-        16
+        22
       ],
       "rotationY": 0,
       "scale": [
@@ -9113,7 +9113,7 @@
       "position": [
         2,
         0,
-        17
+        23
       ],
       "rotationY": 0,
       "scale": [
@@ -9134,7 +9134,7 @@
       "position": [
         2,
         0,
-        18
+        24
       ],
       "rotationY": 0,
       "scale": [
@@ -9150,10 +9150,94 @@
     },
     {
       "id": "floor-436",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        2,
+        3,
+        0,
+        15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-437",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        3,
+        0,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-438",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        3,
+        0,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-439",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        3,
+        0,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-440",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        3,
         0,
         19
       ],
@@ -9170,97 +9254,13 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-437",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "id": "floor-441",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        2,
+        3,
         0,
         20
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-438",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2,
-        0,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-439",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2,
-        0,
-        22
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-440",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        2,
-        0,
-        23
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-441",
-      "assetId": "f03-t-stone-full",
-      "label": "f03-t-stone-full",
-      "position": [
-        2,
-        0,
-        24
       ],
       "rotationY": 0,
       "scale": [
@@ -9281,7 +9281,7 @@
       "position": [
         3,
         0,
-        14
+        21
       ],
       "rotationY": 0,
       "scale": [
@@ -9302,7 +9302,7 @@
       "position": [
         3,
         0,
-        15
+        22
       ],
       "rotationY": 0,
       "scale": [
@@ -9323,7 +9323,7 @@
       "position": [
         3,
         0,
-        16
+        23
       ],
       "rotationY": 0,
       "scale": [
@@ -9344,153 +9344,6 @@
       "position": [
         3,
         0,
-        17
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-446",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        3,
-        0,
-        18
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-447",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        3,
-        0,
-        19
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-448",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        3,
-        0,
-        20
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-449",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        3,
-        0,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-450",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        3,
-        0,
-        22
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-451",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        3,
-        0,
-        23
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-452",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        3,
-        0,
         24
       ],
       "rotationY": 0,
@@ -9506,7 +9359,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-453",
+      "id": "floor-446",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9527,7 +9380,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-454",
+      "id": "floor-447",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -9548,7 +9401,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-455",
+      "id": "floor-448",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9569,7 +9422,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-456",
+      "id": "floor-449",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9590,7 +9443,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-457",
+      "id": "floor-450",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -9611,7 +9464,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-458",
+      "id": "floor-451",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9632,7 +9485,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-459",
+      "id": "floor-452",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9653,7 +9506,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-460",
+      "id": "floor-453",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -9674,7 +9527,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-461",
+      "id": "floor-454",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9695,7 +9548,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-462",
+      "id": "floor-455",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9716,7 +9569,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-463",
+      "id": "floor-456",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -9737,7 +9590,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-464",
+      "id": "floor-457",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9758,7 +9611,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-465",
+      "id": "floor-458",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9779,7 +9632,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-466",
+      "id": "floor-459",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -9800,7 +9653,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-467",
+      "id": "floor-460",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9821,7 +9674,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-468",
+      "id": "floor-461",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9842,7 +9695,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-469",
+      "id": "floor-462",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -9863,7 +9716,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-470",
+      "id": "floor-463",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9884,7 +9737,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-471",
+      "id": "floor-464",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9905,7 +9758,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-472",
+      "id": "floor-465",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -9926,7 +9779,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-473",
+      "id": "floor-466",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9947,7 +9800,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-474",
+      "id": "floor-467",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -9968,7 +9821,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-475",
+      "id": "floor-468",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -9989,7 +9842,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-476",
+      "id": "floor-469",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10010,7 +9863,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-477",
+      "id": "floor-470",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10031,7 +9884,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-478",
+      "id": "floor-471",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -10052,7 +9905,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-479",
+      "id": "floor-472",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10073,7 +9926,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-480",
+      "id": "floor-473",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10094,7 +9947,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-481",
+      "id": "floor-474",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10115,7 +9968,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-482",
+      "id": "floor-475",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10136,7 +9989,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-483",
+      "id": "floor-476",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10157,7 +10010,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-484",
+      "id": "floor-477",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10178,7 +10031,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-485",
+      "id": "floor-478",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10199,7 +10052,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-486",
+      "id": "floor-479",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10220,7 +10073,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-487",
+      "id": "floor-480",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10241,7 +10094,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-488",
+      "id": "floor-481",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10262,7 +10115,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-489",
+      "id": "floor-482",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10283,7 +10136,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-490",
+      "id": "floor-483",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10304,7 +10157,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-491",
+      "id": "floor-484",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10325,7 +10178,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-492",
+      "id": "floor-485",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10346,7 +10199,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-493",
+      "id": "floor-486",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10367,7 +10220,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-494",
+      "id": "floor-487",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10388,7 +10241,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-495",
+      "id": "floor-488",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10409,7 +10262,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-496",
+      "id": "floor-489",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -10430,7 +10283,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-497",
+      "id": "floor-490",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10451,7 +10304,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-498",
+      "id": "floor-491",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10472,7 +10325,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-499",
+      "id": "floor-492",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10493,7 +10346,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-500",
+      "id": "floor-493",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10514,7 +10367,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-501",
+      "id": "floor-494",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10535,7 +10388,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-502",
+      "id": "floor-495",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10556,7 +10409,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-503",
+      "id": "floor-496",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10577,7 +10430,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-504",
+      "id": "floor-497",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10598,7 +10451,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-505",
+      "id": "floor-498",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10619,7 +10472,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-506",
+      "id": "floor-499",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10640,7 +10493,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-507",
+      "id": "floor-500",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10661,7 +10514,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-508",
+      "id": "floor-501",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10682,7 +10535,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-509",
+      "id": "floor-502",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10703,7 +10556,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-510",
+      "id": "floor-503",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10724,7 +10577,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-511",
+      "id": "floor-504",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10745,7 +10598,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-512",
+      "id": "floor-505",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10766,7 +10619,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-513",
+      "id": "floor-506",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10787,7 +10640,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-514",
+      "id": "floor-507",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -10808,7 +10661,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-515",
+      "id": "floor-508",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10829,7 +10682,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-516",
+      "id": "floor-509",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10850,7 +10703,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-517",
+      "id": "floor-510",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10871,7 +10724,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-518",
+      "id": "floor-511",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10892,7 +10745,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-519",
+      "id": "floor-512",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10913,7 +10766,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-520",
+      "id": "floor-513",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10934,7 +10787,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-521",
+      "id": "floor-514",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10955,7 +10808,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-522",
+      "id": "floor-515",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -10976,7 +10829,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-523",
+      "id": "floor-516",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -10997,7 +10850,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-524",
+      "id": "floor-517",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11018,7 +10871,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-525",
+      "id": "floor-518",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11039,7 +10892,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-526",
+      "id": "floor-519",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11060,7 +10913,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-527",
+      "id": "floor-520",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11081,7 +10934,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-528",
+      "id": "floor-521",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11102,7 +10955,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-529",
+      "id": "floor-522",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11123,7 +10976,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-530",
+      "id": "floor-523",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11144,7 +10997,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-531",
+      "id": "floor-524",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11165,7 +11018,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-532",
+      "id": "floor-525",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -11186,7 +11039,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-533",
+      "id": "floor-526",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11207,7 +11060,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-534",
+      "id": "floor-527",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11228,7 +11081,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-535",
+      "id": "floor-528",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11249,7 +11102,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-536",
+      "id": "floor-529",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11270,7 +11123,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-537",
+      "id": "floor-530",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11291,7 +11144,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-538",
+      "id": "floor-531",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11312,7 +11165,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-539",
+      "id": "floor-532",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11333,7 +11186,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-540",
+      "id": "floor-533",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11354,7 +11207,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-541",
+      "id": "floor-534",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11375,7 +11228,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-542",
+      "id": "floor-535",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11396,7 +11249,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-543",
+      "id": "floor-536",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11417,7 +11270,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-544",
+      "id": "floor-537",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11438,7 +11291,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-545",
+      "id": "floor-538",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11459,7 +11312,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-546",
+      "id": "floor-539",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11480,7 +11333,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-547",
+      "id": "floor-540",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11501,7 +11354,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-548",
+      "id": "floor-541",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11522,7 +11375,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-549",
+      "id": "floor-542",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11543,7 +11396,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-550",
+      "id": "floor-543",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -11564,7 +11417,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-551",
+      "id": "floor-544",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11585,7 +11438,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-552",
+      "id": "floor-545",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11606,7 +11459,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-553",
+      "id": "floor-546",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11627,7 +11480,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-554",
+      "id": "floor-547",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11648,7 +11501,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-555",
+      "id": "floor-548",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11669,7 +11522,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-556",
+      "id": "floor-549",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11690,7 +11543,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-557",
+      "id": "floor-550",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11711,7 +11564,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-558",
+      "id": "floor-551",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11732,7 +11585,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-559",
+      "id": "floor-552",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11753,7 +11606,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-560",
+      "id": "floor-553",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11774,7 +11627,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-561",
+      "id": "floor-554",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11795,7 +11648,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-562",
+      "id": "floor-555",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11816,7 +11669,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-563",
+      "id": "floor-556",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11837,7 +11690,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-564",
+      "id": "floor-557",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11858,7 +11711,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-565",
+      "id": "floor-558",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -11879,7 +11732,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-566",
+      "id": "floor-559",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11900,7 +11753,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-567",
+      "id": "floor-560",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11921,7 +11774,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-568",
+      "id": "floor-561",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -11942,7 +11795,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-569",
+      "id": "floor-562",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11963,7 +11816,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-570",
+      "id": "floor-563",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -11984,7 +11837,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-571",
+      "id": "floor-564",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12005,7 +11858,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-572",
+      "id": "floor-565",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12026,7 +11879,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-573",
+      "id": "floor-566",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12047,7 +11900,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-574",
+      "id": "floor-567",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12068,7 +11921,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-575",
+      "id": "floor-568",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12089,7 +11942,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-576",
+      "id": "floor-569",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12110,7 +11963,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-577",
+      "id": "floor-570",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12131,7 +11984,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-578",
+      "id": "floor-571",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12152,7 +12005,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-579",
+      "id": "floor-572",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12173,7 +12026,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-580",
+      "id": "floor-573",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12194,7 +12047,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-581",
+      "id": "floor-574",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12215,7 +12068,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-582",
+      "id": "floor-575",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12236,7 +12089,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-583",
+      "id": "floor-576",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12257,7 +12110,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-584",
+      "id": "floor-577",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12278,7 +12131,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-585",
+      "id": "floor-578",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12299,7 +12152,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-586",
+      "id": "floor-579",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -12320,7 +12173,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-587",
+      "id": "floor-580",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12341,7 +12194,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-588",
+      "id": "floor-581",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12362,7 +12215,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-589",
+      "id": "floor-582",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12383,7 +12236,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-590",
+      "id": "floor-583",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12404,7 +12257,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-591",
+      "id": "floor-584",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12425,7 +12278,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-592",
+      "id": "floor-585",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12446,7 +12299,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-593",
+      "id": "floor-586",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12467,7 +12320,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-594",
+      "id": "floor-587",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12488,7 +12341,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-595",
+      "id": "floor-588",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -12509,7 +12362,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-596",
+      "id": "floor-589",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12530,7 +12383,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-597",
+      "id": "floor-590",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12551,7 +12404,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-598",
+      "id": "floor-591",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12572,7 +12425,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-599",
+      "id": "floor-592",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12593,7 +12446,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-600",
+      "id": "floor-593",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12614,7 +12467,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-601",
+      "id": "floor-594",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12635,7 +12488,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-602",
+      "id": "floor-595",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12656,7 +12509,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-603",
+      "id": "floor-596",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12677,7 +12530,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-604",
+      "id": "floor-597",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12698,7 +12551,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-605",
+      "id": "floor-598",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12719,7 +12572,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-606",
+      "id": "floor-599",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12740,7 +12593,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-607",
+      "id": "floor-600",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12761,7 +12614,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-608",
+      "id": "floor-601",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12782,7 +12635,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-609",
+      "id": "floor-602",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12803,7 +12656,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-610",
+      "id": "floor-603",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12824,7 +12677,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-611",
+      "id": "floor-604",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12845,7 +12698,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-612",
+      "id": "floor-605",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12866,7 +12719,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-613",
+      "id": "floor-606",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -12887,7 +12740,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-614",
+      "id": "floor-607",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12908,7 +12761,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-615",
+      "id": "floor-608",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12929,7 +12782,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-616",
+      "id": "floor-609",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -12950,7 +12803,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-617",
+      "id": "floor-610",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12971,7 +12824,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-618",
+      "id": "floor-611",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -12992,7 +12845,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-619",
+      "id": "floor-612",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13013,7 +12866,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-620",
+      "id": "floor-613",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13034,7 +12887,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-621",
+      "id": "floor-614",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13055,7 +12908,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-622",
+      "id": "floor-615",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13076,7 +12929,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-623",
+      "id": "floor-616",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13097,7 +12950,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-624",
+      "id": "floor-617",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13118,7 +12971,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-625",
+      "id": "floor-618",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13139,7 +12992,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-626",
+      "id": "floor-619",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13160,7 +13013,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-627",
+      "id": "floor-620",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13181,7 +13034,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-628",
+      "id": "floor-621",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13202,7 +13055,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-629",
+      "id": "floor-622",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13223,7 +13076,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-630",
+      "id": "floor-623",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13244,7 +13097,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-631",
+      "id": "floor-624",
       "assetId": "f03-t-stone-full",
       "label": "f03-t-stone-full",
       "position": [
@@ -13265,7 +13118,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-632",
+      "id": "floor-625",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13286,7 +13139,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-633",
+      "id": "floor-626",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13307,7 +13160,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-634",
+      "id": "floor-627",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13328,7 +13181,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-635",
+      "id": "floor-628",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13349,7 +13202,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-636",
+      "id": "floor-629",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13370,7 +13223,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-637",
+      "id": "floor-630",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13391,7 +13244,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-638",
+      "id": "floor-631",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13412,7 +13265,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-639",
+      "id": "floor-632",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13433,7 +13286,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-640",
+      "id": "floor-633",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13454,7 +13307,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-641",
+      "id": "floor-634",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13475,7 +13328,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-642",
+      "id": "floor-635",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13496,7 +13349,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-643",
+      "id": "floor-636",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13517,7 +13370,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-644",
+      "id": "floor-637",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13538,7 +13391,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-645",
+      "id": "floor-638",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13559,7 +13412,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-646",
+      "id": "floor-639",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13580,7 +13433,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-647",
+      "id": "floor-640",
       "assetId": "m02-metal-full",
       "label": "m02-metal-full",
       "position": [
@@ -13601,7 +13454,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-648",
+      "id": "floor-641",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13622,7 +13475,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-649",
+      "id": "floor-642",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13643,7 +13496,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-650",
+      "id": "floor-643",
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
@@ -13664,7 +13517,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-651",
+      "id": "floor-644",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13685,7 +13538,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-652",
+      "id": "floor-645",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13706,7 +13559,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-653",
+      "id": "floor-646",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13727,7 +13580,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-654",
+      "id": "floor-647",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13748,7 +13601,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-655",
+      "id": "floor-648",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -13769,13 +13622,160 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-656",
+      "id": "floor-649",
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
         -16,
         0,
         12
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-650",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -15,
+        0,
+        4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-651",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -15,
+        0,
+        5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-652",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -15,
+        0,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-653",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -15,
+        0,
+        7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-654",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -15,
+        0,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-655",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -15,
+        0,
+        9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-656",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -15,
+        0,
+        10
       ],
       "rotationY": 0,
       "scale": [
@@ -13796,7 +13796,7 @@
       "position": [
         -15,
         0,
-        4
+        11
       ],
       "rotationY": 0,
       "scale": [
@@ -13817,7 +13817,7 @@
       "position": [
         -15,
         0,
-        5
+        12
       ],
       "rotationY": 0,
       "scale": [
@@ -13838,7 +13838,7 @@
       "position": [
         -15,
         0,
-        6
+        13
       ],
       "rotationY": 0,
       "scale": [
@@ -13854,12 +13854,12 @@
     },
     {
       "id": "floor-660",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -15,
+        -14,
         0,
-        7
+        5
       ],
       "rotationY": 0,
       "scale": [
@@ -13878,7 +13878,49 @@
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
-        -15,
+        -14,
+        0,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-662",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -14,
+        0,
+        7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-663",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -14,
         0,
         8
       ],
@@ -13895,11 +13937,11 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-662",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "id": "floor-664",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -15,
+        -14,
         0,
         9
       ],
@@ -13916,11 +13958,11 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-663",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "id": "floor-665",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -15,
+        -14,
         0,
         10
       ],
@@ -13937,11 +13979,11 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-664",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "id": "floor-666",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -15,
+        -14,
         0,
         11
       ],
@@ -13958,55 +14000,13 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-665",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -15,
-        0,
-        12
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-666",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -15,
-        0,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
       "id": "floor-667",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
         -14,
         0,
-        4
+        12
       ],
       "rotationY": 0,
       "scale": [
@@ -14027,7 +14027,7 @@
       "position": [
         -14,
         0,
-        5
+        13
       ],
       "rotationY": 0,
       "scale": [
@@ -14043,12 +14043,12 @@
     },
     {
       "id": "floor-669",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -14,
         0,
-        6
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -14067,9 +14067,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -14,
+        -13,
         0,
-        7
+        8
       ],
       "rotationY": 0,
       "scale": [
@@ -14088,9 +14088,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -14,
+        -13,
         0,
-        8
+        9
       ],
       "rotationY": 0,
       "scale": [
@@ -14109,9 +14109,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -14,
+        -13,
         0,
-        9
+        10
       ],
       "rotationY": 0,
       "scale": [
@@ -14130,28 +14130,7 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -14,
-        0,
-        10
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-674",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -14,
+        -13,
         0,
         11
       ],
@@ -14168,13 +14147,34 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-675",
+      "id": "floor-674",
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
-        -14,
+        -13,
         0,
         12
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-675",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -13,
+        0,
+        13
       ],
       "rotationY": 0,
       "scale": [
@@ -14193,9 +14193,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -14,
+        -13,
         0,
-        13
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -14214,9 +14214,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -14,
+        -13,
         0,
-        14
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -14235,9 +14235,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -12,
         0,
-        4
+        9
       ],
       "rotationY": 0,
       "scale": [
@@ -14256,9 +14256,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -12,
         0,
-        5
+        10
       ],
       "rotationY": 0,
       "scale": [
@@ -14274,12 +14274,12 @@
     },
     {
       "id": "floor-680",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -12,
         0,
-        6
+        11
       ],
       "rotationY": 0,
       "scale": [
@@ -14295,12 +14295,12 @@
     },
     {
       "id": "floor-681",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        -13,
+        -12,
         0,
-        7
+        12
       ],
       "rotationY": 0,
       "scale": [
@@ -14319,9 +14319,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -12,
         0,
-        8
+        13
       ],
       "rotationY": 0,
       "scale": [
@@ -14340,9 +14340,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -12,
         0,
-        9
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -14361,9 +14361,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -12,
         0,
-        10
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -14382,9 +14382,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -12,
         0,
-        11
+        16
       ],
       "rotationY": 0,
       "scale": [
@@ -14400,12 +14400,12 @@
     },
     {
       "id": "floor-686",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -11,
         0,
-        12
+        10
       ],
       "rotationY": 0,
       "scale": [
@@ -14424,9 +14424,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -11,
         0,
-        13
+        11
       ],
       "rotationY": 0,
       "scale": [
@@ -14442,12 +14442,12 @@
     },
     {
       "id": "floor-688",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        -13,
+        -11,
         0,
-        14
+        12
       ],
       "rotationY": 0,
       "scale": [
@@ -14466,9 +14466,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -13,
+        -11,
         0,
-        15
+        13
       ],
       "rotationY": 0,
       "scale": [
@@ -14487,9 +14487,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -12,
+        -11,
         0,
-        4
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -14508,9 +14508,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -12,
+        -11,
         0,
-        5
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -14526,12 +14526,12 @@
     },
     {
       "id": "floor-692",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -12,
+        -11,
         0,
-        6
+        16
       ],
       "rotationY": 0,
       "scale": [
@@ -14547,12 +14547,12 @@
     },
     {
       "id": "floor-693",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        -12,
+        -10,
         0,
-        7
+        11
       ],
       "rotationY": 0,
       "scale": [
@@ -14568,12 +14568,12 @@
     },
     {
       "id": "floor-694",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        -12,
+        -10,
         0,
-        8
+        12
       ],
       "rotationY": 0,
       "scale": [
@@ -14589,12 +14589,12 @@
     },
     {
       "id": "floor-695",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        -12,
+        -10,
         0,
-        9
+        13
       ],
       "rotationY": 0,
       "scale": [
@@ -14610,12 +14610,12 @@
     },
     {
       "id": "floor-696",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        -12,
+        -10,
         0,
-        10
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -14631,12 +14631,12 @@
     },
     {
       "id": "floor-697",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "f01-a",
+      "label": "f01-a",
       "position": [
-        -12,
+        -10,
         0,
-        11
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -14655,9 +14655,9 @@
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
-        -12,
+        -10,
         0,
-        12
+        16
       ],
       "rotationY": 0,
       "scale": [
@@ -14673,636 +14673,6 @@
     },
     {
       "id": "floor-699",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -12,
-        0,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-700",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -12,
-        0,
-        14
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-701",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -12,
-        0,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-702",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -12,
-        0,
-        16
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-703",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        4
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-704",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-705",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -11,
-        0,
-        6
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-706",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        7
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-707",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        8
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-708",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-709",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        10
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-710",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-711",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -11,
-        0,
-        12
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-712",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-713",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        14
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-714",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-715",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -11,
-        0,
-        16
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-716",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        4
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-717",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-718",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        6
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-719",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        7
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-720",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        8
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-721",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-722",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        10
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-723",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-724",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        12
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-725",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        13
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-726",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        14
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-727",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        15
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-728",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -10,
-        0,
-        16
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-729",
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
@@ -15323,175 +14693,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-730",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -9,
-        0,
-        4
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-731",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -9,
-        0,
-        5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-732",
-      "assetId": "f01-a",
-      "label": "f01-a",
-      "position": [
-        -9,
-        0,
-        6
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-733",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -9,
-        0,
-        7
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-734",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -9,
-        0,
-        8
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-735",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -9,
-        0,
-        9
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-736",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -9,
-        0,
-        10
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-737",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
-      "position": [
-        -9,
-        0,
-        11
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
-    },
-    {
-      "id": "floor-738",
+      "id": "floor-700",
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
@@ -15512,7 +14714,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-739",
+      "id": "floor-701",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -15533,7 +14735,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-740",
+      "id": "floor-702",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -15554,7 +14756,7 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-741",
+      "id": "floor-703",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
@@ -15575,13 +14777,811 @@
       "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
     },
     {
-      "id": "floor-742",
+      "id": "floor-704",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
         -9,
         0,
         16
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-705",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -9,
+        0,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-706",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -8,
+        0,
+        4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-707",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -8,
+        0,
+        13
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-708",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -8,
+        0,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-709",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -8,
+        0,
+        15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-710",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -8,
+        0,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-711",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -8,
+        0,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-712",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -8,
+        0,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-713",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -7,
+        0,
+        4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-714",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -7,
+        0,
+        5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-715",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -7,
+        0,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-716",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -7,
+        0,
+        15
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-717",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -7,
+        0,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-718",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -7,
+        0,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-719",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -7,
+        0,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-720",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -16,
+        0,
+        -1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-721",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -16,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-722",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -16,
+        0,
+        1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-723",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -15,
+        0,
+        -5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-724",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -15,
+        0,
+        -4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-725",
+      "assetId": "m02-metal-full",
+      "label": "m02-metal-full",
+      "position": [
+        -15,
+        0,
+        -3
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-726",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -15,
+        0,
+        -2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-727",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -15,
+        0,
+        -1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-728",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -15,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-729",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -15,
+        0,
+        1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-730",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -15,
+        0,
+        2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-731",
+      "assetId": "m02-metal-full",
+      "label": "m02-metal-full",
+      "position": [
+        -15,
+        0,
+        3
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-732",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -14,
+        0,
+        -7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-733",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -14,
+        0,
+        -6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-734",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -14,
+        0,
+        -5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-735",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -13,
+        0,
+        -9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-736",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -13,
+        0,
+        -8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-737",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -12,
+        0,
+        -10
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-738",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -12,
+        0,
+        -9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-739",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -11,
+        0,
+        -11
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-740",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -11,
+        0,
+        -10
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-741",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -10,
+        0,
+        -12
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 visual-only modular tile; floor tile may be moved/replaced by owner"
+    },
+    {
+      "id": "floor-742",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -10,
+        0,
+        -11
       ],
       "rotationY": 0,
       "scale": [
@@ -15602,7 +15602,7 @@
       "position": [
         -9,
         0,
-        17
+        -13
       ],
       "rotationY": 0,
       "scale": [
@@ -15621,9 +15621,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -9,
         0,
-        4
+        -12
       ],
       "rotationY": 0,
       "scale": [
@@ -15644,7 +15644,7 @@
       "position": [
         -8,
         0,
-        5
+        -13
       ],
       "rotationY": 0,
       "scale": [
@@ -15660,12 +15660,12 @@
     },
     {
       "id": "floor-746",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -7,
         0,
-        6
+        -14
       ],
       "rotationY": 0,
       "scale": [
@@ -15684,9 +15684,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -6,
         0,
-        7
+        -14
       ],
       "rotationY": 0,
       "scale": [
@@ -15705,9 +15705,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -6,
         0,
-        8
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -15726,9 +15726,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -5,
         0,
-        9
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -15747,9 +15747,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -5,
         0,
-        10
+        -14
       ],
       "rotationY": 0,
       "scale": [
@@ -15768,9 +15768,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -5,
         0,
-        11
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -15786,12 +15786,12 @@
     },
     {
       "id": "floor-752",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -5,
         0,
-        12
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -15810,9 +15810,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -4,
         0,
-        13
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -15831,9 +15831,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -4,
         0,
-        14
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -15849,12 +15849,12 @@
     },
     {
       "id": "floor-755",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "m02-metal-full",
+      "label": "m02-metal-full",
       "position": [
-        -8,
+        -3,
         0,
-        15
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -15873,9 +15873,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -2,
         0,
-        16
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -15894,9 +15894,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -1,
         0,
-        17
+        -16
       ],
       "rotationY": 0,
       "scale": [
@@ -15912,12 +15912,12 @@
     },
     {
       "id": "floor-758",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -8,
+        -1,
         0,
-        18
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -15936,9 +15936,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
         0,
-        4
+        0,
+        -16
       ],
       "rotationY": 0,
       "scale": [
@@ -15957,9 +15957,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
         0,
-        5
+        0,
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -15975,12 +15975,12 @@
     },
     {
       "id": "floor-761",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -7,
+        1,
         0,
-        6
+        -16
       ],
       "rotationY": 0,
       "scale": [
@@ -15999,9 +15999,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        1,
         0,
-        7
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -16020,9 +16020,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        2,
         0,
-        8
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -16038,12 +16038,12 @@
     },
     {
       "id": "floor-764",
-      "assetId": "f03-s-stone-full",
-      "label": "f03-s-stone-full",
+      "assetId": "m02-metal-full",
+      "label": "m02-metal-full",
       "position": [
-        -7,
+        3,
         0,
-        9
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -16062,9 +16062,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        4,
         0,
-        10
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -16083,9 +16083,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        4,
         0,
-        11
+        15
       ],
       "rotationY": 0,
       "scale": [
@@ -16101,12 +16101,12 @@
     },
     {
       "id": "floor-767",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -7,
+        5,
         0,
-        12
+        -15
       ],
       "rotationY": 0,
       "scale": [
@@ -16125,9 +16125,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        5,
         0,
-        13
+        -14
       ],
       "rotationY": 0,
       "scale": [
@@ -16146,7 +16146,7 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        5,
         0,
         14
       ],
@@ -16167,7 +16167,7 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        5,
         0,
         15
       ],
@@ -16188,9 +16188,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        6,
         0,
-        16
+        -14
       ],
       "rotationY": 0,
       "scale": [
@@ -16209,9 +16209,9 @@
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
       "position": [
-        -7,
+        6,
         0,
-        17
+        14
       ],
       "rotationY": 0,
       "scale": [
@@ -16227,12 +16227,12 @@
     },
     {
       "id": "floor-773",
-      "assetId": "f01-a",
-      "label": "f01-a",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
-        -7,
+        7,
         0,
-        18
+        -14
       ],
       "rotationY": 0,
       "scale": [
