@@ -324,7 +324,7 @@ def add_floor(items,v):
    if v==4:kind=("main","contrast","accent","service")[(abs(x)+z)%4]
    tile(x,z,kind)
  # Four distinct long fingers, with centered path, a visible open slot for the actual beds.
- for n,(_,bed,cx,cz,ang) in enumerate(BEDS,1):
+ for bed_index,(_,bed,cx,cz,ang) in enumerate(BEDS,1):
   # Extend approach from center to a safe distance before each bed, 1m floor tiles.
   length=max(6,int(math.hypot(cx,cz)-17))
   vx,vz=cx/math.hypot(cx,cz),cz/math.hypot(cx,cz)
