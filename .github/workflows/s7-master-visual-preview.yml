@@ -1,0 +1,49 @@
+name: S7 MASTER headless WebGL visual smoke
+on:
+  push:
+    branches: ['feature/s7-master-garden-visual-rebuild-20261119']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Launch localhost-only Builder for preview
+        run: |
+          python3 scripts/server.py >/tmp/trialum-builder-preview.log 2>&1 &
+          echo $! >/tmp/trialum-server.pid
+          for i in $(seq 1 40); do curl -sf http://127.0.0.1:8765/index.html >/dev/null && break; sleep 1; done
+          curl -sf 'http://127.0.0.1:8765/projects/trialum-s7-master-garden-review.json' >/dev/null
+          curl -sf 'http://127.0.0.1:8765/assets/models/g01-water-surfaces-animated.glb' -o /tmp/g01-water.glb
+          python3 - <<'PY'
+          from pathlib import Path
+          assert Path('/tmp/g01-water.glb').read_bytes()[:4]==b'glTF'
+          PY
+      - name: Generate review screenshot in headless WebGL
+        run: |
+          set -euxo pipefail
+          mkdir -p screenshots
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          echo "Headless renderer: $CHROME"
+          timeout 110s "$CHROME" --headless=new --no-sandbox --disable-dev-shm-usage \
+            --enable-webgl --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader \
+            --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=45000 \
+            --screenshot=screenshots/S7-MASTER-G01-WEBGL.png \
+            'http://127.0.0.1:8765/?preset=garden-master' \
+            >screenshots/chrome.log 2>&1
+          test -s screenshots/S7-MASTER-G01-WEBGL.png
+          file screenshots/S7-MASTER-G01-WEBGL.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: S7-MASTER-REVIEW-WEBGL-SCREENSHOT
+          path: |
+            screenshots/S7-MASTER-G01-WEBGL.png
+            screenshots/chrome.log
+          if-no-files-found: error
+          retention-days: 14
