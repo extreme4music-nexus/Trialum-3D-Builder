@@ -15,7 +15,7 @@ const ids=["projectName","saveIndicator","assetSearch","categoryFilter","catalog
  "noSelection","inspector","selectedAssetTitle","objLabel","posX","posY","posZ",
  "rotY","scaleVal","layerSelect","binding","objLocked","objVisible","roomWidth",
  "roomDepth","roomHeight","showWalls","surfaceMode","gridStep","snapEnabled",
- "toggleGrid","glbFileInput","projectFileInput"];
+ "toggleGrid","glbFileInput","projectFileInput","animationControls","animationClip"];
 const ui=Object.fromEntries(ids.map(id=>[id,$(id)]));
 const LOCAL_AUTOSAVE="trialum-3d-builder:scene-v1";
 const CATALOG_URL="./assets/catalog.json";
@@ -218,7 +218,13 @@ async function renderInstance(rec){
   if(state.instanceMeshes.get(rec.id)!==root)return;
   root.add(obj);
   const clips=state.modelAnimations.get(asset.id)||[];
-  if(clips.length){const mixer=new THREE.AnimationMixer(obj);for(const clip of clips)mixer.clipAction(clip).play();state.animationMixers.set(rec.id,mixer);}
+  if(clips.length){
+   const mixer=new THREE.AnimationMixer(obj);
+   const defaultClip=clips.find(c=>c.name==="idle")||clips[0];
+   mixer.clipAction(defaultClip).reset().play();
+   state.animationMixers.set(rec.id,mixer);
+   if(state.selectedId===rec.id)refreshInspector();
+  }
  }catch(e){
   console.error("Model load failed:",asset.id,e);
   if(state.instanceMeshes.get(rec.id)===root)root.add(placeholder(asset,true));
@@ -295,12 +301,32 @@ function refreshObjectList(){
   ui.objectList.append(btn);
  }
 }
+function playSelectedAnimation(clipName){
+ const rec=getSelected();if(!rec)return;
+ const mixer=state.animationMixers.get(rec.id),clips=state.modelAnimations.get(rec.assetId)||[];
+ if(!mixer||!clips.length){say("Овој GLB нема вчитани анимациски клипови.",true);return;}
+ mixer.stopAllAction();
+ if(clipName){
+  const clip=clips.find(c=>c.name===clipName);if(!clip){say("Невалидна анимација.",true);return;}
+  mixer.clipAction(clip).reset().play();
+  say("▶ Анимација "+clip.name+" · само преглед, без дејство во играта.");
+ }else say("■ Анимацијата е запрена.");
+}
 function refreshInspector(){
  const rec=getSelected();
  ui.noSelection.hidden=!!rec;
  ui.inspector.hidden=!rec;
- if(!rec){refreshObjectList();return;}
+ if(!rec){ui.animationControls.hidden=true;refreshObjectList();return;}
  $("selectedAssetTitle").textContent=assetById(rec.assetId)?.name||rec.assetId;
+ const clips=state.modelAnimations.get(rec.assetId)||[];
+ ui.animationControls.hidden=!clips.length;
+ const previous=ui.animationClip.value;
+ ui.animationClip.replaceChildren();
+ for(const clip of clips){
+  const opt=document.createElement("option");opt.value=clip.name;opt.textContent=clip.name;
+  ui.animationClip.append(opt);
+ }
+ if(clips.length)ui.animationClip.value=clips.some(c=>c.name===previous)?previous:(clips.find(c=>c.name==="idle")||clips[0]).name;
  ui.objLabel.value=rec.label||"";
  ui.posX.value=+rec.position[0].toFixed(3);
  ui.posY.value=+rec.position[1].toFixed(3);
@@ -886,6 +912,8 @@ function addListeners(){
  $("newProject").onclick=newProject;
  $("openLightingGallery").onclick=()=>openRoomPreset("lights-all");
  $("openS7FRobots").onclick=()=>openRoomPreset("s7f-all");
+ $("animationPlay").onclick=()=>playSelectedAnimation(ui.animationClip.value);
+ $("animationStop").onclick=()=>playSelectedAnimation(null);
  $("openG00LE0E1Gallery").onclick=()=>openRoomPreset("g00l-e0e1-all");
  $("openIrrigationGallery").onclick=()=>openRoomPreset("irrigation-all");
  $("openProject").onclick=()=>ui.projectFileInput.click();
