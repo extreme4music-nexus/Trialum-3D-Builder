@@ -96,6 +96,9 @@ jobs:
           if 'S7-F robotics eighteen real GLBs' not in s:
            s+='\ntest("S7-F robotics eighteen real GLBs and eight Builder galleries",()=>{\n const c=JSON.parse(file("assets/catalog.json")); const a=c.assets.filter(x=>x.id.startsWith("s7-f-")&&x.src?.endsWith(".glb"));\n assert.equal(a.length,18);assert.equal(c.genuineGlbCount,338);\n const h=file("index.html"),j=file("src/main.js");\n assert.match(h,/id="openS7FRobots"/);assert.match(j,/openRoomPreset\\("s7f-all"\\)/);\n for(const v of ["all","heroes","machines","transports","robot","tools","g00l-preview","rig-demo"]){assert.ok(h.includes(\'value="s7f-\'+v+\'"\'));assert.ok(j.includes(\'"s7f-\'+v+\'"\'));}\n assert.equal(JSON.parse(file("projects/trialum-s7-f-all.json")).instances.length,18);\n});\n'
           tests.write_text(s,encoding='utf8')
+          soil=Path('tests/soil-canonical-mapping.test.mjs');v=soil.read_text(encoding='utf8')
+          v=v.replace('[210,234,292,320]','[210,234,292,320,338]')
+          soil.write_text(v,encoding='utf8')
           boot=Path('.github/workflows/bootstrap.yml');s=boot.read_text(encoding='utf8')
           s=s.replace('assert len(glbs) in (150,210,234,292,320),len(glbs)','assert len(glbs) in (150,210,234,292,320,338),len(glbs)')
           boot.write_text(s,encoding='utf8')
@@ -117,7 +120,7 @@ jobs:
           git config user.email 'trialum-s7-f-robotics@users.noreply.github.com'
           git add -f assets/models/s7-f-*.glb
           git add assets/s7-f/*.json tools/b1/build_s7_f_robotics.py tests/verify_s7_f_robotics.py docs/S7_F_ROBOTICS_18_GLB_HANDOFF_20261119.md
-          git add projects/trialum-s7-f-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
+          git add projects/trialum-s7-f-*.json assets/catalog.json index.html src/main.js tests/editor-files.test.mjs tests/soil-canonical-mapping.test.mjs .github/workflows/bootstrap.yml START-BUILDER-WINDOWS.bat
           if git diff --staged --quiet; then echo 'All 18 genuine robotics GLB models already committed'; exit 0; fi
           git commit -m 'feat(S7-F builder): 18 original robot/machine GLBs, rig clips, 8 editable QA galleries'
           git fetch origin main
