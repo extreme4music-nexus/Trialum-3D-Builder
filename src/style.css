@@ -33,3 +33,9 @@ input[type=checkbox]{accent-color:#65bb91;box-shadow:none}.topbar{height:70px;ba
 .soil-matrix-status{font-weight:700;color:#d3e9c7}
 .soil-matrix-disclaimer{color:#b8cbbc!important;font-size:11px}
 @media(max-width:760px){.soil-matrix-panel{top:100px;right:8px;width:calc(100vw - 16px);max-height:calc(100vh - 125px)}}
+
+/* S7-F: quick-access model library and full GLB bundle */
+.s7f-quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:9px 0 5px}
+.s7f-quick button{min-width:0;white-space:normal;font-size:.85rem;padding:9px 5px}
+.s7f-quick #downloadS7FGLB{grid-column:1/-1}
+.s7f-library-status{display:block;line-height:1.45;padding:5px 0 9px;color:#add8c2;overflow-wrap:anywhere}
