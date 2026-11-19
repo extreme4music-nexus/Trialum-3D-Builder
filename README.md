@@ -8,7 +8,7 @@
 
 - **TOP → "Избери 3D просторија…"** contains REAL rooms: Agro Atrium, Warehouse, Cold Storage, Packing, Greenhouse, G01 water core; plus **four complete garden options V1/V2/V3/V4**. No standalone GLB packages here.
 - **LEFT → "📦 Готови пакети / тест сцени"** contains all 53 previously visible GLB gallery packages (S7 F01 original 70 tiles, marble F01–F03, soil S01–S03, M01–M03, robotics S7-F/R01, irrigation I01–I06, lighting LED, G-00L fixtures). Select a package to open its fully editable QA scene.
-- **LEFT → "Категорија"** contains every asset category including individual **S7-F · E01/E02/T01/T02/T03/R01** and each of the four plant species. Select an individual GLB model card, then "Постави" to add it to the scene. Search matches IDs like `s7-f-r01-humanoid`.
+- **LEFT → "Категорија"** filters model cards by asset family. **LEFT → "⬡ Поединечен 3D GLB модел"** is a second dropdown: **all 360 genuine GLBs are listed individually**, grouped by category; choosing one selects it for placement. Search still matches IDs such as `s7-f-r01-humanoid`.
 - Removed all special top `S7-F 18`, `G-00L 28`, `IRR 58`, `LED 24`, `S7 F01` buttons and left S7-F/R01/ZIP quick buttons.
 
 ### New 22 real 3D plant binaries (total 360)
