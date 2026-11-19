@@ -636,6 +636,7 @@ function useProject(raw,fromDisk=false){
  state.saveHandle=fromDisk?state.saveHandle:null;
  for(const asset of project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=project.name;
+ if(project.projectId.startsWith("trialum-s7-master-garden-pass2"))$("handoffBranch").value="design/s7-master-pass2";
  roomHelpers();syncGrid();refreshCategories();rebuildScene();
  recordSnapshot();
  if(fromDisk)markSaved();else markChanged();
@@ -782,7 +783,7 @@ async function exportBundle(){
 function designHandoffPayload(){
  const project=collectProject();
  const branch=$("handoffBranch").value;
- if(!/^design\/s7-garden-v[1-4]$/.test(branch))throw Error("Недозволена дизајнерска гранка.");
+ if(!/^design\/(?:s7-garden-v[1-4]|s7-master-pass2)$/.test(branch))throw Error("Недозволена дизајнерска гранка.");
  const used=[...new Set(project.instances.filter(x=>x.visible).map(x=>x.assetId))];
  const missing=used.filter(id=>!state.registry.has(id));
  if(missing.length)throw Error("Недостапни GLB IDs: "+missing.slice(0,6).join(", "));
@@ -1094,6 +1095,7 @@ async function openRoomPreset(key){
   state.saveHandle=null;
   useProject(data,true);
   if(key==="garden-master"){
+   $("handoffBranch").value="design/s7-master-pass2";
    state.gridOn=false;
    if(grid)grid.visible=false;
    $("toggleGrid").classList.remove("active");
@@ -1302,6 +1304,7 @@ async function startup(){
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
  refreshCategories();roomHelpers();addListeners();
+ if(state.project.projectId.startsWith("trialum-s7-master-garden-pass2"))$("handoffBranch").value="design/s7-master-pass2";
  $("restorePreUpgradeDraft").hidden=!localStorage.getItem(PASS2_PREVIOUS_DRAFT_KEY)&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
  await rebuildScene();recordSnapshot();
  if(welcomedMaster){
