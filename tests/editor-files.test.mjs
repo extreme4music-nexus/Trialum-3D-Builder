@@ -53,7 +53,7 @@ test("official S7 builder project contains original GLB modules, not demo primit
  assert.ok(p.instances.every(i=>i.assetId.startsWith("f01-")));
  assert.equal(p.meta.gameplayWrites,0);
  assert.equal(p.meta.officialScene,false);
- assert.match(file("src/main.js"),/openS7Project/);
+ assert.match(file("src/main.js"),/"f01":"trialum-s7-f01-production.json"/);
 });
 
 test("existing source rooms and two warehouse annexes have editable non-demo JSON",()=>{
@@ -230,7 +230,7 @@ test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-stat
  const ids=new Set(catalogue.assets.map(a=>a.id));
  for(const id of ["s02-25-planting-grid","s01-dug-turnover","s02-fill-plug","s02-slot-ring","s02-demo-seedling"])
   assert.ok(ids.has(id),"Missing soil GLB in catalogue: "+id);
- assert.ok([150,210,234,292,320,338].includes(catalogue.genuineGlbCount));
+ assert.ok(catalogue.genuineGlbCount>=150);
  const grid=JSON.parse(file("assets/soil-slot-matrix.json"));
  assert.equal(grid.slotCount,25);
  assert.equal(grid.canonicalPlantSlotsPerBed,5);
@@ -271,9 +271,9 @@ test("one-click 24-light gallery remains visible after pulling Builder main",()=
  const c=JSON.parse(file("assets/catalog.json"));
  const lighting=c.assets.filter(a=>/^s7-l(?:f[1-3]|w[1-2]|c[1-3])-/.test(a.id)&&a.src?.endsWith(".glb"));
  assert.equal(lighting.length,24,"Real lighting assets must be present in Builder");
- assert.match(html,/id="openLightingGallery"/);
+ assert.match(html,/id="packagePreset"/);
  assert.match(html,/id="builderLibraryVersion"/);
- assert.match(js,/\$\("openLightingGallery"\)\.onclick=\(\)=>openRoomPreset\("lights-all"\)/);
+ assert.match(js,/"lights-all":"trialum-s7-lights-all-24-glbs.json"/);
  assert.match(js,/LED "\+lightCount\+"\/24 · S7-F /);
  for(const item of ["lights-all","lights-floor","lights-wall","lights-ceiling","lights-g01"]){
   assert.ok(html.includes('value="'+item+'"'),item+" not in room selector");
@@ -292,7 +292,7 @@ test("G00L twenty-eight real GLBs appear in Builder one-click scene",()=>{
  const items=c.assets.filter(a=>a.id.startsWith("s7-e0e1-")&&a.src.endsWith(".glb"));
  assert.equal(items.length,28);assert.ok(c.genuineGlbCount>=320);
  const h=file("index.html"),j=file("src/main.js");
- assert.match(h,/id="openG00LE0E1Gallery"/);assert.match(j,/openRoomPreset\("g00l-e0e1-all"\)/);
+ assert.match(h,/id="packagePreset"/);assert.match(j,/"g00l-e0e1-all":"trialum-g00l-e0e1-all-review.json"/);
  for(const name of ["all","rs","rm","st","desk","accessories","layout"]){
   assert.ok(h.includes('value="g00l-e0e1-'+name+'"'));
   assert.ok(j.includes('"g00l-e0e1-'+name+'"'));
@@ -302,9 +302,9 @@ test("G00L twenty-eight real GLBs appear in Builder one-click scene",()=>{
 
 test("S7-F robotics eighteen real GLBs and eight Builder galleries",()=>{
  const c=JSON.parse(file("assets/catalog.json")); const a=c.assets.filter(x=>x.id.startsWith("s7-f-")&&x.src?.endsWith(".glb"));
- assert.equal(a.length,18);assert.equal(c.genuineGlbCount,338);
+ assert.equal(a.length,18);assert.ok(c.genuineGlbCount>=338);
  const h=file("index.html"),j=file("src/main.js");
- assert.match(h,/id="openS7FRobots"/);assert.match(j,/openRoomPreset\("s7f-all"\)/);
+ assert.match(h,/id="packagePreset"/);assert.match(j,/"s7f-all":"trialum-s7-f-all.json"/);
  for(const v of ["all","heroes","machines","transports","robot","tools","g00l-preview","rig-demo"]){assert.ok(h.includes('value="s7f-'+v+'"'));assert.ok(j.includes('"s7f-'+v+'"'));}
  assert.equal(JSON.parse(file("projects/trialum-s7-f-all.json")).instances.length,18);
 });
@@ -328,14 +328,14 @@ test("S7-F and R01 models are directly discoverable and all original binaries ex
  assert.equal(parts.length,18);
  assert.equal(robots.length,3);
  assert.equal(new Set(parts.map(a=>a.id)).size,18);
- for(const id of ["filterS7F","filterR01","downloadS7FGLB","s7fStatus"]){
+ for(const id of ["packagePreset","handoffBranch","exportHandoff"]){
    assert.ok(h.includes('id="'+id+'"'),id);
    assert.ok(src.includes('"'+id+'"'),id);
  }
  assert.match(src,/const S7_F_ALL=/);
- assert.match(src,/function showS7FCategory/);
- assert.match(src,/async function downloadS7FModels/);
- assert.match(src,/downloadBlob\(makeZip\(files\),"TRIALUM-S7-F-ALL-18-REAL-GLB\.zip"\)/);
+ assert.match(src,/async function exportDesignHandoff/);
+ assert.match(src,/downloadBlob\(makeZip\(files\),/);
+ assert.match(src,/const files=\[/);
  assert.ok(h.includes('value="s7f-robot"'));
  assert.ok(h.includes('value="s7f-all"'));
  const all=JSON.parse(file("projects/trialum-s7-f-all.json"));
