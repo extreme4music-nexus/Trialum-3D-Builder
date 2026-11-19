@@ -133,5 +133,5 @@ test("G00L open glass canopy covers real service area without altering original 
  assert.equal(doc.asset.extras.originalGreenhouseUnmodified,true);
  assert.equal(doc.materials[0].alphaMode,"BLEND");
  assert.equal(doc.meshes[0].primitives.length,3);
- assert.equal(catalog.genuineGlbCount,362);
+ assert.ok([362,363].includes(catalog.genuineGlbCount),"G00L genuine annex must remain plus optional PASS2 2.3m glass door");
 });
