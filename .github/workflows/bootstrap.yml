@@ -157,7 +157,7 @@ jobs:
            if old is not None:assert old['src']==new['src']
            else:doc['assets'].append(new)
           glbs=[a for a in doc['assets'] if (a.get('src') or '').endswith('.glb')]
-          assert len(glbs) in (150,210,234,292),len(glbs)
+          assert len(glbs) in (150,210,234,292,320),len(glbs)
           doc['genuineGlbCount']=len(glbs)
           doc['assetLibraryVersion']='2026-11-18-floor-mixed-'+str(len(glbs))+'-glbs'
           cat.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
