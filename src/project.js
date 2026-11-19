@@ -49,7 +49,7 @@ export function sanitizeProject(raw){
  // Preserve only SAFE, canonical review metadata when round-tripping a full
  // S7 greenhouse through the editor. Never honor game-state/write flags from JSON.
  const rawMeta=raw.meta&&typeof raw.meta==="object"&&!Array.isArray(raw.meta)?raw.meta:{};
- const isGarden=/^trialum-s7-complete-garden-v[1-4]/.test(p.projectId);
+ const isGarden=/^trialum-s7-(?:complete-garden-v[1-4]|master-garden)/.test(p.projectId);
  p.meta={
   editorVersion:"0.1.0",gameplayWrites:0,officialScene:false,
   ...(isGarden?{

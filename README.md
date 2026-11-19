@@ -1,5 +1,23 @@
 # Trialum 3D World Builder (TWCS)
 
+## 🌿 CURRENT MAIN DELIVERY — S7 MASTER GARDEN, 362 GLBs
+
+**After GitHub Desktop MAIN Fetch/Pull**, close the old Builder server on port 8765, run `START-BUILDER-WINDOWS.bat` from the updated Builder checkout, and open `http://127.0.0.1:8765/`. On the first run after this upgrade, the **fully composed MASTER garden** is opened instead of the original F01 materials gallery. The previous local autosave is retained under a separate backup key and can be restored via the new **Мој претходен проект** button. Subsequent visits resume the user's current autosave normally. The dropdown **Избери 3D просторија → MASTER GARDEN** always opens the preview on demand.
+
+- **362 genuine GLBs** (360 original S7 set + genuine G01 curved rim and G00L glass annex). The S7 owner-review MASTER scene has 372 independently editable objects, central G01 1+3 rippling water basins and four Aquaglow visual slots, four five-slot growing beds, 44 decorative planting/soil groups, G00L service racks, robots, a true glass annex, lamps, hoses and physical furniture.
+- The four **older V1–V4 garden JSON scenes remain available and unchanged**; they should **not** be presented as final redesigned variants until the MASTER has passed the owner's visual review. The complete MASTER layout is `projects/trialum-s7-master-garden-review.json`.
+- `Категорија` and `Поединечен 3D GLB модел` display genuine models and all families in the **left Library**; packages have their own left-hand dropdown; real room and MASTER presets live under the top room selector.
+- Real water animation + source-floor occlusion fix, bounds-based height/pivot grounding, living plant clips, G00L desk/robot arrangements and six headless browser screenshots have been implemented/tested. This is a **visual editing preview**, not an in-game engine change, app release, or final OWNER PASS.
+- Detailed evidence and review/remaining follow-ups: `docs/S7_MASTER_GARDEN_RECONSTRUCTION_REPORT_20261119.md`. To inspect directly: `http://127.0.0.1:8765/?preset=garden-master&view=water` (replace `water` with `g00l` or `bed1`–`bed4` for close-ups).
+
+### Acceptance before continuing
+1. On Windows, visually verify the actual water movement, monitor/table heights, leaf sway, four beds, decorative soil, robot service corner and lighting; send screenshots/videos for any remaining geometry defects.
+2. Fix the **one MASTER** design first and record OWNER PASS. Only then derive four final floor-pattern variations with identical functional scene contents.
+3. After owner-approved Builder handoff, separately integrate into Trialum game on a development branch; never change Classic or production directly.
+
+---
+
+
 ## 🌿 S7 — NOVEMBER 19 2026 — 360 real GLB + four complete editable garden layouts
 
 **AUTHORITATIVE CURRENT GUIDE.** Previously recorded milestones below are historical; any old note saying that a GLB gallery lives under "Избери 3D просторија…" is obsolete.

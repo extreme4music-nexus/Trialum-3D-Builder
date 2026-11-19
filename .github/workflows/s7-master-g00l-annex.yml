@@ -1,0 +1,59 @@
+name: S7 MASTER genuine G00L open glass annex
+on:
+  push:
+    branches: ['feature/s7-master-garden-visual-rebuild-20261119']
+    paths:
+      - 'tools/b1/build-s7-g00l-annex.py'
+      - '.github/workflows/s7-master-g00l-annex.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: s7-master-g00l-annex
+  cancel-in-progress: false
+jobs:
+  build-review-annex:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate real open glass extension and verify no original shell mutation
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/b1/build-s7-g00l-annex.py
+          python3 tools/b1/build-s7-g00l-annex.py
+          python3 - <<'PY'
+          import json, struct
+          from pathlib import Path
+          data=Path('assets/models/s7-master-g00l-glass-service-wing.glb').read_bytes()
+          assert data[:4]==b'glTF' and struct.unpack_from('<I',data,8)[0]==len(data)
+          ln=struct.unpack_from('<I',data,12)[0]
+          j=json.loads(data[20:20+ln])
+          assert len(j['meshes'][0]['primitives'])==3
+          assert j['asset']['extras']['isFifthFinger'] is False
+          assert j['materials'][0]['alphaMode']=='BLEND'
+          p=json.loads(Path('projects/trialum-s7-master-garden-review.json').read_text())
+          assert p['meta']['gameplayWrites']==0
+          assert any(x['id']=='master-g00l-glass-annex' for x in p['instances'])
+          assert sum(x['id'].startswith('master-g00l-entrance-connector-') for x in p['instances'])==8
+          assert json.loads(Path('assets/catalog.json').read_text())['genuineGlbCount']==362
+          print('PASS open G00L canopy, 8 physical passage tiles and untouched game')
+          PY
+      - name: Commit only the isolated Builder feature branch
+        run: |
+          set -euo pipefail
+          git config user.name 'trialum-s7-master-visual-bot'
+          git config user.email 's7-master-visual@users.noreply.github.com'
+          git add -f assets/models/s7-master-g00l-glass-service-wing.glb
+          git add assets/catalog.json assets/s7-master-g00l-annex-manifest.json projects/trialum-s7-master-garden-review.json
+          if git diff --staged --quiet; then echo "Already current"; exit 0; fi
+          git commit -m 'assets(S7 MASTER): original open glass G00L service wing and entrance walkway'
+          git fetch origin feature/s7-master-garden-visual-rebuild-20261119
+          git rebase origin/feature/s7-master-garden-visual-rebuild-20261119
+          git push origin HEAD:feature/s7-master-garden-visual-rebuild-20261119

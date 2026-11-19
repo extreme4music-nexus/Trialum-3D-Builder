@@ -1,0 +1,10 @@
+{
+  "glb": "assets/models/s7-master-g01-edge-finish.glb",
+  "sha256": "e40493f2f82dc0c927e982287ad88627ed6ce0c08d8f90231874c02840ca4e46",
+  "bytes": 113364,
+  "outerRadius": 17.43,
+  "segments": 192,
+  "waterBasinCount": 4,
+  "gameplayWrites": 0,
+  "ownerVisualPass": false
+}

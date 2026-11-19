@@ -1,0 +1,7864 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-s7-master-garden-visual-rebuild-20261119",
+  "name": "S7 · MASTER GARDEN · живо водно јадро и четири оформени градини",
+  "description": "OWNER REVIEW — целосна S7 визуелна сцена со поправена G01 вода, растенија и опрема. Не е поврзана со gameplay.",
+  "room": {
+    "width": 82,
+    "depth": 104,
+    "height": 12.5,
+    "gridSize": 0.5,
+    "showWalls": false,
+    "floorColor": "#304b45",
+    "wallColor": "#56736c"
+  },
+  "instances": [
+    {
+      "id": "shell-original",
+      "assetId": "greenhouse-shell",
+      "label": "greenhouse-shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original S7 glass shell. Existing physical glass/floor and pool cutout MUST be owner verified."
+    },
+    {
+      "id": "g01-g01-main-basin",
+      "assetId": "g01-main-basin",
+      "label": "g01-main-basin",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 water module. Real engine has exactly FOUR aquatic slots; preview only."
+    },
+    {
+      "id": "g01-g01-satellite-basins",
+      "assetId": "g01-satellite-basins",
+      "label": "g01-satellite-basins",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 water module. Real engine has exactly FOUR aquatic slots; preview only."
+    },
+    {
+      "id": "g01-g01-walkway-and-railings",
+      "assetId": "g01-walkway-and-railings",
+      "label": "g01-walkway-and-railings",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 water module. Real engine has exactly FOUR aquatic slots; preview only."
+    },
+    {
+      "id": "g01-g01-crossing-bridge",
+      "assetId": "g01-crossing-bridge",
+      "label": "g01-crossing-bridge",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 water module. Real engine has exactly FOUR aquatic slots; preview only."
+    },
+    {
+      "id": "g01-g01-visual-service-pumps",
+      "assetId": "g01-visual-service-pumps",
+      "label": "g01-visual-service-pumps",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 water module. Real engine has exactly FOUR aquatic slots; preview only."
+    },
+    {
+      "id": "g01-g01-water-surfaces-animated",
+      "assetId": "g01-water-surfaces-animated",
+      "label": "g01-water-surfaces-animated",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": true,
+      "visible": true,
+      "binding": "",
+      "note": "Original G01 water module. Real engine has exactly FOUR aquatic slots; preview only."
+    },
+    {
+      "id": "aquatic-slot-1",
+      "assetId": "aquaglow-mature",
+      "label": "aquaglow-mature",
+      "position": [
+        -2.7,
+        -0.225,
+        -2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:G01:aquatic-slot-1",
+      "note": "Оригинален G01 aquatic-slot-1 во ГЛАВНИОТ базен (4 канонски, не 4 во сателитските); дното е Y=-0.235"
+    },
+    {
+      "id": "aquatic-slot-2",
+      "assetId": "aquaglow-growing",
+      "label": "aquaglow-growing",
+      "position": [
+        2.7,
+        -0.225,
+        -2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:G01:aquatic-slot-2",
+      "note": "Оригинален G01 aquatic-slot-2 во ГЛАВНИОТ базен (4 канонски, не 4 во сателитските); дното е Y=-0.235"
+    },
+    {
+      "id": "aquatic-slot-3",
+      "assetId": "aquaglow-young",
+      "label": "aquaglow-young",
+      "position": [
+        -2.7,
+        -0.225,
+        2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:G01:aquatic-slot-3",
+      "note": "Оригинален G01 aquatic-slot-3 во ГЛАВНИОТ базен (4 канонски, не 4 во сателитските); дното е Y=-0.235"
+    },
+    {
+      "id": "aquatic-slot-4",
+      "assetId": "aquaglow-ready-for-transplant",
+      "label": "aquaglow-ready-for-transplant",
+      "position": [
+        2.7,
+        -0.225,
+        2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:G01:aquatic-slot-4",
+      "note": "Оригинален G01 aquatic-slot-4 во ГЛАВНИОТ базен (4 канонски, не 4 во сателитските); дното е Y=-0.235"
+    },
+    {
+      "id": "g00l-rs-1",
+      "assetId": "s7-e0e1-rs01-nursery-3-tier",
+      "label": "s7-e0e1-rs01-nursery-3-tier",
+      "position": [
+        -15.3,
+        0,
+        15.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L seedling rack display; real seedlings inventory comes from engine."
+    },
+    {
+      "id": "g00l-rs-2",
+      "assetId": "s7-e0e1-rs02-nursery-4-tier",
+      "label": "s7-e0e1-rs02-nursery-4-tier",
+      "position": [
+        -15.2,
+        0,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L seedling rack display; real seedlings inventory comes from engine."
+    },
+    {
+      "id": "g00l-rm-1",
+      "assetId": "s7-e0e1-rm01-mature-single",
+      "label": "s7-e0e1-rm01-mature-single",
+      "position": [
+        -15.4,
+        0,
+        7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Larger and MORE numerous RM racks: 4 versus 2 RS; no fictional stored plants."
+    },
+    {
+      "id": "g00l-rm-2",
+      "assetId": "s7-e0e1-rm02-mature-double",
+      "label": "s7-e0e1-rm02-mature-double",
+      "position": [
+        -11.8,
+        0,
+        7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Larger and MORE numerous RM racks: 4 versus 2 RS; no fictional stored plants."
+    },
+    {
+      "id": "g00l-rm-3",
+      "assetId": "s7-e0e1-rm03-mature-tall",
+      "label": "s7-e0e1-rm03-mature-tall",
+      "position": [
+        -15.4,
+        0,
+        9.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Larger and MORE numerous RM racks: 4 versus 2 RS; no fictional stored plants."
+    },
+    {
+      "id": "g00l-rm-4",
+      "assetId": "s7-e0e1-rm04-reinforced-mature-carrier",
+      "label": "s7-e0e1-rm04-reinforced-mature-carrier",
+      "position": [
+        -11.8,
+        0,
+        9.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Larger and MORE numerous RM racks: 4 versus 2 RS; no fictional stored plants."
+    },
+    {
+      "id": "g00l-equipment-1",
+      "assetId": "s7-e0e1-w01-workstation-desk",
+      "label": "s7-e0e1-w01-workstation-desk",
+      "position": [
+        -9.9,
+        0,
+        13.65
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-2",
+      "assetId": "s7-e0e1-w02-ergonomic-chair",
+      "label": "s7-e0e1-w02-ergonomic-chair",
+      "position": [
+        -10.05,
+        0,
+        15.1
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-3",
+      "assetId": "s7-e0e1-w03-hologram-monitor",
+      "label": "s7-e0e1-w03-hologram-monitor",
+      "position": [
+        -10,
+        0.93,
+        13.4
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-4",
+      "assetId": "s7-e0e1-w04-workstation-tower",
+      "label": "s7-e0e1-w04-workstation-tower",
+      "position": [
+        -8.4,
+        0,
+        13.5
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-5",
+      "assetId": "s7-e0e1-w05-backlit-keyboard",
+      "label": "s7-e0e1-w05-backlit-keyboard",
+      "position": [
+        -10.05,
+        0.94,
+        13.93
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-6",
+      "assetId": "s7-e0e1-w06-ergonomic-mouse",
+      "label": "s7-e0e1-w06-ergonomic-mouse",
+      "position": [
+        -9.55,
+        0.94,
+        13.95
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-7",
+      "assetId": "s7-e0e1-st01-spares-rack",
+      "label": "s7-e0e1-st01-spares-rack",
+      "position": [
+        -15.4,
+        0,
+        19.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-8",
+      "assetId": "s7-e0e1-st02-secure-cabinet",
+      "label": "s7-e0e1-st02-secure-cabinet",
+      "position": [
+        -12.45,
+        0,
+        19.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-9",
+      "assetId": "s7-e0e1-st03-mobile-tool-cart",
+      "label": "s7-e0e1-st03-mobile-tool-cart",
+      "position": [
+        -9.8,
+        0,
+        19.9
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-10",
+      "assetId": "s7-e0e1-cn01-seedling-tray-demo",
+      "label": "s7-e0e1-cn01-seedling-tray-demo",
+      "position": [
+        -15.3,
+        0.73,
+        15.7
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Декоративен расаден сад поставен на физичка полица од RS01, без gameplay inventory."
+    },
+    {
+      "id": "g00l-equipment-11",
+      "assetId": "s7-f-r01-charging-dock",
+      "label": "s7-f-r01-charging-dock",
+      "position": [
+        -7.65,
+        0,
+        19.65
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-12",
+      "assetId": "s7-f-r01-humanoid",
+      "label": "s7-f-r01-humanoid",
+      "position": [
+        -7.65,
+        0,
+        18.45
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-00L physical service/robotics. Animations are visual only, no jobs or gameplay writes."
+    },
+    {
+      "id": "g00l-equipment-13",
+      "assetId": "s7-f-r01-repair-tool",
+      "label": "s7-f-r01-repair-tool",
+      "position": [
+        -9.2,
+        0.94,
+        13.88
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "R01 repair tool placed on desk surface, physically rooted using real GLB bounds."
+    },
+    {
+      "id": "g00l-equipment-14",
+      "assetId": "s7-f-t01-planting-carrier",
+      "label": "s7-f-t01-planting-carrier",
+      "position": [
+        -8.6,
+        0,
+        7.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна машина паркирана на цврста G-00L подлога; без активни autonomous tasks."
+    },
+    {
+      "id": "g00l-equipment-15",
+      "assetId": "s7-f-t02-flat-transport",
+      "label": "s7-f-t02-flat-transport",
+      "position": [
+        -11.3,
+        0,
+        3.2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна машина паркирана на цврста G-00L подлога; без активни autonomous tasks."
+    },
+    {
+      "id": "g00l-equipment-16",
+      "assetId": "s7-f-t03-heavy-transport",
+      "label": "s7-f-t03-heavy-transport",
+      "position": [
+        -8.5,
+        0,
+        4.6
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна машина паркирана на цврста G-00L подлога; без активни autonomous tasks."
+    },
+    {
+      "id": "g00l-equipment-17",
+      "assetId": "s7-f-e01-excavator",
+      "label": "s7-f-e01-excavator",
+      "position": [
+        -15.4,
+        0,
+        2
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна машина паркирана на цврста G-00L подлога; без активни autonomous tasks."
+    },
+    {
+      "id": "g00l-equipment-18",
+      "assetId": "s7-f-e02-tiller",
+      "label": "s7-f-e02-tiller",
+      "position": [
+        -12.1,
+        0,
+        2.3
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна машина паркирана на цврста G-00L подлога; без активни autonomous tasks."
+    },
+    {
+      "id": "bed-1-real-bed",
+      "assetId": "s02-25-planting-grid",
+      "label": "s02-25-planting-grid",
+      "position": [
+        -30.315,
+        0.065,
+        -9.268
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        4.65,
+        1,
+        4.65
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-1",
+      "note": "G-02: ONE actual 5×5-hole soil surface, scale 3.45m. Only FIVE real gameplay slots; other holes remain purely visual."
+    },
+    {
+      "id": "bed-1-irrigation-controller",
+      "assetId": "s7-c-irr01-bed-control-compact",
+      "label": "s7-c-irr01-bed-control-compact",
+      "position": [
+        -26.028,
+        0.04,
+        -4.82
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-1",
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-1-irrig-1",
+      "assetId": "s7-i01-feed-distributor-4",
+      "label": "s7-i01-feed-distributor-4",
+      "position": [
+        -26.895,
+        0.13,
+        -4.72
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-1-irrig-2",
+      "assetId": "s7-i02-pump-compact",
+      "label": "s7-i02-pump-compact",
+      "position": [
+        -28.091,
+        0.13,
+        -5.085
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-1-irrig-3",
+      "assetId": "s7-i03-hose-soft-arch-1m",
+      "label": "s7-i03-hose-soft-arch-1m",
+      "position": [
+        -26.584,
+        0.14,
+        -5.566
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-1-irrig-4",
+      "assetId": "s7-i04-tee",
+      "label": "s7-i04-tee",
+      "position": [
+        -27.828,
+        0.14,
+        -5.946
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-1-irrig-5",
+      "assetId": "s7-i05-dripline-1m",
+      "label": "s7-i05-dripline-1m",
+      "position": [
+        -28.569,
+        0.17,
+        -7.113
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
+    },
+    {
+      "id": "bed-1-irrig-6",
+      "assetId": "s7-i06-replacement-cartridge",
+      "label": "s7-i06-replacement-cartridge",
+      "position": [
+        -27.662,
+        0.32,
+        -5.634
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-1-plant-preview-1",
+      "assetId": "mineralreed-seedling",
+      "label": "mineralreed-seedling",
+      "position": [
+        -29.9492,
+        0.18,
+        -7.7968
+      ],
+      "rotationY": -1.09409,
+      "scale": [
+        1.55,
+        1.55,
+        1.55
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-1:slot-1",
+      "note": "G-02 канонски slot 1/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-1-plant-preview-2",
+      "assetId": "lumemoss-young",
+      "label": "lumemoss-young",
+      "position": [
+        -31.2448,
+        0.18,
+        -9.134
+      ],
+      "rotationY": -1.49409,
+      "scale": [
+        1.8,
+        1.8,
+        1.8
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-1:slot-2",
+      "note": "G-02 канонски slot 2/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-1-plant-preview-3",
+      "assetId": "glowfern-growing",
+      "label": "glowfern-growing",
+      "position": [
+        -29.4038,
+        0.18,
+        -9.5123
+      ],
+      "rotationY": -1.09409,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-1:slot-3",
+      "note": "G-02 канонски slot 3/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-1-plant-preview-4",
+      "assetId": "mineralreed-mature",
+      "label": "mineralreed-mature",
+      "position": [
+        -30.7419,
+        0.18,
+        -10.7788
+      ],
+      "rotationY": -1.49409,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-1:slot-4",
+      "note": "G-02 канонски slot 4/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-1-plant-preview-5",
+      "assetId": "lumemoss-ready-for-transplant",
+      "label": "lumemoss-ready-for-transplant",
+      "position": [
+        -30.315,
+        0.18,
+        -9.268
+      ],
+      "rotationY": -1.09409,
+      "scale": [
+        2.05,
+        2.05,
+        2.05
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-1:slot-5",
+      "note": "G-02 канонски slot 5/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-1-ceiling-ring",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "s7-lc3-corridor-ceiling-ring-medium",
+      "position": [
+        -30.31486076402822,
+        5.65,
+        -9.268183039710756
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real ceiling fixture mesh; lighting engine not enabled."
+    },
+    {
+      "id": "bed-1-led-floor",
+      "assetId": "s7-lf1-perimeter-straight-1m",
+      "label": "s7-lf1-perimeter-straight-1m",
+      "position": [
+        -28.658,
+        0.1,
+        -11.951
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "bed-2-real-bed",
+      "assetId": "s02-25-planting-grid",
+      "label": "s02-25-planting-grid",
+      "position": [
+        -29.983,
+        0.065,
+        -38.376
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        4.65,
+        1,
+        4.65
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-2",
+      "note": "G-03: ONE actual 5×5-hole soil surface, scale 3.45m. Only FIVE real gameplay slots; other holes remain purely visual."
+    },
+    {
+      "id": "bed-2-irrigation-controller",
+      "assetId": "s7-c-irr01-bed-control-compact",
+      "label": "s7-c-irr01-bed-control-compact",
+      "position": [
+        -30.204,
+        0.04,
+        -31.35
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-2",
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-2-irrig-1",
+      "assetId": "s7-i01-feed-distributor-4",
+      "label": "s7-i01-feed-distributor-4",
+      "position": [
+        -30.973,
+        0.13,
+        -31.765
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-2-irrig-2",
+      "assetId": "s7-i02-pump-compact",
+      "label": "s7-i02-pump-compact",
+      "position": [
+        -31.742,
+        0.13,
+        -32.75
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-2-irrig-3",
+      "assetId": "s7-i03-hose-soft-arch-1m",
+      "label": "s7-i03-hose-soft-arch-1m",
+      "position": [
+        -30.233,
+        0.14,
+        -32.28
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-2-irrig-4",
+      "assetId": "s7-i04-tee",
+      "label": "s7-i04-tee",
+      "position": [
+        -31.033,
+        0.14,
+        -33.304
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-2-irrig-5",
+      "assetId": "s7-i05-dripline-1m",
+      "label": "s7-i05-dripline-1m",
+      "position": [
+        -29.788,
+        0.17,
+        -35.609
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
+    },
+    {
+      "id": "bed-2-irrig-6",
+      "assetId": "s7-i06-replacement-cartridge",
+      "label": "s7-i06-replacement-cartridge",
+      "position": [
+        -31.076,
+        0.32,
+        -32.954
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-2-plant-preview-1",
+      "assetId": "lumemoss-seedling",
+      "label": "lumemoss-seedling",
+      "position": [
+        -30.5272,
+        0.18,
+        -36.961
+      ],
+      "rotationY": -0.483225,
+      "scale": [
+        1.55,
+        1.55,
+        1.55
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-2:slot-1",
+      "note": "G-03 канонски slot 1/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-2-plant-preview-2",
+      "assetId": "glowfern-young",
+      "label": "glowfern-young",
+      "position": [
+        -30.8215,
+        0.18,
+        -38.7995
+      ],
+      "rotationY": -0.883225,
+      "scale": [
+        1.8,
+        1.8,
+        1.8
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-2:slot-2",
+      "note": "G-03 канонски slot 2/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-2-plant-preview-3",
+      "assetId": "mineralreed-growing",
+      "label": "mineralreed-growing",
+      "position": [
+        -29.0965,
+        0.18,
+        -38.0534
+      ],
+      "rotationY": -0.483225,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-2:slot-3",
+      "note": "G-03 канонски slot 3/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-2-plant-preview-4",
+      "assetId": "lumemoss-mature",
+      "label": "lumemoss-mature",
+      "position": [
+        -29.4661,
+        0.18,
+        -39.8585
+      ],
+      "rotationY": -0.883225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-2:slot-4",
+      "note": "G-03 канонски slot 4/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-2-plant-preview-5",
+      "assetId": "glowfern-ready-for-transplant",
+      "label": "glowfern-ready-for-transplant",
+      "position": [
+        -29.983,
+        0.18,
+        -38.376
+      ],
+      "rotationY": -0.483225,
+      "scale": [
+        2.05,
+        2.05,
+        2.05
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-2:slot-5",
+      "note": "G-03 канонски slot 5/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-2-ceiling-ring",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "s7-lc3-corridor-ceiling-ring-medium",
+      "position": [
+        -29.982713848359555,
+        5.65,
+        -38.37612370064736
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real ceiling fixture mesh; lighting engine not enabled."
+    },
+    {
+      "id": "bed-2-led-floor",
+      "assetId": "s7-lf1-perimeter-straight-1m",
+      "label": "s7-lf1-perimeter-straight-1m",
+      "position": [
+        -27.087,
+        0.1,
+        -39.623
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "bed-3-real-bed",
+      "assetId": "s02-25-planting-grid",
+      "label": "s02-25-planting-grid",
+      "position": [
+        -1.979,
+        0.065,
+        -56.665
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        4.65,
+        1,
+        4.65
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-3",
+      "note": "G-04: ONE actual 5×5-hole soil surface, scale 3.45m. Only FIVE real gameplay slots; other holes remain purely visual."
+    },
+    {
+      "id": "bed-3-irrigation-controller",
+      "assetId": "s7-c-irr01-bed-control-compact",
+      "label": "s7-c-irr01-bed-control-compact",
+      "position": [
+        -7.287,
+        0.04,
+        -51.077
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-3",
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-3-irrig-1",
+      "assetId": "s7-i01-feed-distributor-4",
+      "label": "s7-i01-feed-distributor-4",
+      "position": [
+        -7.665,
+        0.13,
+        -51.864
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-3-irrig-2",
+      "assetId": "s7-i02-pump-compact",
+      "label": "s7-i02-pump-compact",
+      "position": [
+        -7.708,
+        0.13,
+        -53.113
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-3-irrig-3",
+      "assetId": "s7-i03-hose-soft-arch-1m",
+      "label": "s7-i03-hose-soft-arch-1m",
+      "position": [
+        -6.764,
+        0.14,
+        -51.846
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-3-irrig-4",
+      "assetId": "s7-i04-tee",
+      "label": "s7-i04-tee",
+      "position": [
+        -6.809,
+        0.14,
+        -53.145
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-3-irrig-5",
+      "assetId": "s7-i05-dripline-1m",
+      "label": "s7-i05-dripline-1m",
+      "position": [
+        -3.448,
+        0.17,
+        -54.313
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
+    },
+    {
+      "id": "bed-3-irrig-6",
+      "assetId": "s7-i06-replacement-cartridge",
+      "label": "s7-i06-replacement-cartridge",
+      "position": [
+        -7.05,
+        0.32,
+        -52.886
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-3-plant-preview-1",
+      "assetId": "glowfern-seedling",
+      "label": "glowfern-seedling",
+      "position": [
+        -3.251,
+        0.18,
+        -55.8401
+      ],
+      "rotationY": 0.145093,
+      "scale": [
+        1.55,
+        1.55,
+        1.55
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-3:slot-1",
+      "note": "G-04 канонски slot 1/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-3-plant-preview-2",
+      "assetId": "mineralreed-young",
+      "label": "mineralreed-young",
+      "position": [
+        -2.4084,
+        0.18,
+        -57.5005
+      ],
+      "rotationY": -0.254907,
+      "scale": [
+        1.8,
+        1.8,
+        1.8
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-3:slot-2",
+      "note": "G-04 канонски slot 2/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-3-plant-preview-3",
+      "assetId": "lumemoss-growing",
+      "label": "lumemoss-growing",
+      "position": [
+        -1.4514,
+        0.18,
+        -55.8829
+      ],
+      "rotationY": 0.145093,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-3:slot-3",
+      "note": "G-04 канонски slot 3/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-3-plant-preview-4",
+      "assetId": "glowfern-mature",
+      "label": "glowfern-mature",
+      "position": [
+        -0.6895,
+        0.18,
+        -57.5605
+      ],
+      "rotationY": -0.254907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-3:slot-4",
+      "note": "G-04 канонски slot 4/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-3-plant-preview-5",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "mineralreed-ready-for-transplant",
+      "position": [
+        -1.979,
+        0.18,
+        -56.665
+      ],
+      "rotationY": 0.145093,
+      "scale": [
+        2.05,
+        2.05,
+        2.05
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-3:slot-5",
+      "note": "G-04 канонски slot 5/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-3-ceiling-ring",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "s7-lc3-corridor-ceiling-ring-medium",
+      "position": [
+        -1.9788014630318052,
+        5.65,
+        -56.665459891982735
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real ceiling fixture mesh; lighting engine not enabled."
+    },
+    {
+      "id": "bed-3-led-floor",
+      "assetId": "s7-lf1-perimeter-straight-1m",
+      "label": "s7-lf1-perimeter-straight-1m",
+      "position": [
+        1.097,
+        0.1,
+        -55.972
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "bed-4-real-bed",
+      "assetId": "s02-25-planting-grid",
+      "label": "s02-25-planting-grid",
+      "position": [
+        29.91,
+        0.065,
+        -39.692
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        4.65,
+        1,
+        4.65
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-4",
+      "note": "G-05: ONE actual 5×5-hole soil surface, scale 3.45m. Only FIVE real gameplay slots; other holes remain purely visual."
+    },
+    {
+      "id": "bed-4-irrigation-controller",
+      "assetId": "s7-c-irr01-bed-control-compact",
+      "label": "s7-c-irr01-bed-control-compact",
+      "position": [
+        22.867,
+        0.04,
+        -38.238
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-4",
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-4-irrig-1",
+      "assetId": "s7-i01-feed-distributor-4",
+      "label": "s7-i01-feed-distributor-4",
+      "position": [
+        23.069,
+        0.13,
+        -39.088
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-4-irrig-2",
+      "assetId": "s7-i02-pump-compact",
+      "label": "s7-i02-pump-compact",
+      "position": [
+        23.821,
+        0.13,
+        -40.086
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-4-irrig-3",
+      "assetId": "s7-i03-hose-soft-arch-1m",
+      "label": "s7-i03-hose-soft-arch-1m",
+      "position": [
+        23.757,
+        0.14,
+        -38.506
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-4-irrig-4",
+      "assetId": "s7-i04-tee",
+      "label": "s7-i04-tee",
+      "position": [
+        24.54,
+        0.14,
+        -39.544
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-4-irrig-5",
+      "assetId": "s7-i05-dripline-1m",
+      "label": "s7-i05-dripline-1m",
+      "position": [
+        27.288,
+        0.17,
+        -38.788
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Genuine dripline placed immediately against moist planted soil (not freely floating in the walkway)."
+    },
+    {
+      "id": "bed-4-irrig-6",
+      "assetId": "s7-i06-replacement-cartridge",
+      "label": "s7-i06-replacement-cartridge",
+      "position": [
+        24.19,
+        0.32,
+        -39.495
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 genuine irrigation module on fixed service station / bedside pipe, visual only."
+    },
+    {
+      "id": "bed-4-plant-preview-1",
+      "assetId": "mineralreed-seedling",
+      "label": "mineralreed-seedling",
+      "position": [
+        28.4024,
+        0.18,
+        -39.8514
+      ],
+      "rotationY": 0.825772,
+      "scale": [
+        1.55,
+        1.55,
+        1.55
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-4:slot-1",
+      "note": "G-05 канонски slot 1/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-4-plant-preview-2",
+      "assetId": "lumemoss-young",
+      "label": "lumemoss-young",
+      "position": [
+        30.1021,
+        0.18,
+        -40.6116
+      ],
+      "rotationY": 0.425772,
+      "scale": [
+        1.8,
+        1.8,
+        1.8
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-4:slot-2",
+      "note": "G-05 канонски slot 2/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-4-plant-preview-3",
+      "assetId": "glowfern-growing",
+      "label": "glowfern-growing",
+      "position": [
+        29.8279,
+        0.18,
+        -38.7522
+      ],
+      "rotationY": 0.825772,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-4:slot-3",
+      "note": "G-05 канонски slot 3/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-4-plant-preview-4",
+      "assetId": "mineralreed-mature",
+      "label": "mineralreed-mature",
+      "position": [
+        31.4757,
+        0.18,
+        -39.5764
+      ],
+      "rotationY": 0.425772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-4:slot-4",
+      "note": "G-05 канонски slot 4/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-4-plant-preview-5",
+      "assetId": "lumemoss-ready-for-transplant",
+      "label": "lumemoss-ready-for-transplant",
+      "position": [
+        29.91,
+        0.18,
+        -39.692
+      ],
+      "rotationY": 0.825772,
+      "scale": [
+        2.05,
+        2.05,
+        2.05
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "preview:bed-4:slot-5",
+      "note": "G-05 канонски slot 5/5; уметнички преглед, без вистински plantId."
+    },
+    {
+      "id": "bed-4-ceiling-ring",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "s7-lc3-corridor-ceiling-ring-medium",
+      "position": [
+        29.9102066506568,
+        5.65,
+        -39.692184849350454
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Real ceiling fixture mesh; lighting engine not enabled."
+    },
+    {
+      "id": "bed-4-led-floor",
+      "assetId": "s7-lf1-perimeter-straight-1m",
+      "label": "s7-lf1-perimeter-straight-1m",
+      "position": [
+        31.865,
+        0.1,
+        -37.218
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "g01-five-rings",
+      "assetId": "s7-lc1-g01-1plus4-ring-chandelier",
+      "label": "s7-lc1-g01-1plus4-ring-chandelier",
+      "position": [
+        0,
+        7.65,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Chandelier physical mesh; no automatic day-night lighting."
+    },
+    {
+      "id": "g01-perimeter-led-1",
+      "assetId": "s7-lf1-perimeter-g01-curve",
+      "label": "s7-lf1-perimeter-g01-curve",
+      "position": [
+        -8,
+        0,
+        -8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "g01-perimeter-led-2",
+      "assetId": "s7-lf1-perimeter-g01-curve",
+      "label": "s7-lf1-perimeter-g01-curve",
+      "position": [
+        8,
+        0,
+        -8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "g01-perimeter-led-3",
+      "assetId": "s7-lf1-perimeter-g01-curve",
+      "label": "s7-lf1-perimeter-g01-curve",
+      "position": [
+        -8,
+        0,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "g01-perimeter-led-4",
+      "assetId": "s7-lf1-perimeter-g01-curve",
+      "label": "s7-lf1-perimeter-g01-curve",
+      "position": [
+        8,
+        0,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Builder visual scene only; no gameplay writes"
+    },
+    {
+      "id": "master-G-02-soil-base",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -30.315,
+        0,
+        -9.268
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        4.9,
+        0.58,
+        4.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Темна вистинска почва под една канонска леа; геометрија без дополнителни слотови"
+    },
+    {
+      "id": "master-finger-1-path-1",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -17.984,
+        0.022,
+        -4.453
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-2",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -17.399,
+        0.022,
+        -6.365
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-3",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -19.897,
+        0.022,
+        -5.037
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-4",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -19.312,
+        0.022,
+        -6.95
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-5",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -21.809,
+        0.022,
+        -5.622
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-6",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -21.224,
+        0.022,
+        -7.535
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-7",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -23.722,
+        0.022,
+        -6.207
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-8",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -23.137,
+        0.022,
+        -8.119
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-9",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -25.634,
+        0.022,
+        -6.792
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-1-path-10",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -25.05,
+        0.022,
+        -8.704
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-1-soil-island-1",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -20.7691,
+        0.035,
+        -3.8924
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-1-foliage-1",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -20.7691,
+        0.16,
+        -3.8924
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-1-soil-island-2",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -19.3951,
+        0.035,
+        -8.3871
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-1-foliage-2",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -19.3951,
+        0.16,
+        -8.3871
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-1-soil-island-3",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -24.7379,
+        0.035,
+        -5.1058
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-1-foliage-3",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -24.7379,
+        0.16,
+        -5.1058
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-1-soil-island-4",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -23.364,
+        0.035,
+        -9.6005
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-1-foliage-4",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -23.364,
+        0.16,
+        -9.6005
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-G-03-soil-base",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -29.983,
+        0,
+        -38.376
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        4.9,
+        0.58,
+        4.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Темна вистинска почва под една канонска леа; геометрија без дополнителни слотови"
+    },
+    {
+      "id": "master-finger-2-path-11",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -12.178,
+        0.022,
+        -13.963
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-12",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -10.602,
+        0.022,
+        -15.194
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-13",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -13.409,
+        0.022,
+        -15.539
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-14",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -11.833,
+        0.022,
+        -16.77
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-15",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -14.64,
+        0.022,
+        -17.115
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-16",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -13.064,
+        0.022,
+        -18.346
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-17",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -15.872,
+        0.022,
+        -18.691
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-18",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -14.296,
+        0.022,
+        -19.922
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-19",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -17.103,
+        0.022,
+        -20.267
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-20",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -15.527,
+        0.022,
+        -21.498
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-21",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -18.334,
+        0.022,
+        -21.843
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-22",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -16.758,
+        0.022,
+        -23.074
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-23",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -19.566,
+        0.022,
+        -23.419
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-24",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -17.99,
+        0.022,
+        -24.65
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-25",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -20.797,
+        0.022,
+        -24.995
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-26",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -19.221,
+        0.022,
+        -26.226
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-27",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -22.028,
+        0.022,
+        -26.571
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-28",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -20.452,
+        0.022,
+        -27.802
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-29",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -23.26,
+        0.022,
+        -28.147
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-30",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -21.684,
+        0.022,
+        -29.378
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-31",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -24.491,
+        0.022,
+        -29.723
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-32",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -22.915,
+        0.022,
+        -30.954
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-33",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -25.722,
+        0.022,
+        -31.299
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-34",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -24.146,
+        0.022,
+        -32.53
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-35",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -26.954,
+        0.022,
+        -32.875
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-36",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -25.378,
+        0.022,
+        -34.106
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-37",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -28.185,
+        0.022,
+        -34.451
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-2-path-38",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -26.609,
+        0.022,
+        -35.682
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-2-soil-island-1",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -15.9628,
+        0.035,
+        -14.1781
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-1",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -15.9628,
+        0.16,
+        -14.1781
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-2",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -9.8953,
+        0.035,
+        -18.9188
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-2",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -9.8953,
+        0.16,
+        -18.9188
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-3",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -18.5177,
+        0.035,
+        -17.4482
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-3",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -18.5177,
+        0.16,
+        -17.4482
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-4",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -12.4502,
+        0.035,
+        -22.1889
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-4",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -12.4502,
+        0.16,
+        -22.1889
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-5",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -21.0726,
+        0.035,
+        -20.7183
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-5",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -21.0726,
+        0.16,
+        -20.7183
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-6",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -15.005,
+        0.035,
+        -25.459
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-6",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -15.005,
+        0.16,
+        -25.459
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-7",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -23.6275,
+        0.035,
+        -23.9884
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-7",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -23.6275,
+        0.16,
+        -23.9884
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-8",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -17.5604,
+        0.035,
+        -28.7297
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-8",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -17.5604,
+        0.16,
+        -28.7297
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-9",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -26.1828,
+        0.035,
+        -27.2591
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-9",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -26.1828,
+        0.16,
+        -27.2591
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-10",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -20.1153,
+        0.035,
+        -31.9998
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-10",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -20.1153,
+        0.16,
+        -31.9998
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-11",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -28.7377,
+        0.035,
+        -30.5292
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-11",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -28.7377,
+        0.16,
+        -30.5292
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-soil-island-12",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -22.6698,
+        0.035,
+        -35.2694
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-2-foliage-12",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -22.6698,
+        0.16,
+        -35.2694
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-2-light-26",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "L-C3 · Средна кружна ходничка таванска LED",
+      "position": [
+        -16.007,
+        5.55,
+        -20.488
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.35,
+        1,
+        1.35
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-2-light-37",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "L-C3 · Средна кружна ходничка таванска LED",
+      "position": [
+        -22.779,
+        5.55,
+        -29.156
+      ],
+      "rotationY": -0.663225,
+      "scale": [
+        1.35,
+        1,
+        1.35
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-G-04-soil-base",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -1.979,
+        0,
+        -56.665
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        4.9,
+        0.58,
+        4.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Темна вистинска почва под една канонска леа; геометрија без дополнителни слотови"
+    },
+    {
+      "id": "master-finger-3-path-39",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.645,
+        0.022,
+        -18.454
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-40",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.354,
+        0.022,
+        -18.524
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-41",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.715,
+        0.022,
+        -20.453
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-42",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.284,
+        0.022,
+        -20.522
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-43",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.785,
+        0.022,
+        -22.451
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-44",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.214,
+        0.022,
+        -22.521
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-45",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.854,
+        0.022,
+        -24.45
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-46",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.144,
+        0.022,
+        -24.52
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-47",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.924,
+        0.022,
+        -26.449
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-48",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.075,
+        0.022,
+        -26.519
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-49",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.994,
+        0.022,
+        -28.448
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-50",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.005,
+        0.022,
+        -28.518
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-51",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.064,
+        0.022,
+        -30.447
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-52",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.065,
+        0.022,
+        -30.516
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-53",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.134,
+        0.022,
+        -32.445
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-54",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.135,
+        0.022,
+        -32.515
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-55",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.203,
+        0.022,
+        -34.444
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-56",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.205,
+        0.022,
+        -34.514
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-57",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.273,
+        0.022,
+        -36.443
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-58",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.274,
+        0.022,
+        -36.513
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-59",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.343,
+        0.022,
+        -38.442
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-60",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.344,
+        0.022,
+        -38.511
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-61",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.413,
+        0.022,
+        -40.44
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-62",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.414,
+        0.022,
+        -40.51
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-63",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.483,
+        0.022,
+        -42.439
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-64",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.484,
+        0.022,
+        -42.509
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-65",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.552,
+        0.022,
+        -44.438
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-66",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.554,
+        0.022,
+        -44.508
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-67",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.622,
+        0.022,
+        -46.437
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-68",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.623,
+        0.022,
+        -46.507
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-69",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.692,
+        0.022,
+        -48.436
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-70",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.693,
+        0.022,
+        -48.505
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-71",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.762,
+        0.022,
+        -50.434
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-72",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.763,
+        0.022,
+        -50.504
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-73",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.832,
+        0.022,
+        -52.433
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-74",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.833,
+        0.022,
+        -52.503
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-3-soil-island-1",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -5.5799,
+        0.035,
+        -20.8176
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-1",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -5.5799,
+        0.16,
+        -20.8176
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-2",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        4.1142,
+        0.035,
+        -21.1564
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-2",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        4.1142,
+        0.16,
+        -21.1564
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-3",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -5.7248,
+        0.035,
+        -24.9656
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-3",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -5.7248,
+        0.16,
+        -24.9656
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-4",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        3.9693,
+        0.035,
+        -25.3044
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-4",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        3.9693,
+        0.16,
+        -25.3044
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-5",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -5.8696,
+        0.035,
+        -29.1126
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-5",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -5.8696,
+        0.16,
+        -29.1126
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-6",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        3.8245,
+        0.035,
+        -29.4514
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-6",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        3.8245,
+        0.16,
+        -29.4514
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-7",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -6.0144,
+        0.035,
+        -33.2606
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-7",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -6.0144,
+        0.16,
+        -33.2606
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-8",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        3.6797,
+        0.035,
+        -33.5984
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-8",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        3.6797,
+        0.16,
+        -33.5984
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-9",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -6.1593,
+        0.035,
+        -37.4076
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-9",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -6.1593,
+        0.16,
+        -37.4076
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-10",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        3.5348,
+        0.035,
+        -37.7464
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-10",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        3.5348,
+        0.16,
+        -37.7464
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-11",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -6.3041,
+        0.035,
+        -41.5556
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-11",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        -6.3041,
+        0.16,
+        -41.5556
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-12",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        3.39,
+        0.035,
+        -41.8934
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-12",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        3.39,
+        0.16,
+        -41.8934
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-13",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -6.4489,
+        0.035,
+        -45.7026
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-13",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        -6.4489,
+        0.16,
+        -45.7026
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-14",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        3.2452,
+        0.035,
+        -46.0414
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-14",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        3.2452,
+        0.16,
+        -46.0414
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-15",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        -6.5938,
+        0.035,
+        -49.8506
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-15",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        -6.5938,
+        0.16,
+        -49.8506
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-soil-island-16",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        3.1003,
+        0.035,
+        -50.1884
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-3-foliage-16",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        3.1003,
+        0.16,
+        -50.1884
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-3-light-26",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "L-C3 · Средна кружна ходничка таванска LED",
+      "position": [
+        -0.907,
+        5.55,
+        -25.984
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.35,
+        1,
+        1.35
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-3-light-37",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "L-C3 · Средна кружна ходничка таванска LED",
+      "position": [
+        -1.291,
+        5.55,
+        -36.977
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.35,
+        1,
+        1.35
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-3-light-48",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "L-C3 · Средна кружна ходничка таванска LED",
+      "position": [
+        -1.675,
+        5.55,
+        -47.971
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.35,
+        1,
+        1.35
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-G-05-soil-base",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        29.91,
+        0,
+        -39.692
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        4.9,
+        0.58,
+        4.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Темна вистинска почва под една канонска леа; геометрија без дополнителни слотови"
+    },
+    {
+      "id": "master-finger-4-path-75",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        10.335,
+        0.022,
+        -15.377
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-76",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        11.932,
+        0.022,
+        -14.173
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-77",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        11.539,
+        0.022,
+        -16.974
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-78",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        13.136,
+        0.022,
+        -15.77
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-79",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        12.742,
+        0.022,
+        -18.571
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-80",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        14.339,
+        0.022,
+        -17.367
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-81",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        13.946,
+        0.022,
+        -20.168
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-82",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        15.543,
+        0.022,
+        -18.965
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-83",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        15.149,
+        0.022,
+        -21.766
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-84",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        16.747,
+        0.022,
+        -20.562
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-85",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        16.353,
+        0.022,
+        -23.363
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-86",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        17.95,
+        0.022,
+        -22.159
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-87",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        17.557,
+        0.022,
+        -24.96
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-88",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        19.154,
+        0.022,
+        -23.757
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-89",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        18.76,
+        0.022,
+        -26.557
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-90",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        20.358,
+        0.022,
+        -25.354
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-91",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        19.964,
+        0.022,
+        -28.155
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-92",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        21.561,
+        0.022,
+        -26.951
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-93",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        21.168,
+        0.022,
+        -29.752
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-94",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        22.765,
+        0.022,
+        -28.548
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-95",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        22.371,
+        0.022,
+        -31.349
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-96",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        23.969,
+        0.022,
+        -30.146
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-97",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        23.575,
+        0.022,
+        -32.947
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-98",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        25.172,
+        0.022,
+        -31.743
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-99",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        24.779,
+        0.022,
+        -34.544
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-100",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        26.376,
+        0.022,
+        -33.34
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-101",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        25.982,
+        0.022,
+        -36.141
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-4-path-102",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        27.579,
+        0.022,
+        -34.937
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-4-soil-island-1",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        9.3637,
+        0.035,
+        -19.2387
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-1",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        9.3637,
+        0.16,
+        -19.2387
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-2",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        15.9121,
+        0.035,
+        -14.3034
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-2",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        15.9121,
+        0.16,
+        -14.3034
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-3",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        11.8613,
+        0.035,
+        -22.5533
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-3",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        11.8613,
+        0.16,
+        -22.5533
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-4",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        18.4102,
+        0.035,
+        -17.6184
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-4",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        18.4102,
+        0.16,
+        -17.6184
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-5",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        14.3589,
+        0.035,
+        -25.8676
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-5",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        14.3589,
+        0.16,
+        -25.8676
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-6",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        20.9077,
+        0.035,
+        -20.9327
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-6",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        20.9077,
+        0.16,
+        -20.9327
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-7",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        16.8561,
+        0.035,
+        -29.1815
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-7",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        16.8561,
+        0.16,
+        -29.1815
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-8",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        23.4049,
+        0.035,
+        -24.2466
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-8",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        23.4049,
+        0.16,
+        -24.2466
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-9",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        19.3541,
+        0.035,
+        -32.4965
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-9",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        19.3541,
+        0.16,
+        -32.4965
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-10",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        25.9029,
+        0.035,
+        -27.5616
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-10",
+      "assetId": "mineralreed-ready-for-transplant",
+      "label": "Минерална трска · подготвено за пресадување",
+      "position": [
+        25.9029,
+        0.16,
+        -27.5616
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-11",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        21.8513,
+        0.035,
+        -35.8103
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-11",
+      "assetId": "lumemoss-mature",
+      "label": "Лумемос · зрело",
+      "position": [
+        21.8513,
+        0.16,
+        -35.8103
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        2.25,
+        2.25,
+        2.25
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-soil-island-12",
+      "assetId": "s03-untreated-full",
+      "label": "S03 · НЕОБРАБОТЕНА почва · full",
+      "position": [
+        28.4001,
+        0.035,
+        -30.8754
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.7,
+        0.6,
+        3.05
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Внатрешна вистинска земјена жардиниера, поставена под стаклената арка; визуелен распоред без gameplay слотови."
+    },
+    {
+      "id": "master-4-foliage-12",
+      "assetId": "glowfern-growing",
+      "label": "Светлопапрат · расте",
+      "position": [
+        28.4001,
+        0.16,
+        -30.8754
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.95,
+        1.95,
+        1.95
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Нежно анимиран примерок во страничната леа; не е дополнителна gameplay единка."
+    },
+    {
+      "id": "master-4-light-26",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "L-C3 · Средна кружна ходничка таванска LED",
+      "position": [
+        15.647,
+        5.55,
+        -20.765
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.35,
+        1,
+        1.35
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-4-light-37",
+      "assetId": "s7-lc3-corridor-ceiling-ring-medium",
+      "label": "L-C3 · Средна кружна ходничка таванска LED",
+      "position": [
+        22.267,
+        5.55,
+        -29.55
+      ],
+      "rotationY": 0.645772,
+      "scale": [
+        1.35,
+        1,
+        1.35
+      ],
+      "layer": "decor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Ceiling preview — height subject to dome geometry QA; visual-only lamp."
+    },
+    {
+      "id": "master-g01-edge-finish",
+      "assetId": "s7-master-g01-edge-finish",
+      "label": "G-01 · професионален непрекинат кружен завршеток",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "192-segment circular anti-jagged finish, explicitly outside all 4 water apertures, no gameplay write."
+    },
+    {
+      "id": "master-g00l-floor-1",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 1",
+      "position": [
+        -16,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-2",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 2",
+      "position": [
+        -16,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-3",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 3",
+      "position": [
+        -16,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-4",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 4",
+      "position": [
+        -16,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-5",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 5",
+      "position": [
+        -16,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-6",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 6",
+      "position": [
+        -16,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-7",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 7",
+      "position": [
+        -16,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-8",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 8",
+      "position": [
+        -16,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-9",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 9",
+      "position": [
+        -16,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-10",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 10",
+      "position": [
+        -14,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-11",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 11",
+      "position": [
+        -14,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-12",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 12",
+      "position": [
+        -14,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-13",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 13",
+      "position": [
+        -14,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-14",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 14",
+      "position": [
+        -14,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-15",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 15",
+      "position": [
+        -14,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-16",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 16",
+      "position": [
+        -14,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-17",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 17",
+      "position": [
+        -14,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-18",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 18",
+      "position": [
+        -14,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-19",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 19",
+      "position": [
+        -12,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-20",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 20",
+      "position": [
+        -12,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-21",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 21",
+      "position": [
+        -12,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-22",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 22",
+      "position": [
+        -12,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-23",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 23",
+      "position": [
+        -12,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-24",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 24",
+      "position": [
+        -12,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-25",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 25",
+      "position": [
+        -12,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-26",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 26",
+      "position": [
+        -12,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-27",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 27",
+      "position": [
+        -12,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-28",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 28",
+      "position": [
+        -10,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-29",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 29",
+      "position": [
+        -10,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-30",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 30",
+      "position": [
+        -10,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-31",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 31",
+      "position": [
+        -10,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-32",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 32",
+      "position": [
+        -10,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-33",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 33",
+      "position": [
+        -10,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-34",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 34",
+      "position": [
+        -10,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-35",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 35",
+      "position": [
+        -10,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-36",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 36",
+      "position": [
+        -10,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-37",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 37",
+      "position": [
+        -8,
+        0.012,
+        6
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-38",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 38",
+      "position": [
+        -8,
+        0.012,
+        8
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-39",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 39",
+      "position": [
+        -8,
+        0.012,
+        10
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-40",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 40",
+      "position": [
+        -8,
+        0.012,
+        12
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-41",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 41",
+      "position": [
+        -8,
+        0.012,
+        14
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-42",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 42",
+      "position": [
+        -8,
+        0.012,
+        16
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-43",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 43",
+      "position": [
+        -8,
+        0.012,
+        18
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-44",
+      "assetId": "f01-a",
+      "label": "G-00L · мермерна сервисна платформа · 44",
+      "position": [
+        -8,
+        0.012,
+        20
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-g00l-floor-45",
+      "assetId": "f03-s-stone-full",
+      "label": "G-00L · мермерна сервисна платформа · 45",
+      "position": [
+        -8,
+        0.012,
+        22
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Сервисна платформа под RS/RM, работна маса и R01; индивидуално уредлива 2×2m."
+    },
+    {
+      "id": "master-bed-1-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        -27.338,
+        0.02,
+        -5.325
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-1-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -28.325,
+        0.17,
+        -7.74
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-1-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -28.068,
+        0.17,
+        -8.581
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-1-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -27.81,
+        0.17,
+        -9.423
+      ],
+      "rotationY": -1.274,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-2-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        -30.987,
+        0.02,
+        -32.515
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-2-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -29.229,
+        0.17,
+        -35.983
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-2-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -28.536,
+        0.17,
+        -36.524
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-2-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -27.842,
+        0.17,
+        -37.066
+      ],
+      "rotationY": -0.663,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-03 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-3-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        -7.236,
+        0.02,
+        -52.479
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-3-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -2.776,
+        0.17,
+        -54.286
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-3-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -1.897,
+        0.17,
+        -54.317
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-3-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        -1.017,
+        0.17,
+        -54.348
+      ],
+      "rotationY": -0.035,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-4-irrigation-station",
+      "assetId": "m01-metal-full",
+      "label": "m01-metal-full",
+      "position": [
+        23.789,
+        0.02,
+        -39.296
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        2.3,
+        0.8,
+        1.95
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 irrigation service platform for genuine bed pump, distributor and spare parts; visual only, no water inventory"
+    },
+    {
+      "id": "master-bed-4-hose-edge-1",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        27.793,
+        0.17,
+        -38.345
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-4-hose-edge-2",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        28.496,
+        0.17,
+        -37.815
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-bed-4-hose-edge-3",
+      "assetId": "s7-i03-hose-straight-1p0m",
+      "label": "s7-i03-hose-straight-1p0m",
+      "position": [
+        29.199,
+        0.17,
+        -37.286
+      ],
+      "rotationY": 0.646,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "props",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-05 pipe length aligned to physical soil edge; flow requires original engine integration."
+    },
+    {
+      "id": "master-g00l-glass-annex",
+      "assetId": "s7-master-g00l-glass-service-wing",
+      "label": "G-00L · отворен стаклен сервисен анекс",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "S7 owner review: original central glass dome remains untouched; G-00L left of entrance remains open to main greenhouse."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z17",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z17",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        17
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z19",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        19
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z19",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        19
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z21",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        21
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z21",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        21
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x6-z23",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -6,
+        0.012,
+        23
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    },
+    {
+      "id": "master-g00l-entrance-connector-x4-z23",
+      "assetId": "f01-a",
+      "label": "G-00L · поврзувачка подна патека",
+      "position": [
+        -4,
+        0.012,
+        23
+      ],
+      "rotationY": 0,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Physical 2m passage from G-00L racks to original greenhouse entrance; fully editable."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false,
+    "ownerVisualPass": false,
+    "reviewOnly": true,
+    "physicalCutoutQARequired": true,
+    "zones": {
+      "G-00L": "service left of entrance",
+      "G-01": "water 4 slots",
+      "G-02": "bed-1",
+      "G-03": "bed-2",
+      "G-04": "bed-3",
+      "G-05": "bed-4"
+    },
+    "capacity": {
+      "beds": 4,
+      "slotsPerBed": 5,
+      "aquaticSlots": 4
+    },
+    "floorTileCount": 773,
+    "floorPalette": "MASTER · original cream greenhouse shell + actual footpaths",
+    "source": "G01 geometry from original shell / S7 V3 blueprint",
+    "generation": "manual S7 master rebuild from video review 2026-11-19",
+    "masterPlantingDisplayCount": 44,
+    "visualQA": [
+      "G01 water should be visible at Y=-0.235",
+      "R01 and all furniture must contact floor/table",
+      "4 real growing beds at correct finger ends",
+      "4 aquatic slots ALL in main basin",
+      "Only master scene changed; V1..4 left unchanged"
+    ]
+  }
+}

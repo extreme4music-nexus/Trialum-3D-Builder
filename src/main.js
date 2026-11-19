@@ -18,6 +18,8 @@ const ids=["projectName","saveIndicator","assetSearch","categoryFilter","catalog
  "toggleGrid","glbFileInput","projectFileInput","animationControls","animationClip"];
 const ui=Object.fromEntries(ids.map(id=>[id,$(id)]));
 const LOCAL_AUTOSAVE="trialum-3d-builder:scene-v1";
+const S7_WELCOME_KEY="trialum-3d-builder:s7-master-first-run-v1";
+const S7_PREVIOUS_DRAFT_KEY="trialum-3d-builder:s7-pre-upgrade-draft-v1";
 const CATALOG_URL="./assets/catalog.json";
 const S7_F_ALL="S7-F · СИТЕ 18";
 const GLB_MAX_BYTES=32*1024*1024;
@@ -50,7 +52,8 @@ controls.maxDistance=220;
 controls.maxPolarAngle=Math.PI*.49;
 controls.mouseButtons={LEFT:THREE.MOUSE.PAN,MIDDLE:THREE.MOUSE.DOLLY,RIGHT:THREE.MOUSE.ROTATE};
 controls.target.set(0,0,0);
-scene.add(new THREE.HemisphereLight(0xe4f4ec,0x61706b,2.4));
+const hemisphere=new THREE.HemisphereLight(0xe4f4ec,0x61706b,2.4);
+scene.add(hemisphere);
 const sunlight=new THREE.DirectionalLight(0xffffff,3.2);
 sunlight.position.set(-5,14,9);scene.add(sunlight);
 const fill=new THREE.DirectionalLight(0x88b7b9,1.0);
@@ -99,7 +102,26 @@ function textureColor(asset){
  return "#9cbdb1";
 }
 
+function isGreenhouseGardenProject(){
+ const id=String(state.project?.projectId||"");
+ return /^trialum-s7-(?:complete-garden-v[1-4]|master-garden)/.test(id);
+}
 function roomHelpers(){
+ // Match the forest/glass palette while preserving general Builder lighting in
+ // all other non-garden rooms. The old 2.4/3.2/1.45 exposure clipped marble to white.
+ if(isGreenhouseGardenProject()){
+  hemisphere.intensity=1.15;
+  sunlight.intensity=1.8;
+  fill.intensity=.56;
+  renderer.toneMappingExposure=1.04;
+  scene.fog.near=78;scene.fog.far=180;
+ }else{
+  hemisphere.intensity=2.4;
+  sunlight.intensity=3.2;
+  fill.intensity=1.0;
+  renderer.toneMappingExposure=1.45;
+  scene.fog.near=55;scene.fog.far=150;
+ }
  state.roomMeshes.forEach(x=>helpers.remove(x));
  state.roomMeshes.length=0;wallMeshes=[];
  const {width,depth,height,showWalls,floorColor,wallColor}=state.project.room;
@@ -108,6 +130,10 @@ function roomHelpers(){
  floorMesh.rotation.x=-Math.PI/2;
  floorMesh.position.y=-.018;
  floorMesh.name="ReferenceFloor_NoGameplay";
+ // The original physical greenhouse-shell GLB already includes its own holed
+ // floor. The old full rectangular helper plane at Y=-.018 sealed all four
+ // aquatic basins whose animated water surface is at Y=-.235.
+ floorMesh.visible=!isGreenhouseGardenProject();
  helpers.add(floorMesh);state.roomMeshes.push(floorMesh);
  grid=new THREE.GridHelper(Math.max(width,depth),Math.round(Math.max(width,depth)/gridStep()),0x63a68f,0x415a58);
  grid.position.y=.003;
@@ -206,6 +232,54 @@ function sceneGroupFor(rec){
  group.visible=rec.visible;
  return group;
 }
+function centerGardenFloorPivot(obj,rec){
+ // Critical original geometry contract: S02 5x5 and S03 soil GLBs are modeled
+ // from [0,0] to [1,1] (local LOWER-LEFT), NOT around an origin at their center.
+ // A 4.65m soil patch thus used to extend ~2.3m away from its five plants.
+ // Recenter real model bounds BEFORE the parent root rotates/scales the instance.
+ if(!isGreenhouseGardenProject()||rec.layer!=="floor")return;
+ const bounds=new THREE.Box3().setFromObject(obj);
+ if(!Number.isFinite(bounds.min.x)||!Number.isFinite(bounds.max.x)||
+    !Number.isFinite(bounds.min.z)||!Number.isFinite(bounds.max.z))return;
+ const mid=bounds.getCenter(new THREE.Vector3());
+ obj.position.x-=mid.x;
+ obj.position.z-=mid.z;
+ obj.userData.floorPivotCentered=true;
+}
+function alignGardenObjectToSupport(obj,rec){
+ // GLB authors use different pivots. Treat an editable object's scene Y
+ // as the top of the supporting surface, NOT its arbitrary GLB mesh origin.
+ // Never touch physical shell, below-grade water or structural basin models.
+ if(!isGreenhouseGardenProject())return;
+ const floorFixture=rec.layer==="decor"&&/^s7-lf[1-3]-/.test(rec.assetId);
+ if(rec.layer!=="props"&&!floorFixture)return;
+ const bbox=new THREE.Box3().setFromObject(obj);
+ if(!Number.isFinite(bbox.min.y)||!Number.isFinite(bbox.max.y))return;
+ const delta=-bbox.min.y;
+ if(Math.abs(delta)<1e-5)return;
+ obj.position.y+=delta;
+ obj.userData.floorSupportOffset=delta;
+}
+function styleOriginalG01Water(root){
+ // Retain the original 4-node, 2-morph-target glTF water and 6-second loop;
+ // this fixes its viewer material without replacing water with fake geometry.
+ root.traverse(child=>{
+  if(!child.isMesh)return;
+  const source=child.material;
+  const water=source.clone();
+  water.transparent=true;
+  water.depthWrite=false;
+  water.side=THREE.DoubleSide;
+  water.opacity=0.88;
+  water.metalness=0.06;
+  water.roughness=0.19;
+  water.color.setRGB(0.12,0.68,0.81);
+  if(water.emissive){water.emissive.setRGB(0.015,0.085,0.105);water.emissiveIntensity=1.2;}
+  water.needsUpdate=true;
+  child.material=water;
+  child.renderOrder=2;
+ });
+}
 async function renderInstance(rec){
  const old=state.instanceMeshes.get(rec.id);
  if(old){if(gizmo.object===old)gizmo.detach();contentRoot.remove(old);state.animationMixers.delete(rec.id);}
@@ -217,11 +291,16 @@ async function renderInstance(rec){
  try{
   const obj=await modelObject(asset);
   if(state.instanceMeshes.get(rec.id)!==root)return;
+  if(rec.assetId==="g01-water-surfaces-animated")styleOriginalG01Water(obj);
+  centerGardenFloorPivot(obj,rec);
+  alignGardenObjectToSupport(obj,rec);
   root.add(obj);
   const clips=state.modelAnimations.get(asset.id)||[];
   if(clips.length){
    const mixer=new THREE.AnimationMixer(obj);
-   const defaultClip=clips.find(c=>c.name==="idle")||clips[0];
+   const defaultClip=rec.assetId==="g01-water-surfaces-animated"
+    ?(clips.find(c=>c.name==="G01_WATER_RIPPLES_LOOP_6S")||clips[0])
+    :(clips.find(c=>c.name==="idle-sway")||clips.find(c=>c.name==="idle")||clips[0]);
    mixer.clipAction(defaultClip).reset().play();
    state.animationMixers.set(rec.id,mixer);
    if(state.selectedId===rec.id)refreshInspector();
@@ -902,6 +981,7 @@ const ROOM_PRESETS=Object.freeze({
  packing:"trialum-packing-room.json",
  greenhouse:"trialum-agro-greenhouse.json",
  g01:"trialum-g01-water-core.json",
+ "garden-master":"trialum-s7-master-garden-review.json",
  "f01-f":"trialum-f01-f-radial-wedge-review.json",
  "f01-g":"trialum-f01-g-pool-curb-g01-preview.json",
  "f01-g-showcase":"trialum-f01-g-curved-trim-showcase.json",
@@ -962,6 +1042,16 @@ const ROOM_PRESETS=Object.freeze({
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
+ if(isGreenhouseGardenProject()){
+  // Editorial opening camera: living G01 center, entrance-left G00L and first
+  // planted fingers; physical MASTER radius is >60m, so preserve zoom-out.
+  camera.position.set(30,22,34);
+  controls.target.set(-2,0,-8);
+  controls.maxDistance=240;
+  camera.far=900;
+  camera.updateProjectionMatrix();controls.update();
+  return;
+ }
  const {width,depth,height}=state.project.room;
  const size=Math.max(width,depth);
  const distance=Math.max(12,size*1.08);
@@ -970,6 +1060,22 @@ function frameCurrentRoom(){
  controls.maxDistance=Math.max(220,size*3);
  camera.far=Math.max(800,size*12);
  camera.updateProjectionMatrix();controls.update();
+}
+function applyGardenCameraBookmark(view){
+ // Optional visual-QA camera-only bookmarks; user can orbit/move everything.
+ // No gameplay or physics coordinates are altered.
+ const perspectives={
+  water:{eye:[15,9,13],target:[0,-.15,-1]},
+  g00l:{eye:[-5.4,3.05,22.6],target:[-12.1,1.25,13.0]},
+  bed1:{eye:[-22,7,-1],target:[-30.2,.4,-9.2]},
+  bed2:{eye:[-21,7,-28],target:[-30,.4,-38.4]},
+  bed3:{eye:[7,7,-48],target:[-2,.4,-56.7]},
+  bed4:{eye:[39,7,-31],target:[30.8,.4,-39.7]}
+ };
+ const preset=perspectives[view];if(!preset||!isGreenhouseGardenProject())return;
+ camera.position.fromArray(preset.eye);
+ controls.target.fromArray(preset.target);
+ camera.far=900;camera.updateProjectionMatrix();controls.update();
 }
 async function openRoomPreset(key){
  const file=ROOM_PRESETS[key];if(!file)return;
@@ -981,6 +1087,11 @@ async function openRoomPreset(key){
   // Never keep the save handle for the previously opened room.
   state.saveHandle=null;
   useProject(data,true);
+  if(key==="garden-master"){
+   state.gridOn=false;
+   if(grid)grid.visible=false;
+   $("toggleGrid").classList.remove("active");
+  }
   if(/^garden-v[1-4]$/.test(key))$("handoffBranch").value="design/s7-garden-v"+key.slice(-1);
   frameCurrentRoom();
   if(key==="f01-f"||key==="f01-g"||key==="f02-g01"||key==="f03-s-g01"||key==="f03-t-g01"){
@@ -1020,6 +1131,18 @@ function addListeners(){
  });
  ui.projectName.addEventListener("change",()=>{state.project.name=ui.projectName.value;markChanged();});
  $("newProject").onclick=newProject;
+ $("restorePreUpgradeDraft").onclick=()=>{
+  const raw=localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
+  if(!raw){say("Нема зачуван претходен дизајн.",true);return;}
+  if(state.dirty&&!confirm("Тековната сцена има незачувани измени. Прво зачувај JSON. Сепак да го отворам претходниот проект?"))return;
+  try{
+   useProject(JSON.parse(raw),true);
+   state.saveHandle=null;
+   frameCurrentRoom();
+   try{localStorage.setItem(LOCAL_AUTOSAVE,raw)}catch{}
+   say("Вратен е претходниот локален проект, без бришење на резервната копија.");
+  }catch(e){say("Не можам да ја вратам резервната копија: "+e.message,true);}
+ };
  $("packagePreset").onchange=e=>{const key=e.target.value;if(key)openRoomPreset(key);e.target.value="";};
  $("exportHandoff").onclick=exportDesignHandoff;
  $("publishHandoff").onclick=publishHandoffBranch;
@@ -1101,6 +1224,7 @@ function tick(){
  renderer.render(scene,camera);
 }
 async function startup(){
+ const requestedPreset=new URLSearchParams(window.location.search).get("preset");
  try{
   const response=await fetch(CATALOG_URL,{cache:"no-store"});
   if(!response.ok)throw Error("HTTP "+response.status);
@@ -1130,14 +1254,49 @@ async function startup(){
   {id:"wall-panel",name:"Ѕиден панел · тест",category:"Градежни блокови",
    dimensions:[1,1,.10],placement:"wall",color:"#668e87"}
  ])if(!state.registry.has(item.id))state.registry.set(item.id,item);
- let data;let recoveredLocalDraft=false;
- try{const saved=localStorage.getItem(LOCAL_AUTOSAVE);if(saved){data=JSON.parse(saved);recoveredLocalDraft=true;}}catch{}
- if(!data)try{const r=await fetch("./projects/trialum-s7-f01-production.json");if(r.ok)data=await r.json()}catch{}
+ let data;let recoveredLocalDraft=false;let welcomedMaster=false;
+ let savedDraft;
+ try{
+  const saved=localStorage.getItem(LOCAL_AUTOSAVE);
+  if(saved)savedDraft=JSON.parse(saved);
+ }catch{}
+ const firstMasterLaunch=!localStorage.getItem(S7_WELCOME_KEY);
+ // New Builder installations and EXISTING F01 users should SEE the real garden,
+ // not the old empty F01 gallery. Preserve their old autosave separately.
+ // After the first upgraded launch, the owner's own autosave takes priority.
+ const openMaster=requestedPreset==="garden-master"||
+   (requestedPreset===null&&(firstMasterLaunch||!savedDraft));
+ if(openMaster){
+  const preview=await fetch("./projects/trialum-s7-master-garden-review.json",{cache:"no-store"});
+  if(!preview.ok)throw Error("MASTER GARDEN HTTP "+preview.status);
+  data=await preview.json();
+  welcomedMaster=true;
+  if(firstMasterLaunch){
+   try{
+    if(savedDraft&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY))
+     localStorage.setItem(S7_PREVIOUS_DRAFT_KEY,JSON.stringify(savedDraft));
+    localStorage.setItem(S7_WELCOME_KEY,"1");
+   }catch{}
+  }
+ }else if(savedDraft){
+  data=savedDraft;
+  recoveredLocalDraft=true;
+ }
+ if(!data)try{const r=await fetch("./projects/trialum-s7-master-garden-review.json",{cache:"no-store"});if(r.ok)data=await r.json()}catch{}
  try{state.project=data?sanitizeProject(data):createProject()}catch{state.project=createProject()}
  for(const asset of state.project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
- refreshCategories();roomHelpers();addListeners();await rebuildScene();recordSnapshot();
+ refreshCategories();roomHelpers();addListeners();
+ $("restorePreUpgradeDraft").hidden=!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
+ await rebuildScene();recordSnapshot();
+ if(welcomedMaster){
+  state.gridOn=false;
+  if(grid)grid.visible=false;
+  $("toggleGrid").classList.remove("active");
+  frameCurrentRoom();
+  applyGardenCameraBookmark(new URLSearchParams(window.location.search).get("view"));
+ }
  if(recoveredLocalDraft){state.dirty=true;ui.saveIndicator.textContent="● Локална копија · треба Git зачувување";ui.saveIndicator.style.color="#edb979";}
  else markSaved();
  updateCounters();
@@ -1145,6 +1304,7 @@ async function startup(){
  tick();
  say((recoveredLocalDraft?"Вратена локална копија (Зачувај во GitHub папка). ":"")+
  "Trialum Builder е подготвен · "+state.catalog.length+" оригинални модели во каталогот.");
+ if(welcomedMaster)say("🌿 Отворена е целосната S7 MASTER GARDEN со вода, растенија и G-00L. Старите локални проекти се зачувани во резервна копија (кога постоеле).");
  if(!state.catalog.length)say("Нема GLB каталог. Стартувај scripts/build_assets.py или провери GitHub Actions.",true);
 }
 startup().catch(e=>{console.error(e);say("Грешка при стартување: "+e.message,true);});
