@@ -948,6 +948,7 @@ const ROOM_PRESETS=Object.freeze({
  packing:"trialum-packing-room.json",
  greenhouse:"trialum-agro-greenhouse.json",
  g01:"trialum-g01-water-core.json",
+ "garden-master":"trialum-s7-master-garden-review.json",
  "f01-f":"trialum-f01-f-radial-wedge-review.json",
  "f01-g":"trialum-f01-g-pool-curb-g01-preview.json",
  "f01-g-showcase":"trialum-f01-g-curved-trim-showcase.json",
@@ -1008,6 +1009,16 @@ const ROOM_PRESETS=Object.freeze({
  f01:"trialum-s7-f01-production.json"
 });
 function frameCurrentRoom(){
+ if(isGreenhouseGardenProject()){
+  // Editorial opening camera: living G01 center, entrance-left G00L and first
+  // planted fingers; physical MASTER radius is >60m, so preserve zoom-out.
+  camera.position.set(30,22,34);
+  controls.target.set(-2,0,-8);
+  controls.maxDistance=240;
+  camera.far=900;
+  camera.updateProjectionMatrix();controls.update();
+  return;
+ }
  const {width,depth,height}=state.project.room;
  const size=Math.max(width,depth);
  const distance=Math.max(12,size*1.08);
@@ -1027,6 +1038,11 @@ async function openRoomPreset(key){
   // Never keep the save handle for the previously opened room.
   state.saveHandle=null;
   useProject(data,true);
+  if(key==="garden-master"){
+   state.gridOn=false;
+   if(grid)grid.visible=false;
+   $("toggleGrid").classList.remove("active");
+  }
   if(/^garden-v[1-4]$/.test(key))$("handoffBranch").value="design/s7-garden-v"+key.slice(-1);
   frameCurrentRoom();
   if(key==="f01-f"||key==="f01-g"||key==="f02-g01"||key==="f03-s-g01"||key==="f03-t-g01"){
