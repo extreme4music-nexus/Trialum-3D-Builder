@@ -5,11 +5,11 @@ android {
     namespace = "com.trialum.gardenpreview"
     compileSdk = 36
     defaultConfig {
-        applicationId = "com.trialum.gardenpreview"
+        applicationId = "com.trialum.gardenpreview.g02stone"
         minSdk = 26
         targetSdk = 36
-        versionCode = 1
-        versionName = "S7-MASTER-PASS2-preview.1"
+        versionCode = 2
+        versionName = "S7-G02-STONE-preview.2"
     }
     buildTypes {
         getByName("debug") { isDebuggable = true }
