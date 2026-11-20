@@ -1,0 +1,40 @@
+/* Trialum full-screen Android S7 garden tour with optional original editor. */
+html,body{margin:0;padding:0;}
+body.trialum-garden-apk{overflow:hidden!important;background:#0e1919;}
+.trialum-garden-apk .topbar,.trialum-garden-apk .left,.trialum-garden-apk .right,
+.trialum-garden-apk .bottomline,.trialum-garden-apk .work>.toolbar,
+.trialum-garden-apk .work>.statusbar,.trialum-garden-apk .viewport-hint,
+.trialum-garden-apk .axis-mark{display:none!important;}
+.trialum-garden-apk .layout{display:block!important;height:100dvh!important;min-height:100dvh!important;}
+.trialum-garden-apk .work{display:flex!important;flex-direction:column!important;height:100dvh!important;width:100vw!important;min-width:0!important;}
+.trialum-garden-apk .viewport{display:block!important;height:100dvh!important;min-height:100dvh!important;width:100vw!important;}
+.trialum-garden-apk canvas{display:block!important;width:100%!important;height:100%!important;touch-action:none;}
+#gardenPreview{position:fixed;inset:0;z-index:60;pointer-events:none;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#e9fff0;}
+.gp-titlebar{position:absolute;top:0;left:0;right:0;min-height:64px;padding:11px 13px 12px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#0b1e1dea 3%,#0b1e1dc4 70%,transparent);pointer-events:none;}
+.gp-titlebar b{display:block;font-size:15px;letter-spacing:.045em}.gp-titlebar small{font-size:10px;display:block;margin-top:2px;color:#a5d4b7}
+.gp-state{font-size:10px;color:#cfe9db;text-align:right;max-width:48%;text-shadow:0 1px 3px #000}
+.gp-bottom{position:absolute;left:0;right:0;bottom:0;padding:20px 9px max(10px,env(safe-area-inset-bottom));background:linear-gradient(0deg,#0b1d1cf7 3%,#0b1d1ce8 70%,transparent);pointer-events:auto;}
+.gp-locations{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:3px 2px 8px;touch-action:pan-x;overscroll-behavior-x:contain}
+.gp-locations::-webkit-scrollbar{display:none}
+#gardenPreview button{border-radius:12px;background:#254338eb;border:1px solid #668774;color:#e9ffed;white-space:nowrap;min-height:42px;padding:8px 11px;font-size:12px;touch-action:manipulation}
+#gardenPreview button.selected{background:#3a8560;border:1px solid #a4f4c0;font-weight:800}
+.gp-actions{display:flex;gap:8px;padding-top:2px}.gp-actions>button{flex:1;min-width:0;font-weight:700}
+#gpJson{background:#44795c!important}
+.gp-disclaimer{margin:7px 1px 0;font-size:9px;color:#b6cfc3;line-height:1.25;max-height:27px;overflow:hidden}
+.trialum-garden-apk.gp-editing{overflow:auto!important}
+.trialum-garden-apk.gp-editing .topbar{display:flex!important}
+.trialum-garden-apk.gp-editing .left,.trialum-garden-apk.gp-editing .right{display:block!important}
+.trialum-garden-apk.gp-editing .work>.toolbar,.trialum-garden-apk.gp-editing .work>.statusbar{display:flex!important}
+.trialum-garden-apk.gp-editing .layout{height:auto!important;min-height:100dvh!important;display:flex!important;flex-direction:column!important}
+.trialum-garden-apk.gp-editing .work{height:65dvh!important;width:100%!important;min-height:320px!important}
+.trialum-garden-apk.gp-editing .viewport{height:auto!important;min-height:44dvh!important;flex:1}
+.trialum-garden-apk.gp-editing .left,.trialum-garden-apk.gp-editing .right{min-height:220px!important}
+.trialum-garden-apk.gp-editing #gardenPreview{position:fixed;inset:auto 0 0}
+.trialum-garden-apk.gp-editing #gardenPreview .gp-titlebar,.trialum-garden-apk.gp-editing #gardenPreview .gp-locations,.trialum-garden-apk.gp-editing #gardenPreview .gp-disclaimer{display:none!important}
+.trialum-garden-apk.gp-editing #gardenPreview .gp-bottom{position:relative;padding:6px 7px max(8px,env(safe-area-inset-bottom))}
+.trialum-garden-apk.gp-editing #gitPull,.trialum-garden-apk.gp-editing #gitPublish,.trialum-garden-apk.gp-editing #publishHandoff{display:none!important}
+@media(orientation:landscape) and (max-height:540px){
+.gp-titlebar{min-height:43px;padding:7px 10px}.gp-titlebar b{font-size:13px}
+.gp-bottom{padding:8px 9px max(5px,env(safe-area-inset-bottom))}
+.gp-locations button{min-height:34px!important}.gp-actions button{min-height:35px!important}
+.gp-disclaimer{display:none}}
