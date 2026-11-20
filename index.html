@@ -31,7 +31,7 @@
         <button id="newProject" title="Нова сцена">Ново</button>
         <button id="restorePreUpgradeDraft" title="Отвори го претходниот локален дизајн, зачуван пред првото отворање на MASTER градината" hidden>Мој претходен проект</button>
 
-        <select id="scenePreset" title="Вчитај вистински Trialum GLB простор" aria-label="3D простории од Trialum">
+        <select id="scenePreset" title="Вчитај вградена или зачувана Builder просторија" aria-label="3D простории од Trialum">
           <option value="">🏛️ Избери 3D просторија…</option>
           <option value="atrium">🏛️ Агро лоби</option>
           <option value="warehouse">📦 Главно стовариште</option>
@@ -45,6 +45,7 @@
           <option value="garden-v2">🗂️ Стара V2 · пред MASTER реконструкција</option>
           <option value="garden-v3">🗂️ Стара V3 · пред MASTER реконструкција</option>
           <option value="garden-v4">🗂️ Стара V4 · пред MASTER реконструкција</option>
+          <optgroup id="serverProjectsGroup" label="Зачувани проекти на Builder серверот"></optgroup>
         </select>
         <button id="soilMatrixTool" title="Уреди 25 визуелни места на избраната S02 почвена коцка (демо, без gameplay)">🌱 Матрица 5×5</button>
 
@@ -52,7 +53,7 @@
         <button id="saveProject" class="accent" title="Зачувај во папка на GitHub Desktop">Зачувај</button>
         <button id="gitPull" title="Преземи последни измени од GitHub; претходно зачувај">GitHub ↓</button>
         <button id="gitPublish" title="Commit и Push само на зачувани дизајни кон feature/remote-builder-3d-20261120">GitHub ↑</button>
-        <button id="exportProject" title="Преземи JSON проект">JSON ↓</button>
+        <button id="exportProject" title="Зачувај JSON проект на Builder серверот">JSON ↑ сервер</button>
         <button id="exportLivingSpace" title="Извези Living Spaces дизајн за идниот во-игра уредувач, без gameplay измени">Дом JSON ↓</button>
         <button id="exportBundle" title="Преземи ZIP со GLB и сцена">ZIP ↓</button>
         <select id="handoffBranch" aria-label="Гранка за дизајнерски handoff" title="Избери цел на handoff, без промена на оригиналната игра">

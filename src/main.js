@@ -1135,6 +1135,62 @@ async function openRoomPreset(key){
  }catch(e){say("Не можам да ја отворам просторијата: "+e.message,true)}
  finally{$("scenePreset").value="";}
 }
+async function refreshServerProjects(){
+ const group=$("serverProjectsGroup");if(!group)return;
+ group.replaceChildren();
+ try{
+  const response=await fetch("./api/projects",{cache:"no-store"});
+  const data=await response.json();
+  if(!response.ok||!data.ok)throw Error(data.error||("HTTP "+response.status));
+  for(const project of data.projects||[]){
+   if(!/^[a-z0-9_-]{1,140}\.json$/.test(project.file||""))continue;
+   const option=document.createElement("option");
+   option.value="server:"+project.file;
+   option.textContent="☁️ "+String(project.name||project.file).slice(0,100);
+   group.append(option);
+  }
+  if(!group.children.length){const option=document.createElement("option");option.disabled=true;option.textContent="(нема зачувани проекти)";group.append(option);}
+ }catch(e){
+  const option=document.createElement("option");option.disabled=true;option.textContent="(серверските проекти не се достапни)";group.append(option);
+ }
+}
+async function openServerProject(filename){
+ if(!/^[a-z0-9_-]{1,140}\.json$/.test(filename))return;
+ if(state.dirty&&!confirm("Има незачувани измени. Да го отворам проектот од серверот?"))return;
+ try{
+  const response=await fetch("./projects/"+encodeURIComponent(filename),{cache:"no-store"});
+  if(!response.ok)throw Error("HTTP "+response.status);
+  const data=await response.json();
+  state.saveHandle=null;
+  useProject(data,true);
+  try{localStorage.setItem(LOCAL_AUTOSAVE,JSON.stringify(state.project))}catch{}
+  say("Отворен серверски проект: projects/"+filename);
+ }catch(e){say("Не можам да го отворам серверскиот проект: "+e.message,true)}
+ finally{$("scenePreset").value="";}
+}
+async function saveProjectToServer(){
+ const btn=$("exportProject");btn.disabled=true;
+ try{
+  const project=collectProject();
+  const filename=slug(project.name).slice(0,140)+".json";
+  const existing=[...$("serverProjectsGroup").options].some(o=>o.value==="server:"+filename);
+  if(existing&&!confirm("На серверот веќе постои „"+filename+"“. Да го заменам со тековниот проект?"))return;
+  const sessionResponse=await fetch("./api/session",{cache:"no-store"});
+  const session=await sessionResponse.json();
+  if(!sessionResponse.ok||!session.ok)throw Error(session.error||("HTTP "+sessionResponse.status));
+  const response=await fetch("./api/project-save",{
+   method:"POST",headers:{"Content-Type":"application/json","X-Trialum-CSRF":session.csrf},
+   body:JSON.stringify({file:filename,project})
+  });
+  const result=await response.json();
+  if(!response.ok||!result.ok)throw Error(result.error||("HTTP "+response.status));
+  markSaved();
+  await refreshServerProjects();
+  $("scenePreset").value="server:"+filename;
+  say("Зачувано директно на Builder серверот: projects/"+filename+". GitHub ↑ ги вклучува JSON проектите од projects/.");
+ }catch(e){say("Не успеа серверското зачувување: "+e.message,true)}
+ finally{btn.disabled=false;}
+}
 
 function addListeners(){
  document.querySelectorAll("[data-tool]").forEach(b=>b.addEventListener("click",()=>setTool(b.dataset.tool)));
@@ -1169,7 +1225,11 @@ function addListeners(){
  $("publishHandoff").onclick=publishHandoffBranch;
 
  $("openProject").onclick=()=>ui.projectFileInput.click();
- $("scenePreset").onchange=e=>openRoomPreset(e.target.value);
+ $("scenePreset").onchange=e=>{
+  const value=e.target.value;
+  if(value.startsWith("server:"))openServerProject(value.slice(7));
+  else if(value)openRoomPreset(value);
+ };
  $("soilMatrixTool").onclick=()=>{
    const panel=$("soilMatrixPanel");
    if(!soilBases().length){say("Прво отвори S02 почвена сцена со 25 дупки.",true);return;}
@@ -1184,7 +1244,7 @@ function addListeners(){
  $("saveProject").onclick=saveProjectToRepo;
  $("gitPull").onclick=()=>githubSync("pull");
  $("gitPublish").onclick=()=>githubSync("publish");
- $("exportProject").onclick=()=>{downloadJson(collectProject(),slug(state.project.name)+".json");say("JSON проектот е преземен. Зачувај го во projects/.")};
+ $("exportProject").onclick=saveProjectToServer;
  $("exportLivingSpace").onclick=()=>{try{const data=exportLivingSpace(collectProject(),[...state.registry.values()]);downloadJson(data,slug(state.project.name)+"-living-space.json");say("Извезен Living Spaces JSON: "+data.items.length+" предмети. Не ја менува играта.");}catch(e){say("Living Spaces export: "+e.message,true)}};
  $("exportBundle").onclick=exportBundle;
  $("importGlb").onclick=()=>ui.glbFileInput.click();
@@ -1322,6 +1382,7 @@ async function startup(){
  ui.gridRotation.value=String(state.project.room.gridRotation||0);
  ui.gridRotationRange.value=String(state.project.room.gridRotation||0);
  refreshCategories();roomHelpers();addListeners();
+ await refreshServerProjects();
  if(state.project.projectId.startsWith("trialum-s7-master-garden-pass2"))$("handoffBranch").value="feature/remote-builder-3d-20261120";
  $("restorePreUpgradeDraft").hidden=!localStorage.getItem(PASS2_PREVIOUS_DRAFT_KEY)&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
  await rebuildScene();recordSnapshot();

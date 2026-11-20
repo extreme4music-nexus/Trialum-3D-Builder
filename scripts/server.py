@@ -28,6 +28,8 @@ def importmap_hash():
 ALLOWED_RE=re.compile(r"^(?:https://github\.com/|git@github\.com:|ssh://git@github\.com/)extreme4music-nexus/Trialum-3D-Builder(?:\.git)?/?$")
 VALID_BRANCH=BUILDER_BRANCH
 DESIGN_PATHS=("projects","assets/models","assets/catalog.json")
+PROJECT_FILE_RE=re.compile(r"^[a-z0-9_-]{1,140}\.json$")
+MAX_PROJECT_BYTES=3_000_000
 
 class GitFault(RuntimeError):
  def __init__(self,code,detail,hint):
@@ -180,6 +182,30 @@ class Handler(SimpleHTTPRequestHandler):
   return self.headers.get("Origin")==PUBLIC_ORIGIN and self.headers.get("Host")==PUBLIC_HOST
  def do_GET(self):
   route=urlsplit(self.path).path
+  if route=="/api/session":
+   if self.headers.get("Host")!=PUBLIC_HOST:
+    self.respond(403,{"ok":False,"code":"BAD_HOST","error":"Untrusted Builder Host header"});return
+   self.respond(200,{"ok":True,"csrf":TOKEN});return
+  if route=="/api/projects":
+   if self.headers.get("Host")!=PUBLIC_HOST:
+    self.respond(403,{"ok":False,"code":"BAD_HOST","error":"Untrusted Builder Host header"});return
+   try:
+    directory=ROOT/"projects"
+    if directory.is_symlink() or not directory.is_dir():raise ValueError("Project folder is unavailable")
+    projects=[]
+    for path in sorted(directory.glob("*.json"),key=lambda p:p.name.lower()):
+     if path.is_symlink() or not PROJECT_FILE_RE.fullmatch(path.name):continue
+     try:
+      if path.stat().st_size>MAX_PROJECT_BYTES:continue
+      data=json.loads(path.read_text(encoding="utf-8"))
+      if not isinstance(data,dict) or data.get("schemaVersion")!=1 or not isinstance(data.get("instances"),list):continue
+      name=data.get("name")
+      projects.append({"file":path.name,"name":name[:100] if isinstance(name,str) and name.strip() else path.stem})
+     except (OSError,ValueError,UnicodeError):continue
+    self.respond(200,{"ok":True,"projects":projects[:500]})
+   except (OSError,ValueError) as e:
+    self.respond(500,{"ok":False,"code":"PROJECT_LIST_FAILED","error":str(e)[:240]})
+   return
   if route=="/api/git-status":
    try:
     if self.headers.get("Host")!=PUBLIC_HOST:
@@ -195,6 +221,45 @@ class Handler(SimpleHTTPRequestHandler):
 
  def do_POST(self):
   route=urlsplit(self.path).path
+  if route=="/api/project-save":
+   if not self.allowed_origin() or self.headers.get("X-Trialum-CSRF")!=TOKEN or self.headers.get("Content-Type")!="application/json":
+    self.respond(403,{"ok":False,"code":"INVALID_SESSION","error":"Invalid origin or session"});return
+   try:length=int(self.headers.get("Content-Length","0"))
+   except (ValueError,OverflowError):length=-1
+   if length<2 or length>MAX_PROJECT_BYTES:
+    self.respond(400,{"ok":False,"code":"PROJECT_TOO_LARGE","error":"Project JSON must be 2B..3MB"});return
+   try:payload=json.loads(self.rfile.read(length))
+   except (ValueError,UnicodeError):
+    self.respond(400,{"ok":False,"code":"PROJECT_BAD_JSON","error":"Invalid JSON"});return
+   if not isinstance(payload,dict) or not PROJECT_FILE_RE.fullmatch(str(payload.get("file",""))):
+    self.respond(400,{"ok":False,"code":"PROJECT_BAD_NAME","error":"Invalid project filename"});return
+   project=payload.get("project")
+   if (not isinstance(project,dict) or project.get("schemaVersion")!=1 or
+       not isinstance(project.get("name"),str) or not project["name"].strip() or
+       len(project["name"])>100 or not isinstance(project.get("instances"),list) or
+       len(project["instances"])>6000 or not isinstance(project.get("assets",[]),list) or
+       len(project.get("assets",[]))>500):
+    self.respond(400,{"ok":False,"code":"PROJECT_INVALID","error":"Project schema is invalid"});return
+   directory=ROOT/"projects"
+   target=directory/payload["file"]
+   if directory.is_symlink() or not directory.is_dir() or target.is_symlink() or target.resolve().parent!=directory.resolve():
+    self.respond(400,{"ok":False,"code":"PROJECT_PATH_INVALID","error":"Project path is not allowed"});return
+   raw=(json.dumps(project,ensure_ascii=False,indent=2)+"\n").encode("utf-8")
+   if len(raw)>MAX_PROJECT_BYTES:
+    self.respond(400,{"ok":False,"code":"PROJECT_TOO_LARGE","error":"Project JSON exceeds 3MB"});return
+   temporary=None
+   try:
+    with tempfile.NamedTemporaryFile(mode="wb",dir=directory,prefix=".builder-project-",suffix=".tmp",delete=False) as stream:
+     temporary=Path(stream.name);stream.write(raw);stream.flush();os.fsync(stream.fileno())
+    os.replace(temporary,target);temporary=None
+    self.respond(200,{"ok":True,"file":payload["file"],"message":"Saved in projects/"+payload["file"]})
+   except OSError as e:
+    self.respond(500,{"ok":False,"code":"PROJECT_SAVE_FAILED","error":str(e)[:240]})
+   finally:
+    if temporary is not None:
+     try:temporary.unlink(missing_ok=True)
+     except OSError:pass
+   return
   if route=="/api/handoff-publish":
    if not self.allowed_origin() or self.headers.get("X-Trialum-CSRF")!=TOKEN or self.headers.get("Content-Type")!="application/json":
     self.respond(403,{"ok":False,"code":"INVALID_SESSION","error":"Invalid origin or session"});return
