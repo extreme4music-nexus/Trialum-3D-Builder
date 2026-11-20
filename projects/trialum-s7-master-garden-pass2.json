@@ -2136,8 +2136,8 @@
     },
     {
       "id": "master-finger-1-path-1",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -17.984,
         0.022,
@@ -2153,12 +2153,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
     },
     {
       "id": "master-finger-1-path-2",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -17.399,
         0.022,
@@ -2174,12 +2174,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
     },
     {
       "id": "master-finger-1-path-3",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -19.897,
         0.022,
@@ -2195,12 +2195,12 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
     },
     {
       "id": "master-finger-1-path-4",
-      "assetId": "f01-a",
-      "label": "F01-A · Цела мермерна плочка",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
       "position": [
         -19.312,
         0.022,
@@ -2216,7 +2216,7 @@
       "locked": false,
       "visible": true,
       "binding": "",
-      "note": "G-02 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
     },
     {
       "id": "master-finger-1-path-5",
