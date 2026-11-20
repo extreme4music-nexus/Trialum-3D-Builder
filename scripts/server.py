@@ -10,6 +10,9 @@ from urllib.parse import urlsplit,unquote
 from handoff_git import publish_handoff
 ROOT=Path(__file__).resolve().parents[1]
 HOST="127.0.0.1"
+BUILDER_BRANCH="feature/remote-builder-3d-20261120"
+PUBLIC_ORIGIN=os.environ.get("TRIALUM_BUILDER_PUBLIC_ORIGIN","http://127.0.0.1:8765").rstrip("/")
+PUBLIC_HOST=urlsplit(PUBLIC_ORIGIN).netloc
 TOKEN=secrets.token_urlsafe(32)
 LOCK=threading.Lock()
 def importmap_hash():
@@ -23,7 +26,7 @@ def importmap_hash():
  digest=base64.b64encode(hashlib.sha256(inline_map.encode('utf-8')).digest()).decode('ascii')
  return "'sha256-"+digest+"'"
 ALLOWED_RE=re.compile(r"^(?:https://github\.com/|git@github\.com:|ssh://git@github\.com/)extreme4music-nexus/Trialum-3D-Builder(?:\.git)?/?$")
-VALID_BRANCH="main"
+VALID_BRANCH=BUILDER_BRANCH
 DESIGN_PATHS=("projects","assets/models","assets/catalog.json")
 
 class GitFault(RuntimeError):
@@ -85,8 +88,8 @@ def validate_clone():
   raise GitFault("GIT_WRONG_WORKTREE","Git points at a different working copy: "+toplevel,
      "Open the correct clone through GitHub Desktop. Do not push edits from a mismatched folder.")
  if git("branch","--show-current")!=VALID_BRANCH:
-  raise GitFault("GIT_WRONG_BRANCH","Only Builder main is supported for direct sync",
-     "Switch to main in GitHub Desktop; this Builder control never changes branches for you.")
+  raise GitFault("GIT_WRONG_BRANCH","Only the dedicated Builder service branch is supported for direct sync",
+     "Switch to feature/remote-builder-3d-20261120 in GitHub Desktop; this Builder control never changes branches for you.")
  if not ALLOWED_RE.fullmatch(git("remote","get-url","origin")):
   raise GitFault("GIT_WRONG_REMOTE","Origin is not the expected Trialum-3D-Builder repo",
      "Check GitHub Desktop repository identity. This control will not push to another remote.")
@@ -128,12 +131,12 @@ def publish_designs():
   raise GitFault("GIT_STAGED_CHANGES","Existing staged changes must be reviewed in GitHub Desktop: "+", ".join(staged[:8]),
     "The browser refuses to include unrelated staged files in a design commit. Review/commit/unstage them in GitHub Desktop; no automatic reset.")
  # New local commits from a prior failed push MUST be pushed, not recommitted.
- ahead=int(git("rev-list","--count","origin/main..HEAD") or "0")
+ ahead=int(git("rev-list","--count",f"origin/{VALID_BRANCH}..HEAD") or "0")
  if ahead:
   if not is_clean():
    raise GitFault("GIT_LOCAL_COMMITS_WITH_CHANGES","Local commits await push but the worktree also has uncommitted changes",
      "Review pending work and publish existing commits in GitHub Desktop before making another design commit.")
-  return git("push","origin","HEAD:main",timeout=120)
+  return git("push","origin",f"HEAD:{VALID_BRANCH}",timeout=120)
  git("add","--",*DESIGN_PATHS)
  staged=staged_paths()
  if not staged:
@@ -144,14 +147,14 @@ def publish_designs():
    raise GitFault("GIT_UNSAFE_STAGING","An unrelated file is staged: "+p,
      "Review staged changes in GitHub Desktop. The editor cannot commit arbitrary source files.")
  git("commit","-m","design(builder): owner layout update",timeout=60)
- return git("push","origin","HEAD:main",timeout=120)
+ return git("push","origin",f"HEAD:{VALID_BRANCH}",timeout=120)
 
 def pull_designs():
  guard()
  if not is_clean():
   raise GitFault("GIT_DIRTY_WORKTREE","Local changes exist; Pull would risk overwriting them",
    "Save and commit your changes through GitHub Desktop or Builder GitHub ↑ before pulling.")
- return git("pull","--ff-only","origin","main",timeout=120)
+ return git("pull","--ff-only","origin",VALID_BRANCH,timeout=120)
 
 class Handler(SimpleHTTPRequestHandler):
  extensions_map={**SimpleHTTPRequestHandler.extensions_map,".js":"text/javascript",".mjs":"text/javascript",
@@ -174,15 +177,15 @@ class Handler(SimpleHTTPRequestHandler):
   raw=json.dumps(data,ensure_ascii=False).encode("utf-8")
   self.send_response(status);self.send_header("Content-Type","application/json; charset=utf-8");self.send_header("Content-Length",str(len(raw)));self.end_headers();self.wfile.write(raw)
  def allowed_origin(self):
-  return self.headers.get("Origin")==f"http://{HOST}:{PORT}" and self.headers.get("Host")==f"{HOST}:{PORT}"
+  return self.headers.get("Origin")==PUBLIC_ORIGIN and self.headers.get("Host")==PUBLIC_HOST
  def do_GET(self):
   route=urlsplit(self.path).path
   if route=="/api/git-status":
    try:
-    if self.headers.get("Host")!=f"{HOST}:{PORT}":
-     raise GitFault("BAD_HOST","Untrusted localhost Host header","Open the official local Builder address.")
+    if self.headers.get("Host")!=PUBLIC_HOST:
+     raise GitFault("BAD_HOST","Untrusted Builder Host header","Open the official Builder address.")
     guard()
-    self.respond(200,{"ok":True,"csrf":TOKEN,"branch":"main",
+    self.respond(200,{"ok":True,"csrf":TOKEN,"branch":VALID_BRANCH,
        "changes":git("status","--short").splitlines()[:60],
        "remote":"Trialum-3D-Builder origin"})
    except (GitFault,RuntimeError,subprocess.TimeoutExpired,FileNotFoundError) as e:

@@ -63,13 +63,13 @@ V1 cream-white marble, V2 black marble contrast, V3 grey-green stone, V4 mixed m
 
 **Not gameplay:** 25 holes on a S02 tile are only geometry. The canonical engine remains 4 land beds × 5 real slots + 4 aquatic slots. Preview plants are NOT active plantIds, racks do NOT contain invented inventory. All garden scenes have `officialScene:false`, `gameplayWrites:0` and `ownerVisualPass:false`. Pool cutout alignment, physical fit and FPS/visual fidelity require the owner's inspection before use in the game.
 
-### Own Git branch for chosen design
+### Dedicated remote preview branch
 
-After changing a V1–V4 garden, use top `Handoff · Градина V1…V4` selector (automatically matches opened starter variant), then **🌿 Handoff ↓** to download a self-contained JSON+manifest ZIP. Or **🌿 Гранка ↑** and explicitly confirm to create/update `design/s7-garden-v1` etc. in the **Builder repo only**. The local Python localhost server builds a data-only Git commit in an isolated temporary index, writes **only two handoff files** (`handoff/approved-scene.json`, `handoff/manifest.json`) on that branch, and pushes normally (never force, no checkout, no Game main changes). The chosen branch contains inherited Builder sources but its **branch diff** only contains the two handoff files. You may also use the ZIP manually if GitHub Desktop authentication is unavailable. On Node fallback there is no secure Git publishing, but ZIP still works.
+All Builder repository pulls, pushes, and handoff commits are restricted to `feature/remote-builder-3d-20261120`. The GitHub ↑/↓ controls never target `main`; the handoff button writes only `handoff/approved-scene.json` and `handoff/manifest.json` to this same preview branch through an isolated temporary Git index. It never force-pushes, checks out another branch, or writes to the Trialum game repository. Keep this branch separate; do not merge it into Builder `main` unless explicitly requested.
 
 Do not confuse clicking handoff with approving visuals or installing to Trialum. The game implementation stage uses a separate `feature/lw-d-s7-owner-garden-review` branch **only after your physical model and layout PASS** and independent original-engine QA.
 
-**Getting the version:** GitHub Desktop `Trialum-3D-Builder` → `main` → Fetch origin / Pull origin → close the old localhost server → `START-BUILDER-WINDOWS.bat` → `http://127.0.0.1:8765/` → Ctrl+F5. The header should read `BUILDER · 360 GLB`. Preserve your personal JSON drafts; never erase `.git` or your own scenes.
+**Getting the version:** GitHub Desktop `Trialum-3D-Builder` → `feature/remote-builder-3d-20261120` → Fetch origin / Pull origin → close the old localhost server → `START-BUILDER-WINDOWS.bat` → `http://127.0.0.1:8765/` → Ctrl+F5. Preserve your personal JSON drafts; never erase `.git` or your own scenes.
 
 **Handoff/next steps:** [S7 completed visual Builder handoff](docs/S7_COMPLETE_GARDEN_UI_PLANTS_HANDOFF_20261119.md). S7.8-G visuals are now built; next is **owner visual/pass** then **S7.8-H (original-engine action contracts, runtime placement, simulation integration and mobile QA)** and **S7.8-I (complete regression and owner acceptance)**. These next stages are NOT implemented by this editor work.
 

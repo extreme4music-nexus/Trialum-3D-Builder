@@ -266,7 +266,7 @@ test("S02 5x5 interactive soil matrix has 25 stable coordinates and no game-stat
  assert.match(js,/plantId must come from canonical game engine/);
 });
 
-test("one-click 24-light gallery remains visible after pulling Builder main",()=>{
+test("one-click 24-light gallery remains visible after pulling the Builder preview branch",()=>{
  const html=file("index.html"),js=file("src/main.js"),launcher=file("START-BUILDER-WINDOWS.bat");
  const c=JSON.parse(file("assets/catalog.json"));
  const lighting=c.assets.filter(a=>/^s7-l(?:f[1-3]|w[1-2]|c[1-3])-/.test(a.id)&&a.src?.endsWith(".glb"));

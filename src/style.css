@@ -52,3 +52,4 @@ input[type=checkbox]{accent-color:#65bb91;box-shadow:none}.topbar{height:70px;ba
 #modelQuickSelect{width:100%;max-width:100%;margin:0 0 10px;border-color:#4e776c;background:#20352e;text-overflow:ellipsis}
 #modelQuickSelect optgroup{font-weight:800;background:#19312a;color:#dfede6}
 #modelQuickSelect option{font-weight:400;padding:5px;color:#f0f6f0}
+.grid-orientation{display:flex;align-items:center;gap:10px}.grid-orientation>input[type=range]{flex:1;min-width:80px;accent-color:#65bb91}.angle-input{display:flex;align-items:center;gap:5px;color:#a3bdb1;font-size:12px}.angle-input input{width:68px!important;padding:7px 6px}.grid-orientation+.helptext{margin-top:6px}

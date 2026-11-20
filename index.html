@@ -51,19 +51,15 @@
         <button id="openProject" title="Отвори JSON проект">Отвори</button>
         <button id="saveProject" class="accent" title="Зачувај во папка на GitHub Desktop">Зачувај</button>
         <button id="gitPull" title="Преземи последни измени од GitHub; претходно зачувај">GitHub ↓</button>
-        <button id="gitPublish" title="Commit и Push само на зачувани дизајни кон Builder main">GitHub ↑</button>
+        <button id="gitPublish" title="Commit и Push само на зачувани дизајни кон feature/remote-builder-3d-20261120">GitHub ↑</button>
         <button id="exportProject" title="Преземи JSON проект">JSON ↓</button>
         <button id="exportLivingSpace" title="Извези Living Spaces дизајн за идниот во-игра уредувач, без gameplay измени">Дом JSON ↓</button>
         <button id="exportBundle" title="Преземи ZIP со GLB и сцена">ZIP ↓</button>
         <select id="handoffBranch" aria-label="Гранка за дизајнерски handoff" title="Избери цел на handoff, без промена на оригиналната игра">
-          <option value="design/s7-master-pass2">🌿 Handoff · MASTER PASS 2</option>
-          <option value="design/s7-garden-v1">🌿 Handoff · Градина V1</option>
-          <option value="design/s7-garden-v2">🌿 Handoff · Градина V2</option>
-          <option value="design/s7-garden-v3">🌿 Handoff · Градина V3</option>
-          <option value="design/s7-garden-v4">🌿 Handoff · Градина V4</option>
+          <option value="feature/remote-builder-3d-20261120">🌿 Builder · remote preview</option>
         </select>
         <button id="exportHandoff" class="accent" title="Извези одобрлив JSON и manifest за посебен дизајнерски бранч, без автоматско менување на играта">🌿 Handoff ↓</button>
-        <button id="publishHandoff" class="accent" title="Создади/ажурирај безбедна гранка design/s7-garden-v1..v4 со само дизајнерски JSON, без промена на Builder main и Trialum играта">🌿 Гранка ↑</button>
+        <button id="publishHandoff" class="accent" title="Објави само дизајнерски JSON во feature/remote-builder-3d-20261120; main и Trialum играта остануваат недопрени">🌿 Гранка ↑</button>
       </nav>
     </header>
 
@@ -226,6 +222,12 @@
             <label>Длабочина<input id="roomDepth" type="number" value="12" min="2" max="120" step=".5"></label>
             <label>Висина<input id="roomHeight" type="number" value="4" min="2" max="30" step=".5"></label>
           </div>
+          <label class="field-label" for="gridRotation">Насока на подната мрежа</label>
+          <div class="grid-orientation">
+            <input id="gridRotationRange" type="range" min="0" max="359" step="1" value="0" aria-label="Агол на подната мрежа">
+            <label class="angle-input"><input id="gridRotation" type="number" min="0" max="359" step="1" value="0"><span>°</span></label>
+          </div>
+          <p class="helptext">Ги врти подната мрежа, лепењето и новите подни плочки околу центарот на просторијата. Поставените предмети не се поместуваат.</p>
           <label class="checkrow"><input id="showWalls" type="checkbox"> Прикажи ѕидови</label>
           <button id="applyRoom" class="full">Примени димензии</button>
           <p class="helptext">Мрежата помага при редење. Ѕидните плочки се лепат на избраниот ѕид.</p>

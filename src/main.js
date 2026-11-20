@@ -14,7 +14,7 @@ const ids=["projectName","saveIndicator","assetSearch","categoryFilter","catalog
  "modelQuickSelect","assetCounter","objectCounter","objectList","sceneCanvas","viewport","statusText",
  "noSelection","inspector","selectedAssetTitle","objLabel","posX","posY","posZ",
  "rotY","scaleVal","layerSelect","binding","objLocked","objVisible","roomWidth",
- "roomDepth","roomHeight","showWalls","surfaceMode","gridStep","snapEnabled",
+ "roomDepth","roomHeight","gridRotationRange","gridRotation","showWalls","surfaceMode","gridStep","snapEnabled",
  "toggleGrid","glbFileInput","projectFileInput","animationControls","animationClip"];
 const ui=Object.fromEntries(ids.map(id=>[id,$(id)]));
 const LOCAL_AUTOSAVE="trialum-3d-builder:scene-v1";
@@ -75,7 +75,7 @@ gizmo.addEventListener("dragging-changed",event=>{
    rec.position=mesh.position.toArray().map(n=>+n.toFixed(4));
    rec.rotationY=+mesh.rotation.y.toFixed(6);
    if(ui.snapEnabled.checked){
-    rec.position=rec.position.map((n,i)=>i===1&&rec.layer==="floor"?0:snap(n,gridStep()));
+    rec.position=rec.layer==="floor"?snapFloorPosition(rec.position):rec.position.map(n=>snap(n,gridStep()));
     mesh.position.fromArray(rec.position);
    }
    markChanged();refreshInspector();warnIfCollision(rec);
@@ -94,6 +94,19 @@ function say(message,warning=false){
  if(warning)console.warn("[Trialum Builder]",message);
 }
 function gridStep(){return Number(ui.gridStep.value)||.5;}
+function gridAngle(){return math.degToRad(Number(state.project.room.gridRotation)||0);}
+function snapFloorPosition(position){
+ const angle=gridAngle(),c=Math.cos(angle),s=Math.sin(angle);
+ const gx=position[0]*c-position[2]*s,gz=position[0]*s+position[2]*c;
+ const sx=snap(gx,gridStep()),sz=snap(gz,gridStep());
+ return [+(sx*c+sz*s).toFixed(4),0,+(-sx*s+sz*c).toFixed(4)];
+}
+function setGridRotation(value){
+ const degrees=math.clamp(Math.round(Number(value)||0),0,359);
+ state.project.room.gridRotation=degrees;
+ ui.gridRotation.value=String(degrees);ui.gridRotationRange.value=String(degrees);
+ syncGrid();
+}
 function id(){return "obj-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7);}
 function getSelected(){return state.project.instances.find(x=>x.id===state.selectedId);}
 function assetById(assetId){return state.registry.get(assetId);}
@@ -138,7 +151,7 @@ function roomHelpers(){
  floorMesh.visible=!isGreenhouseGardenProject();
  helpers.add(floorMesh);state.roomMeshes.push(floorMesh);
  grid=new THREE.GridHelper(Math.max(width,depth),Math.round(Math.max(width,depth)/gridStep()),0x63a68f,0x415a58);
- grid.position.y=.003;
+ grid.position.y=.003;grid.rotation.y=gridAngle();
  grid.material.transparent=true;grid.material.opacity=.68;grid.visible=state.gridOn;
  helpers.add(grid);state.roomMeshes.push(grid);
  const wallMat=new THREE.MeshStandardMaterial({color:wallColor,roughness:.85,transparent:true,opacity:showWalls?.22:.055,depthWrite:false,side:THREE.DoubleSide});
@@ -156,7 +169,7 @@ function roomHelpers(){
  ui.roomWidth.value=width;ui.roomDepth.value=depth;ui.roomHeight.value=height;
  ui.showWalls.checked=showWalls;
 }
-function syncGrid(){if(grid){grid.visible=state.gridOn;grid.geometry.dispose();const size=Math.max(state.project.room.width,state.project.room.depth);const fresh=new THREE.GridHelper(size,Math.round(size/gridStep()),0x63a68f,0x415a58);grid.geometry=fresh.geometry;grid.material=fresh.material;grid.position.y=.003;}}
+function syncGrid(){if(grid){grid.visible=state.gridOn;grid.geometry.dispose();const size=Math.max(state.project.room.width,state.project.room.depth);const fresh=new THREE.GridHelper(size,Math.round(size/gridStep()),0x63a68f,0x415a58);grid.geometry=fresh.geometry;grid.material=fresh.material;grid.position.y=.003;grid.rotation.y=gridAngle();}}
 
 function placeholder(asset,failed=false){
  const d=asset?.dimensions||[1,1,1];
@@ -537,7 +550,7 @@ function hitSurface(ray){
  const hit=new THREE.Vector3();
  if(!ray.ray.intersectPlane(floorPlane,hit))return null;
  if(Math.abs(hit.x)>state.project.room.width/2+.2||Math.abs(hit.z)>state.project.room.depth/2+.2)return null;
- return {point:hit,rotationY:0,side:"floor"};
+ return {point:hit,rotationY:mode==="floor"?gridAngle():0,side:"floor"};
 }
 async function placeAsset(clientX,clientY){
  const asset=assetById(state.selectedAssetId);
@@ -545,7 +558,7 @@ async function placeAsset(clientX,clientY){
  const hit=hitSurface(screenRay(clientX,clientY));
  if(!hit){say("Кликни на подот или на видлив ѕид.",true);return;}
  let p=hit.point.toArray();
- if(ui.snapEnabled.checked)p=p.map((q,i)=>i===1&&ui.surfaceMode.value==="floor"?0:snap(q,gridStep()));
+ if(ui.snapEnabled.checked)p=ui.surfaceMode.value==="floor"?snapFloorPosition(p):p.map(q=>snap(q,gridStep()));
  if(ui.surfaceMode.value==="floor"||ui.surfaceMode.value==="free")p[1]=0;
  if(ui.surfaceMode.value==="wall")p[1]=Math.max(0,p[1]);
  const rec={id:id(),assetId:asset.id,label:"",position:p,rotationY:hit.rotationY,
@@ -636,7 +649,7 @@ function useProject(raw,fromDisk=false){
  state.saveHandle=fromDisk?state.saveHandle:null;
  for(const asset of project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=project.name;
- if(project.projectId.startsWith("trialum-s7-master-garden-pass2"))$("handoffBranch").value="design/s7-master-pass2";
+ if(project.projectId.startsWith("trialum-s7-master-garden-pass2"))$("handoffBranch").value="feature/remote-builder-3d-20261120";
  roomHelpers();syncGrid();refreshCategories();rebuildScene();
  recordSnapshot();
  if(fromDisk)markSaved();else markChanged();
@@ -783,7 +796,7 @@ async function exportBundle(){
 function designHandoffPayload(){
  const project=collectProject();
  const branch=$("handoffBranch").value;
- if(!/^design\/(?:s7-garden-v[1-4]|s7-master-pass2)$/.test(branch))throw Error("Недозволена дизајнерска гранка.");
+ if(branch!=="feature/remote-builder-3d-20261120")throw Error("Недозволена дизајнерска гранка.");
  const used=[...new Set(project.instances.filter(x=>x.visible).map(x=>x.assetId))];
  const missing=used.filter(id=>!state.registry.has(id));
  if(missing.length)throw Error("Недостапни GLB IDs: "+missing.slice(0,6).join(", "));
@@ -882,8 +895,8 @@ async function githubSync(action){
   if(!status.ok)throw Error(gitErrorMessage(status));
   gitToken=status.csrf;
   if(!confirm(action==="pull"?
-    "GitHub ↓ ќе направи Pull (ff-only) од Builder main. Не го користи истовремено GitHub Desktop. Продолжи?":
-    "GitHub ↑ ќе ги објави зачуваните проекти/GLB во Builder main. Не пуштај истовремено GitHub Desktop. Продолжи?"))return;
+    "GitHub ↓ ќе направи Pull (ff-only) од feature/remote-builder-3d-20261120. Не го користи истовремено GitHub Desktop. Продолжи?":
+    "GitHub ↑ ќе ги објави зачуваните проекти/GLB во feature/remote-builder-3d-20261120. Не пуштај истовремено GitHub Desktop. Продолжи?"))return;
   const res=await fetch("./api/git-"+action,{method:"POST",
     headers:{"Content-Type":"application/json","X-Trialum-CSRF":gitToken},body:"{}"});
   const data=await res.json();
@@ -1095,12 +1108,12 @@ async function openRoomPreset(key){
   state.saveHandle=null;
   useProject(data,true);
   if(key==="garden-master"){
-   $("handoffBranch").value="design/s7-master-pass2";
+   $("handoffBranch").value="feature/remote-builder-3d-20261120";
    state.gridOn=false;
    if(grid)grid.visible=false;
    $("toggleGrid").classList.remove("active");
   }
-  if(/^garden-v[1-4]$/.test(key))$("handoffBranch").value="design/s7-garden-v"+key.slice(-1);
+  if(/^garden-v[1-4]$/.test(key))$("handoffBranch").value="feature/remote-builder-3d-20261120";
   frameCurrentRoom();
   if(key==="f01-f"||key==="f01-g"||key==="f02-g01"||key==="f03-s-g01"||key==="f03-t-g01"){
     // Focus on the TRUE G01 north-east poolside arc (22.5–75 degrees).
@@ -1188,6 +1201,9 @@ function addListeners(){
  $("resetCamera").onclick=()=>{
   frameCurrentRoom();say("Камерата е прилагодена на големината на просторијата.");};
  ui.gridStep.addEventListener("change",()=>{state.project.room.gridSize=gridStep();syncGrid();markChanged()});
+ ui.gridRotationRange.addEventListener("input",()=>setGridRotation(ui.gridRotationRange.value));
+ ui.gridRotationRange.addEventListener("change",()=>markChanged());
+ ui.gridRotation.addEventListener("change",()=>{setGridRotation(ui.gridRotation.value);markChanged()});
  $("toggleGrid").onclick=()=>{
   state.gridOn=!state.gridOn;
   if(grid)grid.visible=state.gridOn;
@@ -1303,8 +1319,10 @@ async function startup(){
  for(const asset of state.project.assets)state.registry.set(asset.id,asset);
  ui.projectName.value=state.project.name;
  ui.gridStep.value=String(state.project.room.gridSize||.5);
+ ui.gridRotation.value=String(state.project.room.gridRotation||0);
+ ui.gridRotationRange.value=String(state.project.room.gridRotation||0);
  refreshCategories();roomHelpers();addListeners();
- if(state.project.projectId.startsWith("trialum-s7-master-garden-pass2"))$("handoffBranch").value="design/s7-master-pass2";
+ if(state.project.projectId.startsWith("trialum-s7-master-garden-pass2"))$("handoffBranch").value="feature/remote-builder-3d-20261120";
  $("restorePreUpgradeDraft").hidden=!localStorage.getItem(PASS2_PREVIOUS_DRAFT_KEY)&&!localStorage.getItem(S7_PREVIOUS_DRAFT_KEY);
  await rebuildScene();recordSnapshot();
  if(welcomedMaster){

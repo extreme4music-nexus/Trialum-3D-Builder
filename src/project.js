@@ -8,7 +8,7 @@ const name=(s,fallback,max=100)=>String(s??fallback).trim().slice(0,max)||fallba
 const vector=(v,def,min=-1000,max=1000)=>Array.isArray(v)&&v.length===3?v.map((n,i)=>clamp(n,min,max,def[i])):[...def];
 export function createProject(title="Моја прва просторија"){
  return {schemaVersion:SCHEMA_VERSION,projectId:"builder-"+Date.now().toString(36),name:title,
-  description:"",room:{width:12,depth:12,height:4,gridSize:.5,showWalls:false,
+  description:"",room:{width:12,depth:12,height:4,gridSize:.5,gridRotation:0,showWalls:false,
    floorColor:"#526b60",wallColor:"#34494c"},
   instances:[],assets:[],bindings:{},meta:{editorVersion:"0.1.0",gameplayWrites:0,officialScene:false}};
 }
@@ -24,6 +24,7 @@ export function sanitizeProject(raw){
   width:clamp(src.width,2,120,12),depth:clamp(src.depth,2,120,12),
   height:clamp(src.height,2,30,4),
   gridSize:[.05,.1,.25,.5,1].includes(Number(src.gridSize))?Number(src.gridSize):.5,
+  gridRotation:((clamp(src.gridRotation,0,359,0)%360)+360)%360,
   showWalls:!!src.showWalls,
   floorColor:/^#[0-9a-f]{6}$/i.test(src.floorColor||"")?src.floorColor:"#526b60",
   wallColor:/^#[0-9a-f]{6}$/i.test(src.wallColor||"")?src.wallColor:"#34494c"

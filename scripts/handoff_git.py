@@ -5,14 +5,15 @@ The branch diff adds/replaces only handoff/approved-scene.json and handoff/manif
 import json, math, os, re, subprocess, tempfile
 from pathlib import Path
 
-ALLOWED_BRANCH=re.compile(r"^design/(?:s7-garden-v[1-4]|s7-master-pass2)$")
+BUILDER_BRANCH="feature/remote-builder-3d-20261120"
+ALLOWED_BRANCH=re.compile(r"^feature/remote-builder-3d-20261120$")
 
 def validate_handoff(payload, GitFault):
  if not isinstance(payload,dict) or set(payload)!={"branch","project","manifest"}:
   raise GitFault("HANDOFF_PAYLOAD","Expected branch, project and manifest only","Use the Builder handoff button.")
  branch=payload["branch"]
  if not isinstance(branch,str) or not ALLOWED_BRANCH.fullmatch(branch):
-  raise GitFault("HANDOFF_BRANCH","Only design/s7-garden-v1..v4 or design/s7-master-pass2 can receive a handoff","Choose one of four safe garden branches.")
+  raise GitFault("HANDOFF_BRANCH","Only the dedicated Builder service branch can receive a handoff",f"Choose {BUILDER_BRANCH}.")
  scene=payload["project"];manifest=payload["manifest"]
  if not isinstance(scene,dict) or scene.get("schemaVersion")!=1 or not isinstance(scene.get("instances"),list):
   raise GitFault("HANDOFF_SCENE","Expected an editable Builder schemaVersion=1 scene","Open a Builder garden first.")
@@ -42,13 +43,13 @@ def validate_handoff(payload, GitFault):
 def publish_handoff(payload, ROOT, guard, git, GitFault):
  branch,scene,manifest=validate_handoff(payload,GitFault)
  gitdir=guard()  # localhost-only clone/branch/remote/git-lock safety
- git("fetch","origin","main",timeout=120)
+ git("fetch","origin",branch,timeout=120)
  remote=git("ls-remote","--heads","origin","refs/heads/"+branch,timeout=90).splitlines()
  if remote:
   git("fetch","origin","refs/heads/"+branch+":refs/remotes/origin/"+branch,timeout=90)
   parent=git("rev-parse","refs/remotes/origin/"+branch)
  else:
-  parent=git("rev-parse","refs/remotes/origin/main")
+  raise GitFault("HANDOFF_BRANCH_MISSING","The dedicated Builder service branch does not exist on GitHub","Publish the Builder branch first; no handoff was written to main.")
  with tempfile.TemporaryDirectory(prefix="trialum_handoff_",dir=str(gitdir)) as tmp:
   env={**os.environ,"GIT_INDEX_FILE":os.path.join(tmp,"index")}
   def isolated(*args,stdin=None):

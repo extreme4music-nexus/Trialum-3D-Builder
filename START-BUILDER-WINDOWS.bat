@@ -83,7 +83,7 @@ goto ready
 :incomplete
 echo.
 echo Some original Trialum room GLBs are missing from this local clone.
-echo In GitHub Desktop choose Trialum-3D-Builder MAIN, Fetch origin, Pull origin.
+echo In GitHub Desktop choose Trialum-3D-Builder feature/remote-builder-3d-20261120, Fetch origin, Pull origin.
 echo All 363 models MUST be present, including the glass door and MASTER PASS2 scene.
 echo If necessary run npm install --prefix tools/b1 and py -3 scripts/build_all_assets.py.
 pause

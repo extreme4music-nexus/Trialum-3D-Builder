@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""S7 design handoff must never write Trialum Game, change Builder main, checkout
+"""Builder handoff must never write Trialum Game or Builder main, checkout
 worktree, force push, or change unrelated files. Pure local temporary Git test.
 """
 import json, os, subprocess, sys, tempfile, unittest
@@ -12,7 +12,9 @@ class Fault(RuntimeError):
   super().__init__(detail)
   self.code,self.hint=code,hint
 
-def sample(branch="design/s7-garden-v1"):
+BUILDER_BRANCH="feature/remote-builder-3d-20261120"
+
+def sample(branch=BUILDER_BRANCH):
  project={
   "schemaVersion":1,"projectId":"trialum-s7-complete-garden-v1-test",
   "name":"Review owner garden","instances":[
@@ -26,12 +28,12 @@ def sample(branch="design/s7-garden-v1"):
 class HandoffTests(unittest.TestCase):
  def test_malformed_or_game_state_payload_is_rejected(self):
   p=sample()
-  for candidate in ["../main","main","feature/lw-d-game","design/s7-garden-v0","design/s7-garden-v5"]:
+  for candidate in ["../main","main","feature/lw-d-game","design/s7-garden-v1","design/s7-garden-v5"]:
    with self.subTest(candidate=candidate):
     p=sample(candidate)
     with self.assertRaises(Fault):
      validate_handoff(p,Fault)
-  assert validate_handoff(sample("design/s7-master-pass2"),Fault)[0]=="design/s7-master-pass2"
+  assert validate_handoff(sample(BUILDER_BRANCH),Fault)[0]==BUILDER_BRANCH
   p=sample();p["project"]["meta"]["gameplayWrites"]=1
   with self.assertRaises(Fault):validate_handoff(p,Fault)
   p=sample();p["project"]["meta"]["officialScene"]=True
@@ -40,7 +42,7 @@ class HandoffTests(unittest.TestCase):
   with self.assertRaises(Fault):validate_handoff(p,Fault)
   p=sample();p["project"]["instances"][0]["id"]="../config"
   # IDs are opaque strings but never used as filenames.
-  assert validate_handoff(p,Fault)[0]=="design/s7-garden-v1"
+  assert validate_handoff(p,Fault)[0]==BUILDER_BRANCH
 
  def test_branch_contains_only_handoff_diff_main_untouched(self):
   with tempfile.TemporaryDirectory() as d:
@@ -53,34 +55,34 @@ class HandoffTests(unittest.TestCase):
    run(root,"clone",str(bare),str(work))
    run(work,"config","user.name","Trialum Safety QA")
    run(work,"config","user.email","builder-qa@users.noreply.github.com")
-   run(work,"checkout","-b","main")
-   (work/"README.md").write_text("main original\n")
+   run(work,"checkout","-b",BUILDER_BRANCH)
+   (work/"README.md").write_text("service branch original\n")
    run(work,"add","README.md")
    run(work,"commit","-m","initial")
-   run(work,"push","-u","origin","main")
+   run(work,"push","-u","origin",BUILDER_BRANCH)
    original=run(work,"rev-parse","HEAD")
    def git(*args,timeout=90):
     return run(work,*args)
    def guard():
-    assert run(work,"branch","--show-current")=="main"
+    assert run(work,"branch","--show-current")==BUILDER_BRANCH
     assert not list((work/".git").glob("*.lock"))
     return work/".git"
    response=publish_handoff(sample(),work,guard,git,Fault)
-   self.assertEqual(response["branch"],"design/s7-garden-v1")
-   self.assertEqual(run(work,"branch","--show-current"),"main")
+   self.assertEqual(response["branch"],BUILDER_BRANCH)
+   self.assertEqual(run(work,"branch","--show-current"),BUILDER_BRANCH)
    self.assertEqual(run(work,"rev-parse","HEAD"),original)
    self.assertEqual(run(work,"status","--porcelain"),"")
-   remote=run(work,"ls-remote","origin","refs/heads/main")
+   remote=run(work,"ls-remote","origin","refs/heads/"+BUILDER_BRANCH)
    self.assertTrue(remote.startswith(original))
    diff=run(work,"diff","--name-only",original,response["commit"]).splitlines()
    self.assertEqual(diff,["handoff/approved-scene.json","handoff/manifest.json"])
-   published=run(work,"ls-remote","origin","refs/heads/design/s7-garden-v1")
+   published=run(work,"ls-remote","origin","refs/heads/"+BUILDER_BRANCH)
    self.assertTrue(published.startswith(response["commit"]))
    # Repeat same branch, new review: still only data files and safe fast-forward.
    p=sample();p["project"]["instances"][0]["position"][0]=2
    response2=publish_handoff(p,work,guard,git,Fault)
    self.assertNotEqual(response2["commit"],response["commit"])
-   self.assertEqual(run(work,"branch","--show-current"),"main")
+   self.assertEqual(run(work,"branch","--show-current"),BUILDER_BRANCH)
    self.assertEqual(run(work,"rev-parse","HEAD"),original)
    self.assertEqual(run(work,"status","--porcelain"),"")
    self.assertEqual(run(work,"diff","--name-only",response["commit"],response2["commit"]),
