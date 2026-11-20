@@ -1,6 +1,6 @@
 # TRIALUM 3D BUILDER — TECHNICAL HANDOFF TO NEXT AI / CODEX
 
-**Snapshot 20 November 2026.** This file contains only project technical facts, no credentials or personal account information. The owner also possesses a more complete *private* handoff package covering the full Trialum project and ZMP.
+**Snapshot 20 November 2026.** This file contains only project technical facts, no credentials or personal account information. The owner also possesses a more complete *private*, **TRIALUM-ONLY** handoff ZIP with complete game history, detailed 3D design/simulation roadmap, the byte-exact 703-instance scene JSON and 363-GLB catalog; it should be uploaded into the new ChatGPT account.
 
 ## Current source of truth
 
@@ -38,3 +38,31 @@
 - No secrets, keys, license violations, private user backups or student data in public repos.
 
 **Owner acceptance statement is the only visual gate.** If the owner has not watched the actual scene and said PASS, mark it pending and stop before other rooms/versions.
+
+
+## Detailed source diagnosis: WHY G02 tiles stayed tilted
+This is not a rendering-only defect or a wrong texture. The authoritative `src/main.js` editor has a world-space transform/snap system, but G02 follows a rotated garden finger:
+- Line ~66: `gizmo.setSpace("world")`; floor slab drags use global axes.
+- Lines ~73–80: after dragging, every X/Z component is independently rounded via `snap(n,gridStep())`; the floor Y special case resets to 0.
+- Lines ~96,140,159: gridStep is a world interval, and `new THREE.GridHelper(...)` is global, origin/rotation unbound to a physical bed.
+- Lines ~527–550: floor placement intersects global Y=0 plane; it snaps global X/Z and places floor GLB at `rotationY=0`, not the -73° G02 orientation.
+- Original glass shell uses paw-shaped G02–G05 radial coordinates. A flat axis-aligned grid cannot be stretched or rotated to become a local G02 bed by changing four tiles' `assetId`.
+**Immediate fix:** introduce an opt-in per-bed `originXZ, tangentXZ, lateralXZ, stepU, stepV` coordinate frame; apply inverse projection to grid snap and forward projection back to world, with a matching visible `GridHelper` and scene-GLB rotation/pivot check. Do NOT globally migrate all 703 existing positions or alter snap in unrelated rooms.
+
+G02 radial direction at θ≈-73° is `(sinθ,-cosθ)`; lateral direction `(cosθ,sinθ)`. For world point P and bed origin O:
+`u=dot(P−O,radial)`, `v=dot(P−O,lateral)`;
+`Psnapped=O + round(u/stepU)*stepU*radial + round(v/stepV)*stepV*lateral`.
+Before using this formula, confirm THREE.js axis/yaw direction, *real* GLB pivot and bed start from loaded geometry in Blender/browser. Owner should see an **8–10 tile seamless centerline** with top-down, eye-level and side-view verification. Record before/after screenshots/video from actual editor, not conceptual images.
+
+## 3D full-development dependency after G02 owner acceptance
+1. Owner reviews the left G02 lane; no merge or final visual PASS until explicitly confirmed.
+2. Owner finishes remaining layout in Blender or Builder and exports a corrected complete MASTER scene JSON. Keep PASS1 and old V1–V4 as archives.
+3. Using that exact accepted JSON, derive three additional material-only variants without moving non-floor objects or changing actual plant capacities.
+4. **Separate game-engine project**, only on fresh owner authorization: source-of-truth runtime scene bridge; physical doors/collision; pump/filter/valve/hose water-flow graph and conservation; plant biology and state-driven GLB clips; robot logistics/tasks; deterministic offline ticks/backup/restore; preservation of original Classic, multiplayer, pet/food/inventory and AI consent.
+5. Respect B1/Three.js renderer owner-gates in the game repository. A completed Builder scene or preview APK is not a completed integrated 3D game. Do not push engine changes/Play builds from a design handoff.
+
+## Verified source-snapshot integrity (20 November)
+The owner has an export ZIP, with both source files verified byte-exact against the GitHub blob IDs:
+- `projects/trialum-s7-master-garden-pass2.json` blob `5d68670f7c073d1842b3f89c49b0394c20ffec91` (703 instances; four G02 ID substitutions, **NOT** visual PASS).
+- `assets/catalog.json` blob `8e9eac716453e70b474de87380efb2788a9dec26` (363 real GLB catalog entries).
+The ZIP has **no entire 363-GLB binary collection**: clone Builder from GitHub. New ChatGPT account GitHub connection and local Blender/Windows permissions require the owner's separate explicit setup; never assume they transfer.
