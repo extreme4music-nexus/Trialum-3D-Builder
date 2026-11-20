@@ -1,0 +1,97 @@
+name: Trialum S7 PASS2 — standalone Android 3D garden preview APK
+on:
+  push:
+    branches:
+      - feature/s7-pass2-android-visual-preview-20261120
+    paths:
+      - 'android-preview/**'
+      - 'tools/android-preview/**'
+      - '.github/workflows/s7-android-garden-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-preview-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Install Android SDK 36 with 35.0.0 build tools
+        run: |
+          set -euo pipefail
+          SDKMANAGER=$(find /usr/local/lib/android/sdk/cmdline-tools -name sdkmanager -type f | head -n 1)
+          test -n "$SDKMANAGER"
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+          "$SDKMANAGER" "platforms;android-36" "build-tools;35.0.0"
+      - name: Pack actual 703-object, 363-GLB S7 GARDEN MASTER PASS2 completely offline
+        run: |
+          python3 -m py_compile tools/android-preview/package_web.py
+          python3 tools/android-preview/package_web.py
+          node --check android-preview/tour.js
+          node --check android-preview/app/src/main/assets/web/src/main.js
+          node --check android-preview/app/src/main/assets/web/src/project.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path("android-preview/app/src/main/assets/web")
+          cat=json.loads((root/"assets/catalog.json").read_text())
+          scene=json.loads((root/"projects/trialum-s7-master-garden-pass2.json").read_text())
+          assert cat["genuineGlbCount"]==363
+          assert len(scene["instances"])==703
+          assert scene["meta"]["gameplayWrites"]==0
+          assert "TrialumPreviewAndroid" in (root/"src/project.js").read_text()
+          assert "tour.css" in (root/"index.html").read_text()
+          assert not any(x["assetId"].startswith("s7-i05-") for x in scene["instances"])
+          PY
+      - name: Build debug-signed independent Android APK
+        run: |
+          set -euo pipefail
+          gradle -p android-preview --no-daemon --stacktrace :app:assembleDebug
+      - name: Verify actual installable Android APK and embedded assets
+        run: |
+          set -euo pipefail
+          APK=android-preview/app/build/outputs/apk/debug/app-debug.apk
+          test -s "$APK"
+          mkdir -p dist
+          cp "$APK" dist/TRIALUM-S7-GARDEN-PASS2-PREVIEW-debug.apk
+          python3 - <<'PY'
+          from zipfile import ZipFile
+          from pathlib import Path
+          import hashlib
+          path=Path('dist/TRIALUM-S7-GARDEN-PASS2-PREVIEW-debug.apk')
+          with ZipFile(path) as z:
+           names=set(z.namelist())
+           for req in [
+            "AndroidManifest.xml", "classes.dex",
+            "assets/web/index.html",
+            "assets/web/projects/trialum-s7-master-garden-pass2.json",
+            "assets/web/assets/models/s7-pass2-g00l-glass-partition-door.glb",
+            "assets/web/vendor/three.module.js",
+            "assets/web/preview/tour.js"
+           ]:
+            assert req in names,req
+           assert sum(x.startswith("assets/web/assets/models/") and x.endswith(".glb") for x in names)==363
+          print("PASS: REAL ANDROID APK",path.stat().st_size,"bytes")
+          print("SHA256",hashlib.sha256(path.read_bytes()).hexdigest())
+          PY
+          echo "### S7 MASTER PASS2 standalone APK — built and validated" >> "$GITHUB_STEP_SUMMARY"
+          echo "Only android-preview package com.trialum.gardenpreview (not com.trialum.ziivaiskra)." >> "$GITHUB_STEP_SUMMARY"
+          echo "This is an offline visual QA APK, NOT the engine-integrated Trialum game." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TRIALUM-S7-GARDEN-PASS2-PREVIEW-APK
+          path: dist/TRIALUM-S7-GARDEN-PASS2-PREVIEW-debug.apk
+          retention-days: 30
+          if-no-files-found: error
