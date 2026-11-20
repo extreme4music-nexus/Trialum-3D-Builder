@@ -1,0 +1,143 @@
+name: Trialum G02 LEFT STONE — properly signed installable Android APK
+on:
+  push:
+    branches:
+      - fix/g02-left-bed-stone-signed-apk-20261120
+    paths:
+      - 'android-preview/**'
+      - 'tools/android-preview/**'
+      - '.github/workflows/s7-g02-stone-signed-apk.yml'
+      - 'projects/trialum-s7-master-garden-pass2.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-preview-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch comparison baseline for exact scene-change guardrail
+        run: git fetch origin main:refs/remotes/origin/main
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Install Android SDK 36 with 35.0.0 build tools
+        run: |
+          set -euo pipefail
+          SDKMANAGER=$(find /usr/local/lib/android/sdk/cmdline-tools -name sdkmanager -type f | head -n 1)
+          test -n "$SDKMANAGER"
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+          "$SDKMANAGER" "platforms;android-36" "build-tools;35.0.0"
+      - name: Pack actual 703-object, 363-GLB S7 GARDEN MASTER PASS2 completely offline
+        run: |
+          python3 -m py_compile tools/android-preview/package_web.py
+          python3 tools/android-preview/package_web.py
+          node --check android-preview/tour.js
+          node --check android-preview/app/src/main/assets/web/src/main.js
+          node --check android-preview/app/src/main/assets/web/src/project.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path("android-preview/app/src/main/assets/web")
+          cat=json.loads((root/"assets/catalog.json").read_text())
+          scene=json.loads((root/"projects/trialum-s7-master-garden-pass2.json").read_text())
+          assert cat["genuineGlbCount"]==363
+          assert len(scene["instances"])==703
+          assert scene["meta"]["gameplayWrites"]==0
+          assert "TrialumPreviewAndroid" in (root/"src/project.js").read_text()
+          assert "tour.css" in (root/"index.html").read_text()
+          assert not any(x["assetId"].startswith("s7-i05-") for x in scene["instances"])
+          PY
+      - name: Validate ONLY left bed changed from exact prior main design
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          old=json.loads(subprocess.check_output(["git","show","origin/main:projects/trialum-s7-master-garden-pass2.json"]))
+          new=json.loads(Path("projects/trialum-s7-master-garden-pass2.json").read_text())
+          oldmap={x["id"]:x for x in old["instances"]}
+          newmap={x["id"]:x for x in new["instances"]}
+          assert len(oldmap)==len(newmap)==703
+          assert set(oldmap)==set(newmap)
+          required={"master-finger-1-path-1","master-finger-1-path-2","master-finger-1-path-3","master-finger-1-path-4"}
+          changed=set()
+          for key in oldmap:
+           if oldmap[key]!=newmap[key]:
+            changed.add(key)
+            assert key in required,key
+            assert oldmap[key]["assetId"]=="f01-a"
+            assert newmap[key]["assetId"]=="f03-s-stone-full"
+            for prop in ("position","scale","rotationY","layer","locked","visible","binding"):
+             assert oldmap[key][prop]==newmap[key][prop],(key,prop)
+          assert changed==required,changed
+          assert old["meta"]==new["meta"]
+          print("PASS: exactly four LEFT G-02 central path stones, all other 699 instances unchanged")
+          PY
+      - name: Build debug-signed independent Android APK
+        run: |
+          set -euo pipefail
+          gradle -p android-preview --no-daemon --stacktrace :app:assembleDebug
+      - name: Verify APK v2/v3 signatures, zip alignment and independent package ID
+        run: |
+          set -euo pipefail
+          APK=android-preview/app/build/outputs/apk/debug/app-debug.apk
+          BT="${ANDROID_HOME:-/usr/local/lib/android/sdk}/build-tools/35.0.0"
+          "$BT/zipalign" -c -v 4 "$APK"
+          "$BT/apksigner" verify --verbose --print-certs "$APK" | tee /tmp/trialum-g02-apksigner.txt
+          grep -F 'Verified using v2 scheme (APK Signature Scheme v2): true' /tmp/trialum-g02-apksigner.txt
+          "$BT/aapt" dump badging "$APK" | tee /tmp/trialum-g02-badging.txt
+          grep -F "package: name='com.trialum.gardenpreview.g02stone'" /tmp/trialum-g02-badging.txt
+      - name: Verify actual installable Android APK and embedded assets
+        run: |
+          set -euo pipefail
+          APK=android-preview/app/build/outputs/apk/debug/app-debug.apk
+          test -s "$APK"
+          mkdir -p dist
+          cp "$APK" dist/TRIALUM-G02-LEFT-STONE-PROPERLY-SIGNED-debug.apk
+          python3 - <<'PY'
+          from zipfile import ZipFile
+          from pathlib import Path
+          import hashlib,json
+          path=Path('dist/TRIALUM-G02-LEFT-STONE-PROPERLY-SIGNED-debug.apk')
+          with ZipFile(path) as z:
+           names=set(z.namelist())
+           for req in [
+            "AndroidManifest.xml", "classes.dex",
+            "assets/web/index.html",
+            "assets/web/projects/trialum-s7-master-garden-pass2.json",
+            "assets/web/assets/models/s7-pass2-g00l-glass-partition-door.glb",
+            "assets/web/vendor/three.module.js",
+            "assets/web/preview/tour.js"
+           ]:
+            assert req in names,req
+           assert sum(x.startswith("assets/web/assets/models/") and x.endswith(".glb") for x in names)==363
+           scene=json.loads(z.read("assets/web/projects/trialum-s7-master-garden-pass2.json"))
+           assert all(scene["instances"][i]["assetId"] for i in range(703))
+           for x in scene["instances"]:
+            if x["id"] in {"master-finger-1-path-1","master-finger-1-path-2","master-finger-1-path-3","master-finger-1-path-4"}:
+             assert x["assetId"]=="f03-s-stone-full"
+          print("PASS: REAL ANDROID APK",path.stat().st_size,"bytes")
+          print("SHA256",hashlib.sha256(path.read_bytes()).hexdigest())
+          PY
+          echo "### S7 MASTER PASS2 standalone APK — built and validated" >> "$GITHUB_STEP_SUMMARY"
+          echo "Unique install identity com.trialum.gardenpreview.g02stone, NOT an update over existing debug-signed QA installation." >> "$GITHUB_STEP_SUMMARY"
+          echo "This is an offline visual QA APK, NOT the engine-integrated Trialum game." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TRIALUM-G02-LEFT-STONE-SIGNED-APK
+          path: dist/TRIALUM-G02-LEFT-STONE-PROPERLY-SIGNED-debug.apk
+          retention-days: 30
+          if-no-files-found: error
