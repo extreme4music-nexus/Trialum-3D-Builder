@@ -7,7 +7,8 @@
     "width": 82,
     "depth": 104,
     "height": 12.5,
-    "gridSize": 0.5,
+    "gridSize": 0.1,
+    "gridRotation": 0,
     "showWalls": false,
     "floorColor": "#304b45",
     "wallColor": "#56736c"
@@ -396,11 +397,11 @@
       "assetId": "s7-e0e1-w02-ergonomic-chair",
       "label": "s7-e0e1-w02-ergonomic-chair",
       "position": [
-        -10.15,
+        -10.100000000000001,
         0,
-        20.92
+        21.5
       ],
-      "rotationY": 0,
+      "rotationY": -0.111642,
       "scale": [
         1,
         1,
@@ -417,11 +418,11 @@
       "assetId": "s7-e0e1-w03-hologram-monitor",
       "label": "s7-e0e1-w03-hologram-monitor",
       "position": [
-        -10.15,
-        0.93,
-        22.05
+        -10.100000000000001,
+        0.9,
+        22.5
       ],
-      "rotationY": 0,
+      "rotationY": -0.010916,
       "scale": [
         1,
         1,
@@ -459,9 +460,9 @@
       "assetId": "s7-e0e1-w05-backlit-keyboard",
       "label": "s7-e0e1-w05-backlit-keyboard",
       "position": [
-        -10.22,
-        0.94,
-        22.64
+        -10.200000000000001,
+        0.9,
+        22.200000000000003
       ],
       "rotationY": 0,
       "scale": [
@@ -480,9 +481,9 @@
       "assetId": "s7-e0e1-w06-ergonomic-mouse",
       "label": "s7-e0e1-w06-ergonomic-mouse",
       "position": [
-        -9.71,
-        0.94,
-        22.63
+        -10.700000000000001,
+        0.9,
+        22.3
       ],
       "rotationY": 0,
       "scale": [
@@ -2135,6 +2136,90 @@
       "note": "Темна вистинска почва под една канонска леа; геометрија без дополнителни слотови"
     },
     {
+      "id": "master-finger-1-path-1",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -17.984,
+        0.022,
+        -4.453
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
+    },
+    {
+      "id": "master-finger-1-path-2",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -17.399,
+        0.022,
+        -6.365
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
+    },
+    {
+      "id": "master-finger-1-path-3",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -19.897,
+        0.022,
+        -5.037
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
+    },
+    {
+      "id": "master-finger-1-path-4",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -19.312,
+        0.022,
+        -6.95
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-02 left bed: original central footpath stone surface; all other S7 areas deliberately unchanged."
+    },
+    {
       "id": "master-finger-1-path-5",
       "assetId": "f03-s-stone-full",
       "label": "f03-s-stone-full",
@@ -3603,6 +3688,762 @@
       "visible": true,
       "binding": "",
       "note": "Темна вистинска почва под една канонска леа; геометрија без дополнителни слотови"
+    },
+    {
+      "id": "master-finger-3-path-39",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.645,
+        0.022,
+        -18.454
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-40",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.354,
+        0.022,
+        -18.524
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-41",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.715,
+        0.022,
+        -20.453
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-42",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.284,
+        0.022,
+        -20.522
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-43",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.785,
+        0.022,
+        -22.451
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-44",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.214,
+        0.022,
+        -22.521
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-45",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.854,
+        0.022,
+        -24.45
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-46",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.144,
+        0.022,
+        -24.52
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-47",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.924,
+        0.022,
+        -26.449
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-48",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.075,
+        0.022,
+        -26.519
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-49",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -1.994,
+        0.022,
+        -28.448
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-50",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        0.005,
+        0.022,
+        -28.518
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-51",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.064,
+        0.022,
+        -30.447
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-52",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.065,
+        0.022,
+        -30.516
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-53",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.134,
+        0.022,
+        -32.445
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-54",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.135,
+        0.022,
+        -32.515
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-55",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.203,
+        0.022,
+        -34.444
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-56",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.205,
+        0.022,
+        -34.514
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-57",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.273,
+        0.022,
+        -36.443
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-58",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.274,
+        0.022,
+        -36.513
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-59",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.343,
+        0.022,
+        -38.442
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-60",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.344,
+        0.022,
+        -38.511
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-61",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.413,
+        0.022,
+        -40.44
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-62",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.414,
+        0.022,
+        -40.51
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-63",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.483,
+        0.022,
+        -42.439
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-64",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.484,
+        0.022,
+        -42.509
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-65",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -2.552,
+        0.022,
+        -44.438
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-66",
+      "assetId": "f01-a",
+      "label": "F01-A · Цела мермерна плочка",
+      "position": [
+        -0.554,
+        0.022,
+        -44.508
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "G-04 главна пешачка патека: 2×2m крем камен, оставен слободен центар за пристап до леата."
+    },
+    {
+      "id": "master-finger-3-path-67",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
+      "position": [
+        -2.622,
+        0.022,
+        -46.437
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
+    },
+    {
+      "id": "master-finger-3-path-68",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
+      "position": [
+        -0.623,
+        0.022,
+        -46.507
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
+    },
+    {
+      "id": "master-finger-3-path-69",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
+      "position": [
+        -2.692,
+        0.022,
+        -48.436
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
+    },
+    {
+      "id": "master-finger-3-path-70",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -0.693,
+        0.022,
+        -48.505
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
+    },
+    {
+      "id": "master-finger-3-path-71",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -2.762,
+        0.022,
+        -50.434
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
+    },
+    {
+      "id": "master-finger-3-path-72",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -0.763,
+        0.022,
+        -50.504
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
+    },
+    {
+      "id": "master-finger-3-path-73",
+      "assetId": "f03-s-stone-full",
+      "label": "f03-s-stone-full",
+      "position": [
+        -2.832,
+        0.022,
+        -52.433
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
+    },
+    {
+      "id": "master-finger-3-path-74",
+      "assetId": "f03-t-stone-full",
+      "label": "f03-t-stone-full",
+      "position": [
+        -0.833,
+        0.022,
+        -52.503
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        2,
+        1,
+        2
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "F03 природен камен по патеките каде што се расадите."
     },
     {
       "id": "master-3-soil-island-1",
@@ -10619,6 +11460,48 @@
       "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
     },
     {
+      "id": "pass2-g01-stone-accent-13",
+      "assetId": "f03-t-stone-radial-wedge",
+      "label": "f03-t-stone-radial-wedge",
+      "position": [
+        -8.4935,
+        0.091,
+        -11.6903
+      ],
+      "rotationY": 4.08407,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
+      "id": "pass2-g01-stone-accent-14",
+      "assetId": "f03-s-stone-radial-wedge",
+      "label": "f03-s-stone-radial-wedge",
+      "position": [
+        -4.4653,
+        0.091,
+        -13.7428
+      ],
+      "rotationY": 4.39823,
+      "scale": [
+        0.78,
+        1,
+        0.78
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
+    },
+    {
       "id": "pass2-g01-stone-accent-16",
       "assetId": "f03-s-stone-radial-wedge",
       "label": "f03-s-stone-radial-wedge",
@@ -10703,6 +11586,48 @@
       "note": "Кружен природен F03 S/T камен мотив, околу G01 мермерните патеки."
     },
     {
+      "id": "pass2-path-fill-1-L",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -17.4918,
+        0.022,
+        -4.2498
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-1-R",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -16.8778,
+        0.022,
+        -6.258
+      ],
+      "rotationY": -1.27409,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
       "id": "pass2-path-fill-2-L",
       "assetId": "f01-a",
       "label": "f01-a",
@@ -10733,6 +11658,48 @@
         -14.807
       ],
       "rotationY": -0.663225,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-3-L",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        -1.6765,
+        0.022,
+        -17.9224
+      ],
+      "rotationY": -0.034907,
+      "scale": [
+        1.8,
+        1,
+        1.8
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Затворен празен отвор меѓу кружна G01 патека и стаклен градински тунел."
+    },
+    {
+      "id": "pass2-path-fill-3-R",
+      "assetId": "f01-a",
+      "label": "f01-a",
+      "position": [
+        0.4222,
+        0.022,
+        -17.9957
+      ],
+      "rotationY": -0.034907,
       "scale": [
         1.8,
         1,
@@ -10812,9 +11779,9 @@
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
-        -2,
-        0,
-        19.5
+        -2.2,
+        0.022,
+        19.4
       ],
       "rotationY": 0,
       "scale": [
@@ -10854,9 +11821,9 @@
       "assetId": "f01-a",
       "label": "f01-a",
       "position": [
-        -2,
-        0,
-        21
+        -2.2,
+        0.022,
+        21.15
       ],
       "rotationY": 0,
       "scale": [
@@ -13475,6 +14442,174 @@
       "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
     },
     {
+      "id": "pass2-bed3-stone-frame-1",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -3.8984,
+        0.022,
+        -52.8962
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-2",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -1.8497,
+        0.022,
+        -52.9677
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-3",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        0.1991,
+        0.022,
+        -53.0393
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-4",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -4.1567,
+        0.022,
+        -60.2917
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-5",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -2.1079,
+        0.022,
+        -60.3632
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-6",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -0.0592,
+        0.022,
+        -60.4347
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-7",
+      "assetId": "f03-s-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        -5.6266,
+        0.022,
+        -56.5381
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
+      "id": "pass2-bed3-stone-frame-8",
+      "assetId": "f03-t-stone-full",
+      "label": "PASS 2 · уредна камена рамка G-04",
+      "position": [
+        1.669,
+        0.022,
+        -56.7928
+      ],
+      "rotationY": -0.03490658503988659,
+      "scale": [
+        1.9,
+        1,
+        1.9
+      ],
+      "layer": "floor",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
+    },
+    {
       "id": "pass2-bed4-stone-frame-1",
       "assetId": "f03-s-stone-full",
       "label": "PASS 2 · уредна камена рамка G-05",
@@ -13641,426 +14776,6 @@
       "visible": true,
       "binding": "",
       "note": "Непрекинато планска F03 камена рамка околу леа, не расфрлани коцки; водните отвори остануваат отворени."
-    },
-    {
-      "id": "obj-mwo6d2q5-b0tdp",
-      "assetId": "f01-a",
-      "label": "f01-a · копија",
-      "position": [
-        -0.5,
-        0,
-        19.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6e1qd-xjh9y",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија",
-      "position": [
-        1,
-        0,
-        19.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6ecvl-tkham",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија",
-      "position": [
-        2,
-        0,
-        19.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6ell6-pkniz",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија",
-      "position": [
-        -0.5,
-        0,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6f30b-cqdgw",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија",
-      "position": [
-        1,
-        0,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6fahr-f0800",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија",
-      "position": [
-        2,
-        0,
-        21
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6fkb8-raj9w",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија",
-      "position": [
-        -2,
-        0,
-        22.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6g0r3-gftdw",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија · копија",
-      "position": [
-        -0.5,
-        0,
-        22.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6g5nd-gudiq",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија · копија · копија",
-      "position": [
-        1,
-        0,
-        22.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6g90w-rljz2",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија · копија · копија · копија",
-      "position": [
-        2,
-        0,
-        22.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6gnl1-wdgdb",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија · копија · копија · копија · ко",
-      "position": [
-        -2,
-        0,
-        24
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6h0is-zni2u",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија · копија · копија · копија · ко",
-      "position": [
-        -0.5,
-        0,
-        24
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6h4ij-r9avf",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија · копија · копија · копија · ко",
-      "position": [
-        1,
-        0,
-        24
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6h6vg-2cfx8",
-      "assetId": "f01-a",
-      "label": "f01-a · копија · копија · копија · копија · копија · копија · копија · копија · копија · копија · ко",
-      "position": [
-        2,
-        0,
-        24
-      ],
-      "rotationY": 0,
-      "scale": [
-        1.7,
-        1,
-        1.7
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": "Рамна бела патека на новата врата, не се меша со G01 вода."
-    },
-    {
-      "id": "obj-mwo6imw0-c81wo",
-      "assetId": "f01-a",
-      "label": "",
-      "position": [
-        -2.5,
-        0,
-        25.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": ""
-    },
-    {
-      "id": "obj-mwo6joqu-4if23",
-      "assetId": "f01-a",
-      "label": "",
-      "position": [
-        -1.5,
-        0,
-        25.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": ""
-    },
-    {
-      "id": "obj-mwo6jq3z-2der3",
-      "assetId": "f01-a",
-      "label": "",
-      "position": [
-        -0.5,
-        0,
-        25.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": ""
-    },
-    {
-      "id": "obj-mwo6jqvt-mpmg1",
-      "assetId": "f01-a",
-      "label": "",
-      "position": [
-        0.5,
-        0,
-        25.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": ""
-    },
-    {
-      "id": "obj-mwo6jsvp-ueff9",
-      "assetId": "f01-a",
-      "label": "",
-      "position": [
-        1.5,
-        0,
-        25.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": ""
-    },
-    {
-      "id": "obj-mwo6jtm6-rxjcm",
-      "assetId": "f01-a",
-      "label": "",
-      "position": [
-        2.5,
-        0,
-        25.5
-      ],
-      "rotationY": 0,
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "layer": "floor",
-      "locked": false,
-      "visible": true,
-      "binding": "",
-      "note": ""
     }
   ],
   "assets": [],
@@ -14085,7 +14800,7 @@
       "slotsPerBed": 5,
       "aquaticSlots": 4
     },
-    "floorTileCount": 368,
+    "floorTileCount": 402,
     "floorPalette": "MASTER · original cream greenhouse shell + actual footpaths",
     "version": "MASTER_PASS_2",
     "ownerApproval": "PENDING",

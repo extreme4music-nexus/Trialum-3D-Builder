@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "projectId": "trialum-g01-original-water-core-review",
+  "name": "G01 · вистинско водно јадро — GLB работилница",
+  "description": "All six REAL G01 standalone GLBs assembled at original X/Y/Z world origin for visual inspection. This is a separate review layout, not installed in greenhouse floor.",
+  "room": {
+    "width": 34,
+    "depth": 34,
+    "height": 5.5,
+    "gridSize": 0.5,
+    "gridRotation": 0,
+    "showWalls": false,
+    "floorColor": "#254c48",
+    "wallColor": "#305f5d"
+  },
+  "instances": [
+    {
+      "id": "g01-review-g01-main-basin",
+      "assetId": "g01-main-basin",
+      "label": "g01-main-basin",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB. Animated water contains a true animation clip; Builder animation playback is a separate feature."
+    },
+    {
+      "id": "g01-review-g01-satellite-basins",
+      "assetId": "g01-satellite-basins",
+      "label": "g01-satellite-basins",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB. Animated water contains a true animation clip; Builder animation playback is a separate feature."
+    },
+    {
+      "id": "g01-review-g01-walkway-and-railings",
+      "assetId": "g01-walkway-and-railings",
+      "label": "g01-walkway-and-railings",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB. Animated water contains a true animation clip; Builder animation playback is a separate feature."
+    },
+    {
+      "id": "g01-review-g01-crossing-bridge",
+      "assetId": "g01-crossing-bridge",
+      "label": "g01-crossing-bridge",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB. Animated water contains a true animation clip; Builder animation playback is a separate feature."
+    },
+    {
+      "id": "g01-review-g01-visual-service-pumps",
+      "assetId": "g01-visual-service-pumps",
+      "label": "g01-visual-service-pumps",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB. Animated water contains a true animation clip; Builder animation playback is a separate feature."
+    },
+    {
+      "id": "g01-review-g01-water-surfaces-animated",
+      "assetId": "g01-water-surfaces-animated",
+      "label": "g01-water-surfaces-animated",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "layer": "structure",
+      "locked": false,
+      "visible": true,
+      "binding": "",
+      "note": "Unmodified original G01 GLB. Animated water contains a true animation clip; Builder animation playback is a separate feature."
+    }
+  ],
+  "assets": [],
+  "bindings": {},
+  "meta": {
+    "editorVersion": "0.1.0",
+    "gameplayWrites": 0,
+    "officialScene": false
+  }
+}
